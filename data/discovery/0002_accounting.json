@@ -1,0 +1,1420 @@
+{
+  "url": "https://stage2-salma.altersense.net/app/accounting",
+  "title": "Accounting",
+  "text": "ERP\nHome\nAccounting\nLocal Procurement\nImport\nMerchandising\nInventory\nAssets\nProduction\nQuality\nPlanning\nSupport\nCRM\nSettings\n Collapse\nBegin typing for results.\nNo new notifications\nHelp \nA\nAccounting\nShortcuts\nChart of Accounts\nMRR\nBill Submission\nPayment Entry\nAccounts Payable\nAccounts Receivable\nJournal Entry\nGeneral Ledger\nReports & Masters\nAccounting Masters\nCompany \nChart of Accounts \nAccounts Settings \nFiscal Year \nAccounting Dimension \nFinance Book \nAccounting Period \nPayment Term \nPayments\nPayment Entry \nJournal Entry \nJournal Entry Template \nTerms and Conditions \nMode of Payment \nTax Masters\nSales Taxes and Charges Template \nPurchase Taxes and Charges Template \nItem Tax Template \nTax Category \nTax Rule \nTax Withholding Category \nCost Center and Budgeting\nChart of Cost Centers \nCompany Budget \nAccounting Dimension \nCost Center Allocation \nBudget Variance Report \nMonthly Distribution \nMulti Currency\nCurrency \nCurrency Exchange \nExchange Rate Revaluation \nBanking\nBank \nBank Account \nBank Clearance \nBank Reconciliation Tool \nBank Reconciliation Statement \nPlaid Settings \nOpening and Closing\nOpening Invoice Creation Tool \nChart of Accounts Importer \nPeriod Closing Voucher \nSubscription Management\nSubscription Plan \nSubscription \nSubscription Settings \nShare Management\nShareholder \nShare Transfer \nShare Ledger\nShare Balance\nFinance & Accounts Report\nProfit and Loss Statement \nBalance Sheet \nTrial Balance \nConsolidated Financial Statement \nProfitability Analysis \nGross and Net Profit Report \nCustom Reports\nGeneral Ledger 2 \nTest Report \n New\n Edit",
+  "elements": [
+    {
+      "tag": "a",
+      "text": "ERP",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "app-switcher-dropdown"
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset drop-icon show-in-edit-mode"
+    },
+    {
+      "tag": "a",
+      "text": "Home Home",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Home",
+      "role": "",
+      "href": "/app/home",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Accounting Accounting",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Accounting",
+      "role": "",
+      "href": "/app/accounting",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset drop-icon show-in-edit-mode"
+    },
+    {
+      "tag": "a",
+      "text": "Local Procurement Local Procurement",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Local Procurement",
+      "role": "",
+      "href": "/app/buying",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Import Import",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Import",
+      "role": "",
+      "href": "/app/import",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Merchandising Merchandising",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Merchandising",
+      "role": "",
+      "href": "/app/selling",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Inventory Inventory",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Inventory",
+      "role": "",
+      "href": "/app/stock",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Assets Assets",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Assets",
+      "role": "",
+      "href": "/app/assets",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Production Production",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Production",
+      "role": "",
+      "href": "/app/manufacturing",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Quality Quality",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Quality",
+      "role": "",
+      "href": "/app/quality",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Planning Planning",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Planning",
+      "role": "",
+      "href": "/app/projects",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Support Support",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Support",
+      "role": "",
+      "href": "/app/support",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "CRM CRM",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "CRM",
+      "role": "",
+      "href": "/app/crm",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Settings Settings",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Settings",
+      "role": "",
+      "href": "/app/settings",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Collapse",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "collapse-sidebar-link"
+    },
+    {
+      "tag": "input",
+      "text": "Search or type a command (Ctrl + K) navbar-search",
+      "id": "navbar-search",
+      "name": "",
+      "type": "text",
+      "placeholder": "Search or type a command (Ctrl + K)",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "href": "",
+      "value": "",
+      "class": "form-control"
+    },
+    {
+      "tag": "button",
+      "text": "No new notifications",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link notifications-icon text-muted"
+    },
+    {
+      "tag": "button",
+      "text": "Help Help Dropdown",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Help Dropdown",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link"
+    },
+    {
+      "tag": "button",
+      "text": "A User Menu",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link"
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn btn-xs btn-secondary chart-menu"
+    },
+    {
+      "tag": "a",
+      "text": "...",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": ""
+    },
+    {
+      "tag": "a",
+      "text": "...",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": ""
+    },
+    {
+      "tag": "a",
+      "text": "...",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": ""
+    },
+    {
+      "tag": "a",
+      "text": "...",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": ""
+    },
+    {
+      "tag": "div",
+      "text": "Chart of Accounts 1538 Chart of Accounts",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Chart of Accounts",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "div",
+      "text": "MRR 53 MRR",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "MRR",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "div",
+      "text": "Bill Submission 0 Bill Submission",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Bill Submission",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "div",
+      "text": "Payment Entry 57 Payment Entry",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Payment Entry",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "div",
+      "text": "Accounts Payable Accounts Payable",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Accounts Payable",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "div",
+      "text": "Accounts Receivable Accounts Receivable",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Accounts Receivable",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "div",
+      "text": "Journal Entry 241 Journal Entry",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Journal Entry",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "div",
+      "text": "General Ledger General Ledger",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "General Ledger",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "a",
+      "text": "Company Company",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Company",
+      "role": "",
+      "href": "/app/company",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Chart of Accounts Chart of Accounts",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Chart of Accounts",
+      "role": "",
+      "href": "/app/account",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Accounts Settings Accounts Settings",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Accounts Settings",
+      "role": "",
+      "href": "/app/accounts-settings",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Fiscal Year Fiscal Year",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Fiscal Year",
+      "role": "",
+      "href": "/app/fiscal-year",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Accounting Dimension Accounting Dimension",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Accounting Dimension",
+      "role": "",
+      "href": "/app/accounting-dimension",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Finance Book Finance Book",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Finance Book",
+      "role": "",
+      "href": "/app/finance-book",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Accounting Period Accounting Period",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Accounting Period",
+      "role": "",
+      "href": "/app/accounting-period",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Payment Term Payment Term",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Payment Term",
+      "role": "",
+      "href": "/app/payment-term",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Payment Entry Payment Entry",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Payment Entry",
+      "role": "",
+      "href": "/app/payment-entry",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Journal Entry Journal Entry",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Journal Entry",
+      "role": "",
+      "href": "/app/journal-entry",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Journal Entry Template Journal Entry Template",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Journal Entry Template",
+      "role": "",
+      "href": "/app/journal-entry-template",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Terms and Conditions Terms and Conditions",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Terms and Conditions",
+      "role": "",
+      "href": "/app/terms-and-conditions",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Mode of Payment Mode of Payment",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Mode of Payment",
+      "role": "",
+      "href": "/app/mode-of-payment",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Sales Taxes and Charges Template Sales Taxes and Charges Template",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Sales Taxes and Charges Template",
+      "role": "",
+      "href": "/app/sales-taxes-and-charges-template",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Purchase Taxes and Charges Template Purchase Taxes and Charges Template",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Purchase Taxes and Charges Template",
+      "role": "",
+      "href": "/app/purchase-taxes-and-charges-template",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Item Tax Template Item Tax Template",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Item Tax Template",
+      "role": "",
+      "href": "/app/item-tax-template",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Tax Category Tax Category",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Tax Category",
+      "role": "",
+      "href": "/app/tax-category",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Tax Rule Tax Rule",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Tax Rule",
+      "role": "",
+      "href": "/app/tax-rule",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Tax Withholding Category Tax Withholding Category",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Tax Withholding Category",
+      "role": "",
+      "href": "/app/tax-withholding-category",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Chart of Cost Centers Chart of Cost Centers",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Chart of Cost Centers",
+      "role": "",
+      "href": "/app/cost-center",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Company Budget Company Budget",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Company Budget",
+      "role": "",
+      "href": "/app/budget",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Accounting Dimension Accounting Dimension",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Accounting Dimension",
+      "role": "",
+      "href": "/app/accounting-dimension",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Cost Center Allocation Cost Center Allocation",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Cost Center Allocation",
+      "role": "",
+      "href": "/app/cost-center-allocation",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Budget Variance Report Budget Variance Report",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Budget Variance Report",
+      "role": "",
+      "href": "/app/query-report/Budget Variance Report",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Monthly Distribution Monthly Distribution",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Monthly Distribution",
+      "role": "",
+      "href": "/app/monthly-distribution",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Currency Currency",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Currency",
+      "role": "",
+      "href": "/app/currency",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Currency Exchange Currency Exchange",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Currency Exchange",
+      "role": "",
+      "href": "/app/currency-exchange",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Exchange Rate Revaluation Exchange Rate Revaluation",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Exchange Rate Revaluation",
+      "role": "",
+      "href": "/app/exchange-rate-revaluation",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Bank Bank",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Bank",
+      "role": "",
+      "href": "/app/bank",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Bank Account Bank Account",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Bank Account",
+      "role": "",
+      "href": "/app/bank-account",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Bank Clearance Bank Clearance",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Bank Clearance",
+      "role": "",
+      "href": "/app/bank-clearance",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Bank Reconciliation Tool Bank Reconciliation Tool",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Bank Reconciliation Tool",
+      "role": "",
+      "href": "/app/bank-reconciliation-tool",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Bank Reconciliation Statement Bank Reconciliation Statement",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Bank Reconciliation Statement",
+      "role": "",
+      "href": "/app/query-report/Bank Reconciliation Statement",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Plaid Settings Plaid Settings",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Plaid Settings",
+      "role": "",
+      "href": "/app/plaid-settings",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Opening Invoice Creation Tool Opening Invoice Creation Tool",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Opening Invoice Creation Tool",
+      "role": "",
+      "href": "/app/opening-invoice-creation-tool",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Chart of Accounts Importer Chart of Accounts Importer",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Chart of Accounts Importer",
+      "role": "",
+      "href": "/app/chart-of-accounts-importer",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "absolute_url": null
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "absolute_url": "https://stage2-salma.altersense.net/app/home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "absolute_url": "https://stage2-salma.altersense.net/app/accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "absolute_url": "https://stage2-salma.altersense.net/app/buying"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "absolute_url": "https://stage2-salma.altersense.net/app/import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "absolute_url": "https://stage2-salma.altersense.net/app/selling"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "absolute_url": "https://stage2-salma.altersense.net/app/stock"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "absolute_url": "https://stage2-salma.altersense.net/app/assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "absolute_url": "https://stage2-salma.altersense.net/app/manufacturing"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "absolute_url": "https://stage2-salma.altersense.net/app/quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "absolute_url": "https://stage2-salma.altersense.net/app/projects"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "absolute_url": "https://stage2-salma.altersense.net/app/support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "absolute_url": "https://stage2-salma.altersense.net/app/crm"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "absolute_url": "https://stage2-salma.altersense.net/app/settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "absolute_url": null
+    },
+    {
+      "text": "...",
+      "href": "",
+      "absolute_url": null
+    },
+    {
+      "text": "Company",
+      "href": "/app/company",
+      "absolute_url": "https://stage2-salma.altersense.net/app/company"
+    },
+    {
+      "text": "Chart of Accounts",
+      "href": "/app/account",
+      "absolute_url": "https://stage2-salma.altersense.net/app/account"
+    },
+    {
+      "text": "Accounts Settings",
+      "href": "/app/accounts-settings",
+      "absolute_url": "https://stage2-salma.altersense.net/app/accounts-settings"
+    },
+    {
+      "text": "Fiscal Year",
+      "href": "/app/fiscal-year",
+      "absolute_url": "https://stage2-salma.altersense.net/app/fiscal-year"
+    },
+    {
+      "text": "Accounting Dimension",
+      "href": "/app/accounting-dimension",
+      "absolute_url": "https://stage2-salma.altersense.net/app/accounting-dimension"
+    },
+    {
+      "text": "Finance Book",
+      "href": "/app/finance-book",
+      "absolute_url": "https://stage2-salma.altersense.net/app/finance-book"
+    },
+    {
+      "text": "Accounting Period",
+      "href": "/app/accounting-period",
+      "absolute_url": "https://stage2-salma.altersense.net/app/accounting-period"
+    },
+    {
+      "text": "Payment Term",
+      "href": "/app/payment-term",
+      "absolute_url": "https://stage2-salma.altersense.net/app/payment-term"
+    },
+    {
+      "text": "Payment Entry",
+      "href": "/app/payment-entry",
+      "absolute_url": "https://stage2-salma.altersense.net/app/payment-entry"
+    },
+    {
+      "text": "Journal Entry",
+      "href": "/app/journal-entry",
+      "absolute_url": "https://stage2-salma.altersense.net/app/journal-entry"
+    },
+    {
+      "text": "Journal Entry Template",
+      "href": "/app/journal-entry-template",
+      "absolute_url": "https://stage2-salma.altersense.net/app/journal-entry-template"
+    },
+    {
+      "text": "Terms and Conditions",
+      "href": "/app/terms-and-conditions",
+      "absolute_url": "https://stage2-salma.altersense.net/app/terms-and-conditions"
+    },
+    {
+      "text": "Mode of Payment",
+      "href": "/app/mode-of-payment",
+      "absolute_url": "https://stage2-salma.altersense.net/app/mode-of-payment"
+    },
+    {
+      "text": "Sales Taxes and Charges Template",
+      "href": "/app/sales-taxes-and-charges-template",
+      "absolute_url": "https://stage2-salma.altersense.net/app/sales-taxes-and-charges-template"
+    },
+    {
+      "text": "Purchase Taxes and Charges Template",
+      "href": "/app/purchase-taxes-and-charges-template",
+      "absolute_url": "https://stage2-salma.altersense.net/app/purchase-taxes-and-charges-template"
+    },
+    {
+      "text": "Item Tax Template",
+      "href": "/app/item-tax-template",
+      "absolute_url": "https://stage2-salma.altersense.net/app/item-tax-template"
+    },
+    {
+      "text": "Tax Category",
+      "href": "/app/tax-category",
+      "absolute_url": "https://stage2-salma.altersense.net/app/tax-category"
+    },
+    {
+      "text": "Tax Rule",
+      "href": "/app/tax-rule",
+      "absolute_url": "https://stage2-salma.altersense.net/app/tax-rule"
+    },
+    {
+      "text": "Tax Withholding Category",
+      "href": "/app/tax-withholding-category",
+      "absolute_url": "https://stage2-salma.altersense.net/app/tax-withholding-category"
+    },
+    {
+      "text": "Chart of Cost Centers",
+      "href": "/app/cost-center",
+      "absolute_url": "https://stage2-salma.altersense.net/app/cost-center"
+    },
+    {
+      "text": "Company Budget",
+      "href": "/app/budget",
+      "absolute_url": "https://stage2-salma.altersense.net/app/budget"
+    },
+    {
+      "text": "Cost Center Allocation",
+      "href": "/app/cost-center-allocation",
+      "absolute_url": "https://stage2-salma.altersense.net/app/cost-center-allocation"
+    },
+    {
+      "text": "Budget Variance Report",
+      "href": "/app/query-report/Budget Variance Report",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Budget Variance Report"
+    },
+    {
+      "text": "Monthly Distribution",
+      "href": "/app/monthly-distribution",
+      "absolute_url": "https://stage2-salma.altersense.net/app/monthly-distribution"
+    },
+    {
+      "text": "Currency",
+      "href": "/app/currency",
+      "absolute_url": "https://stage2-salma.altersense.net/app/currency"
+    },
+    {
+      "text": "Currency Exchange",
+      "href": "/app/currency-exchange",
+      "absolute_url": "https://stage2-salma.altersense.net/app/currency-exchange"
+    },
+    {
+      "text": "Exchange Rate Revaluation",
+      "href": "/app/exchange-rate-revaluation",
+      "absolute_url": "https://stage2-salma.altersense.net/app/exchange-rate-revaluation"
+    },
+    {
+      "text": "Bank",
+      "href": "/app/bank",
+      "absolute_url": "https://stage2-salma.altersense.net/app/bank"
+    },
+    {
+      "text": "Bank Account",
+      "href": "/app/bank-account",
+      "absolute_url": "https://stage2-salma.altersense.net/app/bank-account"
+    },
+    {
+      "text": "Bank Clearance",
+      "href": "/app/bank-clearance",
+      "absolute_url": "https://stage2-salma.altersense.net/app/bank-clearance"
+    },
+    {
+      "text": "Bank Reconciliation Tool",
+      "href": "/app/bank-reconciliation-tool",
+      "absolute_url": "https://stage2-salma.altersense.net/app/bank-reconciliation-tool"
+    },
+    {
+      "text": "Bank Reconciliation Statement",
+      "href": "/app/query-report/Bank Reconciliation Statement",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Bank Reconciliation Statement"
+    },
+    {
+      "text": "Plaid Settings",
+      "href": "/app/plaid-settings",
+      "absolute_url": "https://stage2-salma.altersense.net/app/plaid-settings"
+    },
+    {
+      "text": "Opening Invoice Creation Tool",
+      "href": "/app/opening-invoice-creation-tool",
+      "absolute_url": "https://stage2-salma.altersense.net/app/opening-invoice-creation-tool"
+    },
+    {
+      "text": "Chart of Accounts Importer",
+      "href": "/app/chart-of-accounts-importer",
+      "absolute_url": "https://stage2-salma.altersense.net/app/chart-of-accounts-importer"
+    },
+    {
+      "text": "Period Closing Voucher",
+      "href": "/app/period-closing-voucher",
+      "absolute_url": "https://stage2-salma.altersense.net/app/period-closing-voucher"
+    },
+    {
+      "text": "Subscription Plan",
+      "href": "/app/subscription-plan",
+      "absolute_url": "https://stage2-salma.altersense.net/app/subscription-plan"
+    },
+    {
+      "text": "Subscription",
+      "href": "/app/subscription",
+      "absolute_url": "https://stage2-salma.altersense.net/app/subscription"
+    },
+    {
+      "text": "Subscription Settings",
+      "href": "/app/subscription-settings",
+      "absolute_url": "https://stage2-salma.altersense.net/app/subscription-settings"
+    },
+    {
+      "text": "Shareholder",
+      "href": "/app/shareholder",
+      "absolute_url": "https://stage2-salma.altersense.net/app/shareholder"
+    },
+    {
+      "text": "Share Transfer",
+      "href": "/app/share-transfer",
+      "absolute_url": "https://stage2-salma.altersense.net/app/share-transfer"
+    },
+    {
+      "text": "Share Ledger",
+      "href": "/app/query-report/Share Ledger",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Share Ledger"
+    },
+    {
+      "text": "Share Balance",
+      "href": "/app/query-report/Share Balance",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Share Balance"
+    },
+    {
+      "text": "Profit and Loss Statement",
+      "href": "/app/query-report/Profit and Loss Statement",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Profit and Loss Statement"
+    },
+    {
+      "text": "Balance Sheet",
+      "href": "/app/query-report/Balance Sheet",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Balance Sheet"
+    },
+    {
+      "text": "Trial Balance",
+      "href": "/app/query-report/Trial Balance",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Trial Balance"
+    },
+    {
+      "text": "Consolidated Financial Statement",
+      "href": "/app/query-report/Consolidated Financial Statement",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Consolidated Financial Statement"
+    },
+    {
+      "text": "Profitability Analysis",
+      "href": "/app/query-report/Profitability Analysis",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Profitability Analysis"
+    },
+    {
+      "text": "Gross and Net Profit Report",
+      "href": "/app/query-report/Gross and Net Profit Report",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Gross and Net Profit Report"
+    },
+    {
+      "text": "General Ledger 2",
+      "href": "/app/query-report/General Ledger 2",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/General Ledger 2"
+    },
+    {
+      "text": "Test Report",
+      "href": "/app/purchase-invoice/view/report/Test Report",
+      "absolute_url": "https://stage2-salma.altersense.net/app/purchase-invoice/view/report/Test Report"
+    }
+  ],
+  "buttons": [
+    {
+      "tag": "button",
+      "text": "No new notifications",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link notifications-icon text-muted",
+      "blocked_for_discovery": true
+    },
+    {
+      "tag": "button",
+      "text": "Help Help Dropdown",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Help Dropdown",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link",
+      "blocked_for_discovery": false
+    },
+    {
+      "tag": "button",
+      "text": "A User Menu",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link",
+      "blocked_for_discovery": false
+    },
+    {
+      "tag": "button",
+      "text": "New",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn btn-default ellipsis btn-new-workspace",
+      "blocked_for_discovery": true
+    },
+    {
+      "tag": "button",
+      "text": "Edit",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn btn-default btn-sm mr-2 btn-edit-workspace",
+      "blocked_for_discovery": false
+    }
+  ],
+  "fields": [
+    {
+      "tag": "input",
+      "text": "Search or type a command (Ctrl + K) navbar-search",
+      "id": "navbar-search",
+      "name": "",
+      "type": "text",
+      "placeholder": "Search or type a command (Ctrl + K)",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "href": "",
+      "value": "",
+      "class": "form-control",
+      "required": false
+    }
+  ],
+  "doctype": "Accounting",
+  "route": "/app/accounting"
+}

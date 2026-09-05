@@ -1,0 +1,900 @@
+{
+  "url": "https://stage2-salma.altersense.net/app/home",
+  "title": "Home",
+  "text": "ERP\nHome\nAccounting\nLocal Procurement\nImport\nMerchandising\nInventory\nAssets\nProduction\nQuality\nPlanning\nSupport\nCRM\nSettings\n Collapse\nBegin typing for results.\nNo new notifications\nHelp \nA\nHome\nYour Shortcuts\nProduct\n19473\nCustomer/Buyer\n17\nSupplier\n370\nSales Invoice\n36\nReports & Masters\nAccounting\nChart of Accounts \nCompany \nCustomer/Buyer \nSupplier \nInventory\nProduct \nStore \nBrand \nUnit of Measure (UOM) \nStock Reconciliation \nCRM\nLead \nCustomer Group \nTerritory \nData Import and Settings\nImport Data \nOpening Invoice Creation Tool \nChart of Accounts Importer \nLetter Head \nEmail Account \nCustom Reports\nfinance \n New\n Edit",
+  "elements": [
+    {
+      "tag": "a",
+      "text": "ERP",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "app-switcher-dropdown"
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset drop-icon show-in-edit-mode"
+    },
+    {
+      "tag": "a",
+      "text": "Home Home",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Home",
+      "role": "",
+      "href": "/app/home",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Accounting Accounting",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Accounting",
+      "role": "",
+      "href": "/app/accounting",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset drop-icon show-in-edit-mode"
+    },
+    {
+      "tag": "a",
+      "text": "Local Procurement Local Procurement",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Local Procurement",
+      "role": "",
+      "href": "/app/buying",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Import Import",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Import",
+      "role": "",
+      "href": "/app/import",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Merchandising Merchandising",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Merchandising",
+      "role": "",
+      "href": "/app/selling",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Inventory Inventory",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Inventory",
+      "role": "",
+      "href": "/app/stock",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Assets Assets",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Assets",
+      "role": "",
+      "href": "/app/assets",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Production Production",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Production",
+      "role": "",
+      "href": "/app/manufacturing",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Quality Quality",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Quality",
+      "role": "",
+      "href": "/app/quality",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Planning Planning",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Planning",
+      "role": "",
+      "href": "/app/projects",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Support Support",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Support",
+      "role": "",
+      "href": "/app/support",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "CRM CRM",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "CRM",
+      "role": "",
+      "href": "/app/crm",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Settings Settings",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Settings",
+      "role": "",
+      "href": "/app/settings",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Collapse",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "collapse-sidebar-link"
+    },
+    {
+      "tag": "input",
+      "text": "Search or type a command (Ctrl + K) navbar-search",
+      "id": "navbar-search",
+      "name": "",
+      "type": "text",
+      "placeholder": "Search or type a command (Ctrl + K)",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "href": "",
+      "value": "",
+      "class": "form-control"
+    },
+    {
+      "tag": "button",
+      "text": "No new notifications",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link notifications-icon text-muted"
+    },
+    {
+      "tag": "button",
+      "text": "Help Help Dropdown",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Help Dropdown",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link"
+    },
+    {
+      "tag": "button",
+      "text": "A User Menu",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link"
+    },
+    {
+      "tag": "div",
+      "text": "Product 19473 Product",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Product",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "div",
+      "text": "Customer/Buyer 17 Customer/Buyer",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Customer/Buyer",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "div",
+      "text": "Supplier 370 Supplier",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Supplier",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "div",
+      "text": "Sales Invoice 36 Sales Invoice",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Sales Invoice",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "a",
+      "text": "Chart of Accounts Chart of Accounts",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Chart of Accounts",
+      "role": "",
+      "href": "/app/account",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Company Company",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Company",
+      "role": "",
+      "href": "/app/company",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Customer/Buyer Customer/Buyer",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Customer/Buyer",
+      "role": "",
+      "href": "/app/customer",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Supplier Supplier",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Supplier",
+      "role": "",
+      "href": "/app/supplier",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Product Product",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Product",
+      "role": "",
+      "href": "/app/item",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Store Store",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Store",
+      "role": "",
+      "href": "/app/warehouse",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Brand Brand",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Brand",
+      "role": "",
+      "href": "/app/brand",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Unit of Measure (UOM) Unit of Measure (UOM)",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Unit of Measure (UOM)",
+      "role": "",
+      "href": "/app/uom",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Stock Reconciliation Stock Reconciliation",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Stock Reconciliation",
+      "role": "",
+      "href": "/app/stock-reconciliation",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Lead Lead",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Lead",
+      "role": "",
+      "href": "/app/lead",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Customer Group Customer Group",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Customer Group",
+      "role": "",
+      "href": "/app/customer-group",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Territory Territory",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Territory",
+      "role": "",
+      "href": "/app/territory",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Import Data Import Data",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Import Data",
+      "role": "",
+      "href": "/app/data-import",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Opening Invoice Creation Tool Opening Invoice Creation Tool",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Opening Invoice Creation Tool",
+      "role": "",
+      "href": "/app/opening-invoice-creation-tool",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Chart of Accounts Importer Chart of Accounts Importer",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Chart of Accounts Importer",
+      "role": "",
+      "href": "/app/chart-of-accounts-importer",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Letter Head Letter Head",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Letter Head",
+      "role": "",
+      "href": "/app/letter-head",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Email Account Email Account",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Email Account",
+      "role": "",
+      "href": "/app/email-account",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "finance finance",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "finance",
+      "role": "",
+      "href": "/app/employee/view/report/finance",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "button",
+      "text": "New",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn btn-default ellipsis btn-new-workspace"
+    },
+    {
+      "tag": "button",
+      "text": "Edit",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn btn-default btn-sm mr-2 btn-edit-workspace"
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "absolute_url": null
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "absolute_url": "https://stage2-salma.altersense.net/app/home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "absolute_url": "https://stage2-salma.altersense.net/app/accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "absolute_url": "https://stage2-salma.altersense.net/app/buying"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "absolute_url": "https://stage2-salma.altersense.net/app/import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "absolute_url": "https://stage2-salma.altersense.net/app/selling"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "absolute_url": "https://stage2-salma.altersense.net/app/stock"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "absolute_url": "https://stage2-salma.altersense.net/app/assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "absolute_url": "https://stage2-salma.altersense.net/app/manufacturing"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "absolute_url": "https://stage2-salma.altersense.net/app/quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "absolute_url": "https://stage2-salma.altersense.net/app/projects"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "absolute_url": "https://stage2-salma.altersense.net/app/support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "absolute_url": "https://stage2-salma.altersense.net/app/crm"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "absolute_url": "https://stage2-salma.altersense.net/app/settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "absolute_url": null
+    },
+    {
+      "text": "Chart of Accounts",
+      "href": "/app/account",
+      "absolute_url": "https://stage2-salma.altersense.net/app/account"
+    },
+    {
+      "text": "Company",
+      "href": "/app/company",
+      "absolute_url": "https://stage2-salma.altersense.net/app/company"
+    },
+    {
+      "text": "Customer/Buyer",
+      "href": "/app/customer",
+      "absolute_url": "https://stage2-salma.altersense.net/app/customer"
+    },
+    {
+      "text": "Supplier",
+      "href": "/app/supplier",
+      "absolute_url": "https://stage2-salma.altersense.net/app/supplier"
+    },
+    {
+      "text": "Product",
+      "href": "/app/item",
+      "absolute_url": "https://stage2-salma.altersense.net/app/item"
+    },
+    {
+      "text": "Store",
+      "href": "/app/warehouse",
+      "absolute_url": "https://stage2-salma.altersense.net/app/warehouse"
+    },
+    {
+      "text": "Brand",
+      "href": "/app/brand",
+      "absolute_url": "https://stage2-salma.altersense.net/app/brand"
+    },
+    {
+      "text": "Unit of Measure (UOM)",
+      "href": "/app/uom",
+      "absolute_url": "https://stage2-salma.altersense.net/app/uom"
+    },
+    {
+      "text": "Stock Reconciliation",
+      "href": "/app/stock-reconciliation",
+      "absolute_url": "https://stage2-salma.altersense.net/app/stock-reconciliation"
+    },
+    {
+      "text": "Lead",
+      "href": "/app/lead",
+      "absolute_url": "https://stage2-salma.altersense.net/app/lead"
+    },
+    {
+      "text": "Customer Group",
+      "href": "/app/customer-group",
+      "absolute_url": "https://stage2-salma.altersense.net/app/customer-group"
+    },
+    {
+      "text": "Territory",
+      "href": "/app/territory",
+      "absolute_url": "https://stage2-salma.altersense.net/app/territory"
+    },
+    {
+      "text": "Import Data",
+      "href": "/app/data-import",
+      "absolute_url": "https://stage2-salma.altersense.net/app/data-import"
+    },
+    {
+      "text": "Opening Invoice Creation Tool",
+      "href": "/app/opening-invoice-creation-tool",
+      "absolute_url": "https://stage2-salma.altersense.net/app/opening-invoice-creation-tool"
+    },
+    {
+      "text": "Chart of Accounts Importer",
+      "href": "/app/chart-of-accounts-importer",
+      "absolute_url": "https://stage2-salma.altersense.net/app/chart-of-accounts-importer"
+    },
+    {
+      "text": "Letter Head",
+      "href": "/app/letter-head",
+      "absolute_url": "https://stage2-salma.altersense.net/app/letter-head"
+    },
+    {
+      "text": "Email Account",
+      "href": "/app/email-account",
+      "absolute_url": "https://stage2-salma.altersense.net/app/email-account"
+    },
+    {
+      "text": "finance",
+      "href": "/app/employee/view/report/finance",
+      "absolute_url": "https://stage2-salma.altersense.net/app/employee/view/report/finance"
+    }
+  ],
+  "buttons": [
+    {
+      "tag": "button",
+      "text": "No new notifications",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link notifications-icon text-muted",
+      "blocked_for_discovery": true
+    },
+    {
+      "tag": "button",
+      "text": "Help Help Dropdown",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Help Dropdown",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link",
+      "blocked_for_discovery": false
+    },
+    {
+      "tag": "button",
+      "text": "A User Menu",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link",
+      "blocked_for_discovery": false
+    },
+    {
+      "tag": "button",
+      "text": "New",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn btn-default ellipsis btn-new-workspace",
+      "blocked_for_discovery": true
+    },
+    {
+      "tag": "button",
+      "text": "Edit",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn btn-default btn-sm mr-2 btn-edit-workspace",
+      "blocked_for_discovery": false
+    }
+  ],
+  "fields": [
+    {
+      "tag": "input",
+      "text": "Search or type a command (Ctrl + K) navbar-search",
+      "id": "navbar-search",
+      "name": "",
+      "type": "text",
+      "placeholder": "Search or type a command (Ctrl + K)",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "href": "",
+      "value": "",
+      "class": "form-control",
+      "required": false
+    }
+  ],
+  "doctype": "Home",
+  "route": "/app/home"
+}

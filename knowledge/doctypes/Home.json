@@ -1,0 +1,178 @@
+{
+  "doctype": "Home",
+  "source_file": "data/discovery/home.json",
+  "discovered_at": "2026-09-05T15:39:38.451803+00:00",
+  "fields": [],
+  "mandatory_fields": [],
+  "link_fields": [],
+  "buttons": [],
+  "links": [
+    {
+      "text": "ERP",
+      "href": ""
+    },
+    {
+      "text": "Home",
+      "href": "/app/home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings"
+    },
+    {
+      "text": "Collapse",
+      "href": ""
+    },
+    {
+      "text": "Chart of Accounts",
+      "href": "/app/account"
+    },
+    {
+      "text": "Company",
+      "href": "/app/company"
+    },
+    {
+      "text": "Customer/Buyer",
+      "href": "/app/customer"
+    },
+    {
+      "text": "Supplier",
+      "href": "/app/supplier"
+    },
+    {
+      "text": "Product",
+      "href": "/app/item"
+    },
+    {
+      "text": "Store",
+      "href": "/app/warehouse"
+    },
+    {
+      "text": "Brand",
+      "href": "/app/brand"
+    },
+    {
+      "text": "Unit of Measure (UOM)",
+      "href": "/app/uom"
+    },
+    {
+      "text": "Stock Reconciliation",
+      "href": "/app/stock-reconciliation"
+    },
+    {
+      "text": "Lead",
+      "href": "/app/lead"
+    },
+    {
+      "text": "Customer Group",
+      "href": "/app/customer-group"
+    },
+    {
+      "text": "Territory",
+      "href": "/app/territory"
+    },
+    {
+      "text": "Import Data",
+      "href": "/app/data-import"
+    },
+    {
+      "text": "Opening Invoice Creation Tool",
+      "href": "/app/opening-invoice-creation-tool"
+    },
+    {
+      "text": "Chart of Accounts Importer",
+      "href": "/app/chart-of-accounts-importer"
+    },
+    {
+      "text": "Letter Head",
+      "href": "/app/letter-head"
+    },
+    {
+      "text": "Email Account",
+      "href": "/app/email-account"
+    },
+    {
+      "text": "finance",
+      "href": "/app/employee/view/report/finance"
+    }
+  ],
+  "workflows": [],
+  "routes": [
+    "https://stage2-salma.altersense.net/app/home",
+    "/app/home",
+    "/app/accounting",
+    "/app/buying",
+    "/app/import",
+    "/app/selling",
+    "/app/stock",
+    "/app/assets",
+    "/app/manufacturing",
+    "/app/quality",
+    "/app/projects",
+    "/app/support",
+    "/app/crm",
+    "/app/settings",
+    "/app/account",
+    "/app/company",
+    "/app/customer",
+    "/app/supplier",
+    "/app/item",
+    "/app/warehouse",
+    "/app/brand",
+    "/app/uom",
+    "/app/stock-reconciliation",
+    "/app/lead",
+    "/app/customer-group",
+    "/app/territory",
+    "/app/data-import",
+    "/app/opening-invoice-creation-tool",
+    "/app/chart-of-accounts-importer",
+    "/app/letter-head",
+    "/app/email-account",
+    "/app/employee/view/report/finance"
+  ]
+}

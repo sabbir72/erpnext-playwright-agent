@@ -1,0 +1,810 @@
+{
+  "erp_url": "https://stage2-salma.altersense.net",
+  "started_at": "2026-09-05 22:20:48",
+  "pages_discovered": 100,
+  "visited_urls": [
+    "https://stage2-salma.altersense.net",
+    "https://stage2-salma.altersense.net/Workspaces/Accounting",
+    "https://stage2-salma.altersense.net/Workspaces/Buying",
+    "https://stage2-salma.altersense.net/Workspaces/Home",
+    "https://stage2-salma.altersense.net/Workspaces/Import",
+    "https://stage2-salma.altersense.net/app/account",
+    "https://stage2-salma.altersense.net/app/accounting",
+    "https://stage2-salma.altersense.net/app/accounting-dimension",
+    "https://stage2-salma.altersense.net/app/accounting-period",
+    "https://stage2-salma.altersense.net/app/accounts-settings",
+    "https://stage2-salma.altersense.net/app/assets",
+    "https://stage2-salma.altersense.net/app/bank",
+    "https://stage2-salma.altersense.net/app/bank-account",
+    "https://stage2-salma.altersense.net/app/bank-clearance",
+    "https://stage2-salma.altersense.net/app/bank-reconciliation-tool",
+    "https://stage2-salma.altersense.net/app/blanket-order",
+    "https://stage2-salma.altersense.net/app/brand",
+    "https://stage2-salma.altersense.net/app/budget",
+    "https://stage2-salma.altersense.net/app/buying",
+    "https://stage2-salma.altersense.net/app/buying-settings",
+    "https://stage2-salma.altersense.net/app/chart-of-accounts-importer",
+    "https://stage2-salma.altersense.net/app/commercial-invoice",
+    "https://stage2-salma.altersense.net/app/company",
+    "https://stage2-salma.altersense.net/app/cost-center",
+    "https://stage2-salma.altersense.net/app/cost-center-allocation",
+    "https://stage2-salma.altersense.net/app/crm",
+    "https://stage2-salma.altersense.net/app/currency",
+    "https://stage2-salma.altersense.net/app/currency-exchange",
+    "https://stage2-salma.altersense.net/app/customer",
+    "https://stage2-salma.altersense.net/app/customer-group",
+    "https://stage2-salma.altersense.net/app/data-import",
+    "https://stage2-salma.altersense.net/app/email-account",
+    "https://stage2-salma.altersense.net/app/employee/view/report/finance",
+    "https://stage2-salma.altersense.net/app/exchange-rate-revaluation",
+    "https://stage2-salma.altersense.net/app/finance-book",
+    "https://stage2-salma.altersense.net/app/fiscal-year",
+    "https://stage2-salma.altersense.net/app/home",
+    "https://stage2-salma.altersense.net/app/import",
+    "https://stage2-salma.altersense.net/app/import-lc",
+    "https://stage2-salma.altersense.net/app/item",
+    "https://stage2-salma.altersense.net/app/item-price",
+    "https://stage2-salma.altersense.net/app/item-tax-template",
+    "https://stage2-salma.altersense.net/app/journal-entry",
+    "https://stage2-salma.altersense.net/app/journal-entry-template",
+    "https://stage2-salma.altersense.net/app/lc-application",
+    "https://stage2-salma.altersense.net/app/lead",
+    "https://stage2-salma.altersense.net/app/letter-head",
+    "https://stage2-salma.altersense.net/app/loyalty-point-entry",
+    "https://stage2-salma.altersense.net/app/loyalty-program",
+    "https://stage2-salma.altersense.net/app/manufacturing",
+    "https://stage2-salma.altersense.net/app/material-distribution",
+    "https://stage2-salma.altersense.net/app/material-request",
+    "https://stage2-salma.altersense.net/app/mode-of-payment",
+    "https://stage2-salma.altersense.net/app/monthly-distribution",
+    "https://stage2-salma.altersense.net/app/opening-invoice-creation-tool",
+    "https://stage2-salma.altersense.net/app/payment-entry",
+    "https://stage2-salma.altersense.net/app/payment-term",
+    "https://stage2-salma.altersense.net/app/period-closing-voucher",
+    "https://stage2-salma.altersense.net/app/plaid-settings",
+    "https://stage2-salma.altersense.net/app/pos-closing-entry",
+    "https://stage2-salma.altersense.net/app/pos-opening-entry",
+    "https://stage2-salma.altersense.net/app/pos-profile",
+    "https://stage2-salma.altersense.net/app/pos-settings",
+    "https://stage2-salma.altersense.net/app/price-fixation",
+    "https://stage2-salma.altersense.net/app/projects",
+    "https://stage2-salma.altersense.net/app/purchase-invoice/view/report/Test Report",
+    "https://stage2-salma.altersense.net/app/purchase-order",
+    "https://stage2-salma.altersense.net/app/purchase-receipt",
+    "https://stage2-salma.altersense.net/app/purchase-taxes-and-charges-template",
+    "https://stage2-salma.altersense.net/app/quality",
+    "https://stage2-salma.altersense.net/app/query-report/Balance Sheet",
+    "https://stage2-salma.altersense.net/app/query-report/Bank Reconciliation Statement",
+    "https://stage2-salma.altersense.net/app/query-report/Budget Variance Report",
+    "https://stage2-salma.altersense.net/app/query-report/Consolidated Financial Statement",
+    "https://stage2-salma.altersense.net/app/query-report/General Ledger 2",
+    "https://stage2-salma.altersense.net/app/query-report/Gross and Net Profit Report",
+    "https://stage2-salma.altersense.net/app/query-report/Profit and Loss Statement",
+    "https://stage2-salma.altersense.net/app/query-report/Profitability Analysis",
+    "https://stage2-salma.altersense.net/app/query-report/Share Balance",
+    "https://stage2-salma.altersense.net/app/query-report/Share Ledger",
+    "https://stage2-salma.altersense.net/app/query-report/Trial Balance",
+    "https://stage2-salma.altersense.net/app/sales-taxes-and-charges-template",
+    "https://stage2-salma.altersense.net/app/selling",
+    "https://stage2-salma.altersense.net/app/settings",
+    "https://stage2-salma.altersense.net/app/share-transfer",
+    "https://stage2-salma.altersense.net/app/shareholder",
+    "https://stage2-salma.altersense.net/app/stock",
+    "https://stage2-salma.altersense.net/app/stock-reconciliation",
+    "https://stage2-salma.altersense.net/app/subscription",
+    "https://stage2-salma.altersense.net/app/subscription-plan",
+    "https://stage2-salma.altersense.net/app/subscription-settings",
+    "https://stage2-salma.altersense.net/app/supplier",
+    "https://stage2-salma.altersense.net/app/support",
+    "https://stage2-salma.altersense.net/app/tax-category",
+    "https://stage2-salma.altersense.net/app/tax-rule",
+    "https://stage2-salma.altersense.net/app/tax-withholding-category",
+    "https://stage2-salma.altersense.net/app/terms-and-conditions",
+    "https://stage2-salma.altersense.net/app/territory",
+    "https://stage2-salma.altersense.net/app/uom",
+    "https://stage2-salma.altersense.net/app/warehouse"
+  ],
+  "pages": [
+    {
+      "url": "https://stage2-salma.altersense.net/app/home",
+      "title": "Home",
+      "doctype": "Home",
+      "route": "/app/home",
+      "file": "0001_app_home.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/accounting",
+      "title": "Accounting",
+      "doctype": "Accounting",
+      "route": "/app/accounting",
+      "file": "0002_app_accounting.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/buying",
+      "title": "Local Procurement",
+      "doctype": "Buying",
+      "route": "/app/buying",
+      "file": "0003_app_buying.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/import",
+      "title": "Import",
+      "doctype": "Import",
+      "route": "/app/import",
+      "file": "0004_app_import.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/selling",
+      "title": "Merchandising",
+      "doctype": "Selling",
+      "route": "/app/selling",
+      "file": "0005_app_selling.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/stock",
+      "title": "Inventory",
+      "doctype": "Stock",
+      "route": "/app/stock",
+      "file": "0006_app_stock.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/assets",
+      "title": "Assets",
+      "doctype": "Assets",
+      "route": "/app/assets",
+      "file": "0007_app_assets.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/manufacturing",
+      "title": "Production",
+      "doctype": "Manufacturing",
+      "route": "/app/manufacturing",
+      "file": "0008_app_manufacturing.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/quality",
+      "title": "Quality",
+      "doctype": "Quality",
+      "route": "/app/quality",
+      "file": "0009_app_quality.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/projects",
+      "title": "Planning",
+      "doctype": "Projects",
+      "route": "/app/projects",
+      "file": "0010_app_projects.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/support",
+      "title": "Support",
+      "doctype": "Support",
+      "route": "/app/support",
+      "file": "0011_app_support.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/crm",
+      "title": "CRM",
+      "doctype": "Crm",
+      "route": "/app/crm",
+      "file": "0012_app_crm.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/settings",
+      "title": "Settings",
+      "doctype": "Settings",
+      "route": "/app/settings",
+      "file": "0013_app_settings.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/account",
+      "title": "Chart of Accounts",
+      "doctype": "Account",
+      "route": "/app/account",
+      "file": "0014_app_account.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/company",
+      "title": "Company",
+      "doctype": "Company",
+      "route": "/app/company",
+      "file": "0015_app_company.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/customer",
+      "title": "Customer/Buyer",
+      "doctype": "Customer",
+      "route": "/app/customer",
+      "file": "0016_app_customer.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/supplier?supplier_type=Foreign+Company",
+      "title": "Supplier",
+      "doctype": "Supplier",
+      "route": "/app/supplier",
+      "file": "0017_app_supplier.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/item",
+      "title": "Product",
+      "doctype": "Item",
+      "route": "/app/item",
+      "file": "0018_app_item.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/warehouse",
+      "title": "Store Tree",
+      "doctype": "Warehouse",
+      "route": "/app/warehouse",
+      "file": "0019_app_warehouse.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/brand",
+      "title": "Brand",
+      "doctype": "Brand",
+      "route": "/app/brand",
+      "file": "0020_app_brand.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/uom",
+      "title": "UOM",
+      "doctype": "Uom",
+      "route": "/app/uom",
+      "file": "0021_app_uom.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/stock-reconciliation",
+      "title": "Stock Reconciliation",
+      "doctype": "Stock Reconciliation",
+      "route": "/app/stock-reconciliation",
+      "file": "0022_app_stock-reconciliation.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/lead",
+      "title": "Lead",
+      "doctype": "Lead",
+      "route": "/app/lead",
+      "file": "0023_app_lead.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/customer-group",
+      "title": "Customer Group Tree",
+      "doctype": "Customer Group",
+      "route": "/app/customer-group",
+      "file": "0024_app_customer-group.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/territory",
+      "title": "Territory",
+      "doctype": "Territory",
+      "route": "/app/territory",
+      "file": "0025_app_territory.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/data-import?reference_doctype=Supplier",
+      "title": "Data Import",
+      "doctype": "Data Import",
+      "route": "/app/data-import",
+      "file": "0026_app_data-import.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/opening-invoice-creation-tool",
+      "title": "Opening Invoice Creation Tool",
+      "doctype": "Opening Invoice Creation Tool",
+      "route": "/app/opening-invoice-creation-tool",
+      "file": "0027_app_opening-invoice-creation-tool.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/chart-of-accounts-importer",
+      "title": "Chart of Accounts Importer",
+      "doctype": "Chart Of Accounts Importer",
+      "route": "/app/chart-of-accounts-importer",
+      "file": "0028_app_chart-of-accounts-importer.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/letter-head",
+      "title": "Letter Head",
+      "doctype": "Letter Head",
+      "route": "/app/letter-head",
+      "file": "0029_app_letter-head.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/email-account",
+      "title": "Email Account",
+      "doctype": "Email Account",
+      "route": "/app/email-account",
+      "file": "0030_app_email-account.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/employee/view/report/finance",
+      "title": "finance",
+      "doctype": "Employee",
+      "route": "/app/employee/view/report/finance",
+      "file": "0031_app_employee_view_report_finance.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/Workspaces/Home",
+      "title": "Not Found",
+      "doctype": null,
+      "route": "/Workspaces/Home",
+      "file": "0032_Workspaces_Home.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/settings",
+      "title": "Settings",
+      "doctype": "Settings",
+      "route": "/app/settings",
+      "file": "0033_app_settings.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/accounts-settings#invoice_and_billing_tab",
+      "title": "Accounts Settings",
+      "doctype": "Accounts Settings",
+      "route": "/app/accounts-settings",
+      "file": "0034_app_accounts-settings.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/fiscal-year",
+      "title": "Fiscal Year",
+      "doctype": "Fiscal Year",
+      "route": "/app/fiscal-year",
+      "file": "0035_app_fiscal-year.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/accounting-dimension",
+      "title": "Accounting Dimension",
+      "doctype": "Accounting Dimension",
+      "route": "/app/accounting-dimension",
+      "file": "0036_app_accounting-dimension.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/finance-book",
+      "title": "Finance Book",
+      "doctype": "Finance Book",
+      "route": "/app/finance-book",
+      "file": "0037_app_finance-book.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/accounting-period",
+      "title": "Accounting Period",
+      "doctype": "Accounting Period",
+      "route": "/app/accounting-period",
+      "file": "0038_app_accounting-period.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/payment-term",
+      "title": "Payment Term",
+      "doctype": "Payment Term",
+      "route": "/app/payment-term",
+      "file": "0039_app_payment-term.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/payment-entry",
+      "title": "Payment Entry",
+      "doctype": "Payment Entry",
+      "route": "/app/payment-entry",
+      "file": "0040_app_payment-entry.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/journal-entry",
+      "title": "Journal Entry",
+      "doctype": "Journal Entry",
+      "route": "/app/journal-entry",
+      "file": "0041_app_journal-entry.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/journal-entry-template",
+      "title": "Journal Entry Template",
+      "doctype": "Journal Entry Template",
+      "route": "/app/journal-entry-template",
+      "file": "0042_app_journal-entry-template.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/terms-and-conditions",
+      "title": "Terms and Conditions",
+      "doctype": "Terms And Conditions",
+      "route": "/app/terms-and-conditions",
+      "file": "0043_app_terms-and-conditions.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/mode-of-payment",
+      "title": "Mode of Payment",
+      "doctype": "Mode Of Payment",
+      "route": "/app/mode-of-payment",
+      "file": "0044_app_mode-of-payment.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/sales-taxes-and-charges-template",
+      "title": "Sales Taxes and Charges Template",
+      "doctype": "Sales Taxes And Charges Template",
+      "route": "/app/sales-taxes-and-charges-template",
+      "file": "0045_app_sales-taxes-and-charges-template.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/purchase-taxes-and-charges-template",
+      "title": "Purchase Taxes and Charges Template",
+      "doctype": "Purchase Taxes And Charges Template",
+      "route": "/app/purchase-taxes-and-charges-template",
+      "file": "0046_app_purchase-taxes-and-charges-template.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/item-tax-template",
+      "title": "Item Tax Template",
+      "doctype": "Item Tax Template",
+      "route": "/app/item-tax-template",
+      "file": "0047_app_item-tax-template.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/tax-category",
+      "title": "Tax Category",
+      "doctype": "Tax Category",
+      "route": "/app/tax-category",
+      "file": "0048_app_tax-category.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/tax-rule",
+      "title": "Tax Rule",
+      "doctype": "Tax Rule",
+      "route": "/app/tax-rule",
+      "file": "0049_app_tax-rule.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/tax-withholding-category",
+      "title": "Tax Withholding Category",
+      "doctype": "Tax Withholding Category",
+      "route": "/app/tax-withholding-category",
+      "file": "0050_app_tax-withholding-category.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/cost-center",
+      "title": "Cost Center Tree",
+      "doctype": "Cost Center",
+      "route": "/app/cost-center",
+      "file": "0051_app_cost-center.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/budget",
+      "title": "Company Budget",
+      "doctype": "Budget",
+      "route": "/app/budget",
+      "file": "0052_app_budget.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/cost-center-allocation",
+      "title": "Cost Center Allocation",
+      "doctype": "Cost Center Allocation",
+      "route": "/app/cost-center-allocation",
+      "file": "0053_app_cost-center-allocation.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/query-report/Budget%20Variance%20Report",
+      "title": "Budget Variance Report",
+      "doctype": "Query Report",
+      "route": "/app/query-report/Budget%20Variance%20Report",
+      "file": "0054_app_query-report_Budget_20Variance_20Report.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/monthly-distribution",
+      "title": "Monthly Distribution",
+      "doctype": "Monthly Distribution",
+      "route": "/app/monthly-distribution",
+      "file": "0055_app_monthly-distribution.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/currency?name=%5B%22like%22%2C%22%25usd%25%22%5D",
+      "title": "Currency",
+      "doctype": "Currency",
+      "route": "/app/currency",
+      "file": "0056_app_currency.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/currency-exchange",
+      "title": "Currency Exchange",
+      "doctype": "Currency Exchange",
+      "route": "/app/currency-exchange",
+      "file": "0057_app_currency-exchange.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/exchange-rate-revaluation",
+      "title": "Exchange Rate Revaluation",
+      "doctype": "Exchange Rate Revaluation",
+      "route": "/app/exchange-rate-revaluation",
+      "file": "0058_app_exchange-rate-revaluation.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/bank?name=%5B%22like%22%2C%22%25citi%25%22%5D",
+      "title": "Bank",
+      "doctype": "Bank",
+      "route": "/app/bank",
+      "file": "0059_app_bank.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/bank-account",
+      "title": "Bank Account",
+      "doctype": "Bank Account",
+      "route": "/app/bank-account",
+      "file": "0060_app_bank-account.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/bank-clearance",
+      "title": "Bank Clearance",
+      "doctype": "Bank Clearance",
+      "route": "/app/bank-clearance",
+      "file": "0061_app_bank-clearance.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/bank-reconciliation-tool",
+      "title": "Bank Reconciliation Tool",
+      "doctype": "Bank Reconciliation Tool",
+      "route": "/app/bank-reconciliation-tool",
+      "file": "0062_app_bank-reconciliation-tool.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/query-report/Bank%20Reconciliation%20Statement",
+      "title": "Bank Reconciliation Statement",
+      "doctype": "Query Report",
+      "route": "/app/query-report/Bank%20Reconciliation%20Statement",
+      "file": "0063_app_query-report_Bank_20Reconciliation_20Statement.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/plaid-settings",
+      "title": "Plaid Settings",
+      "doctype": "Plaid Settings",
+      "route": "/app/plaid-settings",
+      "file": "0064_app_plaid-settings.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/period-closing-voucher",
+      "title": "Period Closing Voucher",
+      "doctype": "Period Closing Voucher",
+      "route": "/app/period-closing-voucher",
+      "file": "0065_app_period-closing-voucher.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/subscription-plan",
+      "title": "Subscription Plan",
+      "doctype": "Subscription Plan",
+      "route": "/app/subscription-plan",
+      "file": "0066_app_subscription-plan.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/subscription",
+      "title": "Subscription",
+      "doctype": "Subscription",
+      "route": "/app/subscription",
+      "file": "0067_app_subscription.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/subscription-settings",
+      "title": "Subscription Settings",
+      "doctype": "Subscription Settings",
+      "route": "/app/subscription-settings",
+      "file": "0068_app_subscription-settings.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/shareholder",
+      "title": "Shareholder",
+      "doctype": "Shareholder",
+      "route": "/app/shareholder",
+      "file": "0069_app_shareholder.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/share-transfer",
+      "title": "Share Transfer",
+      "doctype": "Share Transfer",
+      "route": "/app/share-transfer",
+      "file": "0070_app_share-transfer.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/query-report/Share%20Ledger?date=2026-09-05",
+      "title": "Share Ledger",
+      "doctype": "Query Report",
+      "route": "/app/query-report/Share%20Ledger",
+      "file": "0071_app_query-report_Share_20Ledger.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/query-report/Share%20Balance?date=2026-09-05",
+      "title": "Share Balance",
+      "doctype": "Query Report",
+      "route": "/app/query-report/Share%20Balance",
+      "file": "0072_app_query-report_Share_20Balance.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/query-report/Profit%20and%20Loss%20Statement?company=Dabiruddin+Spinning+Mills+Ltd.&filter_based_on=Fiscal+Year&period_start_date=2026-07-01&period_end_date=2027-06-30&from_fiscal_year=2026-2027&to_fiscal_year=2026-2027&periodicity=Yearly&selected_view=Report&accumulated_values=1&include_default_book_entries=1",
+      "title": "Profit and Loss Statement",
+      "doctype": "Query Report",
+      "route": "/app/query-report/Profit%20and%20Loss%20Statement",
+      "file": "0073_app_query-report_Profit_20and_20Loss_20Statement.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/query-report/Balance%20Sheet?company=Dabiruddin+Spinning+Mills+Ltd.&filter_based_on=Fiscal+Year&period_start_date=2026-07-01&period_end_date=2027-06-30&from_fiscal_year=2026-2027&to_fiscal_year=2026-2027&periodicity=Yearly&selected_view=Report&accumulated_values=1&include_default_book_entries=1",
+      "title": "Balance Sheet",
+      "doctype": "Query Report",
+      "route": "/app/query-report/Balance%20Sheet",
+      "file": "0074_app_query-report_Balance_20Sheet.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/query-report/Trial%20Balance?company=Dabiruddin+Spinning+Mills+Ltd.&fiscal_year=2026-2027&from_date=2026-07-01&to_date=2027-06-30&with_period_closing_entry_for_opening=1&with_period_closing_entry_for_current_period=1&include_default_book_entries=1&show_net_values=1&show_group_accounts=1",
+      "title": "Trial Balance",
+      "doctype": "Query Report",
+      "route": "/app/query-report/Trial%20Balance",
+      "file": "0075_app_query-report_Trial_20Balance.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/query-report/Consolidated%20Financial%20Statement?company=Dabiruddin+Spinning+Mills+Ltd.&filter_based_on=Fiscal+Year&period_start_date=2026-07-01&period_end_date=2027-06-30&from_fiscal_year=2026-2027&to_fiscal_year=2026-2027&report=Balance+Sheet&presentation_currency=BDT&include_default_book_entries=1",
+      "title": "Consolidated Financial Statement",
+      "doctype": "Query Report",
+      "route": "/app/query-report/Consolidated%20Financial%20Statement",
+      "file": "0076_app_query-report_Consolidated_20Financial_20Statement.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/query-report/Profitability%20Analysis?company=Dabiruddin+Spinning+Mills+Ltd.&based_on=Cost+Center&fiscal_year=2026-2027&from_date=2026-07-01&to_date=2027-06-30",
+      "title": "Profitability Analysis",
+      "doctype": "Query Report",
+      "route": "/app/query-report/Profitability%20Analysis",
+      "file": "0077_app_query-report_Profitability_20Analysis.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/query-report/Gross%20and%20Net%20Profit%20Report?company=Dabiruddin+Spinning+Mills+Ltd.&filter_based_on=Fiscal+Year&period_start_date=2026-07-01&period_end_date=2027-06-30&from_fiscal_year=2026-2027&to_fiscal_year=2026-2027&periodicity=Yearly",
+      "title": "Gross and Net Profit Report",
+      "doctype": "Query Report",
+      "route": "/app/query-report/Gross%20and%20Net%20Profit%20Report",
+      "file": "0078_app_query-report_Gross_20and_20Net_20Profit_20Report.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/query-report/General%20Ledger%202",
+      "title": "General Ledger 2",
+      "doctype": "Query Report",
+      "route": "/app/query-report/General%20Ledger%202",
+      "file": "0079_app_query-report_General_20Ledger_202.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/purchase-invoice/view/report/Test%20Report",
+      "title": "AlterSys",
+      "doctype": "Purchase Invoice",
+      "route": "/app/purchase-invoice/view/report/Test%20Report",
+      "file": "0080_app_purchase-invoice_view_report_Test_20Report.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/Workspaces/Accounting",
+      "title": "Not Found",
+      "doctype": null,
+      "route": "/Workspaces/Accounting",
+      "file": "0081_Workspaces_Accounting.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/buying-settings#supplier_and_price_defaults_section",
+      "title": "Buying Settings",
+      "doctype": "Buying Settings",
+      "route": "/app/buying-settings",
+      "file": "0082_app_buying-settings.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/Workspaces/Buying",
+      "title": "Not Found",
+      "doctype": null,
+      "route": "/Workspaces/Buying",
+      "file": "0083_Workspaces_Buying.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/Workspaces/Import",
+      "title": "Not Found",
+      "doctype": null,
+      "route": "/Workspaces/Import",
+      "file": "0084_Workspaces_Import.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/blanket-order",
+      "title": "Contract",
+      "doctype": "Blanket Order",
+      "route": "/app/blanket-order",
+      "file": "0085_app_blanket-order.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/price-fixation",
+      "title": "Price Fixation",
+      "doctype": "Price Fixation",
+      "route": "/app/price-fixation",
+      "file": "0086_app_price-fixation.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/material-request",
+      "title": "AlterSys",
+      "doctype": "Material Request",
+      "route": "/app/material-request",
+      "file": "0087_app_material-request.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/purchase-order?name=%5B%22like%22%2C%22%25https%3A%2F%2Fstage2-salma.altersense.net%2Fapp%2Fmanufacturing%25%22%5D",
+      "title": "AlterSys",
+      "doctype": "Purchase Order",
+      "route": "/app/purchase-order",
+      "file": "0088_app_purchase-order.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/lc-application?name=%5B%22in%22%2C%5B%22LCA-DSML-17082026-18639%22%5D%5D",
+      "title": "LC Application",
+      "doctype": "Lc Application",
+      "route": "/app/lc-application",
+      "file": "0089_app_lc-application.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/import-lc?lc_application=LCA-DSML-17082026-18639",
+      "title": "Import LC",
+      "doctype": "Import Lc",
+      "route": "/app/import-lc",
+      "file": "0090_app_import-lc.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/commercial-invoice?lc_no=SWIFT+MT700",
+      "title": "Shipment Document",
+      "doctype": "Commercial Invoice",
+      "route": "/app/commercial-invoice",
+      "file": "0091_app_commercial-invoice.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/material-distribution",
+      "title": "Material Distribution",
+      "doctype": "Material Distribution",
+      "route": "/app/material-distribution",
+      "file": "0092_app_material-distribution.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/purchase-receipt",
+      "title": "MRR",
+      "doctype": "Purchase Receipt",
+      "route": "/app/purchase-receipt",
+      "file": "0093_app_purchase-receipt.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/pos-profile",
+      "title": "POS Profile",
+      "doctype": "Pos Profile",
+      "route": "/app/pos-profile",
+      "file": "0094_app_pos-profile.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/pos-settings",
+      "title": "POS Settings",
+      "doctype": "Pos Settings",
+      "route": "/app/pos-settings",
+      "file": "0095_app_pos-settings.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/pos-opening-entry",
+      "title": "POS Opening Entry",
+      "doctype": "Pos Opening Entry",
+      "route": "/app/pos-opening-entry",
+      "file": "0096_app_pos-opening-entry.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/pos-closing-entry",
+      "title": "POS Closing Entry",
+      "doctype": "Pos Closing Entry",
+      "route": "/app/pos-closing-entry",
+      "file": "0097_app_pos-closing-entry.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/loyalty-program",
+      "title": "Loyalty Program",
+      "doctype": "Loyalty Program",
+      "route": "/app/loyalty-program",
+      "file": "0098_app_loyalty-program.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/loyalty-point-entry",
+      "title": "Loyalty Point Entry",
+      "doctype": "Loyalty Point Entry",
+      "route": "/app/loyalty-point-entry",
+      "file": "0099_app_loyalty-point-entry.json"
+    },
+    {
+      "url": "https://stage2-salma.altersense.net/app/item-price?item_code=Cotton-Benin-0001",
+      "title": "Item Price",
+      "doctype": "Item Price",
+      "route": "/app/item-price",
+      "file": "0100_app_item-price.json"
+    }
+  ],
+  "max_pages": 100
+}

@@ -1,0 +1,1579 @@
+{
+  "url": "https://stage2-salma.altersense.net/app/selling",
+  "title": "Merchandising",
+  "text": "ERP\nHome\nAccounting\nLocal Procurement\nImport\nMerchandising\nInventory\nAssets\nProduction\nQuality\nPlanning\nSupport\nCRM\nSettings\n Collapse\nBegin typing for results.\nNo new notifications\nHelp \nA\nMerchandising\nSales Order Trends\nLoading...\nQuick Access\nProduct\n19466 Available\nDelivery Order\n61 To Deliver\nSales Analytics\nDashboard\nReports & Masters\nImport\nCRM Contract \nPrice Fixation \nRequisition \nPurchase Order \nLC Application \nImport LC \nShipment Document \nMaterial Distribution \nMRR \nPoint of Sale\nPoint-of-Sale Profile \nPOS Settings \nPOS Opening Entry \nPOS Closing Entry \nLoyalty Program \nLoyalty Point Entry \nItems and Pricing\nProduct \nItem Price \nPrice List \nProduct Group \nProduct Bundle \nPromotional Scheme \nPricing Rule \nShipping Rule \nCoupon Code \nSettings\nSelling Settings \nTerms and Conditions Template \nSales Taxes and Charges Template \nUTM Source \nCustomer Group \nContact \nAddress \nTerritory \nCampaign \nKey Reports\nSales Analytics \nSales Order Analysis \nSales Funnel \nSales Order Trends \nQuotation Trends \nCustomer Acquisition and Loyalty \nInactive Customers \nSales Person-wise Transaction Summary \nItem-wise Sales History \nOther Reports\nCustomer Addresses And Contacts \nAvailable Stock for Packing Items \nPending SO Items For Purchase Request \nDelivery Note Trends \nSales Invoice Trends \nCustomer Credit Balance \nCustomers Without Any Sales Transactions \nSales Partners Commission \nTerritory Target Variance Based On Item Group \nSales Person Target Variance Based On Item Group \nSales Partner Target Variance Based On Item Group \n New\n Edit",
+  "elements": [
+    {
+      "tag": "a",
+      "text": "ERP",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "app-switcher-dropdown"
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset drop-icon show-in-edit-mode"
+    },
+    {
+      "tag": "a",
+      "text": "Home Home",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Home",
+      "role": "",
+      "href": "/app/home",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Accounting Accounting",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Accounting",
+      "role": "",
+      "href": "/app/accounting",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset drop-icon show-in-edit-mode"
+    },
+    {
+      "tag": "a",
+      "text": "Local Procurement Local Procurement",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Local Procurement",
+      "role": "",
+      "href": "/app/buying",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Import Import",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Import",
+      "role": "",
+      "href": "/app/import",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Merchandising Merchandising",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Merchandising",
+      "role": "",
+      "href": "/app/selling",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Inventory Inventory",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Inventory",
+      "role": "",
+      "href": "/app/stock",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Assets Assets",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Assets",
+      "role": "",
+      "href": "/app/assets",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Production Production",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Production",
+      "role": "",
+      "href": "/app/manufacturing",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Quality Quality",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Quality",
+      "role": "",
+      "href": "/app/quality",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Planning Planning",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Planning",
+      "role": "",
+      "href": "/app/projects",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Support Support",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Support",
+      "role": "",
+      "href": "/app/support",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "CRM CRM",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "CRM",
+      "role": "",
+      "href": "/app/crm",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Settings Settings",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Settings",
+      "role": "",
+      "href": "/app/settings",
+      "value": "",
+      "class": "item-anchor"
+    },
+    {
+      "tag": "a",
+      "text": "Collapse",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "collapse-sidebar-link"
+    },
+    {
+      "tag": "input",
+      "text": "Search or type a command (Ctrl + K) navbar-search",
+      "id": "navbar-search",
+      "name": "",
+      "type": "text",
+      "placeholder": "Search or type a command (Ctrl + K)",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "href": "",
+      "value": "",
+      "class": "form-control"
+    },
+    {
+      "tag": "button",
+      "text": "No new notifications",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link notifications-icon text-muted"
+    },
+    {
+      "tag": "button",
+      "text": "Help Help Dropdown",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Help Dropdown",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link"
+    },
+    {
+      "tag": "button",
+      "text": "A User Menu",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link"
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn btn-xs btn-secondary chart-menu"
+    },
+    {
+      "tag": "div",
+      "text": "Product 19466 Available Product",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Product",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "div",
+      "text": "Delivery Order 61 To Deliver Delivery Order",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Delivery Order",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "div",
+      "text": "Sales Analytics Sales Analytics",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Sales Analytics",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "div",
+      "text": "Dashboard Dashboard",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Dashboard",
+      "title": "",
+      "role": "link",
+      "href": "",
+      "value": "",
+      "class": "widget shortcut-widget-box"
+    },
+    {
+      "tag": "a",
+      "text": "CRM Contract CRM Contract",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "CRM Contract",
+      "role": "",
+      "href": "/app/blanket-order",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Price Fixation Price Fixation",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Price Fixation",
+      "role": "",
+      "href": "/app/price-fixation",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Requisition Requisition",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Requisition",
+      "role": "",
+      "href": "/app/material-request",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Purchase Order Purchase Order",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Purchase Order",
+      "role": "",
+      "href": "/app/purchase-order",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "LC Application LC Application",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "LC Application",
+      "role": "",
+      "href": "/app/lc-application",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Import LC Import LC",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Import LC",
+      "role": "",
+      "href": "/app/import-lc",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Shipment Document Shipment Document",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Shipment Document",
+      "role": "",
+      "href": "/app/commercial-invoice",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Material Distribution Material Distribution",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Material Distribution",
+      "role": "",
+      "href": "/app/material-distribution",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "MRR MRR",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "MRR",
+      "role": "",
+      "href": "/app/purchase-receipt",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Point-of-Sale Profile Point-of-Sale Profile",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Point-of-Sale Profile",
+      "role": "",
+      "href": "/app/pos-profile",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "POS Settings POS Settings",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "POS Settings",
+      "role": "",
+      "href": "/app/pos-settings",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "POS Opening Entry POS Opening Entry",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "POS Opening Entry",
+      "role": "",
+      "href": "/app/pos-opening-entry",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "POS Closing Entry POS Closing Entry",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "POS Closing Entry",
+      "role": "",
+      "href": "/app/pos-closing-entry",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Loyalty Program Loyalty Program",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Loyalty Program",
+      "role": "",
+      "href": "/app/loyalty-program",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Loyalty Point Entry Loyalty Point Entry",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Loyalty Point Entry",
+      "role": "",
+      "href": "/app/loyalty-point-entry",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Product Product",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Product",
+      "role": "",
+      "href": "/app/item",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Item Price Item Price",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Item Price",
+      "role": "",
+      "href": "/app/item-price",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Price List Price List",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Price List",
+      "role": "",
+      "href": "/app/price-list",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Product Group Product Group",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Product Group",
+      "role": "",
+      "href": "/app/item-group",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Product Bundle Product Bundle",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Product Bundle",
+      "role": "",
+      "href": "/app/product-bundle",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Promotional Scheme Promotional Scheme",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Promotional Scheme",
+      "role": "",
+      "href": "/app/promotional-scheme",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Pricing Rule Pricing Rule",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Pricing Rule",
+      "role": "",
+      "href": "/app/pricing-rule",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Shipping Rule Shipping Rule",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Shipping Rule",
+      "role": "",
+      "href": "/app/shipping-rule",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Coupon Code Coupon Code",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Coupon Code",
+      "role": "",
+      "href": "/app/coupon-code",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Selling Settings Selling Settings",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Selling Settings",
+      "role": "",
+      "href": "/app/selling-settings",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Terms and Conditions Template Terms and Conditions Template",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Terms and Conditions Template",
+      "role": "",
+      "href": "/app/terms-and-conditions",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Sales Taxes and Charges Template Sales Taxes and Charges Template",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Sales Taxes and Charges Template",
+      "role": "",
+      "href": "/app/sales-taxes-and-charges-template",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "UTM Source UTM Source",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "UTM Source",
+      "role": "",
+      "href": "/app/utm-source",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Customer Group Customer Group",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Customer Group",
+      "role": "",
+      "href": "/app/customer-group",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Contact Contact",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Contact",
+      "role": "",
+      "href": "/app/contact",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Address Address",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Address",
+      "role": "",
+      "href": "/app/address",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Territory Territory",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Territory",
+      "role": "",
+      "href": "/app/territory",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Campaign Campaign",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Campaign",
+      "role": "",
+      "href": "/app/campaign",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Sales Analytics Sales Analytics",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Sales Analytics",
+      "role": "",
+      "href": "/app/query-report/Sales Analytics",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Sales Order Analysis Sales Order Analysis",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Sales Order Analysis",
+      "role": "",
+      "href": "/app/query-report/Sales Order Analysis",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Sales Funnel Sales Funnel",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Sales Funnel",
+      "role": "",
+      "href": "/app/sales-funnel",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\tonboard-spotlight "
+    },
+    {
+      "tag": "a",
+      "text": "Sales Order Trends Sales Order Trends",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Sales Order Trends",
+      "role": "",
+      "href": "/app/query-report/Sales Order Trends",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Quotation Trends Quotation Trends",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Quotation Trends",
+      "role": "",
+      "href": "/app/query-report/Quotation Trends",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Customer Acquisition and Loyalty Customer Acquisition and Loyalty",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Customer Acquisition and Loyalty",
+      "role": "",
+      "href": "/app/query-report/Customer Acquisition and Loyalty",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Inactive Customers Inactive Customers",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Inactive Customers",
+      "role": "",
+      "href": "/app/query-report/Inactive Customers",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Sales Person-wise Transaction Summary Sales Person-wise Transaction Summary",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Sales Person-wise Transaction Summary",
+      "role": "",
+      "href": "/app/query-report/Sales Person-wise Transaction Summary",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Item-wise Sales History Item-wise Sales History",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Item-wise Sales History",
+      "role": "",
+      "href": "/app/query-report/Item-wise Sales History",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Customer Addresses And Contacts Customer Addresses And Contacts",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Customer Addresses And Contacts",
+      "role": "",
+      "href": "/app/query-report/Address And Contacts",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Available Stock for Packing Items Available Stock for Packing Items",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Available Stock for Packing Items",
+      "role": "",
+      "href": "/app/query-report/Available Stock for Packing Items",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Pending SO Items For Purchase Request Pending SO Items For Purchase Request",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Pending SO Items For Purchase Request",
+      "role": "",
+      "href": "/app/query-report/Pending SO Items For Purchase Request",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Delivery Note Trends Delivery Note Trends",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Delivery Note Trends",
+      "role": "",
+      "href": "/app/query-report/Delivery Note Trends",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Sales Invoice Trends Sales Invoice Trends",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Sales Invoice Trends",
+      "role": "",
+      "href": "/app/query-report/Sales Invoice Trends",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Customer Credit Balance Customer Credit Balance",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Customer Credit Balance",
+      "role": "",
+      "href": "/app/query-report/Customer Credit Balance",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Customers Without Any Sales Transactions Customers Without Any Sales Transactions",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Customers Without Any Sales Transactions",
+      "role": "",
+      "href": "/app/query-report/Customers Without Any Sales Transactions",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Sales Partners Commission Sales Partners Commission",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Sales Partners Commission",
+      "role": "",
+      "href": "/app/query-report/Sales Partners Commission",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Territory Target Variance Based On Item Group Territory Target Variance Based On Item Group",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Territory Target Variance Based On Item Group",
+      "role": "",
+      "href": "/app/query-report/Territory Target Variance Based On Item Group",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Sales Person Target Variance Based On Item Group Sales Person Target Variance Based On Item Group",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Sales Person Target Variance Based On Item Group",
+      "role": "",
+      "href": "/app/query-report/Sales Person Target Variance Based On Item Group",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "a",
+      "text": "Sales Partner Target Variance Based On Item Group Sales Partner Target Variance Based On Item Group",
+      "id": "",
+      "name": "",
+      "type": "Link",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Sales Partner Target Variance Based On Item Group",
+      "role": "",
+      "href": "/app/query-report/Sales Partner Target Variance based on Item Group",
+      "value": "",
+      "class": "link-item ellipsis\n\t\t\t\t\t "
+    },
+    {
+      "tag": "button",
+      "text": "New",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn btn-default ellipsis btn-new-workspace"
+    },
+    {
+      "tag": "button",
+      "text": "Edit",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn btn-default btn-sm mr-2 btn-edit-workspace"
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "absolute_url": null
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "absolute_url": "https://stage2-salma.altersense.net/app/home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "absolute_url": "https://stage2-salma.altersense.net/app/accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "absolute_url": "https://stage2-salma.altersense.net/app/buying"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "absolute_url": "https://stage2-salma.altersense.net/app/import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "absolute_url": "https://stage2-salma.altersense.net/app/selling"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "absolute_url": "https://stage2-salma.altersense.net/app/stock"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "absolute_url": "https://stage2-salma.altersense.net/app/assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "absolute_url": "https://stage2-salma.altersense.net/app/manufacturing"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "absolute_url": "https://stage2-salma.altersense.net/app/quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "absolute_url": "https://stage2-salma.altersense.net/app/projects"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "absolute_url": "https://stage2-salma.altersense.net/app/support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "absolute_url": "https://stage2-salma.altersense.net/app/crm"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "absolute_url": "https://stage2-salma.altersense.net/app/settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "absolute_url": null
+    },
+    {
+      "text": "CRM Contract",
+      "href": "/app/blanket-order",
+      "absolute_url": "https://stage2-salma.altersense.net/app/blanket-order"
+    },
+    {
+      "text": "Price Fixation",
+      "href": "/app/price-fixation",
+      "absolute_url": "https://stage2-salma.altersense.net/app/price-fixation"
+    },
+    {
+      "text": "Requisition",
+      "href": "/app/material-request",
+      "absolute_url": "https://stage2-salma.altersense.net/app/material-request"
+    },
+    {
+      "text": "Purchase Order",
+      "href": "/app/purchase-order",
+      "absolute_url": "https://stage2-salma.altersense.net/app/purchase-order"
+    },
+    {
+      "text": "LC Application",
+      "href": "/app/lc-application",
+      "absolute_url": "https://stage2-salma.altersense.net/app/lc-application"
+    },
+    {
+      "text": "Import LC",
+      "href": "/app/import-lc",
+      "absolute_url": "https://stage2-salma.altersense.net/app/import-lc"
+    },
+    {
+      "text": "Shipment Document",
+      "href": "/app/commercial-invoice",
+      "absolute_url": "https://stage2-salma.altersense.net/app/commercial-invoice"
+    },
+    {
+      "text": "Material Distribution",
+      "href": "/app/material-distribution",
+      "absolute_url": "https://stage2-salma.altersense.net/app/material-distribution"
+    },
+    {
+      "text": "MRR",
+      "href": "/app/purchase-receipt",
+      "absolute_url": "https://stage2-salma.altersense.net/app/purchase-receipt"
+    },
+    {
+      "text": "Point-of-Sale Profile",
+      "href": "/app/pos-profile",
+      "absolute_url": "https://stage2-salma.altersense.net/app/pos-profile"
+    },
+    {
+      "text": "POS Settings",
+      "href": "/app/pos-settings",
+      "absolute_url": "https://stage2-salma.altersense.net/app/pos-settings"
+    },
+    {
+      "text": "POS Opening Entry",
+      "href": "/app/pos-opening-entry",
+      "absolute_url": "https://stage2-salma.altersense.net/app/pos-opening-entry"
+    },
+    {
+      "text": "POS Closing Entry",
+      "href": "/app/pos-closing-entry",
+      "absolute_url": "https://stage2-salma.altersense.net/app/pos-closing-entry"
+    },
+    {
+      "text": "Loyalty Program",
+      "href": "/app/loyalty-program",
+      "absolute_url": "https://stage2-salma.altersense.net/app/loyalty-program"
+    },
+    {
+      "text": "Loyalty Point Entry",
+      "href": "/app/loyalty-point-entry",
+      "absolute_url": "https://stage2-salma.altersense.net/app/loyalty-point-entry"
+    },
+    {
+      "text": "Product",
+      "href": "/app/item",
+      "absolute_url": "https://stage2-salma.altersense.net/app/item"
+    },
+    {
+      "text": "Item Price",
+      "href": "/app/item-price",
+      "absolute_url": "https://stage2-salma.altersense.net/app/item-price"
+    },
+    {
+      "text": "Price List",
+      "href": "/app/price-list",
+      "absolute_url": "https://stage2-salma.altersense.net/app/price-list"
+    },
+    {
+      "text": "Product Group",
+      "href": "/app/item-group",
+      "absolute_url": "https://stage2-salma.altersense.net/app/item-group"
+    },
+    {
+      "text": "Product Bundle",
+      "href": "/app/product-bundle",
+      "absolute_url": "https://stage2-salma.altersense.net/app/product-bundle"
+    },
+    {
+      "text": "Promotional Scheme",
+      "href": "/app/promotional-scheme",
+      "absolute_url": "https://stage2-salma.altersense.net/app/promotional-scheme"
+    },
+    {
+      "text": "Pricing Rule",
+      "href": "/app/pricing-rule",
+      "absolute_url": "https://stage2-salma.altersense.net/app/pricing-rule"
+    },
+    {
+      "text": "Shipping Rule",
+      "href": "/app/shipping-rule",
+      "absolute_url": "https://stage2-salma.altersense.net/app/shipping-rule"
+    },
+    {
+      "text": "Coupon Code",
+      "href": "/app/coupon-code",
+      "absolute_url": "https://stage2-salma.altersense.net/app/coupon-code"
+    },
+    {
+      "text": "Selling Settings",
+      "href": "/app/selling-settings",
+      "absolute_url": "https://stage2-salma.altersense.net/app/selling-settings"
+    },
+    {
+      "text": "Terms and Conditions Template",
+      "href": "/app/terms-and-conditions",
+      "absolute_url": "https://stage2-salma.altersense.net/app/terms-and-conditions"
+    },
+    {
+      "text": "Sales Taxes and Charges Template",
+      "href": "/app/sales-taxes-and-charges-template",
+      "absolute_url": "https://stage2-salma.altersense.net/app/sales-taxes-and-charges-template"
+    },
+    {
+      "text": "UTM Source",
+      "href": "/app/utm-source",
+      "absolute_url": "https://stage2-salma.altersense.net/app/utm-source"
+    },
+    {
+      "text": "Customer Group",
+      "href": "/app/customer-group",
+      "absolute_url": "https://stage2-salma.altersense.net/app/customer-group"
+    },
+    {
+      "text": "Contact",
+      "href": "/app/contact",
+      "absolute_url": "https://stage2-salma.altersense.net/app/contact"
+    },
+    {
+      "text": "Address",
+      "href": "/app/address",
+      "absolute_url": "https://stage2-salma.altersense.net/app/address"
+    },
+    {
+      "text": "Territory",
+      "href": "/app/territory",
+      "absolute_url": "https://stage2-salma.altersense.net/app/territory"
+    },
+    {
+      "text": "Campaign",
+      "href": "/app/campaign",
+      "absolute_url": "https://stage2-salma.altersense.net/app/campaign"
+    },
+    {
+      "text": "Sales Analytics",
+      "href": "/app/query-report/Sales Analytics",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Sales Analytics"
+    },
+    {
+      "text": "Sales Order Analysis",
+      "href": "/app/query-report/Sales Order Analysis",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Sales Order Analysis"
+    },
+    {
+      "text": "Sales Funnel",
+      "href": "/app/sales-funnel",
+      "absolute_url": "https://stage2-salma.altersense.net/app/sales-funnel"
+    },
+    {
+      "text": "Sales Order Trends",
+      "href": "/app/query-report/Sales Order Trends",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Sales Order Trends"
+    },
+    {
+      "text": "Quotation Trends",
+      "href": "/app/query-report/Quotation Trends",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Quotation Trends"
+    },
+    {
+      "text": "Customer Acquisition and Loyalty",
+      "href": "/app/query-report/Customer Acquisition and Loyalty",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Customer Acquisition and Loyalty"
+    },
+    {
+      "text": "Inactive Customers",
+      "href": "/app/query-report/Inactive Customers",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Inactive Customers"
+    },
+    {
+      "text": "Sales Person-wise Transaction Summary",
+      "href": "/app/query-report/Sales Person-wise Transaction Summary",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Sales Person-wise Transaction Summary"
+    },
+    {
+      "text": "Item-wise Sales History",
+      "href": "/app/query-report/Item-wise Sales History",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Item-wise Sales History"
+    },
+    {
+      "text": "Customer Addresses And Contacts",
+      "href": "/app/query-report/Address And Contacts",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Address And Contacts"
+    },
+    {
+      "text": "Available Stock for Packing Items",
+      "href": "/app/query-report/Available Stock for Packing Items",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Available Stock for Packing Items"
+    },
+    {
+      "text": "Pending SO Items For Purchase Request",
+      "href": "/app/query-report/Pending SO Items For Purchase Request",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Pending SO Items For Purchase Request"
+    },
+    {
+      "text": "Delivery Note Trends",
+      "href": "/app/query-report/Delivery Note Trends",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Delivery Note Trends"
+    },
+    {
+      "text": "Sales Invoice Trends",
+      "href": "/app/query-report/Sales Invoice Trends",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Sales Invoice Trends"
+    },
+    {
+      "text": "Customer Credit Balance",
+      "href": "/app/query-report/Customer Credit Balance",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Customer Credit Balance"
+    },
+    {
+      "text": "Customers Without Any Sales Transactions",
+      "href": "/app/query-report/Customers Without Any Sales Transactions",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Customers Without Any Sales Transactions"
+    },
+    {
+      "text": "Sales Partners Commission",
+      "href": "/app/query-report/Sales Partners Commission",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Sales Partners Commission"
+    },
+    {
+      "text": "Territory Target Variance Based On Item Group",
+      "href": "/app/query-report/Territory Target Variance Based On Item Group",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Territory Target Variance Based On Item Group"
+    },
+    {
+      "text": "Sales Person Target Variance Based On Item Group",
+      "href": "/app/query-report/Sales Person Target Variance Based On Item Group",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Sales Person Target Variance Based On Item Group"
+    },
+    {
+      "text": "Sales Partner Target Variance Based On Item Group",
+      "href": "/app/query-report/Sales Partner Target Variance based on Item Group",
+      "absolute_url": "https://stage2-salma.altersense.net/app/query-report/Sales Partner Target Variance based on Item Group"
+    }
+  ],
+  "buttons": [
+    {
+      "tag": "button",
+      "text": "No new notifications",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link notifications-icon text-muted",
+      "blocked_for_discovery": true
+    },
+    {
+      "tag": "button",
+      "text": "Help Help Dropdown",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Help Dropdown",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link",
+      "blocked_for_discovery": false
+    },
+    {
+      "tag": "button",
+      "text": "A User Menu",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn-reset nav-link",
+      "blocked_for_discovery": false
+    },
+    {
+      "tag": "button",
+      "text": "New",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn btn-default ellipsis btn-new-workspace",
+      "blocked_for_discovery": true
+    },
+    {
+      "tag": "button",
+      "text": "Edit",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "href": "",
+      "value": "",
+      "class": "btn btn-default btn-sm mr-2 btn-edit-workspace",
+      "blocked_for_discovery": false
+    }
+  ],
+  "fields": [
+    {
+      "tag": "input",
+      "text": "Search or type a command (Ctrl + K) navbar-search",
+      "id": "navbar-search",
+      "name": "",
+      "type": "text",
+      "placeholder": "Search or type a command (Ctrl + K)",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "href": "",
+      "value": "",
+      "class": "form-control",
+      "required": false
+    }
+  ],
+  "doctype": "Selling",
+  "route": "/app/selling"
+}

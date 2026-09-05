@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-09-05T15:39:38.452450+00:00",
+  "doctypes": [
+    "Home"
+  ],
+  "modules": [],
+  "paths": {
+    "doctypes": "doctypes/",
+    "summary": "knowledge_summary.json"
+  }
+}
