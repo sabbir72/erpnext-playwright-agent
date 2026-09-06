@@ -1,1460 +1,3 @@
-# import json
-# import os
-# import re
-# import time
-# from pathlib import Path
-# from urllib.parse import urljoin, urlparse
-
-# from dotenv import load_dotenv
-# from playwright.sync_api import sync_playwright
-
-
-# # ============================================================
-# # CONFIG
-# # ============================================================
-
-# BASE_DIR = Path(__file__).resolve().parent
-
-# load_dotenv(BASE_DIR / ".env")
-
-# ERP_URL = os.getenv(
-#     "ERPNEXT_URL",
-#     "https://stage2-salma.altersense.net",
-# ).rstrip("/")
-
-# USERNAME = os.getenv("ERPNEXT_USER", "")
-# PASSWORD = os.getenv("ERPNEXT_PASSWORD", "")
-
-# HEADLESS = (
-#     os.getenv("HEADLESS", "false").lower() == "true"
-# )
-
-# # Maximum number of pages to discover.
-# # Increase later if required.
-# MAX_PAGES = int(
-#     os.getenv("DISCOVERY_MAX_PAGES", "100")
-# )
-
-# PAGE_TIMEOUT = int(
-#     os.getenv("DISCOVERY_TIMEOUT", "30000")
-# )
-
-# WAIT_AFTER_NAVIGATION = int(
-#     os.getenv("DISCOVERY_WAIT_MS", "1000")
-# )
-
-# DISCOVERY_DIR = (
-#     BASE_DIR / "data" / "discovery"
-# )
-
-# SCREENSHOT_DIR = (
-#     BASE_DIR / "data" / "screenshots"
-# )
-
-# DISCOVERY_DIR.mkdir(
-#     parents=True,
-#     exist_ok=True
-# )
-
-# SCREENSHOT_DIR.mkdir(
-#     parents=True,
-#     exist_ok=True
-# )
-
-
-# # ============================================================
-# # SAFETY
-# # ============================================================
-
-# # These actions are NEVER executed by discovery.
-# BLOCKED_ACTION_WORDS = {
-#     "new",
-#     "save",
-#     "submit",
-#     "delete",
-#     "cancel",
-#     "remove",
-#     "discard",
-#     "amend",
-#     "update",
-#     "insert",
-#     "create",
-#     "add",
-# }
-
-
-# # ============================================================
-# # LOGGING
-# # ============================================================
-
-# def log(message):
-#     print(
-#         f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] "
-#         f"{message}",
-#         flush=True,
-#     )
-
-
-# # ============================================================
-# # URL HELPERS
-# # ============================================================
-
-# def normalize_url(url):
-#     """
-#     Convert relative ERPNext URLs to absolute URLs.
-#     """
-
-#     if not url:
-#         return None
-
-#     url = url.strip()
-
-#     if not url:
-#         return None
-
-#     absolute = urljoin(
-#         ERP_URL + "/",
-#         url,
-#     )
-
-#     parsed = urlparse(absolute)
-
-#     # Only crawl our ERP domain.
-#     base = urlparse(ERP_URL)
-
-#     if parsed.netloc != base.netloc:
-#         return None
-
-#     # Remove fragments.
-#     absolute = absolute.split("#")[0]
-
-#     return absolute.rstrip("/")
-
-
-# def is_safe_discovery_url(url):
-#     """
-#     Discovery only follows application navigation URLs.
-#     """
-
-#     url = normalize_url(url)
-
-#     if not url:
-#         return False
-
-#     parsed = urlparse(url)
-
-#     path = parsed.path.lower()
-
-#     # Never crawl API endpoints.
-#     if "/api/" in path:
-#         return False
-
-#     # Never crawl assets.
-#     blocked_extensions = (
-#         ".js",
-#         ".css",
-#         ".png",
-#         ".jpg",
-#         ".jpeg",
-#         ".gif",
-#         ".svg",
-#         ".woff",
-#         ".woff2",
-#         ".ttf",
-#         ".ico",
-#     )
-
-#     if path.endswith(blocked_extensions):
-#         return False
-
-#     return True
-
-
-# # ============================================================
-# # SAFE FILE NAME
-# # ============================================================
-
-# def safe_filename(value):
-
-#     value = str(value or "").strip()
-
-#     value = re.sub(
-#         r"[^A-Za-z0-9_-]+",
-#         "_",
-#         value,
-#     )
-
-#     value = value.strip("_")
-
-#     return value[:150] or "page"
-
-
-# # ============================================================
-# # SAVE JSON
-# # ============================================================
-
-# def save_json(path, data):
-
-#     path.parent.mkdir(
-#         parents=True,
-#         exist_ok=True,
-#     )
-
-#     path.write_text(
-#         json.dumps(
-#             data,
-#             indent=2,
-#             ensure_ascii=False,
-#         ),
-#         encoding="utf-8",
-#     )
-
-#     log(
-#         f"Discovery saved: {path}"
-#     )
-
-
-# # ============================================================
-# # SAFE ELEMENT TEXT
-# # ============================================================
-
-# def element_text(element):
-
-#     values = []
-
-#     try:
-#         values.append(
-#             element.inner_text()
-#         )
-#     except Exception:
-#         pass
-
-#     for attr in (
-#         "aria-label",
-#         "title",
-#         "placeholder",
-#         "value",
-#         "name",
-#         "id",
-#     ):
-
-#         try:
-
-#             value = element.get_attribute(
-#                 attr
-#             )
-
-#             if value:
-#                 values.append(value)
-
-#         except Exception:
-#             pass
-
-#     text = " ".join(
-#         str(x).strip()
-#         for x in values
-#         if x
-#     )
-
-#     return re.sub(
-#         r"\s+",
-#         " ",
-#         text,
-#     ).strip()
-
-
-# # ============================================================
-# # ELEMENT DESCRIPTION
-# # ============================================================
-
-# def describe_element(element):
-
-#     try:
-
-#         tag = element.evaluate(
-#             "(el) => el.tagName.toLowerCase()"
-#         )
-
-#     except Exception:
-
-#         tag = ""
-
-#     data = {
-#         "tag": tag,
-#         "text": "",
-#         "id": "",
-#         "name": "",
-#         "type": "",
-#         "placeholder": "",
-#         "aria_label": "",
-#         "title": "",
-#         "role": "",
-#         "href": "",
-#         "value": "",
-#         "class": "",
-#     }
-
-#     attributes = {
-#         "id": "id",
-#         "name": "name",
-#         "type": "type",
-#         "placeholder": "placeholder",
-#         "aria_label": "aria-label",
-#         "title": "title",
-#         "role": "role",
-#         "href": "href",
-#         "value": "value",
-#         "class": "class",
-#     }
-
-#     for key, attr in attributes.items():
-
-#         try:
-
-#             data[key] = (
-#                 element.get_attribute(attr)
-#                 or ""
-#             )
-
-#         except Exception:
-#             pass
-
-#     data["text"] = element_text(
-#         element
-#     )[:300]
-
-#     return data
-
-
-# # ============================================================
-# # VISIBLE ELEMENT DISCOVERY
-# # ============================================================
-
-# def discover_elements(page):
-
-#     elements = []
-
-#     selectors = """
-#         button,
-#         input,
-#         textarea,
-#         select,
-#         a,
-#         [role="button"],
-#         [role="option"],
-#         [role="tab"],
-#         [role="menuitem"],
-#         [role="link"],
-#         [contenteditable="true"]
-#     """
-
-#     try:
-
-#         locator = page.locator(
-#             selectors
-#         )
-
-#         count = min(
-#             locator.count(),
-#             500,
-#         )
-
-#     except Exception:
-
-#         return elements
-
-#     for i in range(count):
-
-#         element = locator.nth(i)
-
-#         try:
-
-#             if not element.is_visible():
-#                 continue
-
-#             elements.append(
-#                 describe_element(
-#                     element
-#                 )
-#             )
-
-#         except Exception:
-#             continue
-
-#     return elements
-
-
-# # ============================================================
-# # LINKS
-# # ============================================================
-
-# def discover_links(page):
-
-#     result = []
-
-#     try:
-
-#         links = page.locator("a")
-
-#         count = min(
-#             links.count(),
-#             500,
-#         )
-
-#     except Exception:
-
-#         return result
-
-#     seen = set()
-
-#     for i in range(count):
-
-#         link = links.nth(i)
-
-#         try:
-
-#             if not link.is_visible():
-#                 continue
-
-#             text = (
-#                 link.inner_text()
-#                 or ""
-#             ).strip()
-
-#             href = (
-#                 link.get_attribute("href")
-#                 or ""
-#             ).strip()
-
-#             absolute = normalize_url(
-#                 href
-#             )
-
-#             key = (
-#                 text,
-#                 absolute,
-#             )
-
-#             if key in seen:
-#                 continue
-
-#             seen.add(key)
-
-#             result.append(
-#                 {
-#                     "text": text[:300],
-#                     "href": href[:500],
-#                     "absolute_url": absolute,
-#                 }
-#             )
-
-#         except Exception:
-#             continue
-
-#     return result
-
-
-# # ============================================================
-# # BUTTONS / ACTIONS
-# # ============================================================
-
-# def discover_buttons(page):
-
-#     result = []
-
-#     try:
-
-#         buttons = page.locator(
-#             "button, [role='button']"
-#         )
-
-#         count = min(
-#             buttons.count(),
-#             300,
-#         )
-
-#     except Exception:
-
-#         return result
-
-#     seen = set()
-
-#     for i in range(count):
-
-#         button = buttons.nth(i)
-
-#         try:
-
-#             if not button.is_visible():
-#                 continue
-
-#             data = describe_element(
-#                 button
-#             )
-
-#             text = (
-#                 data["text"]
-#                 or ""
-#             ).strip()
-
-#             if not text:
-#                 continue
-
-#             key = text.lower()
-
-#             if key in seen:
-#                 continue
-
-#             seen.add(key)
-
-#             # Mark dangerous actions but DON'T click.
-#             normalized = key.lower()
-
-#             blocked = any(
-#                 word == normalized
-#                 or word in normalized
-#                 for word in BLOCKED_ACTION_WORDS
-#             )
-
-#             data["blocked_for_discovery"] = (
-#                 blocked
-#             )
-
-#             result.append(data)
-
-#         except Exception:
-#             continue
-
-#     return result
-
-
-# # ============================================================
-# # FORM FIELDS
-# # ============================================================
-
-# def discover_fields(page):
-
-#     fields = []
-
-#     selectors = """
-#         input,
-#         textarea,
-#         select,
-#         [contenteditable="true"]
-#     """
-
-#     try:
-
-#         locator = page.locator(
-#             selectors
-#         )
-
-#         count = min(
-#             locator.count(),
-#             500,
-#         )
-
-#     except Exception:
-
-#         return fields
-
-#     for i in range(count):
-
-#         field = locator.nth(i)
-
-#         try:
-
-#             if not field.is_visible():
-#                 continue
-
-#             data = describe_element(
-#                 field
-#             )
-
-#             data["required"] = False
-
-#             try:
-
-#                 data["required"] = (
-#                     field.get_attribute(
-#                         "required"
-#                     )
-#                     is not None
-#                 )
-
-#             except Exception:
-#                 pass
-
-#             fields.append(data)
-
-#         except Exception:
-#             continue
-
-#     return fields
-
-
-# # ============================================================
-# # PAGE TEXT
-# # ============================================================
-
-# def discover_text(page):
-
-#     try:
-
-#         return (
-#             page.locator("body")
-#             .inner_text(
-#                 timeout=5000
-#             )
-#             [:30000]
-#         )
-
-#     except Exception:
-
-#         return ""
-
-
-# # ============================================================
-# # PAGE METADATA
-# # ============================================================
-
-# def discover_page(page):
-
-#     data = {
-#         "url": page.url,
-#         "title": "",
-#         "text": "",
-#         "elements": [],
-#         "links": [],
-#         "buttons": [],
-#         "fields": [],
-#         "doctype": None,
-#         "route": None,
-#     }
-
-#     try:
-
-#         data["title"] = page.title()
-
-#     except Exception:
-#         pass
-
-#     data["text"] = discover_text(
-#         page
-#     )
-
-#     data["elements"] = (
-#         discover_elements(page)
-#     )
-
-#     data["links"] = (
-#         discover_links(page)
-#     )
-
-#     data["buttons"] = (
-#         discover_buttons(page)
-#     )
-
-#     data["fields"] = (
-#         discover_fields(page)
-#     )
-
-#     data["route"] = urlparse(
-#         page.url
-#     ).path
-
-#     # --------------------------------------------------------
-#     # Try to infer DocType from route
-#     # --------------------------------------------------------
-
-#     path = data["route"] or ""
-
-#     match = re.search(
-#         r"/app/([^/?#]+)",
-#         path,
-#     )
-
-#     if match:
-
-#         route_name = match.group(1)
-
-#         data["doctype"] = (
-#             route_name
-#             .replace("-", " ")
-#             .replace("_", " ")
-#             .title()
-#         )
-
-#     return data
-
-
-# # ============================================================
-# # DISCOVER CURRENT PAGE
-# # ============================================================
-
-# def save_current_page(
-#     page,
-#     counter,
-# ):
-
-#     data = discover_page(page)
-
-#     path = urlparse(
-#         page.url
-#     ).path
-
-#     filename = safe_filename(
-#         path.replace(
-#             "/app/",
-#             ""
-#         ).replace(
-#             "/",
-#             "_"
-#         )
-#     )
-
-#     if not filename:
-#         filename = "page"
-
-#     filename = (
-#         f"{counter:04d}_{filename}"
-#     )
-
-#     json_path = (
-#         DISCOVERY_DIR
-#         / f"{filename}.json"
-#     )
-
-#     save_json(
-#         json_path,
-#         data,
-#     )
-
-#     # Screenshot.
-#     screenshot_path = (
-#         SCREENSHOT_DIR
-#         / f"{filename}.png"
-#     )
-
-#     try:
-
-#         page.screenshot(
-#             path=str(
-#                 screenshot_path
-#             ),
-#             full_page=True,
-#         )
-
-#     except Exception:
-#         pass
-
-#     return data
-
-
-# # ============================================================
-# # LOGIN
-# # ============================================================
-
-# def find_visible(
-#     page,
-#     selectors,
-# ):
-
-#     for selector in selectors:
-
-#         try:
-
-#             locator = page.locator(
-#                 selector
-#             )
-
-#             count = locator.count()
-
-#         except Exception:
-
-#             continue
-
-#         for i in range(count):
-
-#             item = locator.nth(i)
-
-#             try:
-
-#                 if item.is_visible():
-#                     return item
-
-#             except Exception:
-#                 continue
-
-#     return None
-
-
-# def login(page):
-
-#     log("Checking login state...")
-
-#     if "/app" in page.url:
-
-#         log(
-#             "Already logged in."
-#         )
-
-#         return True
-
-#     if not USERNAME:
-
-#         raise RuntimeError(
-#             "ERPNEXT_USER is missing from .env"
-#         )
-
-#     if not PASSWORD:
-
-#         raise RuntimeError(
-#             "ERPNEXT_PASSWORD is missing from .env"
-#         )
-
-#     username = find_visible(
-#         page,
-#         [
-#             "input[name='usr']",
-#             "input[autocomplete='username']",
-#             "input[name='login']",
-#             "input[type='email']",
-#         ],
-#     )
-
-#     if not username:
-
-#         raise RuntimeError(
-#             "Visible username field not found."
-#         )
-
-#     password = find_visible(
-#         page,
-#         [
-#             "input[name='pwd']",
-#             "input[name='password']",
-#             "input[type='password']",
-#         ],
-#     )
-
-#     if not password:
-
-#         raise RuntimeError(
-#             "Visible password field not found."
-#         )
-
-#     username.fill(
-#         USERNAME
-#     )
-
-#     password.fill(
-#         PASSWORD
-#     )
-
-#     log(
-#         "Credentials filled."
-#     )
-
-#     login_button = find_visible(
-#         page,
-#         [
-#             "button:has-text('Login')",
-#             "button:has-text('Log in')",
-#             "button:has-text('Sign in')",
-#             "input[type='submit']",
-#             "[role='button']:has-text('Login')",
-#         ],
-#     )
-
-#     if not login_button:
-
-#         raise RuntimeError(
-#             "Login button not found."
-#         )
-
-#     login_button.click()
-
-#     page.wait_for_timeout(
-#         2000
-#     )
-
-#     # Wait for app navigation.
-#     try:
-
-#         page.wait_for_url(
-#             re.compile(
-#                 r".*/app.*"
-#             ),
-#             timeout=15000,
-#         )
-
-#     except Exception:
-#         pass
-
-#     log(
-#         f"Login URL: {page.url}"
-#     )
-
-#     if "/app" not in page.url:
-
-#         raise RuntimeError(
-#             f"Login failed: {page.url}"
-#         )
-
-#     log(
-#         "LOGIN SUCCESS"
-#     )
-
-#     return True
-
-
-# # ============================================================
-# # HOME URL
-# # ============================================================
-
-# def open_home(page):
-
-#     # After login ERPNext normally already routes
-#     # to /app or /app/home.
-
-#     if "/app/home" not in page.url:
-
-#         home_url = (
-#             f"{ERP_URL}/app/home"
-#         )
-
-#         page.goto(
-#             home_url,
-#             wait_until="domcontentloaded",
-#             timeout=PAGE_TIMEOUT,
-#         )
-
-#     page.wait_for_timeout(
-#         WAIT_AFTER_NAVIGATION
-#     )
-
-#     log(
-#         f"Home URL: {page.url}"
-#     )
-
-
-# # ============================================================
-# # EXTRACT CRAWLABLE LINKS
-# # ============================================================
-
-# def extract_crawl_urls(
-#     page,
-#     page_data,
-# ):
-
-#     candidates = []
-
-#     # --------------------------------------------------------
-#     # Normal anchor links
-#     # --------------------------------------------------------
-
-#     for item in page_data["links"]:
-
-#         url = item.get(
-#             "absolute_url"
-#         )
-
-#         if url:
-#             candidates.append(url)
-
-#     # --------------------------------------------------------
-#     # Some ERPNext UI elements use data-route
-#     # --------------------------------------------------------
-
-#     selectors = """
-#         [data-route],
-#         [data-link],
-#         [data-href],
-#         [href]
-#     """
-
-#     try:
-
-#         locator = page.locator(
-#             selectors
-#         )
-
-#         count = min(
-#             locator.count(),
-#             500,
-#         )
-
-#     except Exception:
-
-#         count = 0
-
-#     for i in range(count):
-
-#         element = locator.nth(i)
-
-#         try:
-
-#             if not element.is_visible():
-#                 continue
-
-#             for attr in (
-#                 "data-route",
-#                 "data-link",
-#                 "data-href",
-#                 "href",
-#             ):
-
-#                 value = (
-#                     element.get_attribute(
-#                         attr
-#                     )
-#                     or ""
-#                 )
-
-#                 if not value:
-#                     continue
-
-#                 url = normalize_url(
-#                     value
-#                 )
-
-#                 if url:
-#                     candidates.append(url)
-
-#         except Exception:
-#             continue
-
-#     # --------------------------------------------------------
-#     # Unique
-#     # --------------------------------------------------------
-
-#     result = []
-
-#     seen = set()
-
-#     for url in candidates:
-
-#         if not is_safe_discovery_url(
-#             url
-#         ):
-#             continue
-
-#         if url in seen:
-#             continue
-
-#         seen.add(url)
-
-#         result.append(url)
-
-#     return result
-
-
-# # ============================================================
-# # CRAWL
-# # ============================================================
-
-# def crawl(page):
-
-#     queue = []
-
-#     visited = set()
-
-#     discovery_index = []
-
-#     # Start with Home.
-#     home_url = normalize_url(
-#         f"{ERP_URL}/app/home"
-#     )
-
-#     queue.append(home_url)
-
-#     counter = 0
-
-#     while queue and len(
-#         visited
-#     ) < MAX_PAGES:
-
-#         url = queue.pop(0)
-
-#         url = normalize_url(url)
-
-#         if not url:
-#             continue
-
-#         if url in visited:
-#             continue
-
-#         visited.add(url)
-
-#         log("")
-#         log(
-#             "--------------------------------------"
-#         )
-
-#         log(
-#             f"CRAWL "
-#             f"{len(visited)}/{MAX_PAGES}"
-#         )
-
-#         log(
-#             f"URL: {url}"
-#         )
-
-#         log(
-#             "--------------------------------------"
-#         )
-
-#         try:
-
-#             # ------------------------------------------------
-#             # Navigate
-#             # ------------------------------------------------
-
-#             if page.url != url:
-
-#                 page.goto(
-#                     url,
-#                     wait_until="domcontentloaded",
-#                     timeout=PAGE_TIMEOUT,
-#                 )
-
-#             page.wait_for_timeout(
-#                 WAIT_AFTER_NAVIGATION
-#             )
-
-#             # ------------------------------------------------
-#             # Session check
-#             # ------------------------------------------------
-
-#             if "/login" in page.url:
-
-#                 log(
-#                     "Session returned to login."
-#                 )
-
-#                 login(page)
-
-#                 if page.url != url:
-
-#                     page.goto(
-#                         url,
-#                         wait_until="domcontentloaded",
-#                         timeout=PAGE_TIMEOUT,
-#                     )
-
-#                     page.wait_for_timeout(
-#                         WAIT_AFTER_NAVIGATION
-#                     )
-
-#             # ------------------------------------------------
-#             # Discover
-#             # ------------------------------------------------
-
-#             counter += 1
-
-#             page_data = (
-#                 save_current_page(
-#                     page,
-#                     counter,
-#                 )
-#             )
-
-#             discovery_index.append(
-#                 {
-#                     "url": page.url,
-#                     "title": page_data["title"],
-#                     "doctype": page_data["doctype"],
-#                     "route": page_data["route"],
-#                     "file": (
-#                         f"{counter:04d}_"
-#                         f"{safe_filename(urlparse(page.url).path)}"
-#                         ".json"
-#                     ),
-#                 }
-#             )
-
-#             # ------------------------------------------------
-#             # Find next pages
-#             # ------------------------------------------------
-
-#             next_urls = (
-#                 extract_crawl_urls(
-#                     page,
-#                     page_data,
-#                 )
-#             )
-
-#             added = 0
-
-#             for next_url in next_urls:
-
-#                 if next_url in visited:
-#                     continue
-
-#                 if next_url in queue:
-#                     continue
-
-#                 queue.append(
-#                     next_url
-#                 )
-
-#                 added += 1
-
-#             log(
-#                 f"New URLs queued: {added}"
-#             )
-
-#             log(
-#                 f"Queue size: {len(queue)}"
-#             )
-
-#         except Exception as exc:
-
-#             log(
-#                 f"PAGE ERROR: {exc}"
-#             )
-
-#             error_file = (
-#                 DISCOVERY_DIR
-#                 / "crawl_errors.json"
-#             )
-
-#             existing = []
-
-#             if error_file.exists():
-
-#                 try:
-
-#                     existing = json.loads(
-#                         error_file.read_text(
-#                             encoding="utf-8"
-#                         )
-#                     )
-
-#                 except Exception:
-#                     existing = []
-
-#             existing.append(
-#                 {
-#                     "url": url,
-#                     "error": str(exc),
-#                     "time": time.strftime(
-#                         "%Y-%m-%d %H:%M:%S"
-#                     ),
-#                 }
-#             )
-
-#             save_json(
-#                 error_file,
-#                 existing,
-#             )
-
-#             try:
-
-#                 page.screenshot(
-#                     path=str(
-#                         SCREENSHOT_DIR
-#                         / (
-#                             "error_"
-#                             + safe_filename(
-#                                 urlparse(
-#                                     url
-#                                 ).path
-#                             )
-#                             + ".png"
-#                         )
-#                     ),
-#                     full_page=True,
-#                 )
-
-#             except Exception:
-#                 pass
-
-#     # --------------------------------------------------------
-#     # Crawl index
-#     # --------------------------------------------------------
-
-#     save_json(
-#         DISCOVERY_DIR
-#         / "crawl_index.json",
-#         {
-#             "erp_url": ERP_URL,
-#             "started_at": time.strftime(
-#                 "%Y-%m-%d %H:%M:%S"
-#             ),
-#             "pages_discovered": len(
-#                 discovery_index
-#             ),
-#             "visited_urls": sorted(
-#                 visited
-#             ),
-#             "pages": discovery_index,
-#             "max_pages": MAX_PAGES,
-#         },
-#     )
-
-#     return discovery_index
-
-
-# # ============================================================
-# # MAIN
-# # ============================================================
-
-# def main():
-
-#     log(
-#         "======================================"
-#     )
-
-#     log(
-#         "ERPNext GENERIC DISCOVERY AGENT"
-#     )
-
-#     log(
-#         "READ-ONLY MODE"
-#     )
-
-#     log(
-#         "======================================"
-#     )
-
-#     log(
-#         f"ERP URL: {ERP_URL}"
-#     )
-
-#     log(
-#         f"MAX PAGES: {MAX_PAGES}"
-#     )
-
-#     with sync_playwright() as p:
-
-#         browser = p.chromium.launch(
-#             headless=HEADLESS,
-#             slow_mo=20,
-#         )
-
-#         context = browser.new_context(
-#             viewport={
-#                 "width": 1440,
-#                 "height": 900,
-#             }
-#         )
-
-#         page = context.new_page()
-
-#         try:
-
-#             # ------------------------------------------------
-#             # Open ERP
-#             # ------------------------------------------------
-
-#             log(
-#                 f"Opening ERP: {ERP_URL}"
-#             )
-
-#             page.goto(
-#                 ERP_URL,
-#                 wait_until="domcontentloaded",
-#                 timeout=PAGE_TIMEOUT,
-#             )
-
-#             log(
-#                 f"Current URL: {page.url}"
-#             )
-
-#             # ------------------------------------------------
-#             # Login
-#             # ------------------------------------------------
-
-#             login(page)
-
-#             # ------------------------------------------------
-#             # Home
-#             # ------------------------------------------------
-
-#             open_home(page)
-
-#             # ------------------------------------------------
-#             # Full crawl
-#             # ------------------------------------------------
-
-#             pages = crawl(page)
-
-#             # ------------------------------------------------
-#             # Final summary
-#             # ------------------------------------------------
-
-#             log("")
-#             log(
-#                 "======================================"
-#             )
-
-#             log(
-#                 "DISCOVERY FINISHED"
-#             )
-
-#             log(
-#                 f"Pages discovered: {len(pages)}"
-#             )
-
-#             log(
-#                 f"Discovery directory: "
-#                 f"{DISCOVERY_DIR}"
-#             )
-
-#             log(
-#                 f"Screenshot directory: "
-#                 f"{SCREENSHOT_DIR}"
-#             )
-
-#             log(
-#                 "======================================"
-#             )
-
-#         except KeyboardInterrupt:
-
-#             log(
-#                 "Discovery interrupted by user."
-#             )
-
-#         except Exception as exc:
-
-#             log(
-#                 f"FATAL ERROR: {exc}"
-#             )
-
-#             try:
-
-#                 page.screenshot(
-#                     path=str(
-#                         SCREENSHOT_DIR
-#                         / "discovery_failure.png"
-#                     ),
-#                     full_page=True,
-#                 )
-
-#             except Exception:
-#                 pass
-
-#         finally:
-
-#             try:
-#                 context.close()
-#             except Exception:
-#                 pass
-
-#             try:
-#                 browser.close()
-#             except Exception:
-#                 pass
-
-
-# if __name__ == "__main__":
-#     main()
-
-
-# =======================================================
 # import argparse
 # import json
 # import os
@@ -1465,7 +8,6 @@
 
 # from dotenv import load_dotenv
 # from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
-
 
 # # ============================================================
 # # CONFIG
@@ -1484,48 +26,19 @@
 
 # HEADLESS = os.getenv("HEADLESS", "false").lower() == "true"
 
-# TIMEOUT = int(os.getenv("DISCOVERY_TIMEOUT", "30000"))
-# WAIT_MS = int(os.getenv("DISCOVERY_WAIT_MS", "1200"))
-
-# DATA_DIR = BASE_DIR / "data"
-# DISCOVERY_DIR = DATA_DIR / "discovery"
-# SCREENSHOT_DIR = DATA_DIR / "screenshots"
-# LOG_DIR = BASE_DIR / "logs"
+# DISCOVERY_DIR = BASE_DIR / "data" / "discovery"
+# SCREENSHOT_DIR = BASE_DIR / "data" / "screenshots"
 
 # DISCOVERY_DIR.mkdir(parents=True, exist_ok=True)
 # SCREENSHOT_DIR.mkdir(parents=True, exist_ok=True)
-# LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 
 # # ============================================================
-# # ARGUMENTS
+# # LOG
 # # ============================================================
 
-# def parse_args():
-
-#     parser = argparse.ArgumentParser(
-#         description="Generic ERPNext Knowledge Discovery Agent"
-#     )
-
-#     parser.add_argument(
-#         "--module",
-#         help="ERPNext module to discover"
-#     )
-
-#     parser.add_argument(
-#         "--doctype",
-#         help="Read only this DocType"
-#     )
-
-#     return parser.parse_args()
-
-
-# # ============================================================
-# # LOGGING
-# # ============================================================
 
 # def log(message):
-
 #     print(
 #         f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {message}",
 #         flush=True,
@@ -1533,163 +46,172 @@
 
 
 # # ============================================================
-# # NORMALIZATION
+# # TEXT HELPERS
 # # ============================================================
 
-# def normalize_name(value):
 
-#     if not value:
+# def clean_text(value):
+#     if value is None:
 #         return ""
 
-#     value = value.strip().lower()
-
-#     value = re.sub(
+#     return re.sub(
 #         r"\s+",
 #         " ",
-#         value
-#     )
-
-#     return value
+#         str(value),
+#     ).strip()
 
 
 # def slugify(value):
-
-#     value = value.strip().lower()
-
-#     value = value.replace("&", "and")
+#     value = clean_text(value).lower()
 
 #     value = re.sub(
 #         r"[^a-z0-9]+",
 #         "-",
-#         value
+#         value,
 #     )
 
-#     value = re.sub(
-#         r"-+",
-#         "-",
-#         value
-#     )
+#     value = value.strip("-")
 
-#     return value.strip("-")
+#     return value or "unknown"
 
 
 # # ============================================================
-# # SERIAL FILE NAME
+# # DISCOVERY FILE MANAGEMENT
 # # ============================================================
 
-# def next_serial_number():
 
-#     highest = 0
+# def existing_discovery_doctypes():
+#     """
+#     Read all existing discovery JSON files and return
+#     their known DocType names.
+#     """
+
+#     discovered = set()
 
 #     for path in DISCOVERY_DIR.glob("*.json"):
 
-#         match = re.match(
-#             r"^(\d+)_",
-#             path.name
-#         )
+#         try:
+
+#             data = json.loads(path.read_text(encoding="utf-8"))
+
+#             doctype = clean_text(data.get("doctype") or data.get("document_name") or "")
+
+#             if doctype:
+#                 discovered.add(doctype.lower())
+
+#         except Exception:
+#             continue
+
+#     return discovered
+
+
+# def next_serial_number():
+#     """
+#     Find next serial number from existing files.
+
+#     Example:
+
+#     0001_company-budget.json
+#     0002_import-lc.json
+
+#     next = 0003
+#     """
+
+#     maximum = 0
+
+#     pattern = re.compile(r"^(\d+)_")
+
+#     for path in DISCOVERY_DIR.glob("*.json"):
+
+#         match = pattern.match(path.name)
 
 #         if not match:
 #             continue
 
 #         try:
-
 #             number = int(match.group(1))
 
-#             highest = max(
-#                 highest,
-#                 number
+#             maximum = max(
+#                 maximum,
+#                 number,
 #             )
 
 #         except ValueError:
 #             continue
 
-#     return highest + 1
+#     return maximum + 1
 
 
-# def make_discovery_filename(name):
+# def discovery_file_for_doctype(doctype):
+#     """
+#     Find existing JSON for a DocType.
 
-#     serial = next_serial_number()
+#     Primary check:
+#     - JSON content
 
-#     slug = slugify(name)
+#     Secondary check:
+#     - filename slug
+#     """
 
-#     if not slug:
-#         slug = "unknown"
-
-#     return f"{serial:04d}_{slug}.json"
-
-
-# # ============================================================
-# # EXISTING DISCOVERY INDEX
-# # ============================================================
-
-# def get_existing_discovery():
-
-#     existing = {}
+#     target = clean_text(doctype).lower()
+#     target_slug = slugify(doctype)
 
 #     for path in DISCOVERY_DIR.glob("*.json"):
 
-#         try:
+#         # Filename check
+#         filename = path.stem
 
-#             data = json.loads(
-#                 path.read_text(
-#                     encoding="utf-8"
-#                 )
-#             )
-
-#         except Exception:
-#             continue
-
-#         names = []
-
-#         for key in (
-#             "name",
-#             "doctype",
-#             "document",
-#             "title",
-#         ):
-
-#             value = data.get(key)
-
-#             if isinstance(value, str) and value.strip():
-
-#                 names.append(value)
-
-#         for name in names:
-
-#             existing[
-#                 normalize_name(name)
-#             ] = path
-
-#     return existing
-
-
-# # ============================================================
-# # SAVE DISCOVERY
-# # ============================================================
-
-# def save_discovery(name, data):
-
-#     existing = get_existing_discovery()
-
-#     key = normalize_name(name)
-
-#     if key in existing:
-
-#         log(
-#             f"SKIP EXISTING: {name} "
-#             f"-> {existing[key].name}"
+#         match = re.match(
+#             r"^\d+_(.+)$",
+#             filename,
 #         )
 
-#         return existing[key]
+#         if match:
 
-#     filename = make_discovery_filename(name)
+#             if match.group(1).lower() == target_slug:
+#                 return path
+
+#         # Content check
+#         try:
+
+#             data = json.loads(path.read_text(encoding="utf-8"))
+
+#             stored = clean_text(
+#                 data.get("doctype") or data.get("document_name") or ""
+#             ).lower()
+
+#             if stored == target:
+#                 return path
+
+#         except Exception:
+#             pass
+
+#     return None
+
+
+# def save_discovery(data):
+#     """
+#     Save discovery using:
+
+#     0001_company-budget.json
+#     0002_import-lc.json
+#     """
+
+#     doctype = clean_text(data.get("doctype") or data.get("document_name") or "unknown")
+
+#     existing = discovery_file_for_doctype(doctype)
+
+#     if existing:
+
+#         log(f"SKIP SAVE: already exists -> " f"{existing.name}")
+
+#         return existing
+
+#     serial = next_serial_number()
+
+#     filename = f"{serial:04d}_" f"{slugify(doctype)}.json"
 
 #     path = DISCOVERY_DIR / filename
-
-#     data["discovery_file"] = filename
-#     data["discovered_at"] = time.strftime(
-#         "%Y-%m-%d %H:%M:%S"
-#     )
 
 #     path.write_text(
 #         json.dumps(
@@ -1700,109 +222,19 @@
 #         encoding="utf-8",
 #     )
 
-#     log(
-#         f"SAVED: {path}"
-#     )
+#     log(f"Knowledge saved: {path}")
 
 #     return path
 
 
 # # ============================================================
-# # ELEMENT INFO
+# # VISIBLE ELEMENTS
 # # ============================================================
 
-# def element_info(element):
 
-#     try:
+# def discover_elements(page):
 
-#         tag = (
-#             element.evaluate(
-#                 "(el) => el.tagName.toLowerCase()"
-#             )
-#             or ""
-#         )
-
-#     except Exception:
-
-#         tag = ""
-
-#     def attr(name):
-
-#         try:
-#             return (
-#                 element.get_attribute(name)
-#                 or ""
-#             )
-#         except Exception:
-#             return ""
-
-#     try:
-
-#         text = (
-#             element.inner_text()
-#             or ""
-#         ).strip()
-
-#     except Exception:
-
-#         text = ""
-
-#     return {
-#         "tag": tag,
-#         "text": text[:500],
-#         "id": attr("id"),
-#         "name": attr("name"),
-#         "type": attr("type"),
-#         "href": attr("href"),
-#         "title": attr("title"),
-#         "aria_label": attr("aria-label"),
-#         "role": attr("role"),
-#         "data_route": attr("data-route"),
-#         "data_link": attr("data-link"),
-#         "data_href": attr("data-href"),
-#         "class": attr("class")[:500],
-#     }
-
-
-# # ============================================================
-# # DISCOVER PAGE
-# # ============================================================
-
-# def discover_page(page):
-
-#     result = {
-#         "url": page.url,
-#         "title": "",
-#         "text": "",
-#         "elements": [],
-#         "links": [],
-#         "inputs": [],
-#         "buttons": [],
-#         "tabs": [],
-#     }
-
-#     try:
-#         result["title"] = page.title()
-#     except Exception:
-#         pass
-
-#     # --------------------------------------------------------
-#     # BODY TEXT
-#     # --------------------------------------------------------
-
-#     try:
-
-#         result["text"] = (
-#             page.locator("body")
-#             .inner_text(timeout=5000)
-#         )[:50000]
-
-#     except Exception:
-#         pass
-
-#     # --------------------------------------------------------
-#     # ELEMENTS
-#     # --------------------------------------------------------
+#     elements = []
 
 #     selectors = """
 #         button,
@@ -1811,10 +243,9 @@
 #         select,
 #         a,
 #         [role="button"],
-#         [role="link"],
 #         [role="option"],
 #         [role="tab"],
-#         [role="menuitem"],
+#         [role="combobox"],
 #         [contenteditable="true"]
 #     """
 
@@ -1823,468 +254,687 @@
 #     try:
 #         count = min(
 #             locator.count(),
-#             2000
+#             500,
 #         )
+
 #     except Exception:
 #         count = 0
 
 #     for i in range(count):
 
-#         try:
+#         element = locator.nth(i)
 
-#             element = locator.nth(i)
+#         try:
 
 #             if not element.is_visible():
 #                 continue
 
-#             info = element_info(element)
+#             tag = element.evaluate("(el) => el.tagName.toLowerCase()")
 
-#             result["elements"].append(info)
+#             item = {
+#                 "tag": tag,
+#                 "text": clean_text(element.inner_text())[:300],
+#                 "id": (element.get_attribute("id") or ""),
+#                 "name": (element.get_attribute("name") or ""),
+#                 "type": (element.get_attribute("type") or ""),
+#                 "placeholder": (element.get_attribute("placeholder") or ""),
+#                 "aria_label": (element.get_attribute("aria-label") or ""),
+#                 "title": (element.get_attribute("title") or ""),
+#                 "role": (element.get_attribute("role") or ""),
+#                 "value": (element.get_attribute("value") or ""),
+#                 "data_fieldname": (element.get_attribute("data-fieldname") or ""),
+#                 "class": (element.get_attribute("class") or "")[:500],
+#             }
 
-#             tag = info["tag"]
-#             role = info["role"]
-
-#             if tag == "a":
-
-#                 result["links"].append(info)
-
-#             elif tag == "input":
-
-#                 result["inputs"].append(info)
-
-#             elif tag == "button" or role == "button":
-
-#                 result["buttons"].append(info)
-
-#             if role == "tab":
-
-#                 result["tabs"].append(info)
+#             elements.append(item)
 
 #         except Exception:
 #             continue
 
-#     return result
+#     return elements
 
 
 # # ============================================================
-# # ABSOLUTE URL
+# # FIELD DISCOVERY
 # # ============================================================
 
-# def absolute_url(value):
 
-#     if not value:
-#         return ""
+# def discover_form_fields(page):
 
-#     if value.startswith("http://"):
-#         return value
+#     fields = []
 
-#     if value.startswith("https://"):
-#         return value
+#     # --------------------------------------------------------
+#     # ERPNext field wrappers
+#     # --------------------------------------------------------
 
-#     return urljoin(
-#         ERP_URL + "/",
-#         value
-#     )
+#     wrappers = page.locator("""
+#         .frappe-control,
+#         .form-group,
+#         [data-fieldname]
+#         """)
 
-
-# # ============================================================
-# # UI TEXT FILTER
-# # ============================================================
-
-# IGNORED_NAMES = {
-#     "home",
-#     "help",
-#     "settings",
-#     "logout",
-#     "log out",
-#     "login",
-#     "log in",
-#     "sign in",
-#     "search",
-#     "new",
-#     "edit",
-#     "delete",
-#     "save",
-#     "cancel",
-#     "close",
-#     "refresh",
-#     "back",
-#     "next",
-#     "previous",
-#     "collapse",
-#     "expand",
-#     "dashboard",
-#     "menu",
-#     "more",
-#     "actions",
-#     "submit",
-#     "yes",
-#     "no",
-#     "ok",
-#     "clear",
-# }
-
-
-# def looks_like_document_name(text):
-
-#     if not text:
-#         return False
-
-#     text = text.strip()
-
-#     if len(text) < 2:
-#         return False
-
-#     if len(text) > 150:
-#         return False
-
-#     normalized = normalize_name(text)
-
-#     if normalized in IGNORED_NAMES:
-#         return False
-
-#     # Obvious sentence / UI instruction
-#     if normalized.startswith(
-#         (
-#             "click ",
-#             "go to ",
-#             "open ",
-#             "select ",
-#             "type ",
-#             "begin typing",
+#     try:
+#         count = min(
+#             wrappers.count(),
+#             500,
 #         )
-#     ):
-#         return False
 
-#     # Pure number
-#     if re.fullmatch(
-#         r"[\d\s.,/-]+",
-#         text
-#     ):
-#         return False
+#     except Exception:
+#         count = 0
 
-#     return True
-
-
-# # ============================================================
-# # FIND DOCUMENT CANDIDATES
-# # ============================================================
-
-# def discover_document_candidates(
-#     page,
-#     module_name
-# ):
-
-#     log(
-#         f"Scanning visible documents "
-#         f"inside module: {module_name}"
-#     )
-
-#     candidates = []
 #     seen = set()
 
-#     selectors = """
-#         a,
-#         button,
-#         [role="button"],
-#         [role="link"],
-#         [role="menuitem"],
-#         [data-route],
-#         [data-link],
-#         [data-href]
-#     """
-
-#     locator = page.locator(selectors)
-
-#     try:
-
-#         count = min(
-#             locator.count(),
-#             2000
-#         )
-
-#     except Exception:
-
-#         count = 0
-
 #     for i in range(count):
+
+#         wrapper = wrappers.nth(i)
 
 #         try:
 
-#             element = locator.nth(i)
-
-#             if not element.is_visible():
+#             if not wrapper.is_visible():
 #                 continue
 
-#             info = element_info(element)
+#             fieldname = wrapper.get_attribute("data-fieldname") or ""
 
-#             text = (
-#                 info.get("text")
-#                 or info.get("aria_label")
-#                 or info.get("title")
-#             ).strip()
+#             # Try child data-fieldname
+#             if not fieldname:
 
-#             if not looks_like_document_name(text):
+#                 child = wrapper.locator("[data-fieldname]")
+
+#                 if child.count() > 0:
+
+#                     fieldname = child.first.get_attribute("data-fieldname") or ""
+
+#             if not fieldname:
 #                 continue
 
-#             href = (
-#                 info.get("href")
-#                 or info.get("data_route")
-#                 or info.get("data_link")
-#                 or info.get("data_href")
+#             fieldname = clean_text(fieldname)
+
+#             if fieldname in seen:
+#                 continue
+
+#             seen.add(fieldname)
+
+#             # ------------------------------------------------
+#             # Label
+#             # ------------------------------------------------
+
+#             label = ""
+
+#             try:
+
+#                 label_locator = wrapper.locator(".control-label, label")
+
+#                 if label_locator.count() > 0:
+
+#                     label = clean_text(label_locator.first.inner_text())
+
+#             except Exception:
+#                 pass
+
+#             if not label:
+#                 label = fieldname
+
+#             # ------------------------------------------------
+#             # Input
+#             # ------------------------------------------------
+
+#             input_locator = wrapper.locator(
+#                 "input, textarea, select, [contenteditable='true']"
 #             )
 
-#             href = absolute_url(href)
+#             value = ""
 
-#             # ------------------------------------------------
-#             # ERP internal routes only
-#             # ------------------------------------------------
+#             fieldtype = "unknown"
 
-#             if href:
+#             options = []
 
-#                 if not href.startswith(
-#                     ERP_URL
-#                 ):
+#             if input_locator.count() > 0:
 
+#                 control = input_locator.first
+
+#                 try:
+
+#                     tag = control.evaluate("(el) => el.tagName.toLowerCase()")
+
+#                 except Exception:
+#                     tag = ""
+
+#                 try:
+
+#                     control_type = (control.get_attribute("type") or "").lower()
+
+#                 except Exception:
+#                     control_type = ""
+
+#                 # ------------------------------------------------
+#                 # Field type
+#                 # ------------------------------------------------
+
+#                 if tag == "select":
+
+#                     fieldtype = "Select"
+
+#                 elif control_type == "checkbox":
+
+#                     fieldtype = "Check"
+
+#                 elif control_type == "date":
+
+#                     fieldtype = "Date"
+
+#                 elif control_type == "datetime-local":
+
+#                     fieldtype = "Datetime"
+
+#                 elif control_type == "number":
+
+#                     fieldtype = "Float"
+
+#                 elif control_type == "email":
+
+#                     fieldtype = "Data"
+
+#                 else:
+
+#                     # ERPNext Link field
+#                     try:
+
+#                         has_link_class = "link-field" in (
+#                             wrapper.get_attribute("class") or ""
+#                         )
+
+#                     except Exception:
+#                         has_link_class = False
+
+#                     if has_link_class:
+#                         fieldtype = "Link"
+#                     else:
+#                         fieldtype = "Data"
+
+#                 # ------------------------------------------------
+#                 # Value
+#                 # ------------------------------------------------
+
+#                 try:
+
+#                     if tag == "textarea":
+
+#                         value = control.input_value() or ""
+
+#                     elif tag == "select":
+
+#                         value = control.input_value() or ""
+
+#                     elif control_type == "checkbox":
+
+#                         value = control.is_checked()
+
+#                     else:
+
+#                         value = control.input_value() or ""
+
+#                 except Exception:
+#                     pass
+
+#                 # ------------------------------------------------
+#                 # Select options
+#                 # ------------------------------------------------
+
+#                 if tag == "select":
+
+#                     try:
+
+#                         option_locator = control.locator("option")
+
+#                         option_count = min(
+#                             option_locator.count(),
+#                             200,
+#                         )
+
+#                         for j in range(option_count):
+
+#                             option = option_locator.nth(j)
+
+#                             try:
+
+#                                 options.append(
+#                                     {
+#                                         "text": clean_text(option.inner_text()),
+#                                         "value": (option.get_attribute("value") or ""),
+#                                     }
+#                                 )
+
+#                             except Exception:
+#                                 continue
+
+#                     except Exception:
+#                         pass
+
+#                 # ------------------------------------------------
+#                 # Link / autocomplete options
+#                 # ------------------------------------------------
+
+#                 if fieldtype == "Link":
+
+#                     options.extend(
+#                         discover_link_options(
+#                             page,
+#                             wrapper,
+#                         )
+#                     )
+
+#             fields.append(
+#                 {
+#                     "fieldname": fieldname,
+#                     "label": label,
+#                     "fieldtype": fieldtype,
+#                     "value": value,
+#                     "options": options,
+#                 }
+#             )
+
+#         except Exception:
+#             continue
+
+#     # --------------------------------------------------------
+#     # Fallback: direct data-fieldname elements
+#     # --------------------------------------------------------
+
+#     if not fields:
+
+#         direct = page.locator("[data-fieldname]")
+
+#         try:
+#             count = min(
+#                 direct.count(),
+#                 500,
+#             )
+#         except Exception:
+#             count = 0
+
+#         for i in range(count):
+
+#             element = direct.nth(i)
+
+#             try:
+
+#                 if not element.is_visible():
 #                     continue
 
-#             key = (
-#                 normalize_name(text),
-#                 href
-#             )
+#                 fieldname = clean_text(element.get_attribute("data-fieldname") or "")
 
-#             if key in seen:
+#                 if not fieldname:
+#                     continue
+
+#                 if fieldname in seen:
+#                     continue
+
+#                 seen.add(fieldname)
+
+#                 fields.append(
+#                     {
+#                         "fieldname": fieldname,
+#                         "label": fieldname,
+#                         "fieldtype": "unknown",
+#                         "value": "",
+#                         "options": [],
+#                     }
+#                 )
+
+#             except Exception:
 #                 continue
 
-#             seen.add(key)
+#     return fields
 
-#             candidates.append({
-#                 "name": text,
-#                 "url": href,
-#                 "element": info,
-#             })
 
-#         except Exception:
-#             continue
-
-#     # --------------------------------------------------------
-#     # Also inspect visible text blocks
-#     # --------------------------------------------------------
-
-#     text_selectors = """
-#         .standard-sidebar-item,
-#         .desk-sidebar-item,
-#         .module-link,
-#         .widget-head,
-#         .widget-title,
-#         .shortcut-widget-box,
-#         .link-item,
-#         .item-link
+# def discover_link_options(page, wrapper):
+#     """
+#     Read currently visible autocomplete options for a Link field.
+#     Does not type anything into the field.
 #     """
 
-#     blocks = page.locator(text_selectors)
+#     options = []
 
 #     try:
+
+#         candidates = page.locator("""
+#             .awesomplete li,
+#             .awesomplete ul li,
+#             .ac-option,
+#             .link-option,
+#             [role="option"]
+#             """)
 
 #         count = min(
-#             blocks.count(),
-#             1000
+#             candidates.count(),
+#             100,
 #         )
 
-#     except Exception:
+#         for i in range(count):
 
-#         count = 0
+#             option = candidates.nth(i)
 
-#     for i in range(count):
+#             try:
 
-#         try:
+#                 if not option.is_visible():
+#                     continue
 
-#             block = blocks.nth(i)
+#                 text = clean_text(option.inner_text())
 
-#             if not block.is_visible():
+#                 if text:
+
+#                     options.append(
+#                         {
+#                             "text": text,
+#                             "value": text,
+#                         }
+#                     )
+
+#             except Exception:
 #                 continue
-
-#             text = (
-#                 block.inner_text()
-#                 or ""
-#             ).strip()
-
-#             if not looks_like_document_name(text):
-#                 continue
-
-#             key = (
-#                 normalize_name(text),
-#                 ""
-#             )
-
-#             if key in seen:
-#                 continue
-
-#             seen.add(key)
-
-#             candidates.append({
-#                 "name": text,
-#                 "url": "",
-#                 "element": {}
-#             })
-
-#         except Exception:
-#             continue
-
-#     log(
-#         f"Document candidates found: "
-#         f"{len(candidates)}"
-#     )
-
-#     for item in candidates:
-
-#         log(
-#             f"  DOCUMENT: {item['name']}"
-#         )
-
-#     return candidates
-
-
-# # ============================================================
-# # FIND VISIBLE TEXT ELEMENT
-# # ============================================================
-
-# def find_text_element(
-#     page,
-#     text
-# ):
-
-#     exact_selectors = [
-#         f"text={text}",
-#         f"a:text-is('{text}')",
-#         f"button:text-is('{text}')",
-#         f"[role='link']:text-is('{text}')",
-#         f"[role='button']:text-is('{text}')",
-#     ]
-
-#     for selector in exact_selectors:
-
-#         try:
-
-#             locator = page.locator(
-#                 selector
-#             )
-
-#             count = locator.count()
-
-#             for i in range(count):
-
-#                 item = locator.nth(i)
-
-#                 if item.is_visible():
-
-#                     return item
-
-#         except Exception:
-#             continue
-
-#     return None
-
-
-# # ============================================================
-# # OPEN MODULE
-# # ============================================================
-
-# def open_module(
-#     page,
-#     module_name
-# ):
-
-#     log(
-#         f"Finding module: {module_name}"
-#     )
-
-#     # --------------------------------------------------------
-#     # Try direct ERPNext route first
-#     # --------------------------------------------------------
-
-#     route = slugify(module_name)
-
-#     possible_url = (
-#         f"{ERP_URL}/app/{route}"
-#     )
-
-#     try:
-
-#         page.goto(
-#             possible_url,
-#             wait_until="domcontentloaded",
-#             timeout=TIMEOUT
-#         )
-
-#         page.wait_for_timeout(
-#             WAIT_MS
-#         )
-
-#         if "/app/" in page.url:
-
-#             log(
-#                 f"Module URL: {page.url}"
-#             )
-
-#             return True
 
 #     except Exception:
 #         pass
 
-#     # --------------------------------------------------------
-#     # Search visible module name
-#     # --------------------------------------------------------
+#     return options
 
-#     element = find_text_element(
-#         page,
-#         module_name
-#     )
 
-#     if not element:
+# # ============================================================
+# # TABS
+# # ============================================================
 
-#         raise RuntimeError(
-#             f"Module not found: "
-#             f"{module_name}"
+
+# def discover_tabs(page):
+
+#     tabs = []
+
+#     selectors = [
+#         "[role='tab']",
+#         ".form-tabs .nav-link",
+#         ".form-tabs a",
+#         ".nav-tabs .nav-link",
+#     ]
+
+#     seen = set()
+
+#     for selector in selectors:
+
+#         locator = page.locator(selector)
+
+#         try:
+#             count = min(
+#                 locator.count(),
+#                 100,
+#             )
+#         except Exception:
+#             count = 0
+
+#         for i in range(count):
+
+#             item = locator.nth(i)
+
+#             try:
+
+#                 if not item.is_visible():
+#                     continue
+
+#                 text = clean_text(item.inner_text())
+
+#                 if text and text not in seen:
+
+#                     seen.add(text)
+#                     tabs.append(text)
+
+#             except Exception:
+#                 continue
+
+#     return tabs
+
+
+# # ============================================================
+# # SECTIONS
+# # ============================================================
+
+
+# def discover_sections(page):
+
+#     sections = []
+
+#     selectors = [
+#         ".section-head",
+#         ".form-section .section-head",
+#         ".form-dashboard-section .section-head",
+#         ".collapse-label",
+#     ]
+
+#     seen = set()
+
+#     for selector in selectors:
+
+#         locator = page.locator(selector)
+
+#         try:
+#             count = min(
+#                 locator.count(),
+#                 200,
+#             )
+#         except Exception:
+#             count = 0
+
+#         for i in range(count):
+
+#             item = locator.nth(i)
+
+#             try:
+
+#                 if not item.is_visible():
+#                     continue
+
+#                 text = clean_text(item.inner_text())
+
+#                 if text and text not in seen:
+
+#                     seen.add(text)
+#                     sections.append(text)
+
+#             except Exception:
+#                 continue
+
+#     return sections
+
+
+# # ============================================================
+# # BUTTONS
+# # ============================================================
+
+
+# def discover_buttons(page):
+
+#     buttons = []
+
+#     locator = page.locator("""
+#         button,
+#         [role="button"],
+#         input[type="button"],
+#         input[type="submit"]
+#         """)
+
+#     seen = set()
+
+#     try:
+#         count = min(
+#             locator.count(),
+#             300,
 #         )
+#     except Exception:
+#         count = 0
 
-#     element.click()
+#     for i in range(count):
 
-#     page.wait_for_timeout(
-#         WAIT_MS
-#     )
+#         button = locator.nth(i)
 
-#     log(
-#         f"Module URL: {page.url}"
-#     )
+#         try:
 
-#     return True
+#             if not button.is_visible():
+#                 continue
+
+#             text = clean_text(button.inner_text())
+
+#             if not text:
+
+#                 text = clean_text(
+#                     button.get_attribute("aria-label")
+#                     or button.get_attribute("title")
+#                     or button.get_attribute("value")
+#                     or ""
+#                 )
+
+#             if text and text not in seen:
+
+#                 seen.add(text)
+#                 buttons.append(text)
+
+#         except Exception:
+#             continue
+
+#     return buttons
 
 
 # # ============================================================
-# # OPEN HOME
+# # LINKS
 # # ============================================================
 
-# def open_home(page):
 
-#     page.goto(
-#         f"{ERP_URL}/app/home",
-#         wait_until="domcontentloaded",
-#         timeout=TIMEOUT
-#     )
+# def discover_links(page):
 
-#     page.wait_for_timeout(
-#         WAIT_MS
-#     )
+#     links = []
 
-#     log(
-#         f"Home URL: {page.url}"
-#     )
+#     locator = page.locator("a")
+
+#     try:
+#         count = min(
+#             locator.count(),
+#             500,
+#         )
+#     except Exception:
+#         count = 0
+
+#     for i in range(count):
+
+#         link = locator.nth(i)
+
+#         try:
+
+#             if not link.is_visible():
+#                 continue
+
+#             text = clean_text(link.inner_text())
+
+#             href = link.get_attribute("href") or ""
+
+#             if text or href:
+
+#                 links.append(
+#                     {
+#                         "text": text[:300],
+#                         "href": href[:500],
+#                     }
+#                 )
+
+#         except Exception:
+#             continue
+
+#     return links
+
+
+# # ============================================================
+# # PAGE DISCOVERY
+# # ============================================================
+
+
+# def discover_page(page, doctype="", read_mode="unknown"):
+
+#     data = {
+#         "knowledge_type": "erpnext_doctype",
+#         "module": "",
+#         "doctype": doctype,
+#         "document_name": doctype,
+#         "read_mode": read_mode,
+#         "existing_documents_skipped": True,
+#         "url": page.url,
+#         "title": "",
+#         "text": "",
+#         "fields": [],
+#         "tabs": [],
+#         "sections": [],
+#         "buttons": [],
+#         "links": [],
+#         "elements": [],
+#     }
+
+#     try:
+
+#         data["title"] = page.title()
+
+#     except Exception:
+#         pass
+
+#     try:
+
+#         data["text"] = clean_text(page.locator("body").inner_text(timeout=10000))[
+#             :30000
+#         ]
+
+#     except Exception:
+#         pass
+
+#     data["fields"] = discover_form_fields(page)
+
+#     data["tabs"] = discover_tabs(page)
+
+#     data["sections"] = discover_sections(page)
+
+#     data["buttons"] = discover_buttons(page)
+
+#     data["links"] = discover_links(page)
+
+#     data["elements"] = discover_elements(page)
+
+#     return data
 
 
 # # ============================================================
 # # LOGIN
 # # ============================================================
+
+
+# def find_visible_locator(
+#     page,
+#     selectors,
+# ):
+#     for selector in selectors:
+
+#         locator = page.locator(selector)
+
+#         try:
+#             count = locator.count()
+#         except Exception:
+#             count = 0
+
+#         for i in range(count):
+
+#             item = locator.nth(i)
+
+#             try:
+
+#                 if item.is_visible():
+#                     return item
+
+#             except Exception:
+#                 continue
+
+#     return None
+
 
 # def login(page):
 
@@ -2292,137 +942,63 @@
 
 #     if "/app" in page.url:
 
-#         log(
-#             "Already logged in."
-#         )
+#         log("Already logged in.")
 
 #         return True
-
-#     if not USERNAME or not PASSWORD:
-
-#         raise RuntimeError(
-#             "ERPNEXT_USER / "
-#             "ERPNEXT_PASSWORD missing "
-#             "from .env"
-#         )
 
 #     # --------------------------------------------------------
 #     # Username
 #     # --------------------------------------------------------
 
-#     username_selectors = [
-#         "input[name='usr']",
-#         "input[name='login']",
-#         "input[name='username']",
-#         "input[autocomplete='username']",
-#         "input[type='email']",
-#     ]
-
-#     username = None
-
-#     for selector in username_selectors:
-
-#         locator = page.locator(
-#             selector
-#         )
-
-#         try:
-#             count = locator.count()
-#         except Exception:
-#             count = 0
-
-#         for i in range(count):
-
-#             item = locator.nth(i)
-
-#             try:
-
-#                 if item.is_visible():
-
-#                     username = item
-#                     break
-
-#             except Exception:
-#                 pass
-
-#         if username:
-#             break
+#     username = find_visible_locator(
+#         page,
+#         [
+#             "input[name='usr']",
+#             "input[autocomplete='username']",
+#             "input[name='login']",
+#             "input[type='email']",
+#             "input[type='text']",
+#         ],
+#     )
 
 #     if not username:
 
-#         raise RuntimeError(
-#             "Visible username field not found."
-#         )
+#         raise RuntimeError("Visible username field not found.")
 
 #     # --------------------------------------------------------
 #     # Password
 #     # --------------------------------------------------------
 
-#     password_selectors = [
-#         "input[name='pwd']",
-#         "input[name='password']",
-#         "input[type='password']",
-#     ]
-
-#     password = None
-
-#     for selector in password_selectors:
-
-#         locator = page.locator(
-#             selector
-#         )
-
-#         try:
-#             count = locator.count()
-#         except Exception:
-#             count = 0
-
-#         for i in range(count):
-
-#             item = locator.nth(i)
-
-#             try:
-
-#                 if item.is_visible():
-
-#                     password = item
-#                     break
-
-#             except Exception:
-#                 pass
-
-#         if password:
-#             break
+#     password = find_visible_locator(
+#         page,
+#         [
+#             "input[name='pwd']",
+#             "input[name='password']",
+#             "input[type='password']",
+#         ],
+#     )
 
 #     if not password:
 
-#         raise RuntimeError(
-#             "Visible password field not found."
-#         )
+#         raise RuntimeError("Visible password field not found.")
 
-#     username.fill(
-#         USERNAME
-#     )
+#     username.fill(USERNAME)
 
-#     password.fill(
-#         PASSWORD
-#     )
+#     password.fill(PASSWORD)
 
-#     log(
-#         "Credentials filled."
-#     )
+#     log("Credentials filled.")
 
 #     # --------------------------------------------------------
-#     # Login
+#     # Login button
 #     # --------------------------------------------------------
 
 #     login_button = None
 
-#     buttons = page.locator(
-#         "button, "
-#         "input[type='submit'], "
-#         "[role='button']"
-#     )
+#     buttons = page.locator("""
+#         button,
+#         input[type='submit'],
+#         [role='button']
+#         """)
 
 #     try:
 #         count = buttons.count()
@@ -2438,17 +1014,15 @@
 #             if not button.is_visible():
 #                 continue
 
-#             text = " ".join(
-#                 [
-#                     button.inner_text() or "",
-#                     button.get_attribute(
-#                         "value"
-#                     ) or "",
-#                     button.get_attribute(
-#                         "aria-label"
-#                     ) or "",
-#                 ]
-#             ).strip().lower()
+#             text = clean_text(
+#                 " ".join(
+#                     [
+#                         button.inner_text() or "",
+#                         button.get_attribute("value") or "",
+#                         button.get_attribute("aria-label") or "",
+#                     ]
+#                 )
+#             ).lower()
 
 #             if (
 #                 text == "login"
@@ -2465,424 +1039,1172 @@
 
 #     if not login_button:
 
-#         raise RuntimeError(
-#             "Login button not found."
-#         )
+#         raise RuntimeError("Login button not found.")
 
 #     login_button.click()
 
 #     try:
 
 #         page.wait_for_url(
-#             re.compile(
-#                 r".*/app.*"
-#             ),
-#             timeout=10000
+#             re.compile(r"/app"),
+#             timeout=15000,
 #         )
 
 #     except PlaywrightTimeoutError:
 
-#         page.wait_for_timeout(
-#             2500
-#         )
+#         page.wait_for_timeout(3000)
+
+#     log(f"Login URL: {page.url}")
 
 #     if "/app" not in page.url:
 
-#         raise RuntimeError(
-#             f"Login failed: {page.url}"
-#         )
+#         raise RuntimeError("Login failed.")
 
-#     log(
-#         f"LOGIN SUCCESS: {page.url}"
-#     )
+#     log("LOGIN SUCCESS")
 
 #     return True
 
 
 # # ============================================================
-# # READ ONE DOCUMENT
+# # HOME
 # # ============================================================
 
-# def read_document(
-#     page,
-#     module_name,
-#     document_name,
-#     document_url=""
-# ):
 
-#     log(
-#         "--------------------------------------"
+# def open_home(page):
+
+#     log("Opening Home / Desk...")
+
+#     page.goto(
+#         f"{ERP_URL}/app/home",
+#         wait_until="domcontentloaded",
+#         timeout=30000,
 #     )
 
-#     log(
-#         f"READ DOCUMENT: {document_name}"
-#     )
+#     page.wait_for_timeout(1500)
+
+#     log(f"Home URL: {page.url}")
+
+
+# # ============================================================
+# # MODULE NAVIGATION
+# # ============================================================
+
+
+# def normalize_route(text):
+#     return slugify(text)
+
+
+# def find_module(page, module_name):
+
+#     target = clean_text(module_name).lower()
+
+#     log(f"Finding module: {module_name}")
 
 #     # --------------------------------------------------------
-#     # Existing check BEFORE opening
+#     # First: visible text
 #     # --------------------------------------------------------
 
-#     existing = get_existing_discovery()
-
-#     key = normalize_name(
-#         document_name
+#     candidates = page.get_by_text(
+#         module_name,
+#         exact=True,
 #     )
 
-#     if key in existing:
+#     try:
+#         count = candidates.count()
+#     except Exception:
+#         count = 0
 
-#         log(
-#             f"SKIP EXISTING: "
-#             f"{document_name} -> "
-#             f"{existing[key].name}"
+#     for i in range(count):
+
+#         item = candidates.nth(i)
+
+#         try:
+
+#             if item.is_visible():
+#                 return item
+
+#         except Exception:
+#             continue
+
+#     # --------------------------------------------------------
+#     # Second: links/buttons containing text
+#     # --------------------------------------------------------
+
+#     candidates = page.locator("""
+#         a,
+#         button,
+#         [role="button"],
+#         .module-link,
+#         .desk-sidebar-item
+#         """)
+
+#     try:
+#         count = min(
+#             candidates.count(),
+#             500,
 #         )
+#     except Exception:
+#         count = 0
 
+#     for i in range(count):
+
+#         item = candidates.nth(i)
+
+#         try:
+
+#             if not item.is_visible():
+#                 continue
+
+#             text = clean_text(item.inner_text()).lower()
+
+#             if text == target:
+
+#                 return item
+
+#         except Exception:
+#             continue
+
+#     return None
+
+
+# def open_module(page, module_name):
+
+#     item = find_module(
+#         page,
+#         module_name,
+#     )
+
+#     if not item:
+
+#         raise RuntimeError(f"Module not found: {module_name}")
+
+#     log(f"Opening module: {module_name}")
+
+#     item.click()
+
+#     page.wait_for_timeout(1500)
+
+#     log(f"Module URL: {page.url}")
+
+
+# # ============================================================
+# # DOC TYPE DETECTION
+# # ============================================================
+
+
+# def is_probable_record_name(text):
+#     """
+#     Existing ERPNext records often look like:
+
+#     BUDGET-00000025
+#     SAL-ORD-2026-00001
+#     INV-00001
+
+#     We don't want to treat those as DocTypes.
+#     """
+
+#     text = clean_text(text)
+
+#     if not text:
 #         return False
 
-#     # --------------------------------------------------------
-#     # Open
-#     # --------------------------------------------------------
+#     patterns = [
+#         r"^[A-Z]{2,}[-_]\d{3,}",
+#         r"^[A-Z0-9]+-\d{4,}$",
+#         r"^\d+$",
+#     ]
 
-#     if document_url:
+#     return any(
+#         re.match(
+#             pattern,
+#             text,
+#         )
+#         for pattern in patterns
+#     )
 
-#         if not document_url.startswith(
-#             ERP_URL
-#         ):
 
-#             log(
-#                 f"SKIP external URL: "
-#                 f"{document_url}"
-#             )
+# def clean_doctype_candidate(text):
 
-#             return False
+#     text = clean_text(text)
 
-#         page.goto(
-#             document_url,
-#             wait_until="domcontentloaded",
-#             timeout=TIMEOUT
+#     if not text:
+#         return ""
+
+#     if is_probable_record_name(text):
+#         return ""
+
+#     bad = {
+#         "list view",
+#         "kanban",
+#         "calendar",
+#         "report",
+#         "dashboard",
+#         "filter",
+#         "filters",
+#         "load more",
+#         "help",
+#         "settings",
+#         "search",
+#         "actions",
+#         "add",
+#     }
+
+#     if text.lower() in bad:
+#         return ""
+
+#     # Avoid very long UI sentences
+#     if len(text) > 100:
+#         return ""
+
+#     return text
+
+
+# # ============================================================
+# # MODULE DOC DISCOVERY
+# # ============================================================
+
+
+# def discover_module_docs(page):
+#     """
+#     Discover visible DocType entries inside a module.
+
+#     Important:
+#     We do NOT depend on "Quick Access".
+
+#     We inspect visible links/buttons/cards and also
+#     href patterns such as /app/<route>.
+#     """
+
+#     docs = []
+
+#     seen = set()
+
+#     def add_candidate(
+#         text,
+#         href="",
+#     ):
+
+#         text = clean_doctype_candidate(text)
+
+#         if not text:
+#             return
+
+#         key = text.lower()
+
+#         if key in seen:
+#             return
+
+#         seen.add(key)
+
+#         docs.append(
+#             {
+#                 "doctype": text,
+#                 "href": href,
+#             }
 #         )
 
-#     else:
+#     # --------------------------------------------------------
+#     # 1. Visible links
+#     # --------------------------------------------------------
 
-#         element = find_text_element(
-#             page,
-#             document_name
+#     links = page.locator("a")
+
+#     try:
+#         count = min(
+#             links.count(),
+#             1000,
 #         )
+#     except Exception:
+#         count = 0
 
-#         if not element:
+#     for i in range(count):
 
-#             log(
-#                 f"Cannot open: "
-#                 f"{document_name}"
+#         link = links.nth(i)
+
+#         try:
+
+#             if not link.is_visible():
+#                 continue
+
+#             text = clean_text(link.inner_text())
+
+#             href = link.get_attribute("href") or ""
+
+#             # Only likely ERP routes
+#             if href.startswith("/app/") or "/app/" in href:
+
+#                 add_candidate(
+#                     text,
+#                     href,
+#                 )
+
+#         except Exception:
+#             continue
+
+#     # --------------------------------------------------------
+#     # 2. Visible buttons/cards
+#     # --------------------------------------------------------
+
+#     clickable = page.locator("""
+#         button,
+#         [role="button"],
+#         .module-card,
+#         .desk-card,
+#         .link-card,
+#         .widget
+#         """)
+
+#     try:
+#         count = min(
+#             clickable.count(),
+#             1000,
+#         )
+#     except Exception:
+#         count = 0
+
+#     for i in range(count):
+
+#         item = clickable.nth(i)
+
+#         try:
+
+#             if not item.is_visible():
+#                 continue
+
+#             text = clean_text(item.inner_text())
+
+#             href = item.get_attribute("href") or ""
+
+#             add_candidate(
+#                 text,
+#                 href,
 #             )
 
-#             return False
+#         except Exception:
+#             continue
 
-#         element.click()
+#     # --------------------------------------------------------
+#     # 3. Look for "Add <DocType>" buttons
+#     # --------------------------------------------------------
 
-#     page.wait_for_timeout(
-#         WAIT_MS
+#     buttons = page.locator("""
+#         button,
+#         [role="button"],
+#         a
+#         """)
+
+#     try:
+#         count = min(
+#             buttons.count(),
+#             1000,
+#         )
+#     except Exception:
+#         count = 0
+
+#     add_pattern = re.compile(
+#         r"^\+?\s*add\s+(.+)$",
+#         re.I,
+#     )
+
+#     for i in range(count):
+
+#         item = buttons.nth(i)
+
+#         try:
+
+#             if not item.is_visible():
+#                 continue
+
+#             text = clean_text(item.inner_text())
+
+#             match = add_pattern.match(text)
+
+#             if match:
+
+#                 candidate = clean_doctype_candidate(match.group(1))
+
+#                 if candidate:
+
+#                     add_candidate(
+#                         candidate,
+#                         "",
+#                     )
+
+#         except Exception:
+#             continue
+
+#     # --------------------------------------------------------
+#     # 4. Remove obvious non-Doc entries
+#     # --------------------------------------------------------
+
+#     filtered = []
+
+#     for item in docs:
+
+#         text = item["doctype"]
+
+#         lower = text.lower()
+
+#         if lower in {
+#             "home",
+#             "import",
+#             "accounting",
+#             "inventory",
+#             "assets",
+#             "production",
+#             "quality",
+#             "planning",
+#             "support",
+#             "crm",
+#             "settings",
+#         }:
+#             continue
+
+#         filtered.append(item)
+
+#     return filtered
+
+
+# # ============================================================
+# # FIND DOCTYPE LIST PAGE
+# # ============================================================
+
+
+# def find_doctype_route(
+#     page,
+#     doctype,
+# ):
+#     """
+#     Try to find a link that points to this DocType.
+#     """
+
+#     target = clean_text(doctype).lower()
+
+#     links = page.locator("a")
+
+#     try:
+#         count = min(
+#             links.count(),
+#             1000,
+#         )
+#     except Exception:
+#         count = 0
+
+#     for i in range(count):
+
+#         link = links.nth(i)
+
+#         try:
+
+#             if not link.is_visible():
+#                 continue
+
+#             text = clean_text(link.inner_text()).lower()
+
+#             href = link.get_attribute("href") or ""
+
+#             if text == target or target in text:
+
+#                 if href:
+
+#                     return urljoin(
+#                         ERP_URL + "/",
+#                         href,
+#                     )
+
+#         except Exception:
+#             continue
+
+#     return None
+
+
+# def guess_doctype_route(doctype):
+
+#     return f"{ERP_URL}/app/" f"{slugify(doctype)}"
+
+
+# # ============================================================
+# # OPEN DOCTYPE LIST
+# # ============================================================
+
+
+# def open_doctype_list(
+#     page,
+#     doctype,
+# ):
+
+#     log(f"Opening DocType list: {doctype}")
+
+#     route = find_doctype_route(
+#         page,
+#         doctype,
+#     )
+
+#     if not route:
+
+#         route = guess_doctype_route(doctype)
+
+#     log(f"DocType route: {route}")
+
+#     page.goto(
+#         route,
+#         wait_until="domcontentloaded",
+#         timeout=30000,
+#     )
+
+#     page.wait_for_timeout(1200)
+
+#     return page.url
+
+
+# # ============================================================
+# # ADD NEW DOCUMENT
+# # ============================================================
+
+
+# def find_add_button(
+#     page,
+#     doctype,
+# ):
+
+#     target = clean_text(doctype).lower()
+
+#     expected = [
+#         f"add {target}",
+#         f"+ add {target}",
+#         f"new {target}",
+#     ]
+
+#     # --------------------------------------------------------
+#     # Exact text
+#     # --------------------------------------------------------
+
+#     candidates = page.locator("""
+#         button,
+#         a,
+#         [role="button"]
+#         """)
+
+#     try:
+#         count = min(
+#             candidates.count(),
+#             1000,
+#         )
+#     except Exception:
+#         count = 0
+
+#     for i in range(count):
+
+#         item = candidates.nth(i)
+
+#         try:
+
+#             if not item.is_visible():
+#                 continue
+
+#             text = clean_text(
+#                 " ".join(
+#                     [
+#                         item.inner_text() or "",
+#                         item.get_attribute("aria-label") or "",
+#                         item.get_attribute("title") or "",
+#                     ]
+#                 )
+#             ).lower()
+
+#             if text in expected:
+
+#                 return item
+
+#         except Exception:
+#             continue
+
+#     # --------------------------------------------------------
+#     # Contains "Add <DocType>"
+#     # --------------------------------------------------------
+
+#     for i in range(count):
+
+#         item = candidates.nth(i)
+
+#         try:
+
+#             if not item.is_visible():
+#                 continue
+
+#             text = clean_text(item.inner_text()).lower()
+
+#             if "add" in text and target in text:
+
+#                 return item
+
+#         except Exception:
+#             continue
+
+#     # --------------------------------------------------------
+#     # Generic Add button on DocType list
+#     # --------------------------------------------------------
+
+#     generic = [
+#         "button:has-text('Add')",
+#         "button:has-text('New')",
+#         "a:has-text('Add')",
+#         "[role='button']:has-text('Add')",
+#     ]
+
+#     for selector in generic:
+
+#         locator = page.locator(selector)
+
+#         try:
+#             count = locator.count()
+#         except Exception:
+#             count = 0
+
+#         for i in range(count):
+
+#             item = locator.nth(i)
+
+#             try:
+
+#                 if item.is_visible():
+
+#                     return item
+
+#             except Exception:
+#                 continue
+
+#     return None
+
+
+# def click_add_new_document(
+#     page,
+#     doctype,
+# ):
+
+#     log(f"Looking for + Add {doctype}")
+
+#     add_button = find_add_button(
+#         page,
+#         doctype,
+#     )
+
+#     if not add_button:
+
+#         raise RuntimeError(f"+ Add {doctype} button not found.")
+
+#     log(f"Clicking + Add {doctype}")
+
+#     before_url = page.url
+
+#     add_button.click()
+
+#     try:
+
+#         page.wait_for_url(
+#             re.compile(r"/app/"),
+#             timeout=10000,
+#         )
+
+#     except PlaywrightTimeoutError:
+#         pass
+
+#     page.wait_for_timeout(1500)
+
+#     after_url = page.url
+
+#     log(f"New document URL: {after_url}")
+
+#     # --------------------------------------------------------
+#     # Verify we are not still on list
+#     # --------------------------------------------------------
+
+#     if after_url == before_url:
+
+#         # Maybe route did not change immediately.
+#         page.wait_for_timeout(1500)
+
+#     return page.url
+
+
+# # ============================================================
+# # VERIFY NEW DOCUMENT
+# # ============================================================
+
+
+# def verify_new_document(
+#     page,
+#     doctype,
+# ):
+
+#     url = page.url.lower()
+
+#     # Common new route:
+#     # /app/<route>/new-<doctype>
+#     # /app/<doctype>/new-<doctype>
+
+#     has_new = "new-" in url or "/new/" in url
+
+#     # Look at page text
+#     try:
+
+#         body_text = clean_text(page.locator("body").inner_text(timeout=5000)).lower()
+
+#     except Exception:
+#         body_text = ""
+
+#     title = clean_text(doctype).lower()
+
+#     indicators = [
+#         f"new {title}",
+#         f"new-{slugify(doctype)}",
+#         "save",
+#         "submit",
+#     ]
+
+#     text_indicator = any(item in body_text for item in indicators)
+
+#     if has_new or text_indicator:
+
+#         log(f"New document confirmed: {doctype}")
+
+#         return True
+
+#     # --------------------------------------------------------
+#     # Check form fields
+#     # --------------------------------------------------------
+
+#     fields = page.locator("[data-fieldname]")
+
+#     try:
+
+#         if fields.count() > 0:
+
+#             log(f"Form detected for: {doctype}")
+
+#             return True
+
+#     except Exception:
+#         pass
+
+#     return False
+
+
+# # ============================================================
+# # DISCOVER ONE DOCTYPE
+# # ============================================================
+
+
+# def discover_doctype(
+#     page,
+#     doctype,
+#     module_name="",
+# ):
+
+#     doctype = clean_text(doctype)
+
+#     if not doctype:
+#         return None
+
+#     # --------------------------------------------------------
+#     # Existing JSON validation
+#     # --------------------------------------------------------
+
+#     existing = discovery_file_for_doctype(doctype)
+
+#     if existing:
+
+#         log(f"SKIP: {doctype} " f"already discovered -> " f"{existing.name}")
+
+#         return existing
+
+#     log("--------------------------------------")
+
+#     log(f"DISCOVERING DOCTYPE: {doctype}")
+
+#     log("--------------------------------------")
+
+#     # --------------------------------------------------------
+#     # Open list
+#     # --------------------------------------------------------
+
+#     open_doctype_list(
+#         page,
+#         doctype,
 #     )
 
 #     # --------------------------------------------------------
-#     # Read full visible page
+#     # Screenshot list
 #     # --------------------------------------------------------
 
-#     data = discover_page(
-#         page
-#     )
-
-#     data.update({
-#         "name": document_name,
-#         "doctype": document_name,
-#         "module": module_name,
-#         "knowledge_type": "doctype",
-#         "source_url": page.url,
-#     })
-
-#     # --------------------------------------------------------
-#     # Screenshot
-#     # --------------------------------------------------------
-
-#     screenshot_name = (
-#         f"{slugify(document_name)}.png"
-#     )
-
-#     screenshot_path = (
-#         SCREENSHOT_DIR
-#         / screenshot_name
-#     )
+#     list_screenshot = SCREENSHOT_DIR / f"{slugify(doctype)}_list.png"
 
 #     try:
 
 #         page.screenshot(
-#             path=str(
-#                 screenshot_path
-#             ),
-#             full_page=True
+#             path=str(list_screenshot),
+#             full_page=True,
 #         )
 
 #     except Exception:
 #         pass
 
-#     data["screenshot"] = str(
-#         screenshot_path
+#     # --------------------------------------------------------
+#     # Click + Add
+#     # --------------------------------------------------------
+
+#     click_add_new_document(
+#         page,
+#         doctype,
 #     )
 
 #     # --------------------------------------------------------
-#     # Save
+#     # Verify
 #     # --------------------------------------------------------
 
-#     path = save_discovery(
-#         document_name,
-#         data
+#     if not verify_new_document(
+#         page,
+#         doctype,
+#     ):
+
+#         raise RuntimeError(f"Could not confirm new document " f"for {doctype}")
+
+#     # --------------------------------------------------------
+#     # Read form
+#     # --------------------------------------------------------
+
+#     page.wait_for_timeout(1000)
+
+#     log(f"Reading all fields: {doctype}")
+
+#     data = discover_page(
+#         page,
+#         doctype=doctype,
+#         read_mode="blank_new_document",
 #     )
 
-#     log(
-#         f"DOCUMENT COMPLETE: "
-#         f"{document_name}"
-#     )
+#     data["module"] = module_name
 
-#     return True
+#     # --------------------------------------------------------
+#     # Save screenshot
+#     # --------------------------------------------------------
+
+#     screenshot = SCREENSHOT_DIR / f"{slugify(doctype)}_new.png"
+
+#     try:
+
+#         page.screenshot(
+#             path=str(screenshot),
+#             full_page=True,
+#         )
+
+#         log(f"Screenshot saved: {screenshot}")
+
+#     except Exception:
+#         pass
+
+#     # --------------------------------------------------------
+#     # Save JSON
+#     # --------------------------------------------------------
+
+#     saved = save_discovery(data)
+
+#     log(f"Fields discovered: " f"{len(data['fields'])}")
+
+#     log(f"Tabs discovered: " f"{len(data['tabs'])}")
+
+#     log(f"Sections discovered: " f"{len(data['sections'])}")
+
+#     log(f"Buttons discovered: " f"{len(data['buttons'])}")
+
+#     log(f"COMPLETED: {doctype}")
+
+#     return saved
 
 
 # # ============================================================
 # # MODULE DISCOVERY
 # # ============================================================
 
+
 # def discover_module(
 #     page,
 #     module_name,
-#     only_doctype=None
 # ):
 
-#     log(
-#         "======================================"
-#     )
+#     log("======================================")
 
-#     log(
-#         f"MODULE DISCOVERY: {module_name}"
-#     )
+#     log(f"FULL MODULE DISCOVERY: {module_name}")
 
-#     log(
-#         "======================================"
-#     )
+#     log("======================================")
 
 #     # --------------------------------------------------------
-#     # Read module page itself
+#     # Open module
 #     # --------------------------------------------------------
 
-#     module_data = discover_page(
-#         page
-#     )
+#     open_home(page)
 
-#     module_data.update({
-#         "name": module_name,
-#         "module": module_name,
-#         "knowledge_type": "module",
-#     })
-
-#     save_discovery(
+#     open_module(
+#         page,
 #         module_name,
-#         module_data
 #     )
 
+#     page.wait_for_timeout(1000)
+
 #     # --------------------------------------------------------
-#     # If exact DocType requested
+#     # Screenshot module
 #     # --------------------------------------------------------
 
-#     if only_doctype:
+#     module_screenshot = SCREENSHOT_DIR / f"module_{slugify(module_name)}.png"
 
-#         log(
-#             f"TARGET DOC ONLY: "
-#             f"{only_doctype}"
+#     try:
+
+#         page.screenshot(
+#             path=str(module_screenshot),
+#             full_page=True,
 #         )
 
-#         read_document(
-#             page,
-#             module_name,
-#             only_doctype
-#         )
+#     except Exception:
+#         pass
+
+#     # --------------------------------------------------------
+#     # Find visible DocTypes
+#     # --------------------------------------------------------
+
+#     docs = discover_module_docs(page)
+
+#     log(f"Visible document candidates: " f"{len(docs)}")
+
+#     for index, item in enumerate(
+#         docs,
+#         start=1,
+#     ):
+
+#         log(f"{index}. " f"{item['doctype']}")
+
+#     if not docs:
+
+#         log("No visible DocTypes detected.")
 
 #         return
 
 #     # --------------------------------------------------------
-#     # Find ALL visible documents
+#     # Process one by one
 #     # --------------------------------------------------------
 
-#     candidates = (
-#         discover_document_candidates(
-#             page,
-#             module_name
-#         )
-#     )
-
-#     if not candidates:
-
-#         log(
-#             "No visible document candidates found."
-#         )
-
-#         return
-
-#     # --------------------------------------------------------
-#     # Read one by one
-#     # --------------------------------------------------------
-
-#     total = len(candidates)
-
-#     completed = 0
+#     success = 0
 #     skipped = 0
 #     failed = 0
 
 #     for index, item in enumerate(
-#         candidates,
-#         start=1
+#         docs,
+#         start=1,
 #     ):
 
-#         name = item["name"]
+#         doctype = item["doctype"]
 
-#         log(
-#             f"[{index}/{total}] "
-#             f"{name}"
-#         )
+#         log("======================================")
 
-#         existing = get_existing_discovery()
+#         log(f"MODULE DOC {index}/{len(docs)}: " f"{doctype}")
 
-#         if (
-#             normalize_name(name)
-#             in existing
-#         ):
+#         log("======================================")
 
-#             log(
-#                 f"SKIP EXISTING: "
-#                 f"{name}"
-#             )
+#         # Existing check before opening
+#         existing = discovery_file_for_doctype(doctype)
+
+#         if existing:
+
+#             log(f"SKIP EXISTING: {doctype} " f"-> {existing.name}")
 
 #             skipped += 1
+
 #             continue
 
 #         try:
 
-#             success = read_document(
+#             discover_doctype(
 #                 page,
-#                 module_name,
-#                 name,
-#                 item.get("url", "")
+#                 doctype,
+#                 module_name=module_name,
 #             )
 
-#             if success:
-
-#                 completed += 1
-
-#             else:
-
-#                 failed += 1
+#             success += 1
 
 #         except Exception as exc:
 
 #             failed += 1
 
-#             log(
-#                 f"FAILED: "
-#                 f"{name} -> {exc}"
-#             )
+#             log(f"FAILED: {doctype}")
 
-#         # ----------------------------------------------------
-#         # Return to module
-#         # ----------------------------------------------------
+#             log(f"Reason: {exc}")
 
-#         try:
+#             # ------------------------------------------------
+#             # Failure screenshot
+#             # ------------------------------------------------
 
-#             open_module(
-#                 page,
-#                 module_name
-#             )
+#             try:
 
-#         except Exception as exc:
+#                 path = SCREENSHOT_DIR / f"failure_{slugify(doctype)}.png"
 
-#             log(
-#                 f"Could not return to module: "
-#                 f"{exc}"
-#             )
+#                 page.screenshot(
+#                     path=str(path),
+#                     full_page=True,
+#                 )
 
-#             break
+#             except Exception:
+#                 pass
+
+#             # ------------------------------------------------
+#             # Return to module and continue
+#             # ------------------------------------------------
+
+#             try:
+
+#                 open_home(page)
+
+#                 open_module(
+#                     page,
+#                     module_name,
+#                 )
+
+#                 page.wait_for_timeout(1000)
+
+#             except Exception as recovery_error:
+
+#                 log(f"Recovery failed: " f"{recovery_error}")
 
 #     # --------------------------------------------------------
 #     # Summary
 #     # --------------------------------------------------------
 
-#     log(
-#         "======================================"
+#     log("======================================")
+
+#     log(f"MODULE DISCOVERY FINISHED: " f"{module_name}")
+
+#     log(f"SUCCESS: {success}")
+
+#     log(f"SKIPPED: {skipped}")
+
+#     log(f"FAILED: {failed}")
+
+#     log("Agent will now STOP.")
+
+#     log("======================================")
+
+
+# # ============================================================
+# # SINGLE DOCTYPE DISCOVERY
+# # ============================================================
+
+
+# def discover_single_doctype(
+#     page,
+#     doctype,
+# ):
+
+#     log("======================================")
+
+#     log(f"SINGLE DOCTYPE DISCOVERY: {doctype}")
+
+#     log("======================================")
+
+#     existing = discovery_file_for_doctype(doctype)
+
+#     if existing:
+
+#         log(f"ALREADY EXISTS: {existing}")
+
+#         log("Nothing to do.")
+
+#         return
+
+#     discover_doctype(
+#         page,
+#         doctype,
+#         module_name="",
 #     )
 
-#     log(
-#         f"MODULE COMPLETE: {module_name}"
+#     log("======================================")
+
+#     log(f"DOC TYPE DISCOVERY FINISHED: " f"{doctype}")
+
+#     log("Agent will now STOP.")
+
+#     log("======================================")
+
+
+# # ============================================================
+# # ARGUMENTS
+# # ============================================================
+
+
+# def parse_args():
+
+#     parser = argparse.ArgumentParser(description=("ERPNext Knowledge Discovery Agent"))
+
+#     parser.add_argument(
+#         "--module",
+#         required=False,
+#         help=("Discover all visible DocTypes " "inside the module."),
 #     )
 
-#     log(
-#         f"Read: {completed}"
+#     parser.add_argument(
+#         "--doctype",
+#         required=False,
+#         help=("Discover only this DocType."),
 #     )
 
-#     log(
-#         f"Skipped: {skipped}"
-#     )
+#     args = parser.parse_args()
 
-#     log(
-#         f"Failed: {failed}"
-#     )
+#     if not args.module and not args.doctype:
 
-#     log(
-#         "======================================"
-#     )
+#         parser.error("Give either --module or --doctype.")
+
+#     if args.module and args.doctype:
+
+#         log("Both --module and --doctype supplied.")
+
+#         log("Priority: specific --doctype.")
+
+#         args.module = None
+
+#     return args
 
 
 # # ============================================================
 # # MAIN
 # # ============================================================
 
+
 # def main():
 
 #     args = parse_args()
 
-#     if not args.module:
+#     log("======================================")
 
-#         print(
-#             "\nExample:\n"
-#             '  python discovery_agent.py --module "Import"\n\n'
-#             "Or:\n"
-#             "  python discovery_agent.py "
-#             '--module "Import" --doctype "Budget Head"\n'
-#         )
+#     log("ERPNext KNOWLEDGE DISCOVERY AGENT")
 
-#         return
+#     log("======================================")
 
-#     log(
-#         "======================================"
-#     )
+#     log(f"ERP: {ERP_URL}")
 
-#     log(
-#         "ERPNext KNOWLEDGE DISCOVERY AGENT"
-#     )
+#     if args.module:
 
-#     log(
-#         "======================================"
-#     )
+#         log(f"MODE: MODULE")
 
-#     log(
-#         f"Target Module: {args.module}"
-#     )
+#         log(f"MODULE: {args.module}")
 
-#     if args.doctype:
+#     else:
 
-#         log(
-#             f"Target DocType: {args.doctype}"
-#         )
+#         log(f"MODE: SINGLE DOCTYPE")
+
+#         log(f"DOCTYPE: {args.doctype}")
 
 #     with sync_playwright() as p:
 
 #         browser = p.chromium.launch(
 #             headless=HEADLESS,
-#             slow_mo=20
+#             slow_mo=30,
 #         )
 
 #         context = browser.new_context(
@@ -2900,19 +2222,15 @@
 #             # OPEN ERP
 #             # ------------------------------------------------
 
-#             log(
-#                 f"Opening ERP: {ERP_URL}"
-#             )
+#             log(f"Opening ERP: {ERP_URL}")
 
 #             page.goto(
 #                 ERP_URL,
 #                 wait_until="domcontentloaded",
-#                 timeout=TIMEOUT
+#                 timeout=30000,
 #             )
 
-#             log(
-#                 f"Current URL: {page.url}"
-#             )
+#             log(f"Current URL: {page.url}")
 
 #             # ------------------------------------------------
 #             # LOGIN
@@ -2924,66 +2242,40 @@
 #             # HOME
 #             # ------------------------------------------------
 
-#             log(
-#                 "Opening Home / Desk..."
-#             )
-
-#             open_home(
-#                 page
-#             )
+#             open_home(page)
 
 #             # ------------------------------------------------
-#             # SCREENSHOT HOME
+#             # MODE
 #             # ------------------------------------------------
 
-#             try:
+#             if args.doctype:
 
-#                 page.screenshot(
-#                     path=str(
-#                         SCREENSHOT_DIR
-#                         / "home.png"
-#                     ),
-#                     full_page=True
+#                 discover_single_doctype(
+#                     page,
+#                     args.doctype,
 #                 )
 
-#             except Exception:
-#                 pass
+#             elif args.module:
 
-#             # ------------------------------------------------
-#             # MODULE
-#             # ------------------------------------------------
-
-#             open_module(
-#                 page,
-
-#                 args.module
-#             )
-
-#             # ------------------------------------------------
-#             # DISCOVER
-#             # ------------------------------------------------
-
-#             discover_module(
-#                 page,
-#                 args.module,
-#                 args.doctype
-#             )
+#                 discover_module(
+#                     page,
+#                     args.module,
+#                 )
 
 #         except Exception as exc:
 
-#             log(
-#                 f"FATAL ERROR: {exc}"
-#             )
+#             log(f"FATAL ERROR: {exc}")
 
 #             try:
 
+#                 failure = SCREENSHOT_DIR / "discovery_failure.png"
+
 #                 page.screenshot(
-#                     path=str(
-#                         SCREENSHOT_DIR
-#                         / "discovery_failure.png"
-#                     ),
-#                     full_page=True
+#                     path=str(failure),
+#                     full_page=True,
 #                 )
+
+#                 log(f"Failure screenshot: " f"{failure}")
 
 #             except Exception:
 #                 pass
@@ -2993,24 +2285,22 @@
 #             context.close()
 #             browser.close()
 
-#     log(
-#         "======================================"
-#     )
+#     log("======================================")
 
-#     log(
-#         "DISCOVERY FINISHED"
-#     )
+#     log("DISCOVERY FINISHED")
 
-#     log(
-#         "======================================"
-#     )
+#     log("======================================")
 
+
+# # ============================================================
+# # ENTRY
+# # ============================================================
 
 # if __name__ == "__main__":
 #     main()
 
 
-# ================================================
+# =========================================
 import argparse
 import json
 import os
@@ -3020,13 +2310,17 @@ from pathlib import Path
 from urllib.parse import urljoin
 
 from dotenv import load_dotenv
-from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+from playwright.sync_api import (
+    sync_playwright,
+    TimeoutError as PlaywrightTimeoutError,
+)
 
 # ============================================================
 # CONFIG
 # ============================================================
 
 BASE_DIR = Path(__file__).resolve().parent
+
 load_dotenv(BASE_DIR / ".env")
 
 ERP_URL = os.getenv(
@@ -3039,36 +2333,57 @@ PASSWORD = os.getenv("ERPNEXT_PASSWORD", "")
 
 HEADLESS = os.getenv("HEADLESS", "false").lower() == "true"
 
-TIMEOUT = int(os.getenv("DISCOVERY_TIMEOUT", "30000"))
-WAIT_MS = int(os.getenv("DISCOVERY_WAIT_MS", "1500"))
+DISCOVERY_DIR = BASE_DIR / "data" / "discovery"
 
-DATA_DIR = BASE_DIR / "data"
-DISCOVERY_DIR = DATA_DIR / "discovery"
-SCREENSHOT_DIR = DATA_DIR / "screenshots"
-LOG_DIR = BASE_DIR / "logs"
+SCREENSHOT_DIR = BASE_DIR / "data" / "screenshots"
 
-DISCOVERY_DIR.mkdir(parents=True, exist_ok=True)
-SCREENSHOT_DIR.mkdir(parents=True, exist_ok=True)
-LOG_DIR.mkdir(parents=True, exist_ok=True)
+DISCOVERY_DIR.mkdir(
+    parents=True,
+    exist_ok=True,
+)
 
+SCREENSHOT_DIR.mkdir(
+    parents=True,
+    exist_ok=True,
+)
 
 # ============================================================
-# ARGUMENTS
+# TIMING
 # ============================================================
 
+WAIT_SHORT = 500
+WAIT_MEDIUM = 1000
+WAIT_LONG = 1500
 
-def parse_args():
+# ============================================================
+# NOTIFICATION / SYSTEM UI
+# ============================================================
 
-    parser = argparse.ArgumentParser(
-        description="Generic ERPNext Knowledge Discovery Agent"
-    )
+NOTIFICATION_KEYWORDS = {
+    "notification",
+    "notifications",
+    "no new notifications",
+    "notification icon",
+    "bell",
+}
 
-    parser.add_argument("--module", required=True, help="ERPNext module name")
-
-    parser.add_argument("--doctype", required=False, help="Read only one DocType")
-
-    return parser.parse_args()
-
+SYSTEM_UI_KEYWORDS = {
+    "help",
+    "filter",
+    "filters",
+    "search",
+    "settings",
+    "list view",
+    "kanban",
+    "calendar",
+    "dashboard",
+    "load more",
+    "no new notifications",
+    "notification",
+    "notifications",
+    "notification icon",
+    "bell",
+}
 
 # ============================================================
 # LOG
@@ -3076,7 +2391,6 @@ def parse_args():
 
 
 def log(message):
-
     print(
         f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {message}",
         flush=True,
@@ -3088,154 +2402,293 @@ def log(message):
 # ============================================================
 
 
-def normalize_name(value):
-
-    if not value:
+def clean_text(value):
+    if value is None:
         return ""
 
-    value = str(value).strip().lower()
+    return re.sub(
+        r"\s+",
+        " ",
+        str(value),
+    ).strip()
 
-    value = re.sub(r"\s+", " ", value)
 
-    return value
+def normalize_text(value):
+    return clean_text(value).lower()
 
 
 def slugify(value):
+    value = normalize_text(value)
 
-    value = str(value).strip().lower()
+    value = re.sub(
+        r"[^a-z0-9]+",
+        "-",
+        value,
+    )
 
-    value = value.replace("&", "and")
+    value = value.strip("-")
 
-    value = re.sub(r"[^a-z0-9]+", "-", value)
-
-    value = re.sub(r"-+", "-", value)
-
-    return value.strip("-")
-
-
-def absolute_url(value):
-
-    if not value:
-        return ""
-
-    if value.startswith("http://"):
-        return value
-
-    if value.startswith("https://"):
-        return value
-
-    return urljoin(ERP_URL + "/", value)
+    return value or "unknown"
 
 
 # ============================================================
-# SERIAL FILE
+# NOTIFICATION DETECTION
 # ============================================================
+
+
+def is_notification_element(
+    text="",
+    aria_label="",
+    title="",
+    value="",
+    class_name="",
+    id_value="",
+):
+    """
+    Detect ERPNext notification / bell related UI.
+
+    Important:
+    These elements must NEVER become business actions.
+    """
+
+    values = [
+        normalize_text(text),
+        normalize_text(aria_label),
+        normalize_text(title),
+        normalize_text(value),
+        normalize_text(class_name),
+        normalize_text(id_value),
+    ]
+
+    for value_item in values:
+
+        if not value_item:
+            continue
+
+        # Exact match
+        if value_item in NOTIFICATION_KEYWORDS:
+            return True
+
+        # Notification text
+        if "notification" in value_item:
+            return True
+
+        # Bell
+        if value_item == "bell":
+            return True
+
+        # Notification + number
+        if re.search(
+            r"\bnotifications?\b.*\d+",
+            value_item,
+        ):
+            return True
+
+        # Number + notification
+        if re.search(
+            r"\d+.*\bnotifications?\b",
+            value_item,
+        ):
+            return True
+
+        # Notification related class/id
+        if (
+            "notification" in value_item
+            or "navbar-notifications" in value_item
+            or "notifications-icon" in value_item
+        ):
+            return True
+
+    return False
+
+
+def is_system_ui(
+    text="",
+    aria_label="",
+    title="",
+):
+    """
+    Detect generic system/browser/UI elements
+    which should not become business test actions.
+    """
+
+    values = [
+        normalize_text(text),
+        normalize_text(aria_label),
+        normalize_text(title),
+    ]
+
+    for value_item in values:
+
+        if not value_item:
+            continue
+
+        if value_item in SYSTEM_UI_KEYWORDS:
+            return True
+
+        if is_notification_element(
+            text=value_item,
+        ):
+            return True
+
+    return False
+
+
+# ============================================================
+# JSON HELPERS
+# ============================================================
+
+
+def load_json(path):
+
+    try:
+        return json.loads(
+            path.read_text(
+                encoding="utf-8",
+            )
+        )
+
+    except Exception as exc:
+
+        log(f"SKIP INVALID JSON: " f"{path.name} -> {exc}")
+
+        return None
+
+
+# ============================================================
+# DISCOVERY FILE MANAGEMENT
+# ============================================================
+
+
+def existing_discovery_doctypes():
+    """
+    Read existing discovery files and return
+    known DocType names.
+    """
+
+    discovered = set()
+
+    for path in DISCOVERY_DIR.glob("*.json"):
+
+        data = load_json(path)
+
+        if not data:
+            continue
+
+        doctype = clean_text(data.get("doctype") or data.get("document_name") or "")
+
+        if doctype:
+            discovered.add(doctype.lower())
+
+    return discovered
 
 
 def next_serial_number():
+    """
+    Find next serial number.
 
-    highest = 0
+    Example:
+        0001_company-budget.json
+        0002_import-lc.json
 
-    for path in DISCOVERY_DIR.glob("*.json"):
+    Next:
+        0003
+    """
 
-        match = re.match(r"^(\d+)_", path.name)
+    maximum = 0
 
-        if match:
-
-            try:
-                highest = max(highest, int(match.group(1)))
-
-            except ValueError:
-                pass
-
-    return highest + 1
-
-
-def make_filename(name):
-
-    serial = next_serial_number()
-
-    slug = slugify(name)
-
-    if not slug:
-        slug = "unknown"
-
-    return f"{serial:04d}_{slug}.json"
-
-
-# ============================================================
-# EXISTING KNOWLEDGE
-# ============================================================
-
-
-def get_existing_discovery():
-
-    existing = {}
+    pattern = re.compile(r"^(\d+)_")
 
     for path in DISCOVERY_DIR.glob("*.json"):
+
+        match = pattern.match(path.name)
+
+        if not match:
+            continue
 
         try:
 
-            data = json.loads(path.read_text(encoding="utf-8"))
+            number = int(match.group(1))
 
-        except Exception:
+            maximum = max(
+                maximum,
+                number,
+            )
+
+        except ValueError:
             continue
 
-        possible_names = []
-
-        for key in (
-            "name",
-            "doctype",
-            "document",
-            "title",
-        ):
-
-            value = data.get(key)
-
-            if isinstance(value, str):
-                possible_names.append(value)
-
-        for name in possible_names:
-
-            normalized = normalize_name(name)
-
-            if normalized:
-                existing[normalized] = path
-
-    return existing
+    return maximum + 1
 
 
-def already_discovered(name):
+def discovery_file_for_doctype(doctype):
+    """
+    Find existing discovery JSON
+    for a DocType.
+    """
 
-    existing = get_existing_discovery()
+    target = normalize_text(doctype)
 
-    return normalize_name(name) in existing
+    target_slug = slugify(doctype)
+
+    for path in DISCOVERY_DIR.glob("*.json"):
+
+        # ----------------------------------------------------
+        # Filename check
+        # ----------------------------------------------------
+
+        filename = path.stem
+
+        match = re.match(
+            r"^\d+_(.+)$",
+            filename,
+        )
+
+        if match:
+
+            if match.group(1).lower() == target_slug:
+                return path
+
+        # ----------------------------------------------------
+        # Content check
+        # ----------------------------------------------------
+
+        data = load_json(path)
+
+        if not data:
+            continue
+
+        stored = normalize_text(data.get("doctype") or data.get("document_name") or "")
+
+        if stored == target:
+            return path
+
+    return None
 
 
-# ============================================================
-# SAVE
-# ============================================================
+def save_discovery(data):
+    """
+    Save discovery JSON using:
 
+        0001_company-budget.json
+        0002_import-lc.json
+    """
 
-def save_discovery(name, data):
+    doctype = clean_text(data.get("doctype") or data.get("document_name") or "unknown")
 
-    existing = get_existing_discovery()
+    existing = discovery_file_for_doctype(doctype)
 
-    key = normalize_name(name)
+    if existing:
 
-    if key in existing:
+        log(f"SKIP SAVE: already exists -> " f"{existing.name}")
 
-        log(f"SKIP EXISTING: {name} " f"-> {existing[key].name}")
+        return existing
 
-        return existing[key]
+    serial = next_serial_number()
 
-    filename = make_filename(name)
+    filename = f"{serial:04d}_" f"{slugify(doctype)}.json"
 
     path = DISCOVERY_DIR / filename
-
-    data["discovery_file"] = filename
-
-    data["discovered_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
 
     path.write_text(
         json.dumps(
@@ -3246,152 +2699,546 @@ def save_discovery(name, data):
         encoding="utf-8",
     )
 
-    log(f"SAVED: {path}")
+    log(f"Discovery saved: {path}")
 
     return path
 
 
 # ============================================================
-# ELEMENT INFO
+# VISIBLE ELEMENTS
 # ============================================================
 
 
-def element_info(element):
+def discover_elements(page):
 
-    def attr(name):
+    elements = []
 
-        try:
-            return element.get_attribute(name) or ""
-        except Exception:
-            return ""
+    selectors = """
+        button,
+        input,
+        textarea,
+        select,
+        a,
+        [role="button"],
+        [role="option"],
+        [role="tab"],
+        [role="combobox"],
+        [contenteditable="true"]
+    """
 
-    try:
-
-        tag = element.evaluate("(el) => el.tagName.toLowerCase()")
-
-    except Exception:
-
-        tag = ""
-
-    try:
-
-        text = (element.inner_text() or "").strip()
-
-    except Exception:
-
-        text = ""
-
-    return {
-        "tag": tag,
-        "text": text[:500],
-        "id": attr("id"),
-        "name": attr("name"),
-        "type": attr("type"),
-        "href": attr("href"),
-        "title": attr("title"),
-        "aria_label": attr("aria-label"),
-        "role": attr("role"),
-        "data_route": attr("data-route"),
-        "data_link": attr("data-link"),
-        "data_href": attr("data-href"),
-        "class": attr("class")[:500],
-    }
-
-
-# ============================================================
-# FORM FIELD LABEL
-# ============================================================
-
-
-def get_field_label(page, element):
-
-    # --------------------------------------------------------
-    # 1. label[for=id]
-    # --------------------------------------------------------
+    locator = page.locator(selectors)
 
     try:
-
-        element_id = element.get_attribute("id") or ""
-
-        if element_id:
-
-            label = page.locator(f"label[for='{element_id}']")
-
-            if label.count() > 0:
-
-                text = (label.first.inner_text() or "").strip()
-
-                if text:
-                    return text
-
+        count = min(
+            locator.count(),
+            500,
+        )
     except Exception:
-        pass
+        count = 0
 
-    # --------------------------------------------------------
-    # 2. ERPNext control wrapper
-    # --------------------------------------------------------
+    for i in range(count):
 
-    selectors = [
-        "xpath=ancestor::*[contains(@class,'frappe-control')][1]",
-        "xpath=ancestor::*[contains(@class,'form-group')][1]",
-        "xpath=ancestor::*[contains(@class,'field')][1]",
-    ]
-
-    for selector in selectors:
+        element = locator.nth(i)
 
         try:
 
-            parent = element.locator(selector)
-
-            if parent.count() == 0:
+            if not element.is_visible():
                 continue
 
-            # Common ERPNext label classes
-            labels = parent.locator(".control-label, " ".form-label, " "label")
+            tag = element.evaluate("(el) => el.tagName.toLowerCase()")
 
-            if labels.count() > 0:
+            text = clean_text(element.inner_text())
 
-                text = (labels.first.inner_text() or "").strip()
+            aria_label = clean_text(element.get_attribute("aria-label") or "")
 
-                if text:
-                    return text
+            title = clean_text(element.get_attribute("title") or "")
+
+            class_name = element.get_attribute("class") or ""
+
+            id_value = element.get_attribute("id") or ""
+
+            # ------------------------------------------------
+            # NEVER DISCOVER NOTIFICATION UI
+            # ------------------------------------------------
+
+            if is_notification_element(
+                text=text,
+                aria_label=aria_label,
+                title=title,
+                class_name=class_name,
+                id_value=id_value,
+            ):
+                continue
+
+            elements.append(
+                {
+                    "tag": tag,
+                    "text": text[:300],
+                    "id": id_value,
+                    "name": (element.get_attribute("name") or ""),
+                    "type": (element.get_attribute("type") or ""),
+                    "placeholder": (element.get_attribute("placeholder") or ""),
+                    "aria_label": aria_label,
+                    "title": title,
+                    "role": (element.get_attribute("role") or ""),
+                    "value": (element.get_attribute("value") or ""),
+                    "data_fieldname": (element.get_attribute("data-fieldname") or ""),
+                    "class": class_name[:500],
+                    "system_ui": is_system_ui(
+                        text=text,
+                        aria_label=aria_label,
+                        title=title,
+                    ),
+                }
+            )
 
         except Exception:
             continue
 
-    return ""
+    return elements
 
 
 # ============================================================
-# FIELD OPTIONS
+# FIELD DISCOVERY
 # ============================================================
 
 
-def get_select_options(element):
+def discover_form_fields(page):
+
+    fields = []
+
+    wrappers = page.locator("""
+        .frappe-control,
+        .form-group,
+        [data-fieldname]
+        """)
+
+    try:
+        count = min(
+            wrappers.count(),
+            500,
+        )
+    except Exception:
+        count = 0
+
+    seen = set()
+
+    for i in range(count):
+
+        wrapper = wrappers.nth(i)
+
+        try:
+
+            if not wrapper.is_visible():
+                continue
+
+            fieldname = wrapper.get_attribute("data-fieldname") or ""
+
+            if not fieldname:
+
+                child = wrapper.locator("[data-fieldname]")
+
+                if child.count() > 0:
+
+                    fieldname = child.first.get_attribute("data-fieldname") or ""
+
+            fieldname = clean_text(fieldname)
+
+            if not fieldname:
+                continue
+
+            if fieldname in seen:
+                continue
+
+            seen.add(fieldname)
+
+            # ------------------------------------------------
+            # LABEL
+            # ------------------------------------------------
+
+            label = ""
+
+            try:
+
+                label_locator = wrapper.locator(".control-label, label")
+
+                if label_locator.count() > 0:
+
+                    label = clean_text(label_locator.first.inner_text())
+
+            except Exception:
+                pass
+
+            if not label:
+                label = fieldname
+
+            # ------------------------------------------------
+            # REQUIRED
+            # ------------------------------------------------
+
+            required = False
+
+            try:
+
+                required = bool(wrapper.locator(".reqd").count())
+
+            except Exception:
+                required = False
+
+            # ------------------------------------------------
+            # CONTROL
+            # ------------------------------------------------
+
+            input_locator = wrapper.locator("""
+                input,
+                textarea,
+                select,
+                [contenteditable='true']
+                """)
+
+            value = ""
+
+            fieldtype = "unknown"
+
+            options = []
+
+            placeholder = ""
+
+            control_type = ""
+
+            if input_locator.count() > 0:
+
+                control = input_locator.first
+
+                try:
+
+                    tag = control.evaluate("(el) => el.tagName.toLowerCase()")
+
+                except Exception:
+                    tag = ""
+
+                control_type = (control.get_attribute("type") or "").lower()
+
+                placeholder = control.get_attribute("placeholder") or ""
+
+                # ------------------------------------------------
+                # FIELD TYPE
+                # ------------------------------------------------
+
+                if tag == "select":
+
+                    fieldtype = "Select"
+
+                elif control_type == "checkbox":
+
+                    fieldtype = "Check"
+
+                elif control_type == "date":
+
+                    fieldtype = "Date"
+
+                elif control_type == "datetime-local":
+
+                    fieldtype = "Datetime"
+
+                elif control_type == "number":
+
+                    fieldtype = "Float"
+
+                elif control_type == "email":
+
+                    fieldtype = "Data"
+
+                else:
+
+                    wrapper_class = (wrapper.get_attribute("class") or "").lower()
+
+                    if "link-field" in wrapper_class:
+
+                        fieldtype = "Link"
+
+                    elif "date-field" in wrapper_class:
+
+                        fieldtype = "Date"
+
+                    elif "currency" in wrapper_class:
+
+                        fieldtype = "Currency"
+
+                    elif "percent" in wrapper_class:
+
+                        fieldtype = "Percent"
+
+                    else:
+
+                        fieldtype = "Data"
+
+                # ------------------------------------------------
+                # VALUE
+                # ------------------------------------------------
+
+                try:
+
+                    if tag == "textarea":
+
+                        value = control.input_value() or ""
+
+                    elif tag == "select":
+
+                        value = control.input_value() or ""
+
+                    elif control_type == "checkbox":
+
+                        value = control.is_checked()
+
+                    else:
+
+                        value = control.input_value() or ""
+
+                except Exception:
+                    pass
+
+                # ------------------------------------------------
+                # SELECT OPTIONS
+                # ------------------------------------------------
+
+                if tag == "select":
+
+                    try:
+
+                        option_locator = control.locator("option")
+
+                        option_count = min(
+                            option_locator.count(),
+                            200,
+                        )
+
+                        for j in range(option_count):
+
+                            option = option_locator.nth(j)
+
+                            try:
+
+                                option_text = clean_text(option.inner_text())
+
+                                option_value = option.get_attribute("value") or ""
+
+                                if option_text or option_value:
+
+                                    options.append(
+                                        {
+                                            "text": option_text,
+                                            "value": option_value,
+                                        }
+                                    )
+
+                            except Exception:
+                                continue
+
+                    except Exception:
+                        pass
+
+                # ------------------------------------------------
+                # LINK OPTIONS
+                # ------------------------------------------------
+
+                if fieldtype == "Link":
+
+                    options.extend(
+                        discover_link_options(
+                            page,
+                            wrapper,
+                        )
+                    )
+
+            # ------------------------------------------------
+            # ACTIONS
+            # ------------------------------------------------
+
+            actions = []
+
+            if fieldtype in {
+                "Data",
+                "Float",
+                "Currency",
+                "Percent",
+            }:
+
+                actions.extend(
+                    [
+                        "fill",
+                        "clear",
+                    ]
+                )
+
+            elif fieldtype == "Select":
+
+                actions.extend(
+                    [
+                        "select",
+                    ]
+                )
+
+            elif fieldtype == "Check":
+
+                actions.extend(
+                    [
+                        "check",
+                        "uncheck",
+                    ]
+                )
+
+            elif fieldtype == "Link":
+
+                actions.extend(
+                    [
+                        "select_link",
+                    ]
+                )
+
+            elif fieldtype in {
+                "Date",
+                "Datetime",
+            }:
+
+                actions.extend(
+                    [
+                        "fill",
+                        "clear",
+                    ]
+                )
+
+            fields.append(
+                {
+                    "fieldname": fieldname,
+                    "label": label,
+                    "fieldtype": fieldtype,
+                    "value": value,
+                    "required": required,
+                    "placeholder": placeholder,
+                    "options": options,
+                    "actions": actions,
+                }
+            )
+
+        except Exception:
+            continue
+
+    # ========================================================
+    # FALLBACK
+    # ========================================================
+
+    if not fields:
+
+        direct = page.locator("[data-fieldname]")
+
+        try:
+            count = min(
+                direct.count(),
+                500,
+            )
+        except Exception:
+            count = 0
+
+        for i in range(count):
+
+            element = direct.nth(i)
+
+            try:
+
+                if not element.is_visible():
+                    continue
+
+                fieldname = clean_text(element.get_attribute("data-fieldname") or "")
+
+                if not fieldname:
+                    continue
+
+                if fieldname in seen:
+                    continue
+
+                seen.add(fieldname)
+
+                fields.append(
+                    {
+                        "fieldname": fieldname,
+                        "label": fieldname,
+                        "fieldtype": "unknown",
+                        "value": "",
+                        "required": False,
+                        "placeholder": "",
+                        "options": [],
+                        "actions": [],
+                    }
+                )
+
+            except Exception:
+                continue
+
+    return fields
+
+
+# ============================================================
+# LINK OPTIONS
+# ============================================================
+
+
+def discover_link_options(
+    page,
+    wrapper,
+):
+    """
+    Read currently visible autocomplete
+    options without typing into the field.
+    """
 
     options = []
 
     try:
 
-        locator = element.locator("option")
+        candidates = page.locator("""
+            .awesomplete li,
+            .awesomplete ul li,
+            .ac-option,
+            .link-option,
+            [role="option"]
+            """)
 
-        count = min(locator.count(), 200)
+        count = min(
+            candidates.count(),
+            100,
+        )
+
+        seen = set()
 
         for i in range(count):
 
-            option = locator.nth(i)
+            option = candidates.nth(i)
 
             try:
 
+                if not option.is_visible():
+                    continue
+
+                text = clean_text(option.inner_text())
+
+                if not text:
+                    continue
+
+                if is_notification_element(text=text):
+                    continue
+
+                key = text.lower()
+
+                if key in seen:
+                    continue
+
+                seen.add(key)
+
                 options.append(
                     {
-                        "text": (option.inner_text() or "").strip(),
-                        "value": (option.get_attribute("value") or ""),
-                        "selected": (
-                            option.is_checked()
-                            if option.get_attribute("type") in ("checkbox", "radio")
-                            else False
-                        ),
+                        "text": text,
+                        "value": text,
                     }
                 )
 
@@ -3405,118 +3252,125 @@ def get_select_options(element):
 
 
 # ============================================================
-# DISCOVER FORM FIELDS
+# TABS
 # ============================================================
 
 
-def discover_form_fields(page):
+def discover_tabs(page):
 
-    fields = []
+    tabs = []
 
-    selectors = """
-        input,
-        textarea,
-        select,
-        [contenteditable="true"],
-        [role="combobox"],
-        [role="checkbox"],
-        [role="radio"]
-    """
+    selectors = [
+        "[role='tab']",
+        ".form-tabs .nav-link",
+        ".form-tabs a",
+        ".nav-tabs .nav-link",
+    ]
 
-    locator = page.locator(selectors)
+    seen = set()
 
-    try:
+    for selector in selectors:
 
-        count = min(locator.count(), 3000)
-
-    except Exception:
-
-        count = 0
-
-    for i in range(count):
+        locator = page.locator(selector)
 
         try:
+            count = min(
+                locator.count(),
+                100,
+            )
+        except Exception:
+            count = 0
 
-            element = locator.nth(i)
+        for i in range(count):
 
-            if not element.is_visible():
+            item = locator.nth(i)
+
+            try:
+
+                if not item.is_visible():
+                    continue
+
+                text = clean_text(item.inner_text())
+
+                if not text:
+                    continue
+
+                if is_system_ui(text=text):
+                    continue
+
+                if text not in seen:
+
+                    seen.add(text)
+
+                    tabs.append(text)
+
+            except Exception:
                 continue
 
-            info = element_info(element)
-
-            tag = info["tag"]
-
-            # ------------------------------------------------
-            # Value
-            # ------------------------------------------------
-
-            value = ""
-
-            try:
-
-                if tag in ("input", "textarea", "select"):
-
-                    value = element.input_value()
-
-            except Exception:
-                pass
-
-            # ------------------------------------------------
-            # Checked
-            # ------------------------------------------------
-
-            checked = None
-
-            try:
-
-                if info["type"] in ("checkbox", "radio"):
-
-                    checked = element.is_checked()
-
-            except Exception:
-                pass
-
-            # ------------------------------------------------
-            # Field
-            # ------------------------------------------------
-
-            field = {
-                "label": get_field_label(page, element),
-                "name": info["name"],
-                "id": info["id"],
-                "type": info["type"],
-                "tag": info["tag"],
-                "placeholder": info["placeholder"] if "placeholder" in info else "",
-                "aria_label": info["aria_label"],
-                "role": info["role"],
-                "value": value,
-                "checked": checked,
-                "readonly": (element.get_attribute("readonly") is not None),
-                "disabled": (
-                    element.is_disabled()
-                    if tag in ("input", "textarea", "select", "button")
-                    else False
-                ),
-            }
-
-            # ------------------------------------------------
-            # Select options
-            # ------------------------------------------------
-
-            if tag == "select":
-
-                field["options"] = get_select_options(element)
-
-            fields.append(field)
-
-        except Exception:
-            continue
-
-    return fields
+    return tabs
 
 
 # ============================================================
-# BUTTON DISCOVERY
+# SECTIONS
+# ============================================================
+
+
+def discover_sections(page):
+
+    sections = []
+
+    selectors = [
+        ".section-head",
+        ".form-section .section-head",
+        ".form-dashboard-section .section-head",
+        ".collapse-label",
+    ]
+
+    seen = set()
+
+    for selector in selectors:
+
+        locator = page.locator(selector)
+
+        try:
+            count = min(
+                locator.count(),
+                200,
+            )
+        except Exception:
+            count = 0
+
+        for i in range(count):
+
+            item = locator.nth(i)
+
+            try:
+
+                if not item.is_visible():
+                    continue
+
+                text = clean_text(item.inner_text())
+
+                if not text:
+                    continue
+
+                if is_system_ui(text=text):
+                    continue
+
+                if text not in seen:
+
+                    seen.add(text)
+
+                    sections.append(text)
+
+            except Exception:
+                continue
+
+    return sections
+
+
+# ============================================================
+# BUTTONS
 # ============================================================
 
 
@@ -3531,33 +3385,75 @@ def discover_buttons(page):
         input[type="submit"]
         """)
 
-    try:
-
-        count = min(locator.count(), 1000)
-
-    except Exception:
-
-        count = 0
-
     seen = set()
+
+    try:
+        count = min(
+            locator.count(),
+            300,
+        )
+    except Exception:
+        count = 0
 
     for i in range(count):
 
+        button = locator.nth(i)
+
         try:
 
-            element = locator.nth(i)
-
-            if not element.is_visible():
+            if not button.is_visible():
                 continue
 
-            info = element_info(element)
+            text = clean_text(button.inner_text())
 
-            text = (info["text"] or info["aria_label"] or info["title"]).strip()
+            aria_label = clean_text(button.get_attribute("aria-label") or "")
+
+            title = clean_text(button.get_attribute("title") or "")
+
+            value = clean_text(button.get_attribute("value") or "")
+
+            class_name = button.get_attribute("class") or ""
+
+            id_value = button.get_attribute("id") or ""
+
+            # =================================================
+            # IMPORTANT:
+            # NEVER include notification button
+            # =================================================
+
+            if is_notification_element(
+                text=text,
+                aria_label=aria_label,
+                title=title,
+                value=value,
+                class_name=class_name,
+                id_value=id_value,
+            ):
+
+                log(
+                    "IGNORED SYSTEM UI: "
+                    f"notification -> "
+                    f"{text or aria_label or title}"
+                )
+
+                continue
+
+            # Generic system controls
+            if is_system_ui(
+                text=text,
+                aria_label=aria_label,
+                title=title,
+            ):
+                continue
+
+            if not text:
+
+                text = aria_label or title or value
 
             if not text:
                 continue
 
-            key = normalize_name(text)
+            key = text.lower()
 
             if key in seen:
                 continue
@@ -3567,10 +3463,10 @@ def discover_buttons(page):
             buttons.append(
                 {
                     "text": text,
-                    "type": info["type"],
-                    "id": info["id"],
-                    "aria_label": info["aria_label"],
-                    "title": info["title"],
+                    "aria_label": aria_label,
+                    "title": title,
+                    "role": (button.get_attribute("role") or "button"),
+                    "action": "click",
                 }
             )
 
@@ -3581,58 +3477,83 @@ def discover_buttons(page):
 
 
 # ============================================================
-# TABS
+# LINKS
 # ============================================================
 
 
-def discover_tabs(page):
+def discover_links(page):
 
-    tabs = []
+    links = []
 
-    locator = page.locator("""
-        [role="tab"],
-        .form-tabs .nav-link,
-        .nav-tabs .nav-link,
-        .form-dashboard-section .section-head
-        """)
-
-    try:
-
-        count = min(locator.count(), 500)
-
-    except Exception:
-
-        count = 0
+    locator = page.locator("a")
 
     seen = set()
 
+    try:
+        count = min(
+            locator.count(),
+            500,
+        )
+    except Exception:
+        count = 0
+
     for i in range(count):
+
+        link = locator.nth(i)
 
         try:
 
-            element = locator.nth(i)
-
-            if not element.is_visible():
+            if not link.is_visible():
                 continue
 
-            text = (element.inner_text() or "").strip()
+            text = clean_text(link.inner_text())
 
-            if not text:
+            aria_label = clean_text(link.get_attribute("aria-label") or "")
+
+            title = clean_text(link.get_attribute("title") or "")
+
+            href = link.get_attribute("href") or ""
+
+            class_name = link.get_attribute("class") or ""
+
+            id_value = link.get_attribute("id") or ""
+
+            # =================================================
+            # NEVER DISCOVER NOTIFICATION LINK
+            # =================================================
+
+            if is_notification_element(
+                text=text,
+                aria_label=aria_label,
+                title=title,
+                class_name=class_name,
+                id_value=id_value,
+            ):
                 continue
 
-            key = normalize_name(text)
+            if not text and not href:
+                continue
+
+            key = f"{text.lower()}|" f"{href.lower()}"
 
             if key in seen:
                 continue
 
             seen.add(key)
 
-            tabs.append(text)
+            links.append(
+                {
+                    "text": text[:300],
+                    "href": href[:500],
+                    "aria_label": aria_label,
+                    "title": title,
+                }
+            )
 
         except Exception:
             continue
 
-    return tabs
+    return links
 
 
 # ============================================================
@@ -3640,787 +3561,97 @@ def discover_tabs(page):
 # ============================================================
 
 
-def discover_page(page):
+def discover_page(
+    page,
+    doctype="",
+    read_mode="unknown",
+):
 
     data = {
+        "knowledge_type": "erpnext_doctype",
+        "module": "",
+        "doctype": doctype,
+        "document_name": doctype,
+        "read_mode": read_mode,
+        "existing_documents_skipped": True,
         "url": page.url,
         "title": "",
         "text": "",
-        "elements": [],
-        "links": [],
-        "inputs": [],
-        "buttons": [],
-        "tabs": [],
         "fields": [],
+        "tabs": [],
+        "sections": [],
+        "buttons": [],
+        "links": [],
+        "elements": [],
+        "system_ui_rules": {
+            "notification_detected": True,
+            "notification_click_allowed": False,
+            "notification_keywords": sorted(NOTIFICATION_KEYWORDS),
+        },
     }
 
-    # --------------------------------------------------------
-    # Title
-    # --------------------------------------------------------
-
     try:
-
         data["title"] = page.title()
 
     except Exception:
         pass
 
-    # --------------------------------------------------------
-    # Body
-    # --------------------------------------------------------
-
     try:
 
-        data["text"] = (page.locator("body").inner_text(timeout=5000))[:60000]
+        data["text"] = clean_text(page.locator("body").inner_text(timeout=10000))[
+            :30000
+        ]
 
     except Exception:
         pass
 
-    # --------------------------------------------------------
-    # Elements
-    # --------------------------------------------------------
-
-    locator = page.locator("""
-        button,
-        input,
-        textarea,
-        select,
-        a,
-        [role="button"],
-        [role="link"],
-        [role="option"],
-        [role="tab"],
-        [role="menuitem"],
-        [contenteditable="true"]
-        """)
-
-    try:
-
-        count = min(locator.count(), 3000)
-
-    except Exception:
-
-        count = 0
-
-    for i in range(count):
-
-        try:
-
-            element = locator.nth(i)
-
-            if not element.is_visible():
-                continue
-
-            info = element_info(element)
-
-            data["elements"].append(info)
-
-            if info["tag"] == "a":
-                data["links"].append(info)
-
-            if info["tag"] == "input":
-                data["inputs"].append(info)
-
-            if info["tag"] == "button" or info["role"] == "button":
-                data["buttons"].append(info)
-
-        except Exception:
-            continue
-
-    # --------------------------------------------------------
-    # Form fields
-    # --------------------------------------------------------
-
     data["fields"] = discover_form_fields(page)
 
-    # --------------------------------------------------------
-    # Tabs
-    # --------------------------------------------------------
-
     data["tabs"] = discover_tabs(page)
+
+    data["sections"] = discover_sections(page)
+
+    data["buttons"] = discover_buttons(page)
+
+    data["links"] = discover_links(page)
+
+    data["elements"] = discover_elements(page)
 
     return data
 
 
 # ============================================================
-# UI FILTER
-# ============================================================
-
-IGNORED_UI = {
-    "home",
-    "help",
-    "settings",
-    "logout",
-    "log out",
-    "login",
-    "log in",
-    "search",
-    "new",
-    "edit",
-    "delete",
-    "save",
-    "cancel",
-    "close",
-    "refresh",
-    "back",
-    "next",
-    "previous",
-    "collapse",
-    "expand",
-    "dashboard",
-    "menu",
-    "more",
-    "actions",
-    "submit",
-    "yes",
-    "no",
-    "ok",
-    "clear",
-}
-
-
-def valid_candidate_name(text):
-
-    if not text:
-        return False
-
-    text = text.strip()
-
-    if len(text) < 2:
-        return False
-
-    if len(text) > 150:
-        return False
-
-    normalized = normalize_name(text)
-
-    if normalized in IGNORED_UI:
-        return False
-
-    if normalized.startswith(
-        (
-            "click ",
-            "go to ",
-            "open ",
-            "select ",
-            "type ",
-            "begin typing",
-        )
-    ):
-        return False
-
-    if re.fullmatch(r"[\d\s.,/-]+", text):
-        return False
-
-    return True
-
-
-# ============================================================
-# FIND "+ ADD <DOC>" BUTTONS
+# FIND VISIBLE LOCATOR
 # ============================================================
 
 
-def find_add_document_buttons(page):
-
-    results = []
-
-    locator = page.locator("""
-        button,
-        a,
-        [role="button"],
-        [role="link"]
-        """)
-
-    try:
-
-        count = min(locator.count(), 2000)
-
-    except Exception:
-
-        count = 0
-
-    seen = set()
-
-    for i in range(count):
-
-        try:
-
-            element = locator.nth(i)
-
-            if not element.is_visible():
-                continue
-
-            info = element_info(element)
-
-            text = (info["text"] or info["aria_label"] or info["title"] or "").strip()
-
-            if not text:
-                continue
-
-            # ------------------------------------------------
-            # Normalize:
-            #
-            # + Add Import LC
-            # Add Import LC
-            # +Add Import LC
-            # ------------------------------------------------
-
-            cleaned = re.sub(r"^\s*\+\s*", "", text).strip()
-
-            match = re.match(r"^add\s+(.+)$", cleaned, re.IGNORECASE)
-
-            if not match:
-                continue
-
-            document_name = match.group(1).strip()
-
-            if not valid_candidate_name(document_name):
-                continue
-
-            key = normalize_name(document_name)
-
-            if key in seen:
-                continue
-
-            seen.add(key)
-
-            href = (
-                info["href"]
-                or info["data_route"]
-                or info["data_link"]
-                or info["data_href"]
-            )
-
-            results.append(
-                {
-                    "button_text": text,
-                    "document_name": document_name,
-                    "url": absolute_url(href),
-                }
-            )
-
-        except Exception:
-            continue
-
-    return results
-
-
-# ============================================================
-# FIND NORMAL DOCUMENT LINKS
-# ============================================================
-
-
-def find_document_links(page):
-
-    results = []
-
-    locator = page.locator("""
-        a,
-        [role="link"],
-        [data-route],
-        [data-link],
-        [data-href]
-        """)
-
-    try:
-
-        count = min(locator.count(), 2000)
-
-    except Exception:
-
-        count = 0
-
-    seen = set()
-
-    for i in range(count):
-
-        try:
-
-            element = locator.nth(i)
-
-            if not element.is_visible():
-                continue
-
-            info = element_info(element)
-
-            text = (info["text"] or info["aria_label"] or info["title"] or "").strip()
-
-            if not valid_candidate_name(text):
-                continue
-
-            href = (
-                info["href"]
-                or info["data_route"]
-                or info["data_link"]
-                or info["data_href"]
-            )
-
-            href = absolute_url(href)
-
-            # Only internal links
-            if href and not href.startswith(ERP_URL):
-                continue
-
-            key = (normalize_name(text), href)
-
-            if key in seen:
-                continue
-
-            seen.add(key)
-
-            results.append(
-                {
-                    "document_name": text,
-                    "url": href,
-                }
-            )
-
-        except Exception:
-            continue
-
-    return results
-
-
-# ============================================================
-# FIND EXACT TEXT ELEMENT
-# ============================================================
-
-
-def find_exact_text_element(page, text):
-
-    selectors = [
-        f"text={text}",
-        f"a:text-is('{text}')",
-        f"button:text-is('{text}')",
-        f"[role='link']:text-is('{text}')",
-        f"[role='button']:text-is('{text}')",
-    ]
+def find_visible_locator(
+    page,
+    selectors,
+):
 
     for selector in selectors:
 
+        locator = page.locator(selector)
+
         try:
-
-            locator = page.locator(selector)
-
             count = locator.count()
-
-            for i in range(count):
-
-                item = locator.nth(i)
-
-                if item.is_visible():
-
-                    return item
-
         except Exception:
-            continue
+            count = 0
 
-    return None
+        for i in range(count):
 
-
-# ============================================================
-# OPEN DOCUMENT
-# ============================================================
-
-
-def open_document(page, document_name, document_url=""):
-
-    log(f"Opening document: " f"{document_name}")
-
-    # --------------------------------------------------------
-    # URL
-    # --------------------------------------------------------
-
-    if document_url:
-
-        if document_url.startswith(ERP_URL):
+            item = locator.nth(i)
 
             try:
 
-                page.goto(document_url, wait_until="domcontentloaded", timeout=TIMEOUT)
+                if item.is_visible():
+                    return item
 
-                page.wait_for_timeout(WAIT_MS)
-
-                return True
-
-            except Exception as exc:
-
-                log(f"URL open failed: {exc}")
-
-    # --------------------------------------------------------
-    # Text click
-    # --------------------------------------------------------
-
-    element = find_exact_text_element(page, document_name)
-
-    if not element:
-
-        log(f"Document element not found: " f"{document_name}")
-
-        return False
-
-    try:
-
-        element.click(timeout=10000)
-
-        page.wait_for_timeout(WAIT_MS)
-
-        return True
-
-    except Exception as exc:
-
-        log(f"Click failed: {exc}")
-
-        return False
-
-
-# ============================================================
-# READ DOCUMENT FORM
-# ============================================================
-
-
-def read_document_form(page, module_name, document_name):
-
-    log("======================================")
-
-    log(f"READING DOC: {document_name}")
-
-    log("======================================")
-
-    # --------------------------------------------------------
-    # Existing check
-    # --------------------------------------------------------
-
-    if already_discovered(document_name):
-
-        log(f"SKIP EXISTING: " f"{document_name}")
-
-        return "skipped"
-
-    # --------------------------------------------------------
-    # Wait for page
-    # --------------------------------------------------------
-
-    page.wait_for_timeout(WAIT_MS)
-
-    # --------------------------------------------------------
-    # Read
-    # --------------------------------------------------------
-
-    data = discover_page(page)
-
-    data.update(
-        {
-            "name": document_name,
-            "doctype": document_name,
-            "module": module_name,
-            "knowledge_type": "doctype",
-            "source_url": page.url,
-        }
-    )
-
-    # --------------------------------------------------------
-    # Screenshot
-    # --------------------------------------------------------
-
-    screenshot = SCREENSHOT_DIR / f"{slugify(document_name)}.png"
-
-    try:
-
-        page.screenshot(path=str(screenshot), full_page=True)
-
-        data["screenshot"] = str(screenshot)
-
-    except Exception:
-        pass
-
-    # --------------------------------------------------------
-    # Save
-    # --------------------------------------------------------
-
-    save_discovery(document_name, data)
-
-    log(f"FIELDS FOUND: " f"{len(data['fields'])}")
-
-    log(f"BUTTONS FOUND: " f"{len(data['buttons'])}")
-
-    log(f"TABS FOUND: " f"{len(data['tabs'])}")
-
-    return "success"
-
-
-# ============================================================
-# MODULE DISCOVERY
-# ============================================================
-
-
-def discover_module(page, module_name, only_doctype=None):
-
-    log("======================================")
-
-    log(f"MODULE: {module_name}")
-
-    log("======================================")
-
-    # --------------------------------------------------------
-    # Save module page
-    # --------------------------------------------------------
-
-    module_data = discover_page(page)
-
-    module_data.update(
-        {
-            "name": module_name,
-            "module": module_name,
-            "knowledge_type": "module",
-        }
-    )
-
-    save_discovery(module_name, module_data)
-
-    # --------------------------------------------------------
-    # Specific DocType
-    # --------------------------------------------------------
-
-    if only_doctype:
-
-        log(f"TARGET DOC: {only_doctype}")
-
-        if already_discovered(only_doctype):
-
-            log(f"SKIP EXISTING: " f"{only_doctype}")
-
-            return
-
-        opened = open_document(page, only_doctype)
-
-        if opened:
-
-            read_document_form(page, module_name, only_doctype)
-
-        return
-
-    # --------------------------------------------------------
-    # IMPORTANT:
-    #
-    # First priority = "+ Add <Doc Name>"
-    # --------------------------------------------------------
-
-    add_documents = find_add_document_buttons(page)
-
-    log(f"+ Add documents found: " f"{len(add_documents)}")
-
-    for item in add_documents:
-
-        log(f"  + {item['document_name']}")
-
-    # --------------------------------------------------------
-    # Normal visible document links
-    # --------------------------------------------------------
-
-    normal_documents = find_document_links(page)
-
-    # --------------------------------------------------------
-    # Merge candidates
-    # --------------------------------------------------------
-
-    candidates = []
-
-    seen = set()
-
-    for item in add_documents:
-
-        key = normalize_name(item["document_name"])
-
-        if key in seen:
-            continue
-
-        seen.add(key)
-
-        candidates.append(
-            {
-                "document_name": item["document_name"],
-                "url": item.get("url", ""),
-                "source": "add_button",
-            }
-        )
-
-    for item in normal_documents:
-
-        key = normalize_name(item["document_name"])
-
-        if key in seen:
-            continue
-
-        seen.add(key)
-
-        candidates.append(
-            {
-                "document_name": item["document_name"],
-                "url": item.get("url", ""),
-                "source": "visible_link",
-            }
-        )
-
-    log(f"TOTAL DOCUMENT CANDIDATES: " f"{len(candidates)}")
-
-    # --------------------------------------------------------
-    # Process
-    # --------------------------------------------------------
-
-    success = 0
-    skipped = 0
-    failed = 0
-
-    for index, item in enumerate(candidates, start=1):
-
-        name = item["document_name"]
-
-        log(f"[{index}/{len(candidates)}] " f"{name}")
-
-        # ----------------------------------------------------
-        # Existing
-        # ----------------------------------------------------
-
-        if already_discovered(name):
-
-            log(f"SKIP EXISTING: {name}")
-
-            skipped += 1
-
-            continue
-
-        # ----------------------------------------------------
-        # Open
-        # ----------------------------------------------------
-
-        try:
-
-            opened = open_document(page, name, item.get("url", ""))
-
-            if not opened:
-
-                failed += 1
+            except Exception:
                 continue
 
-            # ------------------------------------------------
-            # Read actual form/page
-            # ------------------------------------------------
-
-            result = read_document_form(page, module_name, name)
-
-            if result == "success":
-
-                success += 1
-
-            elif result == "skipped":
-
-                skipped += 1
-
-            else:
-
-                failed += 1
-
-        except Exception as exc:
-
-            failed += 1
-
-            log(f"FAILED: {name} -> {exc}")
-
-        # ----------------------------------------------------
-        # Return to module
-        # ----------------------------------------------------
-
-        try:
-
-            open_home(page)
-
-            open_module(page, module_name)
-
-        except Exception as exc:
-
-            log(f"Could not return to module: " f"{exc}")
-
-            break
-
-    # --------------------------------------------------------
-    # Summary
-    # --------------------------------------------------------
-
-    log("======================================")
-
-    log(f"MODULE COMPLETE: {module_name}")
-
-    log(f"SUCCESS: {success}")
-
-    log(f"SKIPPED: {skipped}")
-
-    log(f"FAILED: {failed}")
-
-    log("======================================")
-
-
-# ============================================================
-# OPEN HOME
-# ============================================================
-
-
-def open_home(page):
-
-    page.goto(f"{ERP_URL}/app/home", wait_until="domcontentloaded", timeout=TIMEOUT)
-
-    page.wait_for_timeout(WAIT_MS)
-
-
-# ============================================================
-# OPEN MODULE
-# ============================================================
-
-
-def open_module(page, module_name):
-
-    log(f"Opening module: " f"{module_name}")
-
-    # --------------------------------------------------------
-    # Try direct route
-    # --------------------------------------------------------
-
-    route = slugify(module_name)
-
-    url = f"{ERP_URL}/app/{route}"
-
-    try:
-
-        page.goto(url, wait_until="domcontentloaded", timeout=TIMEOUT)
-
-        page.wait_for_timeout(WAIT_MS)
-
-        if "/app/" in page.url and page.url.rstrip("/") != f"{ERP_URL}/app":
-
-            log(f"Module URL: {page.url}")
-
-            return True
-
-    except Exception:
-        pass
-
-    # --------------------------------------------------------
-    # Find module text
-    # --------------------------------------------------------
-
-    element = find_exact_text_element(page, module_name)
-
-    if not element:
-
-        raise RuntimeError(f"Module not found: " f"{module_name}")
-
-    element.click()
-
-    page.wait_for_timeout(WAIT_MS)
-
-    log(f"Module URL: {page.url}")
-
-    return True
+    return None
 
 
 # ============================================================
@@ -4438,95 +3669,37 @@ def login(page):
 
         return True
 
-    if not USERNAME:
-
-        raise RuntimeError("ERPNEXT_USER missing " "from .env")
-
-    if not PASSWORD:
-
-        raise RuntimeError("ERPNEXT_PASSWORD missing " "from .env")
-
     # --------------------------------------------------------
-    # Username
+    # USERNAME
     # --------------------------------------------------------
 
-    username = None
-
-    selectors = [
-        "input[name='usr']",
-        "input[name='login']",
-        "input[name='username']",
-        "input[autocomplete='username']",
-        "input[type='email']",
-    ]
-
-    for selector in selectors:
-
-        locator = page.locator(selector)
-
-        try:
-            count = locator.count()
-        except Exception:
-            count = 0
-
-        for i in range(count):
-
-            item = locator.nth(i)
-
-            try:
-
-                if item.is_visible():
-
-                    username = item
-                    break
-
-            except Exception:
-                continue
-
-        if username:
-            break
+    username = find_visible_locator(
+        page,
+        [
+            "input[name='usr']",
+            "input[autocomplete='username']",
+            "input[name='login']",
+            "input[type='email']",
+            "input[type='text']",
+        ],
+    )
 
     if not username:
 
         raise RuntimeError("Visible username field not found.")
 
     # --------------------------------------------------------
-    # Password
+    # PASSWORD
     # --------------------------------------------------------
 
-    password = None
-
-    selectors = [
-        "input[name='pwd']",
-        "input[name='password']",
-        "input[type='password']",
-    ]
-
-    for selector in selectors:
-
-        locator = page.locator(selector)
-
-        try:
-            count = locator.count()
-        except Exception:
-            count = 0
-
-        for i in range(count):
-
-            item = locator.nth(i)
-
-            try:
-
-                if item.is_visible():
-
-                    password = item
-                    break
-
-            except Exception:
-                continue
-
-        if password:
-            break
+    password = find_visible_locator(
+        page,
+        [
+            "input[name='pwd']",
+            "input[name='password']",
+            "input[type='password']",
+        ],
+    )
 
     if not password:
 
@@ -4534,12 +3707,14 @@ def login(page):
 
     username.fill(USERNAME)
 
+    page.wait_for_timeout(WAIT_SHORT)
+
     password.fill(PASSWORD)
 
     log("Credentials filled.")
 
     # --------------------------------------------------------
-    # Login button
+    # LOGIN BUTTON
     # --------------------------------------------------------
 
     login_button = None
@@ -4564,7 +3739,7 @@ def login(page):
             if not button.is_visible():
                 continue
 
-            text = (
+            text = clean_text(
                 " ".join(
                     [
                         button.inner_text() or "",
@@ -4572,9 +3747,7 @@ def login(page):
                         button.get_attribute("aria-label") or "",
                     ]
                 )
-                .strip()
-                .lower()
-            )
+            ).lower()
 
             if (
                 text == "login"
@@ -4584,6 +3757,7 @@ def login(page):
             ):
 
                 login_button = button
+
                 break
 
         except Exception:
@@ -4597,19 +3771,1111 @@ def login(page):
 
     try:
 
-        page.wait_for_url(re.compile(r".*/app.*"), timeout=15000)
+        page.wait_for_url(
+            re.compile(r"/app"),
+            timeout=15000,
+        )
 
     except PlaywrightTimeoutError:
 
-        page.wait_for_timeout(3000)
+        page.wait_for_timeout(WAIT_LONG)
+
+    log(f"Login URL: {page.url}")
 
     if "/app" not in page.url:
 
-        raise RuntimeError(f"Login failed: {page.url}")
+        raise RuntimeError("Login failed.")
 
-    log(f"LOGIN SUCCESS: {page.url}")
+    log("LOGIN SUCCESS")
 
     return True
+
+
+# ============================================================
+# HOME
+# ============================================================
+
+
+def open_home(page):
+
+    log("Opening Home / Desk...")
+
+    page.goto(
+        f"{ERP_URL}/app/home",
+        wait_until="domcontentloaded",
+        timeout=30000,
+    )
+
+    page.wait_for_timeout(WAIT_LONG)
+
+    log(f"Home URL: {page.url}")
+
+
+# ============================================================
+# MODULE NAVIGATION
+# ============================================================
+
+
+def find_module(
+    page,
+    module_name,
+):
+
+    target = normalize_text(module_name)
+
+    log(f"Finding module: {module_name}")
+
+    # --------------------------------------------------------
+    # EXACT TEXT
+    # --------------------------------------------------------
+
+    candidates = page.get_by_text(
+        module_name,
+        exact=True,
+    )
+
+    try:
+        count = candidates.count()
+    except Exception:
+        count = 0
+
+    for i in range(count):
+
+        item = candidates.nth(i)
+
+        try:
+
+            if item.is_visible():
+
+                return item
+
+        except Exception:
+            continue
+
+    # --------------------------------------------------------
+    # CLICKABLE
+    # --------------------------------------------------------
+
+    candidates = page.locator("""
+        a,
+        button,
+        [role="button"],
+        .module-link,
+        .desk-sidebar-item
+        """)
+
+    try:
+        count = min(
+            candidates.count(),
+            500,
+        )
+    except Exception:
+        count = 0
+
+    for i in range(count):
+
+        item = candidates.nth(i)
+
+        try:
+
+            if not item.is_visible():
+                continue
+
+            text = normalize_text(item.inner_text())
+
+            if text == target:
+                return item
+
+        except Exception:
+            continue
+
+    return None
+
+
+def open_module(
+    page,
+    module_name,
+):
+
+    item = find_module(
+        page,
+        module_name,
+    )
+
+    if not item:
+
+        raise RuntimeError(f"Module not found: " f"{module_name}")
+
+    log(f"Opening module: {module_name}")
+
+    item.click()
+
+    page.wait_for_timeout(WAIT_LONG)
+
+    log(f"Module URL: {page.url}")
+
+
+# ============================================================
+# DOCTYPE DETECTION
+# ============================================================
+
+
+def is_probable_record_name(text):
+
+    text = clean_text(text)
+
+    if not text:
+        return False
+
+    patterns = [
+        r"^[A-Z]{2,}[-_]\d{3,}",
+        r"^[A-Z0-9]+-\d{4,}$",
+        r"^\d+$",
+    ]
+
+    return any(
+        re.match(
+            pattern,
+            text,
+        )
+        for pattern in patterns
+    )
+
+
+def clean_doctype_candidate(text):
+
+    text = clean_text(text)
+
+    if not text:
+        return ""
+
+    if is_probable_record_name(text):
+        return ""
+
+    if is_system_ui(text=text):
+        return ""
+
+    if text.lower() in {
+        "home",
+        "import",
+        "accounting",
+        "inventory",
+        "assets",
+        "production",
+        "quality",
+        "planning",
+        "support",
+        "crm",
+        "settings",
+        "add",
+    }:
+        return ""
+
+    if len(text) > 100:
+        return ""
+
+    return text
+
+
+# ============================================================
+# MODULE DOC DISCOVERY
+# ============================================================
+
+
+def discover_module_docs(page):
+
+    docs = []
+
+    seen = set()
+
+    def add_candidate(
+        text,
+        href="",
+    ):
+
+        text = clean_doctype_candidate(text)
+
+        if not text:
+            return
+
+        key = text.lower()
+
+        if key in seen:
+            return
+
+        seen.add(key)
+
+        docs.append(
+            {
+                "doctype": text,
+                "href": href,
+            }
+        )
+
+    # --------------------------------------------------------
+    # VISIBLE LINKS
+    # --------------------------------------------------------
+
+    links = page.locator("a")
+
+    try:
+        count = min(
+            links.count(),
+            1000,
+        )
+    except Exception:
+        count = 0
+
+    for i in range(count):
+
+        link = links.nth(i)
+
+        try:
+
+            if not link.is_visible():
+                continue
+
+            text = clean_text(link.inner_text())
+
+            href = link.get_attribute("href") or ""
+
+            if href.startswith("/app/") or "/app/" in href:
+
+                add_candidate(
+                    text,
+                    href,
+                )
+
+        except Exception:
+            continue
+
+    # --------------------------------------------------------
+    # BUTTONS / CARDS
+    # --------------------------------------------------------
+
+    clickable = page.locator("""
+        button,
+        [role="button"],
+        .module-card,
+        .desk-card,
+        .link-card,
+        .widget
+        """)
+
+    try:
+        count = min(
+            clickable.count(),
+            1000,
+        )
+    except Exception:
+        count = 0
+
+    for i in range(count):
+
+        item = clickable.nth(i)
+
+        try:
+
+            if not item.is_visible():
+                continue
+
+            text = clean_text(item.inner_text())
+
+            if is_notification_element(
+                text=text,
+                aria_label=(item.get_attribute("aria-label") or ""),
+                title=(item.get_attribute("title") or ""),
+            ):
+                continue
+
+            href = item.get_attribute("href") or ""
+
+            add_candidate(
+                text,
+                href,
+            )
+
+        except Exception:
+            continue
+
+    # --------------------------------------------------------
+    # ADD DOCTYPE BUTTONS
+    # --------------------------------------------------------
+
+    buttons = page.locator("""
+        button,
+        [role="button"],
+        a
+        """)
+
+    try:
+        count = min(
+            buttons.count(),
+            1000,
+        )
+    except Exception:
+        count = 0
+
+    # Correct regex
+    add_pattern = re.compile(
+        r"^\+?\s*add\s+(.+)$",
+        re.I,
+    )
+
+    for i in range(count):
+
+        item = buttons.nth(i)
+
+        try:
+
+            if not item.is_visible():
+                continue
+
+            text = clean_text(item.inner_text())
+
+            if is_notification_element(
+                text=text,
+                aria_label=(item.get_attribute("aria-label") or ""),
+                title=(item.get_attribute("title") or ""),
+            ):
+                continue
+
+            match = add_pattern.match(text)
+
+            if match:
+
+                candidate = clean_doctype_candidate(match.group(1))
+
+                if candidate:
+
+                    add_candidate(
+                        candidate,
+                        "",
+                    )
+
+        except Exception:
+            continue
+
+    return docs
+
+
+# ============================================================
+# FIND DOCTYPE ROUTE
+# ============================================================
+
+
+def find_doctype_route(
+    page,
+    doctype,
+):
+
+    target = normalize_text(doctype)
+
+    links = page.locator("a")
+
+    try:
+        count = min(
+            links.count(),
+            1000,
+        )
+    except Exception:
+        count = 0
+
+    for i in range(count):
+
+        link = links.nth(i)
+
+        try:
+
+            if not link.is_visible():
+                continue
+
+            text = normalize_text(link.inner_text())
+
+            href = link.get_attribute("href") or ""
+
+            if is_notification_element(
+                text=text,
+                aria_label=(link.get_attribute("aria-label") or ""),
+                title=(link.get_attribute("title") or ""),
+            ):
+                continue
+
+            if text == target or target in text:
+
+                if href:
+
+                    return urljoin(
+                        ERP_URL + "/",
+                        href,
+                    )
+
+        except Exception:
+            continue
+
+    return None
+
+
+def guess_doctype_route(doctype):
+
+    return f"{ERP_URL}/app/" f"{slugify(doctype)}"
+
+
+# ============================================================
+# OPEN DOCTYPE LIST
+# ============================================================
+
+
+def open_doctype_list(
+    page,
+    doctype,
+):
+
+    log(f"Opening DocType list: " f"{doctype}")
+
+    route = find_doctype_route(
+        page,
+        doctype,
+    )
+
+    if not route:
+
+        route = guess_doctype_route(doctype)
+
+    log(f"DocType route: {route}")
+
+    page.goto(
+        route,
+        wait_until="domcontentloaded",
+        timeout=30000,
+    )
+
+    page.wait_for_timeout(WAIT_LONG)
+
+    return page.url
+
+
+# ============================================================
+# FIND ADD BUTTON
+# ============================================================
+
+
+def find_add_button(
+    page,
+    doctype,
+):
+
+    target = normalize_text(doctype)
+
+    expected = {
+        f"add {target}",
+        f"+ add {target}",
+        f"new {target}",
+    }
+
+    candidates = page.locator("""
+        button,
+        a,
+        [role="button"]
+        """)
+
+    try:
+        count = min(
+            candidates.count(),
+            1000,
+        )
+    except Exception:
+        count = 0
+
+    # --------------------------------------------------------
+    # Exact
+    # --------------------------------------------------------
+
+    for i in range(count):
+
+        item = candidates.nth(i)
+
+        try:
+
+            if not item.is_visible():
+                continue
+
+            text = clean_text(
+                " ".join(
+                    [
+                        item.inner_text() or "",
+                        item.get_attribute("aria-label") or "",
+                        item.get_attribute("title") or "",
+                    ]
+                )
+            ).lower()
+
+            if is_notification_element(text=text):
+                continue
+
+            if text in expected:
+                return item
+
+        except Exception:
+            continue
+
+    # --------------------------------------------------------
+    # Contains
+    # --------------------------------------------------------
+
+    for i in range(count):
+
+        item = candidates.nth(i)
+
+        try:
+
+            if not item.is_visible():
+                continue
+
+            text = normalize_text(item.inner_text())
+
+            if is_notification_element(text=text):
+                continue
+
+            if "add" in text and target in text:
+                return item
+
+        except Exception:
+            continue
+
+    # --------------------------------------------------------
+    # Generic add
+    # --------------------------------------------------------
+
+    generic_selectors = [
+        "button:has-text('Add')",
+        "button:has-text('New')",
+        "a:has-text('Add')",
+        "[role='button']:has-text('Add')",
+    ]
+
+    for selector in generic_selectors:
+
+        locator = page.locator(selector)
+
+        try:
+            count = locator.count()
+        except Exception:
+            count = 0
+
+        for i in range(count):
+
+            item = locator.nth(i)
+
+            try:
+
+                if not item.is_visible():
+                    continue
+
+                text = clean_text(item.inner_text())
+
+                if is_notification_element(text=text):
+                    continue
+
+                return item
+
+            except Exception:
+                continue
+
+    return None
+
+
+# ============================================================
+# CLICK ADD NEW DOCUMENT
+# ============================================================
+
+
+def click_add_new_document(
+    page,
+    doctype,
+):
+
+    log(f"Looking for + Add {doctype}")
+
+    add_button = find_add_button(
+        page,
+        doctype,
+    )
+
+    if not add_button:
+
+        raise RuntimeError(f"+ Add {doctype} " f"button not found.")
+
+    log(f"Clicking + Add {doctype}")
+
+    before_url = page.url
+
+    add_button.click()
+
+    try:
+
+        page.wait_for_url(
+            re.compile(r"/app/"),
+            timeout=10000,
+        )
+
+    except PlaywrightTimeoutError:
+        pass
+
+    page.wait_for_timeout(WAIT_LONG)
+
+    after_url = page.url
+
+    log(f"New document URL: " f"{after_url}")
+
+    if after_url == before_url:
+
+        page.wait_for_timeout(WAIT_LONG)
+
+    return page.url
+
+
+# ============================================================
+# VERIFY NEW DOCUMENT
+# ============================================================
+
+
+def verify_new_document(
+    page,
+    doctype,
+):
+
+    url = page.url.lower()
+
+    has_new = "new-" in url or "/new/" in url
+
+    try:
+
+        body_text = clean_text(page.locator("body").inner_text(timeout=5000)).lower()
+
+    except Exception:
+
+        body_text = ""
+
+    title = normalize_text(doctype)
+
+    indicators = [
+        f"new {title}",
+        f"new-{slugify(doctype)}",
+        "save",
+        "submit",
+    ]
+
+    text_indicator = any(item in body_text for item in indicators)
+
+    if has_new or text_indicator:
+
+        log(f"New document confirmed: " f"{doctype}")
+
+        return True
+
+    # --------------------------------------------------------
+    # Form fields
+    # --------------------------------------------------------
+
+    fields = page.locator("[data-fieldname]")
+
+    try:
+
+        if fields.count() > 0:
+
+            log(f"Form detected for: " f"{doctype}")
+
+            return True
+
+    except Exception:
+        pass
+
+    return False
+
+
+# ============================================================
+# DISCOVER ONE DOCTYPE
+# ============================================================
+
+
+def discover_doctype(
+    page,
+    doctype,
+    module_name="",
+):
+
+    doctype = clean_text(doctype)
+
+    if not doctype:
+        return None
+
+    # --------------------------------------------------------
+    # Existing JSON validation
+    # --------------------------------------------------------
+
+    existing = discovery_file_for_doctype(doctype)
+
+    if existing:
+
+        log(f"SKIP: {doctype} " f"already discovered -> " f"{existing.name}")
+
+        return existing
+
+    log("--------------------------------------")
+
+    log(f"DISCOVERING DOCTYPE: " f"{doctype}")
+
+    log("--------------------------------------")
+
+    # --------------------------------------------------------
+    # Open list
+    # --------------------------------------------------------
+
+    open_doctype_list(
+        page,
+        doctype,
+    )
+
+    # --------------------------------------------------------
+    # Screenshot list
+    # --------------------------------------------------------
+
+    list_screenshot = SCREENSHOT_DIR / f"{slugify(doctype)}_list.png"
+
+    try:
+
+        page.screenshot(
+            path=str(list_screenshot),
+            full_page=True,
+        )
+
+    except Exception:
+        pass
+
+    # --------------------------------------------------------
+    # Add new
+    # --------------------------------------------------------
+
+    click_add_new_document(
+        page,
+        doctype,
+    )
+
+    # --------------------------------------------------------
+    # Verify
+    # --------------------------------------------------------
+
+    if not verify_new_document(
+        page,
+        doctype,
+    ):
+
+        raise RuntimeError(f"Could not confirm " f"new document for " f"{doctype}")
+
+    # --------------------------------------------------------
+    # Read form
+    # --------------------------------------------------------
+
+    page.wait_for_timeout(WAIT_MEDIUM)
+
+    log(f"Reading all fields: " f"{doctype}")
+
+    data = discover_page(
+        page,
+        doctype=doctype,
+        read_mode="blank_new_document",
+    )
+
+    data["module"] = module_name
+
+    # --------------------------------------------------------
+    # Save screenshot
+    # --------------------------------------------------------
+
+    screenshot = SCREENSHOT_DIR / f"{slugify(doctype)}_new.png"
+
+    try:
+
+        page.screenshot(
+            path=str(screenshot),
+            full_page=True,
+        )
+
+        log(f"Screenshot saved: " f"{screenshot}")
+
+    except Exception:
+        pass
+
+    # --------------------------------------------------------
+    # Save JSON
+    # --------------------------------------------------------
+
+    saved = save_discovery(data)
+
+    log(f"Fields discovered: " f"{len(data['fields'])}")
+
+    log(f"Tabs discovered: " f"{len(data['tabs'])}")
+
+    log(f"Sections discovered: " f"{len(data['sections'])}")
+
+    log(f"Buttons discovered: " f"{len(data['buttons'])}")
+
+    log(f"Elements discovered: " f"{len(data['elements'])}")
+
+    log(f"COMPLETED: {doctype}")
+
+    return saved
+
+
+# ============================================================
+# MODULE DISCOVERY
+# ============================================================
+
+
+def discover_module(
+    page,
+    module_name,
+):
+
+    log("======================================")
+
+    log(f"FULL MODULE DISCOVERY: " f"{module_name}")
+
+    log("======================================")
+
+    # --------------------------------------------------------
+    # Open module
+    # --------------------------------------------------------
+
+    open_home(page)
+
+    open_module(
+        page,
+        module_name,
+    )
+
+    page.wait_for_timeout(WAIT_MEDIUM)
+
+    # --------------------------------------------------------
+    # Screenshot
+    # --------------------------------------------------------
+
+    module_screenshot = SCREENSHOT_DIR / f"module_{slugify(module_name)}.png"
+
+    try:
+
+        page.screenshot(
+            path=str(module_screenshot),
+            full_page=True,
+        )
+
+    except Exception:
+        pass
+
+    # --------------------------------------------------------
+    # Discover DocTypes
+    # --------------------------------------------------------
+
+    docs = discover_module_docs(page)
+
+    log(f"Visible document candidates: " f"{len(docs)}")
+
+    for index, item in enumerate(
+        docs,
+        start=1,
+    ):
+
+        log(f"{index}. " f"{item['doctype']}")
+
+    if not docs:
+
+        log("No visible DocTypes detected.")
+
+        return
+
+    # --------------------------------------------------------
+    # Process
+    # --------------------------------------------------------
+
+    success = 0
+    skipped = 0
+    failed = 0
+
+    for index, item in enumerate(
+        docs,
+        start=1,
+    ):
+
+        doctype = item["doctype"]
+
+        log("======================================")
+
+        log(f"MODULE DOC " f"{index}/{len(docs)}: " f"{doctype}")
+
+        log("======================================")
+
+        existing = discovery_file_for_doctype(doctype)
+
+        if existing:
+
+            log(f"SKIP EXISTING: " f"{doctype} -> " f"{existing.name}")
+
+            skipped += 1
+
+            continue
+
+        try:
+
+            discover_doctype(
+                page,
+                doctype,
+                module_name=module_name,
+            )
+
+            success += 1
+
+        except Exception as exc:
+
+            failed += 1
+
+            log(f"FAILED: {doctype}")
+
+            log(f"Reason: {exc}")
+
+            # ------------------------------------------------
+            # Failure screenshot
+            # ------------------------------------------------
+
+            try:
+
+                path = SCREENSHOT_DIR / f"failure_{slugify(doctype)}.png"
+
+                page.screenshot(
+                    path=str(path),
+                    full_page=True,
+                )
+
+            except Exception:
+                pass
+
+            # ------------------------------------------------
+            # Recovery
+            # ------------------------------------------------
+
+            try:
+
+                open_home(page)
+
+                open_module(
+                    page,
+                    module_name,
+                )
+
+                page.wait_for_timeout(WAIT_MEDIUM)
+
+            except Exception as recovery_error:
+
+                log(f"Recovery failed: " f"{recovery_error}")
+
+    # --------------------------------------------------------
+    # Summary
+    # --------------------------------------------------------
+
+    log("======================================")
+
+    log(f"MODULE DISCOVERY FINISHED: " f"{module_name}")
+
+    log(f"SUCCESS: {success}")
+
+    log(f"SKIPPED: {skipped}")
+
+    log(f"FAILED: {failed}")
+
+    log("Agent will now STOP.")
+
+    log("======================================")
+
+
+# ============================================================
+# SINGLE DOCTYPE DISCOVERY
+# ============================================================
+
+
+def discover_single_doctype(
+    page,
+    doctype,
+):
+
+    log("======================================")
+
+    log(f"SINGLE DOCTYPE DISCOVERY: " f"{doctype}")
+
+    log("======================================")
+
+    existing = discovery_file_for_doctype(doctype)
+
+    if existing:
+
+        log(f"ALREADY EXISTS: " f"{existing}")
+
+        log("Nothing to do.")
+
+        return
+
+    discover_doctype(
+        page,
+        doctype,
+        module_name="",
+    )
+
+    log("======================================")
+
+    log(f"DOC TYPE DISCOVERY FINISHED: " f"{doctype}")
+
+    log("Agent will now STOP.")
+
+    log("======================================")
+
+
+# ============================================================
+# ARGUMENTS
+# ============================================================
+
+
+def parse_args():
+
+    parser = argparse.ArgumentParser(
+        description=("ERPNext Knowledge " "Discovery Agent")
+    )
+
+    parser.add_argument(
+        "--module",
+        required=False,
+        help=("Discover all visible " "DocTypes inside module."),
+    )
+
+    parser.add_argument(
+        "--doctype",
+        required=False,
+        help=("Discover only this DocType."),
+    )
+
+    args = parser.parse_args()
+
+    if not args.module and not args.doctype:
+
+        parser.error("Give either " "--module or " "--doctype.")
+
+    if args.module and args.doctype:
+
+        log("Both --module and " "--doctype supplied.")
+
+        log("Priority: specific " "--doctype.")
+
+        args.module = None
+
+    return args
 
 
 # ============================================================
@@ -4623,19 +4889,30 @@ def main():
 
     log("======================================")
 
-    log("ERPNext KNOWLEDGE DISCOVERY AGENT")
+    log("ERPNext KNOWLEDGE " "DISCOVERY AGENT")
 
     log("======================================")
 
-    log(f"Module: {args.module}")
+    log(f"ERP: {ERP_URL}")
 
-    if args.doctype:
+    if args.module:
 
-        log(f"DocType: {args.doctype}")
+        log("MODE: MODULE")
+
+        log(f"MODULE: {args.module}")
+
+    else:
+
+        log("MODE: SINGLE DOCTYPE")
+
+        log(f"DOCTYPE: {args.doctype}")
 
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(headless=HEADLESS, slow_mo=20)
+        browser = p.chromium.launch(
+            headless=HEADLESS,
+            slow_mo=30,
+        )
 
         context = browser.new_context(
             viewport={
@@ -4649,12 +4926,16 @@ def main():
         try:
 
             # ------------------------------------------------
-            # ERP
+            # OPEN ERP
             # ------------------------------------------------
 
             log(f"Opening ERP: {ERP_URL}")
 
-            page.goto(ERP_URL, wait_until="domcontentloaded", timeout=TIMEOUT)
+            page.goto(
+                ERP_URL,
+                wait_until="domcontentloaded",
+                timeout=30000,
+            )
 
             log(f"Current URL: {page.url}")
 
@@ -4668,34 +4949,25 @@ def main():
             # HOME
             # ------------------------------------------------
 
-            log("Opening Home / Desk...")
-
             open_home(page)
 
-            log(f"Home URL: {page.url}")
-
             # ------------------------------------------------
-            # Home screenshot
+            # MODE
             # ------------------------------------------------
 
-            try:
+            if args.doctype:
 
-                page.screenshot(path=str(SCREENSHOT_DIR / "home.png"), full_page=True)
+                discover_single_doctype(
+                    page,
+                    args.doctype,
+                )
 
-            except Exception:
-                pass
+            elif args.module:
 
-            # ------------------------------------------------
-            # MODULE
-            # ------------------------------------------------
-
-            open_module(page, args.module)
-
-            # ------------------------------------------------
-            # DISCOVERY
-            # ------------------------------------------------
-
-            discover_module(page, args.module, args.doctype)
+                discover_module(
+                    page,
+                    args.module,
+                )
 
         except Exception as exc:
 
@@ -4703,9 +4975,14 @@ def main():
 
             try:
 
+                failure = SCREENSHOT_DIR / "discovery_failure.png"
+
                 page.screenshot(
-                    path=str(SCREENSHOT_DIR / "discovery_failure.png"), full_page=True
+                    path=str(failure),
+                    full_page=True,
                 )
+
+                log(f"Failure screenshot: " f"{failure}")
 
             except Exception:
                 pass
@@ -4713,6 +4990,7 @@ def main():
         finally:
 
             context.close()
+
             browser.close()
 
     log("======================================")
@@ -4721,6 +4999,10 @@ def main():
 
     log("======================================")
 
+
+# ============================================================
+# ENTRY
+# ============================================================
 
 if __name__ == "__main__":
     main()
