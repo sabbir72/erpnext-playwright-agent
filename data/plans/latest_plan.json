@@ -1,0 +1,24 @@
+{
+  "status": "needs_clarification",
+  "command": "Generate test cases for company budget",
+  "task_type": "generate_test_cases",
+  "target_type": "unknown",
+  "message": "Could not identify a known ERPNext DocType or Module.",
+  "available_doctypes": [
+    "New Company Budget",
+    "New Contract",
+    "New Price Fixation",
+    "New Requisition",
+    "New Purchase Order",
+    "New Proforma Invoice",
+    "New LC Application",
+    "New Import LC",
+    "New Shipment Document",
+    "New Material Distribution",
+    "New MRR",
+    "New Stock Transaction",
+    "New Product"
+  ],
+  "available_modules": [],
+  "next_step": "ask_user"
+}
