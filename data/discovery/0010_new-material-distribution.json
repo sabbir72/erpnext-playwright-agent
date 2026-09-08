@@ -1,0 +1,2844 @@
+{
+  "knowledge_type": "erpnext_doctype",
+  "schema_version": "2.0",
+  "module": "",
+  "doctype": "New Material Distribution",
+  "document_name": "New Material Distribution",
+  "read_mode": "blank_new_document",
+  "existing_documents_skipped": true,
+  "url": "https://stage2-salma.altersense.net/app/material-distribution/new-material-distribution-ptlkojelmf",
+  "route": "/app/material-distribution/new-material-distribution-ptlkojelmf",
+  "title": "New Material Distribution",
+  "text": "ERP Home Accounting Local Procurement Import Merchandising Inventory Assets Production Quality Planning Support CRM Settings Collapse Material Distribution No new notifications Help A New Material Distribution Not Saved Workflow: Draft Save Supplier Eva Machinery & CO. V-LOC-0004 A One Machinery & Co V-LOC-0012 Adex Engineering Ltd. V-LOC-0013 AFA Corporation V-LOC-0044 Bangla Hardware & Mill Store V-LOC-0095 Faysal Hasan Arif & Associates V-LOC-0098 Focus Auto Bricks & Ceramics Ltd. V-LOC-0160 Maliha Poly Tex Fiber Industry Limited V-LOC-0164 Management Consulting Solution V-LOC-0289 Vai Vai General Store Create a new Supplier Advanced Search 12 results found supplier Import LC Begin typing for results. import_lc Shipment Document No Begin typing for results. commercial_invoice Contract No Begin typing for results. blanket_order B/L Date bl_date Company Begin typing for results. company Commercial Invoice Date commercial_invoice_date Commercial Invoice (CI) No Begin typing for results. commercial_invoice_ci_no Cost Center Begin typing for results. cost_center Department Begin typing for results. department Commercial Invoice Details items No. LC Qty CI Quantity No. of Bale(s) Product Name LC UOM UOM Avg. Bale Qty (Kg) Qty (Kg) Source Store Certification Stock UOM No rows Download Inter-Company Distribution Details inter_company_distribution_item No. Product Code To Company No. of Bale(s) Distributed Qty To Store Bale(s) Distributed UOM Qty (Kg) Qty Difference (Kg) Bale Qty Difference No rows Add Row Download Sales Distribution Delivery Order Begin typing for results. sales_order No. of Bale(s) no_of_bale Insert insert_button Select Product (Row) Begin typing for results. item_code Avg. Bale Qty (Stock UOM) 0 avg_bale_qty_sales_in_stock_uom Customer/Buyer Begin typing for results. customer Default Source Store Begin typing for results. default_source_store_sales Sales Quantity sales_qty Sales Distribution Details sales_distribution_item No. Delivery Order Product Code Customer/Buyer Source Store Sales Distributed Qty UOM Loading Point Shipment Date No. of Bale(s) Avg. Bale Qty (Kg) Transferred Qty Transferred Qty (Kg) Bale(s) Distributed No rows Add Row Download September, 2026 SU MO TU WE TH FR SA 30 31 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 1 2 3 Today September, 2026 SU MO TU WE TH FR SA 30 31 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 1 2 3 Today",
+  "fields": [
+    {
+      "fieldname": "section_break_wrft",
+      "label": "Supplier",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"section_break_wrft\"]",
+        "name": "section_break_wrft",
+        "label": "Supplier"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_2",
+      "label": "Supplier",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_2\"]",
+        "name": "__column_2",
+        "label": "Supplier"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "supplier",
+      "label": "Supplier",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"supplier\"]",
+        "name": "supplier",
+        "label": "Supplier"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "import_lc",
+      "label": "Import LC",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"import_lc\"]",
+        "name": "import_lc",
+        "label": "Import LC"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_ykml",
+      "label": "Shipment Document No",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_ykml\"]",
+        "name": "column_break_ykml",
+        "label": "Shipment Document No"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "commercial_invoice",
+      "label": "Shipment Document No",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"commercial_invoice\"]",
+        "name": "commercial_invoice",
+        "label": "Shipment Document No"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "blanket_order",
+      "label": "Contract No",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"blanket_order\"]",
+        "name": "blanket_order",
+        "label": "Contract No"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_kd8b",
+      "label": "B/L Date",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_kd8b\"]",
+        "name": "column_break_kd8b",
+        "label": "B/L Date"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "bl_date",
+      "label": "B/L Date",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"bl_date\"]",
+        "name": "bl_date",
+        "label": "B/L Date"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Data",
+      "value": "Dabiruddin Spinning Mills Ltd.",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"company\"]",
+        "name": "company",
+        "label": "Company"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_hxzr",
+      "label": "Commercial Invoice Date",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_hxzr\"]",
+        "name": "column_break_hxzr",
+        "label": "Commercial Invoice Date"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "commercial_invoice_date",
+      "label": "Commercial Invoice Date",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"commercial_invoice_date\"]",
+        "name": "commercial_invoice_date",
+        "label": "Commercial Invoice Date"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "commercial_invoice_ci_no",
+      "label": "Commercial Invoice (CI) No",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"commercial_invoice_ci_no\"]",
+        "name": "commercial_invoice_ci_no",
+        "label": "Commercial Invoice (CI) No"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_9win",
+      "label": "column_break_9win",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_9win\"]",
+        "name": "column_break_9win",
+        "label": "column_break_9win"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "cost_center",
+      "label": "Cost Center",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"cost_center\"]",
+        "name": "cost_center",
+        "label": "Cost Center"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "department",
+      "label": "Department",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"department\"]",
+        "name": "department",
+        "label": "Department"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "ci_details_section",
+      "label": "ci_details_section",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"ci_details_section\"]",
+        "name": "ci_details_section",
+        "label": "ci_details_section"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_3",
+      "label": "__column_3",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_3\"]",
+        "name": "__column_3",
+        "label": "__column_3"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "items",
+      "label": "items",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"items\"]",
+        "name": "items",
+        "label": "items"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "lc_qty",
+      "label": "lc_qty",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"lc_qty\"]",
+        "name": "lc_qty",
+        "label": "lc_qty"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "commercial_invoice_qty",
+      "label": "commercial_invoice_qty",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"commercial_invoice_qty\"]",
+        "name": "commercial_invoice_qty",
+        "label": "commercial_invoice_qty"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "no_of_bale",
+      "label": "no_of_bale",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"no_of_bale\"]",
+        "name": "no_of_bale",
+        "label": "no_of_bale"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "item_name",
+      "label": "item_name",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"item_name\"]",
+        "name": "item_name",
+        "label": "item_name"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "lc_uom",
+      "label": "lc_uom",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"lc_uom\"]",
+        "name": "lc_uom",
+        "label": "lc_uom"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "uom",
+      "label": "uom",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"uom\"]",
+        "name": "uom",
+        "label": "uom"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "avg_bale_qty_in_stock_uom",
+      "label": "avg_bale_qty_in_stock_uom",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"avg_bale_qty_in_stock_uom\"]",
+        "name": "avg_bale_qty_in_stock_uom",
+        "label": "avg_bale_qty_in_stock_uom"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "stock_qty",
+      "label": "stock_qty",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"stock_qty\"]",
+        "name": "stock_qty",
+        "label": "stock_qty"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "source_warehouse",
+      "label": "source_warehouse",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"source_warehouse\"]",
+        "name": "source_warehouse",
+        "label": "source_warehouse"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "certification",
+      "label": "certification",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"certification\"]",
+        "name": "certification",
+        "label": "certification"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "stock_uom",
+      "label": "stock_uom",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"stock_uom\"]",
+        "name": "stock_uom",
+        "label": "stock_uom"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "inter_company_distribution_details_section",
+      "label": "inter_company_distribution_details_section",
+      "fieldtype": "Check",
+      "value": false,
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"inter_company_distribution_details_section\"]",
+        "name": "inter_company_distribution_details_section",
+        "label": "inter_company_distribution_details_section"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_5",
+      "label": "__column_5",
+      "fieldtype": "Check",
+      "value": false,
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_5\"]",
+        "name": "__column_5",
+        "label": "__column_5"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "inter_company_distribution_item",
+      "label": "inter_company_distribution_item",
+      "fieldtype": "Check",
+      "value": false,
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"inter_company_distribution_item\"]",
+        "name": "inter_company_distribution_item",
+        "label": "inter_company_distribution_item"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "item_code",
+      "label": "item_code",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"item_code\"]",
+        "name": "item_code",
+        "label": "item_code"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "to_company",
+      "label": "to_company",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"to_company\"]",
+        "name": "to_company",
+        "label": "to_company"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "qty",
+      "label": "qty",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"qty\"]",
+        "name": "qty",
+        "label": "qty"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "to_warehouse",
+      "label": "to_warehouse",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"to_warehouse\"]",
+        "name": "to_warehouse",
+        "label": "to_warehouse"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "bale_distributed",
+      "label": "bale_distributed",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"bale_distributed\"]",
+        "name": "bale_distributed",
+        "label": "bale_distributed"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "stock_qty_difference",
+      "label": "stock_qty_difference",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"stock_qty_difference\"]",
+        "name": "stock_qty_difference",
+        "label": "stock_qty_difference"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "bale_qty_difference",
+      "label": "bale_qty_difference",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"bale_qty_difference\"]",
+        "name": "bale_qty_difference",
+        "label": "bale_qty_difference"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "sales_distribution_section",
+      "label": "Delivery Order",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"sales_distribution_section\"]",
+        "name": "sales_distribution_section",
+        "label": "Delivery Order"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_6",
+      "label": "Delivery Order",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_6\"]",
+        "name": "__column_6",
+        "label": "Delivery Order"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "sales_order",
+      "label": "Delivery Order",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"sales_order\"]",
+        "name": "sales_order",
+        "label": "Delivery Order"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "insert_button",
+      "label": "insert_button",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"insert_button\"]",
+        "name": "insert_button",
+        "label": "insert_button"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_v5sh",
+      "label": "Select Product (Row)",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_v5sh\"]",
+        "name": "column_break_v5sh",
+        "label": "Select Product (Row)"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "avg_bale_qty_sales_in_stock_uom",
+      "label": "Avg. Bale Qty (Stock UOM)",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"avg_bale_qty_sales_in_stock_uom\"]",
+        "name": "avg_bale_qty_sales_in_stock_uom",
+        "label": "Avg. Bale Qty (Stock UOM)"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_diol",
+      "label": "Customer/Buyer",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_diol\"]",
+        "name": "column_break_diol",
+        "label": "Customer/Buyer"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "customer",
+      "label": "Customer/Buyer",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"customer\"]",
+        "name": "customer",
+        "label": "Customer/Buyer"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "default_source_store_sales",
+      "label": "Default Source Store",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"default_source_store_sales\"]",
+        "name": "default_source_store_sales",
+        "label": "Default Source Store"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_wllx",
+      "label": "Sales Quantity",
+      "fieldtype": "Data",
+      "value": "0.00",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_wllx\"]",
+        "name": "column_break_wllx",
+        "label": "Sales Quantity"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "sales_qty",
+      "label": "Sales Quantity",
+      "fieldtype": "Data",
+      "value": "0.00",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"sales_qty\"]",
+        "name": "sales_qty",
+        "label": "Sales Quantity"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_a7ib",
+      "label": "column_break_a7ib",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_a7ib\"]",
+        "name": "column_break_a7ib",
+        "label": "column_break_a7ib"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "section_break_qpgp",
+      "label": "section_break_qpgp",
+      "fieldtype": "Check",
+      "value": false,
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"section_break_qpgp\"]",
+        "name": "section_break_qpgp",
+        "label": "section_break_qpgp"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_7",
+      "label": "__column_7",
+      "fieldtype": "Check",
+      "value": false,
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_7\"]",
+        "name": "__column_7",
+        "label": "__column_7"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "sales_distribution_item",
+      "label": "sales_distribution_item",
+      "fieldtype": "Check",
+      "value": false,
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"sales_distribution_item\"]",
+        "name": "sales_distribution_item",
+        "label": "sales_distribution_item"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "loading_point",
+      "label": "loading_point",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"loading_point\"]",
+        "name": "loading_point",
+        "label": "loading_point"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "delivery_date",
+      "label": "delivery_date",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"delivery_date\"]",
+        "name": "delivery_date",
+        "label": "delivery_date"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "transferred_qty",
+      "label": "transferred_qty",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"transferred_qty\"]",
+        "name": "transferred_qty",
+        "label": "transferred_qty"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "transferred_qty_stock_uom",
+      "label": "transferred_qty_stock_uom",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"transferred_qty_stock_uom\"]",
+        "name": "transferred_qty_stock_uom",
+        "label": "transferred_qty_stock_uom"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    }
+  ],
+  "tabs": [],
+  "tab_observations": [],
+  "sections": [
+    "Commercial Invoice Details",
+    "Inter-Company Distribution Details",
+    "Sales Distribution",
+    "Sales Distribution Details"
+  ],
+  "buttons": [
+    {
+      "text": "A",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Save",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Download",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Add Row",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Insert",
+      "aria_label": "",
+      "title": "Insert",
+      "role": "button",
+      "action": "click"
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "aria_label": "",
+      "title": ""
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "aria_label": "",
+      "title": "Home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "aria_label": "",
+      "title": "Accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "aria_label": "",
+      "title": "Local Procurement"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "aria_label": "",
+      "title": "Import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "aria_label": "",
+      "title": "Merchandising"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "aria_label": "",
+      "title": "Inventory"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "aria_label": "",
+      "title": "Assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "aria_label": "",
+      "title": "Production"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "aria_label": "",
+      "title": "Quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "aria_label": "",
+      "title": "Planning"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "aria_label": "",
+      "title": "Support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "aria_label": "",
+      "title": "CRM"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "aria_label": "",
+      "title": "Settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "aria_label": "",
+      "title": ""
+    },
+    {
+      "text": "Material Distribution",
+      "href": "/app/material-distribution",
+      "aria_label": "",
+      "title": ""
+    }
+  ],
+  "elements": [
+    {
+      "tag": "a",
+      "text": "ERP",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "app-switcher-dropdown",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn-reset drop-icon show-in-edit-mode",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Home",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Home",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Accounting",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Accounting",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn-reset drop-icon show-in-edit-mode",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Local Procurement",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Local Procurement",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Import",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Import",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Merchandising",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Merchandising",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Inventory",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Inventory",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Assets",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Assets",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Production",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Production",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Quality",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Quality",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Planning",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Planning",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Support",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Support",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "CRM",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "CRM",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Settings",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Settings",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": true
+    },
+    {
+      "tag": "a",
+      "text": "Collapse",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "collapse-sidebar-link",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Material Distribution",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "navbar-search",
+      "name": "",
+      "type": "text",
+      "placeholder": "Search or type a command (Ctrl + K)",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "",
+      "class": "form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "Help",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Help Dropdown",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn-reset nav-link",
+      "system_ui": true
+    },
+    {
+      "tag": "button",
+      "text": "A",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn-reset nav-link",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "Save",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn btn-primary btn-sm primary-action",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "supplier",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "div",
+      "text": "Eva Machinery & CO.",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "option",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "div",
+      "text": "V-LOC-0004 A One Machinery & Co",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "option",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "div",
+      "text": "V-LOC-0012 Adex Engineering Ltd.",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "option",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "div",
+      "text": "V-LOC-0013 AFA Corporation",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "option",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "div",
+      "text": "V-LOC-0044 Bangla Hardware & Mill Store",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "option",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "div",
+      "text": "V-LOC-0095 Faysal Hasan Arif & Associates",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "option",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "div",
+      "text": "V-LOC-0098 Focus Auto Bricks & Ceramics Ltd.",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "option",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "div",
+      "text": "V-LOC-0160 Maliha Poly Tex Fiber Industry Limited",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "option",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "div",
+      "text": "V-LOC-0164 Management Consulting Solution",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "option",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "div",
+      "text": "V-LOC-0289 Vai Vai General Store",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "option",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "div",
+      "text": "Create a new Supplier",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "option",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "div",
+      "text": "Advanced Search",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "option",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "import_lc",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "commercial_invoice",
+      "class": "input-with-feedback form-control bold",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "blanket_order",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "bl_date",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "company",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "commercial_invoice_date",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "commercial_invoice_ci_no",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "cost_center",
+      "class": "input-with-feedback form-control bold",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "department",
+      "class": "input-with-feedback form-control bold",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "checkbox",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "grid-row-check",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "Download",
+      "id": "",
+      "name": "",
+      "type": "button",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "grid-download btn btn-xs btn-secondary",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "checkbox",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "grid-row-check",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "Add Row",
+      "id": "",
+      "name": "",
+      "type": "button",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn btn-xs btn-secondary grid-add-row",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "Download",
+      "id": "",
+      "name": "",
+      "type": "button",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "grid-download btn btn-xs btn-secondary",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "sales_order",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "no_of_bale",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "Insert",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Insert",
+      "role": "",
+      "value": "",
+      "data_fieldname": "insert_button",
+      "class": "btn btn-xs btn-default",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "item_code",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "customer",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "default_source_store_sales",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "sales_qty",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "checkbox",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "grid-row-check",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "Add Row",
+      "id": "",
+      "name": "",
+      "type": "button",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn btn-xs btn-secondary grid-add-row",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "Download",
+      "id": "",
+      "name": "",
+      "type": "button",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "grid-download btn btn-xs btn-secondary",
+      "system_ui": false
+    }
+  ],
+  "navigation": {
+    "source": "blank_new_document",
+    "record_access_allowed": false,
+    "business_data_mutation": false
+  },
+  "system_ui_rules": {
+    "notification_detected": true,
+    "notification_click_allowed": false,
+    "notification_keywords": [
+      "bell",
+      "no new notifications",
+      "notification",
+      "notification icon",
+      "notifications"
+    ],
+    "workspace_click_allowed": false,
+    "generic_system_actions_allowed": false
+  },
+  "qa_knowledge": {
+    "form_read": true,
+    "business_data_created": false,
+    "business_data_saved": false,
+    "existing_record_opened": false,
+    "field_actions": [
+      "check",
+      "clear",
+      "fill",
+      "uncheck"
+    ],
+    "business_buttons": [
+      "A",
+      "Save",
+      "Download",
+      "Add Row",
+      "Insert"
+    ],
+    "validation_candidates": [
+      {
+        "fieldname": "section_break_wrft",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__column_2",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "supplier",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "import_lc",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_ykml",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "commercial_invoice",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "blanket_order",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_kd8b",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "bl_date",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "company",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_hxzr",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "commercial_invoice_date",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "commercial_invoice_ci_no",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_9win",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "cost_center",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "department",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "ci_details_section",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "__column_3",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "items",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "lc_qty",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "commercial_invoice_qty",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "no_of_bale",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "item_name",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "lc_uom",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "uom",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "avg_bale_qty_in_stock_uom",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "stock_qty",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "source_warehouse",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "certification",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "stock_uom",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "inter_company_distribution_details_section",
+        "required": true,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "__column_5",
+        "required": true,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "inter_company_distribution_item",
+        "required": true,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "item_code",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "to_company",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "qty",
+        "required": true,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "to_warehouse",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "bale_distributed",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "stock_qty_difference",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "bale_qty_difference",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "sales_distribution_section",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__column_6",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "sales_order",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "insert_button",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "column_break_v5sh",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "avg_bale_qty_sales_in_stock_uom",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "column_break_diol",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "customer",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "default_source_store_sales",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_wllx",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "sales_qty",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_a7ib",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "section_break_qpgp",
+        "required": true,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "__column_7",
+        "required": true,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "sales_distribution_item",
+        "required": true,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "loading_point",
+        "required": true,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "delivery_date",
+        "required": true,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "transferred_qty",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "transferred_qty_stock_uom",
+        "required": false,
+        "fieldtype": "unknown"
+      }
+    ]
+  },
+  "discovery_notes": {
+    "navigation": "Login -> ERPNext Home -> Global Search by exact DocType name -> DocType List -> New <DocType> (or validated New) -> blank document -> read all fields -> back to Module",
+    "doctype_validation": "DocType is accepted from a clean /app/<doctype> list route and the opened list page is UI-validated; no metadata API dependency.",
+    "record_rule": "Existing business documents are not opened for discovery; only the blank New Document form is inspected.",
+    "system_ui_rule": "Notification, Bell, Search, Filter, Settings, Workspace and other system UI are ignored and never treated as DocTypes.",
+    "field_rule": "Visible form fields are read for fieldname, label, fieldtype, required state, placeholder/options and available actions.",
+    "tab_section_rule": "Every visible form tab is opened and read one-by-one; fields are stored with tab context, and sections are collected from each tab.",
+    "blank_form_rule": "The agent reads the blank New Document without filling or saving business data.",
+    "ai_knowledge_rule": "The JSON is an observation record for future AI retrieval/planning, not a test execution result."
+  },
+  "discovery_summary": {
+    "doctype": "New Material Distribution",
+    "field_count": 59,
+    "tab_count": 0,
+    "section_count": 4,
+    "button_count": 5,
+    "link_count": 16,
+    "element_count": 62,
+    "discovery_status": "completed"
+  }
+}

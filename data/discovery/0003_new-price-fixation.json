@@ -1,0 +1,2093 @@
+{
+  "knowledge_type": "erpnext_doctype",
+  "schema_version": "2.0",
+  "module": "",
+  "doctype": "New Price Fixation",
+  "document_name": "New Price Fixation",
+  "read_mode": "blank_new_document",
+  "existing_documents_skipped": true,
+  "url": "https://stage2-salma.altersense.net/app/price-fixation/new-price-fixation-eabiaummnp",
+  "route": "/app/price-fixation/new-price-fixation-eabiaummnp",
+  "title": "New Price Fixation",
+  "text": "ERP Home Accounting Local Procurement Import Merchandising Inventory Assets Production Quality Planning Support CRM Settings Collapse Price Fixation No new notifications Help A New Price Fixation Not Saved Workflow: Draft Save Posting Date posting_date Material Type Begin typing for results. material_type Company Begin typing for results. company Contract Details Contract No Begin typing for results. blanket_order Total Contract Qty total_contract_quantity Fixation Qty fixation_quantity Prior fix Qty prior_fix_quantity Contract Balance Qty contract_balance_quantity Currency and Exchange Rate Currency Begin typing for results. currency Insert Bid Details Date & Time Asia/Dhaka datetime Insert insert ICE Index/CLB ice_indexclb Qty (MT) qty_mt Bid Qty (LBS) bid_quantity Price Entry items Products No. Product code Qty (LBS) UOM Base Price/CLB ICE Index/CLB Unit Price/CLB Bid ID No rows Download Quality Inspection Section Total Amount (BDT) ৳ 0.00 total September, 2026 SU MO TU WE TH FR SA 30 31 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 1 2 3 Today September, 2026 SU MO TU WE TH FR SA 30 31 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 1 2 3 22 : 10 : 14 Today",
+  "fields": [
+    {
+      "fieldname": "__section_1",
+      "label": "__section_1",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__section_1\"]",
+        "name": "__section_1",
+        "label": "__section_1"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_1",
+      "label": "__column_1",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_1\"]",
+        "name": "__column_1",
+        "label": "__column_1"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_pgji",
+      "label": "Posting Date",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_pgji\"]",
+        "name": "column_break_pgji",
+        "label": "Posting Date"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "posting_date",
+      "label": "Posting Date",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"posting_date\"]",
+        "name": "posting_date",
+        "label": "Posting Date"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_saen",
+      "label": "Material Type",
+      "fieldtype": "Data",
+      "value": "Cotton",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_saen\"]",
+        "name": "column_break_saen",
+        "label": "Material Type"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "material_type",
+      "label": "Material Type",
+      "fieldtype": "Data",
+      "value": "Cotton",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"material_type\"]",
+        "name": "material_type",
+        "label": "Material Type"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Data",
+      "value": "Dabiruddin Spinning Mills Ltd.",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"company\"]",
+        "name": "company",
+        "label": "Company"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "contract_details_section",
+      "label": "Contract No",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"contract_details_section\"]",
+        "name": "contract_details_section",
+        "label": "Contract No"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_4",
+      "label": "Contract No",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_4\"]",
+        "name": "__column_4",
+        "label": "Contract No"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "blanket_order",
+      "label": "Contract No",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"blanket_order\"]",
+        "name": "blanket_order",
+        "label": "Contract No"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "total_contract_quantity",
+      "label": "Total Contract Qty",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"total_contract_quantity\"]",
+        "name": "total_contract_quantity",
+        "label": "Total Contract Qty"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "fixation_quantity",
+      "label": "Fixation Qty",
+      "fieldtype": "Data",
+      "value": "0.00",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"fixation_quantity\"]",
+        "name": "fixation_quantity",
+        "label": "Fixation Qty"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_edov",
+      "label": "Prior fix Qty",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_edov\"]",
+        "name": "column_break_edov",
+        "label": "Prior fix Qty"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "prior_fix_quantity",
+      "label": "Prior fix Qty",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"prior_fix_quantity\"]",
+        "name": "prior_fix_quantity",
+        "label": "Prior fix Qty"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "contract_balance_quantity",
+      "label": "Contract Balance Qty",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"contract_balance_quantity\"]",
+        "name": "contract_balance_quantity",
+        "label": "Contract Balance Qty"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "currency_and_exchange_rate",
+      "label": "Currency",
+      "fieldtype": "Data",
+      "value": "BDT",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"currency_and_exchange_rate\"]",
+        "name": "currency_and_exchange_rate",
+        "label": "Currency"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_5",
+      "label": "Currency",
+      "fieldtype": "Data",
+      "value": "BDT",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_5\"]",
+        "name": "__column_5",
+        "label": "Currency"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Data",
+      "value": "BDT",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"currency\"]",
+        "name": "currency",
+        "label": "Currency"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_qaku",
+      "label": "Exchange Rate",
+      "fieldtype": "Data",
+      "value": "1.0000",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_qaku\"]",
+        "name": "column_break_qaku",
+        "label": "Exchange Rate"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "insert_bid_details_section",
+      "label": "Date & Time",
+      "fieldtype": "Data",
+      "value": "08-09-2026 22:10:14",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"insert_bid_details_section\"]",
+        "name": "insert_bid_details_section",
+        "label": "Date & Time"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_6",
+      "label": "Date & Time",
+      "fieldtype": "Data",
+      "value": "08-09-2026 22:10:14",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_6\"]",
+        "name": "__column_6",
+        "label": "Date & Time"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "datetime",
+      "label": "Date & Time",
+      "fieldtype": "Data",
+      "value": "08-09-2026 22:10:14",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"datetime\"]",
+        "name": "datetime",
+        "label": "Date & Time"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "insert",
+      "label": "insert",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"insert\"]",
+        "name": "insert",
+        "label": "insert"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_ronr",
+      "label": "column_break_ronr",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_ronr\"]",
+        "name": "column_break_ronr",
+        "label": "column_break_ronr"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "ice_indexclb",
+      "label": "ICE Index/CLB",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"ice_indexclb\"]",
+        "name": "ice_indexclb",
+        "label": "ICE Index/CLB"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_jwrd",
+      "label": "Qty (MT)",
+      "fieldtype": "Data",
+      "value": "0.00",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_jwrd\"]",
+        "name": "column_break_jwrd",
+        "label": "Qty (MT)"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "qty_mt",
+      "label": "Qty (MT)",
+      "fieldtype": "Data",
+      "value": "0.00",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"qty_mt\"]",
+        "name": "qty_mt",
+        "label": "Qty (MT)"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "bid_quantity",
+      "label": "Bid Qty (LBS)",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"bid_quantity\"]",
+        "name": "bid_quantity",
+        "label": "Bid Qty (LBS)"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_yflg",
+      "label": "column_break_yflg",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_yflg\"]",
+        "name": "column_break_yflg",
+        "label": "column_break_yflg"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "price_entry",
+      "label": "Products",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"price_entry\"]",
+        "name": "price_entry",
+        "label": "Products"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_9",
+      "label": "Products",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_9\"]",
+        "name": "__column_9",
+        "label": "Products"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "items",
+      "label": "Products",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"items\"]",
+        "name": "items",
+        "label": "Products"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "item_code",
+      "label": "item_code",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"item_code\"]",
+        "name": "item_code",
+        "label": "item_code"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "qty",
+      "label": "qty",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"qty\"]",
+        "name": "qty",
+        "label": "qty"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "uom",
+      "label": "uom",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"uom\"]",
+        "name": "uom",
+        "label": "uom"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "base_priceclb",
+      "label": "base_priceclb",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"base_priceclb\"]",
+        "name": "base_priceclb",
+        "label": "base_priceclb"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "rateclb",
+      "label": "rateclb",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"rateclb\"]",
+        "name": "rateclb",
+        "label": "rateclb"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "bid_id",
+      "label": "bid_id",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"bid_id\"]",
+        "name": "bid_id",
+        "label": "bid_id"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "quality_inspection_section",
+      "label": "Quality Inspection Template",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"quality_inspection_section\"]",
+        "name": "quality_inspection_section",
+        "label": "Quality Inspection Template"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "total_section_section",
+      "label": "total_section_section",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"total_section_section\"]",
+        "name": "total_section_section",
+        "label": "total_section_section"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_11",
+      "label": "__column_11",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_11\"]",
+        "name": "__column_11",
+        "label": "__column_11"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_tncu",
+      "label": "Total Amount (BDT)",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_tncu\"]",
+        "name": "column_break_tncu",
+        "label": "Total Amount (BDT)"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "total",
+      "label": "Total Amount (BDT)",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"total\"]",
+        "name": "total",
+        "label": "Total Amount (BDT)"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    }
+  ],
+  "tabs": [],
+  "tab_observations": [],
+  "sections": [
+    "Contract Details",
+    "Currency and Exchange Rate",
+    "Insert Bid Details",
+    "Price Entry",
+    "Quality Inspection Section"
+  ],
+  "buttons": [
+    {
+      "text": "A",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Save",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Insert",
+      "aria_label": "",
+      "title": "Insert",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Download",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "aria_label": "",
+      "title": ""
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "aria_label": "",
+      "title": "Home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "aria_label": "",
+      "title": "Accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "aria_label": "",
+      "title": "Local Procurement"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "aria_label": "",
+      "title": "Import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "aria_label": "",
+      "title": "Merchandising"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "aria_label": "",
+      "title": "Inventory"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "aria_label": "",
+      "title": "Assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "aria_label": "",
+      "title": "Production"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "aria_label": "",
+      "title": "Quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "aria_label": "",
+      "title": "Planning"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "aria_label": "",
+      "title": "Support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "aria_label": "",
+      "title": "CRM"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "aria_label": "",
+      "title": "Settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "aria_label": "",
+      "title": ""
+    },
+    {
+      "text": "Price Fixation",
+      "href": "/app/price-fixation",
+      "aria_label": "",
+      "title": ""
+    }
+  ],
+  "elements": [
+    {
+      "tag": "a",
+      "text": "ERP",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "app-switcher-dropdown",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn-reset drop-icon show-in-edit-mode",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Home",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Home",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Accounting",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Accounting",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn-reset drop-icon show-in-edit-mode",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Local Procurement",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Local Procurement",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Import",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Import",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Merchandising",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Merchandising",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Inventory",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Inventory",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Assets",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Assets",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Production",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Production",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Quality",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Quality",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Planning",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Planning",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Support",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Support",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "CRM",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "CRM",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Settings",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Settings",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "item-anchor",
+      "system_ui": true
+    },
+    {
+      "tag": "a",
+      "text": "Collapse",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "collapse-sidebar-link",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "Price Fixation",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "navbar-search",
+      "name": "",
+      "type": "text",
+      "placeholder": "Search or type a command (Ctrl + K)",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "",
+      "class": "form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "Help",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "Help Dropdown",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn-reset nav-link",
+      "system_ui": true
+    },
+    {
+      "tag": "button",
+      "text": "A",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn-reset nav-link",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "Save",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn btn-primary btn-sm primary-action",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "posting_date",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "material_type",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "company",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "blanket_order",
+      "class": "input-with-feedback form-control bold",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "total_contract_quantity",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "fixation_quantity",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "prior_fix_quantity",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "contract_balance_quantity",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "currency",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "datetime",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "Insert",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "Insert",
+      "role": "",
+      "value": "",
+      "data_fieldname": "insert",
+      "class": "btn btn-xs btn-default",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "ice_indexclb",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "qty_mt",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "bid_quantity",
+      "class": "input-with-feedback form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "checkbox",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "grid-row-check",
+      "system_ui": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "Download",
+      "id": "",
+      "name": "",
+      "type": "button",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "grid-download btn btn-xs btn-secondary",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "hours",
+      "type": "range",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "22",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "minutes",
+      "type": "range",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "10",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "",
+      "name": "seconds",
+      "type": "range",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "14",
+      "data_fieldname": "",
+      "class": "",
+      "system_ui": false
+    }
+  ],
+  "navigation": {
+    "source": "blank_new_document",
+    "record_access_allowed": false,
+    "business_data_mutation": false
+  },
+  "system_ui_rules": {
+    "notification_detected": true,
+    "notification_click_allowed": false,
+    "notification_keywords": [
+      "bell",
+      "no new notifications",
+      "notification",
+      "notification icon",
+      "notifications"
+    ],
+    "workspace_click_allowed": false,
+    "generic_system_actions_allowed": false
+  },
+  "qa_knowledge": {
+    "form_read": true,
+    "business_data_created": false,
+    "business_data_saved": false,
+    "existing_record_opened": false,
+    "field_actions": [
+      "check",
+      "clear",
+      "fill",
+      "uncheck"
+    ],
+    "business_buttons": [
+      "A",
+      "Save",
+      "Insert",
+      "Download"
+    ],
+    "validation_candidates": [
+      {
+        "fieldname": "__section_1",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__column_1",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "column_break_pgji",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "posting_date",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_saen",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "material_type",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "company",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "contract_details_section",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__column_4",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "blanket_order",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "total_contract_quantity",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "fixation_quantity",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_edov",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "prior_fix_quantity",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "contract_balance_quantity",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "currency_and_exchange_rate",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__column_5",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "currency",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_qaku",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "insert_bid_details_section",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__column_6",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "datetime",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "insert",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "column_break_ronr",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "ice_indexclb",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_jwrd",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "qty_mt",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "bid_quantity",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_yflg",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "price_entry",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "__column_9",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "items",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "item_code",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "qty",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "uom",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "base_priceclb",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "rateclb",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "bid_id",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "quality_inspection_section",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "total_section_section",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "__column_11",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "column_break_tncu",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "total",
+        "required": false,
+        "fieldtype": "unknown"
+      }
+    ]
+  },
+  "discovery_notes": {
+    "navigation": "Login -> ERPNext Home -> Global Search by exact DocType name -> DocType List -> New <DocType> (or validated New) -> blank document -> read all fields -> back to Module",
+    "doctype_validation": "DocType is accepted from a clean /app/<doctype> list route and the opened list page is UI-validated; no metadata API dependency.",
+    "record_rule": "Existing business documents are not opened for discovery; only the blank New Document form is inspected.",
+    "system_ui_rule": "Notification, Bell, Search, Filter, Settings, Workspace and other system UI are ignored and never treated as DocTypes.",
+    "field_rule": "Visible form fields are read for fieldname, label, fieldtype, required state, placeholder/options and available actions.",
+    "tab_section_rule": "Every visible form tab is opened and read one-by-one; fields are stored with tab context, and sections are collected from each tab.",
+    "blank_form_rule": "The agent reads the blank New Document without filling or saving business data.",
+    "ai_knowledge_rule": "The JSON is an observation record for future AI retrieval/planning, not a test execution result."
+  },
+  "discovery_summary": {
+    "doctype": "New Price Fixation",
+    "field_count": 43,
+    "tab_count": 0,
+    "section_count": 5,
+    "button_count": 4,
+    "link_count": 16,
+    "element_count": 42,
+    "discovery_status": "completed"
+  }
+}

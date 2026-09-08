@@ -1,0 +1,1 @@
+Read ERPNext discovery JSON and identify document structure, fields, actions, relationships and useful QA knowledge. Do not invent missing information.

@@ -1,0 +1,68 @@
+{
+  "validation_version": "1.0",
+  "source_file": "0012_new-stock-transaction.json",
+  "validated_at": "2026-09-08T16:36:48.500412+00:00",
+  "doctype": "New Stock Transaction",
+  "status": "FAILED",
+  "errors": [
+    "'doctype' must be a list",
+    "tabs #1 is not an object",
+    "tabs #2 is not an object",
+    "sections #1 is not an object",
+    "sections #2 is not an object"
+  ],
+  "warnings": [
+    "Duplicate field entries: __details, tab_connections",
+    "System UI may have been captured in links: 'Settings'",
+    "Duplicate elements: connections, details",
+    "elements #2 has no identifiable name/text",
+    "System UI may have been captured in elements: 'Settings'",
+    "elements #18 has no identifiable name/text",
+    "System UI may have been captured in elements: 'Help'",
+    "elements #26 has no identifiable name/text",
+    "elements #27 has no identifiable name/text",
+    "elements #28 has no identifiable name/text",
+    "elements #29 has no identifiable name/text",
+    "elements #30 has no identifiable name/text",
+    "elements #31 has no identifiable name/text",
+    "elements #32 has no identifiable name/text",
+    "elements #33 has no identifiable name/text",
+    "elements #34 has no identifiable name/text",
+    "elements #35 has no identifiable name/text",
+    "elements #36 has no identifiable name/text",
+    "elements #37 has no identifiable name/text",
+    "elements #38 has no identifiable name/text",
+    "elements #39 has no identifiable name/text",
+    "elements #40 has no identifiable name/text",
+    "elements #41 has no identifiable name/text",
+    "elements #42 has no identifiable name/text",
+    "elements #48 has no identifiable name/text",
+    "elements #49 has no identifiable name/text",
+    "elements #55 has no identifiable name/text",
+    "elements #56 has no identifiable name/text",
+    "elements #57 has no identifiable name/text"
+  ],
+  "summary": {
+    "doctype": "New Stock Transaction",
+    "field_count": 50,
+    "tab_count": 2,
+    "section_count": 2,
+    "button_count": 11,
+    "link_count": 16,
+    "element_count": 57,
+    "completeness": {
+      "checks": {
+        "doctype_present": true,
+        "fields_present": true,
+        "tabs_present": true,
+        "sections_present": true,
+        "buttons_present": true,
+        "links_present": true,
+        "elements_present": true
+      },
+      "score": 100.0,
+      "passed": 7,
+      "total": 7
+    }
+  }
+}

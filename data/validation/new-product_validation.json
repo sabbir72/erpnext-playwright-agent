@@ -1,0 +1,49 @@
+{
+  "validation_version": "1.0",
+  "source_file": "0013_new-product.json",
+  "validated_at": "2026-09-08T16:36:48.502007+00:00",
+  "doctype": "New Product",
+  "status": "FAILED",
+  "errors": [
+    "'doctype' must be a list"
+  ],
+  "warnings": [
+    "System UI may have been captured in links: 'Settings'",
+    "elements #2 has no identifiable name/text",
+    "elements #5 has no identifiable name/text",
+    "System UI may have been captured in elements: 'Settings'",
+    "elements #18 has no identifiable name/text",
+    "System UI may have been captured in elements: 'Help'",
+    "elements #41 has no identifiable name/text",
+    "elements #42 has no identifiable name/text",
+    "elements #43 has no identifiable name/text",
+    "elements #44 has no identifiable name/text",
+    "elements #45 has no identifiable name/text",
+    "elements #46 has no identifiable name/text",
+    "elements #47 has no identifiable name/text",
+    "elements #48 has no identifiable name/text"
+  ],
+  "summary": {
+    "doctype": "New Product",
+    "field_count": 9,
+    "tab_count": 0,
+    "section_count": 0,
+    "button_count": 5,
+    "link_count": 33,
+    "element_count": 50,
+    "completeness": {
+      "checks": {
+        "doctype_present": true,
+        "fields_present": true,
+        "tabs_present": true,
+        "sections_present": true,
+        "buttons_present": true,
+        "links_present": true,
+        "elements_present": true
+      },
+      "score": 100.0,
+      "passed": 7,
+      "total": 7
+    }
+  }
+}
