@@ -1,0 +1,385 @@
+ERPNext AI QA Project — Run Instructions & Working Notes
+
+1. Project Flow
+
+ERPNext Login
+      ↓
+Discovery Agent
+      ↓
+Validation Agent
+      ↓
+Normalize Agent
+      ↓
+Planner
+      ↓
+Test Case Generator
+      ↓
+Executor
+      ↓
+Analyzer / Report
+
+2. Discovery Agent — Main Purpose
+
+Discovery Agent-এর কাজ হলো ERPNext system পড়ে AI-এর জন্য structured knowledge তৈরি করা।
+
+Discovery কোনো business test result তৈরি করবে না এবং existing business record open/save করবে না।
+
+Discovery Flow
+
+Login
+  ↓
+ERPNext Home
+  ↓
+Module নির্বাচন
+  ↓
+Right-side DocType cards পড়া
+  ↓
+একবারে ১টি DocType
+  ↓
+Global Search → New <DocType>
+  ↓
+DocType open
+  ↓
+New
+  ↓
+Blank form
+  ↓
+সব field/tab/section পড়া
+  ↓
+Long form হলে scroll করে bottom পর্যন্ত পড়া
+  ↓
+JSON save
+  ↓
+Home → Module
+  ↓
+পরের DocType
+
+3. DocType Naming Rule
+
+সবসময় Main DocType এবং Search Name আলাদা থাকবে।
+
+Main DocType     = Contract
+Global Search    = New Contract
+UI Action        = New
+Stored filename  = 000X_contract.json
+
+JSON example:
+
+{
+  "doctype": "Contract",
+  "document_name": "Contract",
+  "search_name": "New Contract",
+  "action": "New"
+}
+
+New কখনো main doctype বা filename-এর অংশ হবে না।
+
+4. Module Card Parsing Rule
+
+ERPNext shortcut widget-এ এমন structure থাকতে পারে:
+
+<div class="widget shortcut-widget-box" aria-label="Lead">
+    <div class="widget-title">
+        <span class="ellipsis" title="Lead">Lead</span>
+    </div>
+    <div class="indicator-pill">0 Open</div>
+</div>
+
+এখানে:
+
+DocType       = Lead
+Counter       = 0 Open
+Global Search = New Lead
+
+0 Open, 15 Assigned, 20 Open ইত্যাদি কখনো DocType name হিসেবে search করা যাবে না।
+
+5. System UI Rule
+
+নিচের UI কখনো business DocType হিসেবে process করা যাবে না:
+
+Notification
+Notifications
+No new notifications
+Bell
+Search
+Filter
+Settings
+Dashboard
+New Workspace
+Create Workspace
+Add Workspace
+
+Notification/Bell click করা যাবে না।
+
+Repeated IGNORED SYSTEM UI log শুধু ignore event-এর log; এটি business processing নয়।
+
+6. Long Form Rule
+
+একটি DocType বড় হলে শুধু প্রথম viewport পড়ে থামা যাবে না।
+
+Top
+ ↓
+Read visible fields
+ ↓
+Scroll
+ ↓
+Read newly visible fields
+ ↓
+Scroll
+ ↓
+Read again
+ ↓
+...
+ ↓
+Bottom
+
+প্রতিটি field-এর fieldname দিয়ে duplicate field বাদ দিতে হবে।
+
+প্রতিটি tab থাকলে tab-by-tab একইভাবে read করতে হবে।
+
+7. Discovery Output
+
+Expected folder:
+
+data/
+└── discovery/
+    ├── 0001_company-budget.json
+    ├── 0002_contract.json
+    ├── 0003_price-fixation.json
+    └── ...
+
+প্রতিটি JSON-এ যতটা সম্ভব এই knowledge থাকতে হবে:
+
+DocType
+Module
+Search Name
+Action
+URL / Route
+Fields
+Fieldname
+Label
+Fieldtype
+Required
+Options
+Actions
+Tabs
+Sections
+Buttons
+Links
+Elements
+Discovery notes
+
+8. Discovery Run Commands
+
+One Module
+
+cd ~/Downloads/erpnext-playwright-agent
+python discovery/discovery_agent.py --module "CRM"
+
+Another Module
+
+python discovery/discovery_agent.py --module "Import"
+
+One DocType
+
+python discovery/discovery_agent.py --doctype "Company Budget"
+
+Multiple DocTypes
+
+python discovery/discovery_agent.py \
+  --doctype \
+  "Company Budget" \
+  "Contract" \
+  "Price Fixation" \
+  "Requisition" \
+  "Purchase Order"
+
+9. What to Check After Discovery
+
+Terminal outputে দেখবেন:
+
+LOGIN SUCCESS
+MODULE DOCTYPE FOUND: Lead
+MODULE DOCTYPE FOUND: Opportunity
+GLOBAL SEARCH: New Lead
+SEARCH RESULT FOUND: New Lead
+Looking for New
+Clicking New
+Reading all fields: Lead
+Fields discovered: <number>
+Discovery saved: .../data/discovery/....json
+COMPLETED: Lead
+
+Problem হলে screenshot সাধারণত data/screenshots/-এ থাকবে।
+
+10. Validation Agent
+
+Validation Agent Discovery JSON-এর quality/structure check করবে। এটি ERPNext business functionality test execute করবে না।
+
+Run
+
+cd ~/Downloads/erpnext-playwright-agent
+python validation/validation.py
+
+একটি নির্দিষ্ট JSON:
+
+python validation/validation.py --file 0001_company-budget.json
+
+Validation Check
+
+JSON valid?
+DocType present?
+document_name matches?
+doctype contains New?
+search_name = New <DocType>?
+action = New?
+read_mode correct?
+existing record skipped?
+fields valid?
+duplicate fieldname?
+buttons/links/elements valid?
+system UI contamination?
+
+Expected output folder:
+
+data/
+└── validation/
+    ├── 0001_company-budget.json
+    └── validation_summary.json
+
+11. Normalize Agent
+
+Normalize Agent শুধুমাত্র validated Discovery data normalize করবে।
+
+Run
+
+cd ~/Downloads/erpnext-playwright-agent
+python normalize/normalize_agent.py
+
+একটি নির্দিষ্ট file:
+
+python normalize/normalize_agent.py --file 0001_company-budget.json
+
+Expected output:
+
+data/
+└── normalize/
+    ├── 0001_company-budget.json
+    ├── 0002_contract.json
+    └── ...
+
+Normalization rule:
+
+New Contract → Contract
+search_name  → New Contract
+action       → New
+
+12. Important Pipeline Rule
+
+কাজ সবসময় এই order-এ চালাতে হবে:
+
+python discovery/discovery_agent.py --module "CRM"
+
+তারপর:
+
+python validation/validation.py
+
+তারপর:
+
+python normalize/normalize_agent.py
+
+তারপর Planner / Test Case Generator চালাতে হবে।
+
+13. Failure Interpretation
+
+No discovery JSON found
+
+Discovery output folder-এ JSON নেই বা ভুল project directory থেকে command চালানো হয়েছে।
+
+Check:
+
+pwd
+ls data/discovery
+
+validation status is FAILED
+
+Normalize এখনই চলবে না। আগে Validation কেন failed হয়েছে সেটা ঠিক করতে হবে।
+
+Global search box not found
+
+ERPNext Home-এর search selector verify করতে হবে।
+
+Search result not found
+
+Search term হওয়ার কথা:
+
+New <Main DocType>
+
+উদাহরণ:
+
+New Lead
+New Contract
+New Purchase Order
+
+0 Open / Assigned search হচ্ছে
+
+Module widget title parsing ঠিক হয়নি। আগে .widget-title span[title] / aria-label থেকে আসল DocType নিতে হবে।
+
+14. Safe Design Rules
+
+Discovery = Observe + Record
+Validation = Check knowledge quality
+Normalize = Standardize knowledge
+Planner = Plan execution
+Test Generator = Create test cases
+Executor = Execute
+Analyzer = Analyze result
+
+Discovery পর্যায়ে:
+
+No business data creation
+No Save business record
+No Submit business record
+No Delete business record
+No existing record opening
+No Notification click
+No Bell click
+No Workspace creation
+
+15. Quick Daily Commands
+
+cd ~/Downloads/erpnext-playwright-agent
+
+Discovery:
+
+python discovery/discovery_agent.py --module "CRM"
+
+Validation:
+
+python validation/validation.py
+
+Normalize:
+
+python normalize/normalize_agent.py
+
+Check generated data:
+
+find data/discovery -maxdepth 1 -type f | sort
+find data/validation -maxdepth 1 -type f | sort
+find data/normalize -maxdepth 1 -type f | sort
+
+16. Final Working Principle
+
+সবচেয়ে গুরুত্বপূর্ণ তিনটি rule মনে রাখতে হবে:
+
+1. Module card থেকে শুধু আসল DocType title নিতে হবে.
+2. Search করার সময় New + DocType ব্যবহার করতে হবে.
+3. JSON record করার সময় main DocType থেকে New বাদ রাখতে হবে.
+
+Example:
+
+UI Card       = Lead + 0 Open
+Main DocType  = Lead
+Global Search = New Lead
+UI Action     = New
+JSON          = Lead

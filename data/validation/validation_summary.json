@@ -1,0 +1,166 @@
+{
+  "validation_type": "erpnext_discovery_validation",
+  "checked_at": "2026-09-10T14:27:44",
+  "discovery_dir": "E:\\erpnext-playwright-agent\\data\\discovery",
+  "total": 4,
+  "passed": 3,
+  "failed": 1,
+  "warning_only": 1,
+  "invalid_json": 0,
+  "results": [
+    {
+      "file": "0001_company-budget.json",
+      "status": "PASSED",
+      "doctype": "Company Budget",
+      "checked_at": "2026-09-10T14:27:44",
+      "issues": [
+        {
+          "severity": "WARNING",
+          "message": "field '__column_3' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'budget_head' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'budget_requisition' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'account' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'asking_amount' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'budget_amount' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'carry_forwarded_amount' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'is_carry_forwarding' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'department' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'cost_center' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'branch' has unknown fieldtype"
+        }
+      ]
+    },
+    {
+      "file": "0002_lead.json",
+      "status": "PASSED",
+      "doctype": "Lead",
+      "checked_at": "2026-09-10T14:27:44",
+      "issues": []
+    },
+    {
+      "file": "0003_opportunity.json",
+      "status": "FAILED",
+      "doctype": "Opportunity",
+      "checked_at": "2026-09-10T14:27:44",
+      "issues": [
+        {
+          "severity": "WARNING",
+          "message": "field '__details' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'contact_info' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'items_section' has unknown fieldtype"
+        },
+        {
+          "severity": "ERROR",
+          "message": "duplicate fieldname: __details"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field '__details' has unknown fieldtype"
+        },
+        {
+          "severity": "ERROR",
+          "message": "duplicate fieldname: contact_info"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'contact_info' has unknown fieldtype"
+        },
+        {
+          "severity": "ERROR",
+          "message": "duplicate fieldname: items_section"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'items_section' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'address_contact_section' has unknown fieldtype"
+        },
+        {
+          "severity": "ERROR",
+          "message": "duplicate fieldname: __details"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field '__details' has unknown fieldtype"
+        },
+        {
+          "severity": "ERROR",
+          "message": "duplicate fieldname: contact_info"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'contact_info' has unknown fieldtype"
+        },
+        {
+          "severity": "ERROR",
+          "message": "duplicate fieldname: items_section"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'items_section' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'item_code' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'qty' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'rate' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'amount' has unknown fieldtype"
+        }
+      ]
+    },
+    {
+      "file": "0004_customer-buyer.json",
+      "status": "PASSED",
+      "doctype": "Customer/Buyer",
+      "checked_at": "2026-09-10T14:27:44",
+      "issues": []
+    }
+  ]
+}

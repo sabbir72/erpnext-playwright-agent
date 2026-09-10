@@ -1,0 +1,88 @@
+{
+  "file": "0003_opportunity.json",
+  "status": "FAILED",
+  "doctype": "Opportunity",
+  "checked_at": "2026-09-10T14:27:44",
+  "issues": [
+    {
+      "severity": "WARNING",
+      "message": "field '__details' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'contact_info' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'items_section' has unknown fieldtype"
+    },
+    {
+      "severity": "ERROR",
+      "message": "duplicate fieldname: __details"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field '__details' has unknown fieldtype"
+    },
+    {
+      "severity": "ERROR",
+      "message": "duplicate fieldname: contact_info"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'contact_info' has unknown fieldtype"
+    },
+    {
+      "severity": "ERROR",
+      "message": "duplicate fieldname: items_section"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'items_section' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'address_contact_section' has unknown fieldtype"
+    },
+    {
+      "severity": "ERROR",
+      "message": "duplicate fieldname: __details"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field '__details' has unknown fieldtype"
+    },
+    {
+      "severity": "ERROR",
+      "message": "duplicate fieldname: contact_info"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'contact_info' has unknown fieldtype"
+    },
+    {
+      "severity": "ERROR",
+      "message": "duplicate fieldname: items_section"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'items_section' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'item_code' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'qty' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'rate' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'amount' has unknown fieldtype"
+    }
+  ]
+}

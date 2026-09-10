@@ -1,0 +1,1373 @@
+{
+  "knowledge_type": "erpnext_doctype",
+  "schema_version": "2.1",
+  "module": "",
+  "doctype": "Company Budget",
+  "document_name": "Company Budget",
+  "search_name": "New Company Budget",
+  "action": "New",
+  "read_mode": "blank_new_document",
+  "existing_documents_skipped": true,
+  "url": "https://stage2-salma.altersense.net/app/budget/new-budget-qwdbfeerti",
+  "route": "/app/budget/new-budget-qwdbfeerti",
+  "title": "New Company Budget",
+  "text": "ERP Home Accounting Local Procurement Import Merchandising Inventory Assets Production Quality Planning Support CRM Settings Collapse Company Budget No new notifications Help A New Company Budget Not Saved Workflow: Draft Get Items From Save Series BUDGET-.######## naming_series Budget Against Cost Center Project Branch Department budget_against Company Begin typing for results. company Fiscal Year Begin typing for results. fiscal_year Month January February March April May June July August September October November December Optional period label for monthly budgets; quarterly and annual budgets use Monthly Distribution. month Control Action for Cumulative Expense Applicable on Cumulative Expense (Purchase Order + Material Request + Actual Expense) applicable_on_cumulative_expense budget_account_details Budget Account Details No. Budget Head Budget Requisition Account Asking Amount Budget Amount Carry Forwarded Amount Is Carry Forwarding Department Cost Center Branch No rows Add Row Download Consolidate Account Wise consolidate_account_wise Consolidate Cost Center Wise consolidate_cost_center_wise Consolidate Budget Head Wise consolidate_budget_head_wise Consolidate Department Wise consolidate_department_wise",
+  "fields": [
+    {
+      "fieldname": "__section_1",
+      "label": "__section_1",
+      "fieldtype": "Select",
+      "value": "BUDGET-.########",
+      "required": true,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "BUDGET-.########",
+          "value": "BUDGET-.########"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__section_1\"]",
+        "name": "__section_1",
+        "label": "__section_1"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_1",
+      "label": "__column_1",
+      "fieldtype": "Select",
+      "value": "BUDGET-.########",
+      "required": true,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "BUDGET-.########",
+          "value": "BUDGET-.########"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_1\"]",
+        "name": "__column_1",
+        "label": "__column_1"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "naming_series",
+      "label": "Series",
+      "fieldtype": "Select",
+      "value": "BUDGET-.########",
+      "required": true,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "BUDGET-.########",
+          "value": "BUDGET-.########"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"naming_series\"]",
+        "name": "naming_series",
+        "label": "Series"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "budget_against",
+      "label": "Budget Against",
+      "fieldtype": "Select",
+      "value": "Cost Center",
+      "required": true,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "Cost Center",
+          "value": "Cost Center"
+        },
+        {
+          "text": "Project",
+          "value": "Project"
+        },
+        {
+          "text": "Branch",
+          "value": "Branch"
+        },
+        {
+          "text": "Department",
+          "value": "Department"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"budget_against\"]",
+        "name": "budget_against",
+        "label": "Budget Against"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Data",
+      "value": "Dabiruddin Spinning Mills Ltd.",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"company\"]",
+        "name": "company",
+        "label": "Company"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "group_budget_section_end",
+      "label": "group_budget_section_end",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"group_budget_section_end\"]",
+        "name": "group_budget_section_end",
+        "label": "group_budget_section_end"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_3",
+      "label": "__column_3",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_3\"]",
+        "name": "__column_3",
+        "label": "__column_3"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_3",
+      "label": "column_break_3",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_3\"]",
+        "name": "column_break_3",
+        "label": "column_break_3"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "fiscal_year",
+      "label": "Fiscal Year",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"fiscal_year\"]",
+        "name": "fiscal_year",
+        "label": "Fiscal Year"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "month",
+      "label": "Month",
+      "fieldtype": "Select",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "January",
+          "value": "January"
+        },
+        {
+          "text": "February",
+          "value": "February"
+        },
+        {
+          "text": "March",
+          "value": "March"
+        },
+        {
+          "text": "April",
+          "value": "April"
+        },
+        {
+          "text": "May",
+          "value": "May"
+        },
+        {
+          "text": "June",
+          "value": "June"
+        },
+        {
+          "text": "July",
+          "value": "July"
+        },
+        {
+          "text": "August",
+          "value": "August"
+        },
+        {
+          "text": "September",
+          "value": "September"
+        },
+        {
+          "text": "October",
+          "value": "October"
+        },
+        {
+          "text": "November",
+          "value": "November"
+        },
+        {
+          "text": "December",
+          "value": "December"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"month\"]",
+        "name": "month",
+        "label": "Month"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "control_action_for_cumulative_expense_section",
+      "label": "Applicable on Cumulative Expense",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"control_action_for_cumulative_expense_section\"]",
+        "name": "control_action_for_cumulative_expense_section",
+        "label": "Applicable on Cumulative Expense"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_6",
+      "label": "Applicable on Cumulative Expense",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_6\"]",
+        "name": "__column_6",
+        "label": "Applicable on Cumulative Expense"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "applicable_on_cumulative_expense",
+      "label": "Applicable on Cumulative Expense",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"applicable_on_cumulative_expense\"]",
+        "name": "applicable_on_cumulative_expense",
+        "label": "Applicable on Cumulative Expense"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "section_break_zkfwj",
+      "label": "Budget Account Details",
+      "fieldtype": "Check",
+      "value": false,
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"section_break_zkfwj\"]",
+        "name": "section_break_zkfwj",
+        "label": "Budget Account Details"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_10",
+      "label": "Budget Account Details",
+      "fieldtype": "Check",
+      "value": false,
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_10\"]",
+        "name": "__column_10",
+        "label": "Budget Account Details"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "budget_account_details",
+      "label": "Budget Account Details",
+      "fieldtype": "Check",
+      "value": false,
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"budget_account_details\"]",
+        "name": "budget_account_details",
+        "label": "Budget Account Details"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "budget_head",
+      "label": "budget_head",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"budget_head\"]",
+        "name": "budget_head",
+        "label": "budget_head"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "budget_requisition",
+      "label": "budget_requisition",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"budget_requisition\"]",
+        "name": "budget_requisition",
+        "label": "budget_requisition"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "account",
+      "label": "account",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"account\"]",
+        "name": "account",
+        "label": "account"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "asking_amount",
+      "label": "asking_amount",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"asking_amount\"]",
+        "name": "asking_amount",
+        "label": "asking_amount"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "budget_amount",
+      "label": "budget_amount",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"budget_amount\"]",
+        "name": "budget_amount",
+        "label": "budget_amount"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "carry_forwarded_amount",
+      "label": "carry_forwarded_amount",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"carry_forwarded_amount\"]",
+        "name": "carry_forwarded_amount",
+        "label": "carry_forwarded_amount"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "is_carry_forwarding",
+      "label": "is_carry_forwarding",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"is_carry_forwarding\"]",
+        "name": "is_carry_forwarding",
+        "label": "is_carry_forwarding"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "department",
+      "label": "department",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"department\"]",
+        "name": "department",
+        "label": "department"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "cost_center",
+      "label": "cost_center",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"cost_center\"]",
+        "name": "cost_center",
+        "label": "cost_center"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "branch",
+      "label": "branch",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"branch\"]",
+        "name": "branch",
+        "label": "branch"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "section_break_4lrcu",
+      "label": "Consolidate Account Wise",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"section_break_4lrcu\"]",
+        "name": "section_break_4lrcu",
+        "label": "Consolidate Account Wise"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "section_breakerwaz",
+      "label": "Consolidate Account Wise",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"section_breakerwaz\"]",
+        "name": "section_breakerwaz",
+        "label": "Consolidate Account Wise"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "consolidate_account_wise",
+      "label": "Consolidate Account Wise",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"consolidate_account_wise\"]",
+        "name": "consolidate_account_wise",
+        "label": "Consolidate Account Wise"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_9ppwz",
+      "label": "Consolidate Cost Center Wise",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_9ppwz\"]",
+        "name": "column_break_9ppwz",
+        "label": "Consolidate Cost Center Wise"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "consolidate_cost_center_wise",
+      "label": "Consolidate Cost Center Wise",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"consolidate_cost_center_wise\"]",
+        "name": "consolidate_cost_center_wise",
+        "label": "Consolidate Cost Center Wise"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_rrc7q",
+      "label": "Consolidate Budget Head Wise",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_rrc7q\"]",
+        "name": "column_break_rrc7q",
+        "label": "Consolidate Budget Head Wise"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "consolidate_budget_head_wise",
+      "label": "Consolidate Budget Head Wise",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"consolidate_budget_head_wise\"]",
+        "name": "consolidate_budget_head_wise",
+        "label": "Consolidate Budget Head Wise"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_dwiz1",
+      "label": "Consolidate Department Wise",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_dwiz1\"]",
+        "name": "column_break_dwiz1",
+        "label": "Consolidate Department Wise"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "consolidate_department_wise",
+      "label": "Consolidate Department Wise",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"consolidate_department_wise\"]",
+        "name": "consolidate_department_wise",
+        "label": "Consolidate Department Wise"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    }
+  ],
+  "tabs": [],
+  "tab_observations": [],
+  "sections": [
+    "Control Action for Cumulative Expense"
+  ],
+  "buttons": [
+    {
+      "text": "A",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Get Items From",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Save",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Add Row",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Download",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "aria_label": "",
+      "title": ""
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "aria_label": "",
+      "title": "Home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "aria_label": "",
+      "title": "Accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "aria_label": "",
+      "title": "Local Procurement"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "aria_label": "",
+      "title": "Import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "aria_label": "",
+      "title": "Merchandising"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "aria_label": "",
+      "title": "Inventory"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "aria_label": "",
+      "title": "Assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "aria_label": "",
+      "title": "Production"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "aria_label": "",
+      "title": "Quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "aria_label": "",
+      "title": "Planning"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "aria_label": "",
+      "title": "Support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "aria_label": "",
+      "title": "CRM"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "aria_label": "",
+      "title": "Settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "aria_label": "",
+      "title": ""
+    },
+    {
+      "text": "Company Budget",
+      "href": "/app/budget",
+      "aria_label": "",
+      "title": ""
+    }
+  ],
+  "elements": [
+    {
+      "tag": "a",
+      "text": "ERP",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "app-switcher-dropdown",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn-reset drop-icon show-in-edit-mode",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "navbar-search",
+      "name": "",
+      "type": "text",
+      "placeholder": "Search or type a command (Ctrl + K)",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "",
+      "class": "form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "select",
+      "text": "BUDGET-.########",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "naming_series",
+      "class": "input-with-feedback form-control ellipsis bold",
+      "system_ui": false
+    }
+  ],
+  "navigation": {
+    "source": "blank_new_document",
+    "record_access_allowed": false,
+    "business_data_mutation": false
+  },
+  "system_ui_rules": {
+    "notification_detected": true,
+    "notification_click_allowed": false,
+    "notification_keywords": [
+      "bell",
+      "no new notifications",
+      "notification",
+      "notification icon",
+      "notifications"
+    ],
+    "workspace_click_allowed": false,
+    "generic_system_actions_allowed": false
+  },
+  "qa_knowledge": {
+    "form_read": true,
+    "business_data_created": false,
+    "business_data_saved": false,
+    "existing_record_opened": false,
+    "field_actions": [
+      "check",
+      "clear",
+      "fill",
+      "select",
+      "uncheck"
+    ],
+    "business_buttons": [
+      "A",
+      "Get Items From",
+      "Save",
+      "Add Row",
+      "Download"
+    ],
+    "validation_candidates": [
+      {
+        "fieldname": "__section_1",
+        "required": true,
+        "fieldtype": "Select"
+      },
+      {
+        "fieldname": "__column_1",
+        "required": true,
+        "fieldtype": "Select"
+      },
+      {
+        "fieldname": "naming_series",
+        "required": true,
+        "fieldtype": "Select"
+      },
+      {
+        "fieldname": "budget_against",
+        "required": true,
+        "fieldtype": "Select"
+      },
+      {
+        "fieldname": "company",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "group_budget_section_end",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__column_3",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "column_break_3",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "fiscal_year",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "month",
+        "required": false,
+        "fieldtype": "Select"
+      },
+      {
+        "fieldname": "control_action_for_cumulative_expense_section",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "__column_6",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "applicable_on_cumulative_expense",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "section_break_zkfwj",
+        "required": true,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "__column_10",
+        "required": true,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "budget_account_details",
+        "required": true,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "budget_head",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "budget_requisition",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "account",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "asking_amount",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "budget_amount",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "carry_forwarded_amount",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "is_carry_forwarding",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "department",
+        "required": true,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "cost_center",
+        "required": true,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "branch",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "section_break_4lrcu",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "section_breakerwaz",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "consolidate_account_wise",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "column_break_9ppwz",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "consolidate_cost_center_wise",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "column_break_rrc7q",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "consolidate_budget_head_wise",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "column_break_dwiz1",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "consolidate_department_wise",
+        "required": false,
+        "fieldtype": "Check"
+      }
+    ]
+  },
+  "discovery_notes": {
+    "navigation": "Login -> ERPNext Home -> Global Search using 'New <DocType>' -> DocType List or blank New Document -> read all fields -> store main DocType without 'New'",
+    "doctype_validation": "DocType is accepted from a clean /app/<doctype> list route and the opened list page is UI-validated; no metadata API dependency.",
+    "record_rule": "Existing business documents are not opened for discovery; only the blank New Document form is inspected.",
+    "system_ui_rule": "Notification, Bell, Search, Filter, Settings, Workspace and other system UI are ignored and never treated as DocTypes.",
+    "field_rule": "Visible form fields are read for fieldname, label, fieldtype, required state, placeholder/options and available actions.",
+    "tab_section_rule": "Every visible form tab is opened and read one-by-one; fields are stored with tab context, and sections are collected from each tab.",
+    "scroll_rule": "Each form tab is scanned from top to bottom in multiple scroll positions so long forms and lazy-rendered fields are not missed.",
+    "blank_form_rule": "The agent reads the blank New Document without filling or saving business data.",
+    "ai_knowledge_rule": "The JSON is an observation record for future AI retrieval/planning, not a test execution result."
+  },
+  "discovery_summary": {
+    "doctype": "Company Budget",
+    "field_count": 35,
+    "tab_count": 0,
+    "section_count": 1,
+    "button_count": 5,
+    "link_count": 16,
+    "element_count": 4,
+    "discovery_status": "completed"
+  }
+}

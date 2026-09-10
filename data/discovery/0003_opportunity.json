@@ -1,0 +1,2438 @@
+{
+  "knowledge_type": "erpnext_doctype",
+  "schema_version": "2.1",
+  "module": "CRM",
+  "doctype": "Opportunity",
+  "document_name": "Opportunity",
+  "search_name": "New Opportunity",
+  "action": "New",
+  "read_mode": "blank_new_document",
+  "existing_documents_skipped": true,
+  "url": "https://stage2-salma.altersense.net/app/opportunity/new-opportunity-bcgrszmucl",
+  "route": "/app/opportunity/new-opportunity-bcgrszmucl",
+  "title": "New Opportunity - new-opportunity-bcgrszmucl",
+  "text": "ERP Home Accounting Local Procurement Import Merchandising Inventory Assets Production Quality Planning Support CRM Settings Collapse Opportunity No new notifications Help A New Opportunity Not Saved Save Details Contacts Products Series CRM-OPP-.YYYY.- naming_series Opportunity From Begin typing for results. opportunity_from Party Begin typing for results. party_name Status Open Sales PI Converted Lost Replied Closed status Opportunity Type Begin typing for results. opportunity_type Opportunity Owner Begin typing for results. opportunity_owner Sales Stage Begin typing for results. sales_stage Expected Closing Date expected_closing Probability (%) probability Organization No of Employees 1-10 11-50 51-200 201-500 501-1000 1000+ no_of_employees Annual Revenue annual_revenue Industry Begin typing for results. industry Market Segment Begin typing for results. market_segment Website website City city State/Province state Country Begin typing for results. country Territory Begin typing for results. territory Opportunity Value Currency Begin typing for results. currency Opportunity Amount (BDT) opportunity_amount Analytics Source Begin typing for results. utm_source Content utm_content Campaign Begin typing for results. utm_campaign Medium Begin typing for results. utm_medium More Information September, 2026 SU MO TU WE TH FR SA 30 31 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 1 2 3 Today September, 2026 SU MO TU WE TH FR SA 30 31 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 1 2 3 Today",
+  "fields": [
+    {
+      "fieldname": "__details",
+      "label": "__details",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__details\"]",
+        "name": "__details",
+        "label": "__details"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "contact_info",
+      "label": "contact_info",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"contact_info\"]",
+        "name": "contact_info",
+        "label": "contact_info"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "items_section",
+      "label": "items_section",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"items_section\"]",
+        "name": "items_section",
+        "label": "items_section"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "__section_1",
+      "label": "__section_1",
+      "fieldtype": "Select",
+      "value": "CRM-OPP-.YYYY.-",
+      "required": true,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "CRM-OPP-.YYYY.-",
+          "value": "CRM-OPP-.YYYY.-"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__section_1\"]",
+        "name": "__section_1",
+        "label": "__section_1"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "__column_1",
+      "label": "__column_1",
+      "fieldtype": "Select",
+      "value": "CRM-OPP-.YYYY.-",
+      "required": true,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "CRM-OPP-.YYYY.-",
+          "value": "CRM-OPP-.YYYY.-"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_1\"]",
+        "name": "__column_1",
+        "label": "__column_1"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "naming_series",
+      "label": "Series",
+      "fieldtype": "Select",
+      "value": "CRM-OPP-.YYYY.-",
+      "required": true,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "CRM-OPP-.YYYY.-",
+          "value": "CRM-OPP-.YYYY.-"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"naming_series\"]",
+        "name": "naming_series",
+        "label": "Series"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "opportunity_from",
+      "label": "Opportunity From",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"opportunity_from\"]",
+        "name": "opportunity_from",
+        "label": "Opportunity From"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "party_name",
+      "label": "Party",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"party_name\"]",
+        "name": "party_name",
+        "label": "Party"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "value": "Open",
+      "required": true,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "Open",
+          "value": "Open"
+        },
+        {
+          "text": "Sales PI",
+          "value": "Quotation"
+        },
+        {
+          "text": "Converted",
+          "value": "Converted"
+        },
+        {
+          "text": "Lost",
+          "value": "Lost"
+        },
+        {
+          "text": "Replied",
+          "value": "Replied"
+        },
+        {
+          "text": "Closed",
+          "value": "Closed"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"status\"]",
+        "name": "status",
+        "label": "Status"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "column_break0",
+      "label": "Opportunity Type",
+      "fieldtype": "Data",
+      "value": "Sales",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break0\"]",
+        "name": "column_break0",
+        "label": "Opportunity Type"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "opportunity_type",
+      "label": "Opportunity Type",
+      "fieldtype": "Data",
+      "value": "Sales",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"opportunity_type\"]",
+        "name": "opportunity_type",
+        "label": "Opportunity Type"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "opportunity_owner",
+      "label": "Opportunity Owner",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"opportunity_owner\"]",
+        "name": "opportunity_owner",
+        "label": "Opportunity Owner"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "column_break_10",
+      "label": "Sales Stage",
+      "fieldtype": "Data",
+      "value": "Prospecting",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_10\"]",
+        "name": "column_break_10",
+        "label": "Sales Stage"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "sales_stage",
+      "label": "Sales Stage",
+      "fieldtype": "Data",
+      "value": "Prospecting",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"sales_stage\"]",
+        "name": "sales_stage",
+        "label": "Sales Stage"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "expected_closing",
+      "label": "Expected Closing Date",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"expected_closing\"]",
+        "name": "expected_closing",
+        "label": "Expected Closing Date"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "probability",
+      "label": "Probability (%)",
+      "fieldtype": "Data",
+      "value": "100.000000",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"probability\"]",
+        "name": "probability",
+        "label": "Probability (%)"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "organization_details_section",
+      "label": "No of Employees",
+      "fieldtype": "Select",
+      "value": "1-10",
+      "required": false,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "1-10",
+          "value": "1-10"
+        },
+        {
+          "text": "11-50",
+          "value": "11-50"
+        },
+        {
+          "text": "51-200",
+          "value": "51-200"
+        },
+        {
+          "text": "201-500",
+          "value": "201-500"
+        },
+        {
+          "text": "501-1000",
+          "value": "501-1000"
+        },
+        {
+          "text": "1000+",
+          "value": "1000+"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"organization_details_section\"]",
+        "name": "organization_details_section",
+        "label": "No of Employees"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "__column_2",
+      "label": "No of Employees",
+      "fieldtype": "Select",
+      "value": "1-10",
+      "required": false,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "1-10",
+          "value": "1-10"
+        },
+        {
+          "text": "11-50",
+          "value": "11-50"
+        },
+        {
+          "text": "51-200",
+          "value": "51-200"
+        },
+        {
+          "text": "201-500",
+          "value": "201-500"
+        },
+        {
+          "text": "501-1000",
+          "value": "501-1000"
+        },
+        {
+          "text": "1000+",
+          "value": "1000+"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_2\"]",
+        "name": "__column_2",
+        "label": "No of Employees"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "no_of_employees",
+      "label": "No of Employees",
+      "fieldtype": "Select",
+      "value": "1-10",
+      "required": false,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "1-10",
+          "value": "1-10"
+        },
+        {
+          "text": "11-50",
+          "value": "11-50"
+        },
+        {
+          "text": "51-200",
+          "value": "51-200"
+        },
+        {
+          "text": "201-500",
+          "value": "201-500"
+        },
+        {
+          "text": "501-1000",
+          "value": "501-1000"
+        },
+        {
+          "text": "1000+",
+          "value": "1000+"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"no_of_employees\"]",
+        "name": "no_of_employees",
+        "label": "No of Employees"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "annual_revenue",
+      "label": "Annual Revenue",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"annual_revenue\"]",
+        "name": "annual_revenue",
+        "label": "Annual Revenue"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "column_break_23",
+      "label": "Industry",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_23\"]",
+        "name": "column_break_23",
+        "label": "Industry"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "industry",
+      "label": "Industry",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"industry\"]",
+        "name": "industry",
+        "label": "Industry"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "market_segment",
+      "label": "Market Segment",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"market_segment\"]",
+        "name": "market_segment",
+        "label": "Market Segment"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "website",
+      "label": "Website",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"website\"]",
+        "name": "website",
+        "label": "Website"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "column_break_31",
+      "label": "City",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_31\"]",
+        "name": "column_break_31",
+        "label": "City"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "city",
+      "label": "City",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"city\"]",
+        "name": "city",
+        "label": "City"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "state",
+      "label": "State/Province",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"state\"]",
+        "name": "state",
+        "label": "State/Province"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "country",
+      "label": "Country",
+      "fieldtype": "Data",
+      "value": "Bangladesh",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"country\"]",
+        "name": "country",
+        "label": "Country"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "territory",
+      "label": "Territory",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"territory\"]",
+        "name": "territory",
+        "label": "Territory"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "section_break_14",
+      "label": "Currency",
+      "fieldtype": "Data",
+      "value": "BDT",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"section_break_14\"]",
+        "name": "section_break_14",
+        "label": "Currency"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "__column_3",
+      "label": "Currency",
+      "fieldtype": "Data",
+      "value": "BDT",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_3\"]",
+        "name": "__column_3",
+        "label": "Currency"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Data",
+      "value": "BDT",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"currency\"]",
+        "name": "currency",
+        "label": "Currency"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "column_break_36",
+      "label": "Exchange Rate",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_36\"]",
+        "name": "column_break_36",
+        "label": "Exchange Rate"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "column_break_17",
+      "label": "Opportunity Amount (BDT)",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_17\"]",
+        "name": "column_break_17",
+        "label": "Opportunity Amount (BDT)"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "opportunity_amount",
+      "label": "Opportunity Amount (BDT)",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"opportunity_amount\"]",
+        "name": "opportunity_amount",
+        "label": "Opportunity Amount (BDT)"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "section_break_analytics",
+      "label": "Source",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"section_break_analytics\"]",
+        "name": "section_break_analytics",
+        "label": "Source"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "__column_4",
+      "label": "Source",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_4\"]",
+        "name": "__column_4",
+        "label": "Source"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "utm_source",
+      "label": "Source",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"utm_source\"]",
+        "name": "utm_source",
+        "label": "Source"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "utm_content",
+      "label": "Content",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"utm_content\"]",
+        "name": "utm_content",
+        "label": "Content"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "column_break_emai",
+      "label": "Campaign",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_emai\"]",
+        "name": "column_break_emai",
+        "label": "Campaign"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "utm_campaign",
+      "label": "Campaign",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"utm_campaign\"]",
+        "name": "utm_campaign",
+        "label": "Campaign"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "column_break_whcu",
+      "label": "Medium",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_whcu\"]",
+        "name": "column_break_whcu",
+        "label": "Medium"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "utm_medium",
+      "label": "Medium",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"utm_medium\"]",
+        "name": "utm_medium",
+        "label": "Medium"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "more_info",
+      "label": "Company",
+      "fieldtype": "Data",
+      "value": "Dabiruddin Spinning Mills Ltd.",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"more_info\"]",
+        "name": "more_info",
+        "label": "Company"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Details"
+    },
+    {
+      "fieldname": "__details",
+      "label": "__details",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__details\"]",
+        "name": "__details",
+        "label": "__details"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Contacts"
+    },
+    {
+      "fieldname": "contact_info",
+      "label": "contact_info",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"contact_info\"]",
+        "name": "contact_info",
+        "label": "contact_info"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Contacts"
+    },
+    {
+      "fieldname": "items_section",
+      "label": "items_section",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"items_section\"]",
+        "name": "items_section",
+        "label": "items_section"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Contacts"
+    },
+    {
+      "fieldname": "primary_contact_section",
+      "label": "Contact Person",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"primary_contact_section\"]",
+        "name": "primary_contact_section",
+        "label": "Contact Person"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Contacts"
+    },
+    {
+      "fieldname": "__column_8",
+      "label": "Contact Person",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_8\"]",
+        "name": "__column_8",
+        "label": "Contact Person"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Contacts"
+    },
+    {
+      "fieldname": "job_title",
+      "label": "Job Title",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"job_title\"]",
+        "name": "job_title",
+        "label": "Job Title"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Contacts"
+    },
+    {
+      "fieldname": "column_break_54",
+      "label": "Email",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_54\"]",
+        "name": "column_break_54",
+        "label": "Email"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Contacts"
+    },
+    {
+      "fieldname": "contact_email",
+      "label": "Email",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"contact_email\"]",
+        "name": "contact_email",
+        "label": "Email"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Contacts"
+    },
+    {
+      "fieldname": "contact_mobile",
+      "label": "Contact Mobile",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"contact_mobile\"]",
+        "name": "contact_mobile",
+        "label": "Contact Mobile"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Contacts"
+    },
+    {
+      "fieldname": "column_break_22",
+      "label": "WhatsApp",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_22\"]",
+        "name": "column_break_22",
+        "label": "WhatsApp"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Contacts"
+    },
+    {
+      "fieldname": "whatsapp",
+      "label": "WhatsApp",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"whatsapp\"]",
+        "name": "whatsapp",
+        "label": "WhatsApp"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Contacts"
+    },
+    {
+      "fieldname": "phone",
+      "label": "Phone",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"phone\"]",
+        "name": "phone",
+        "label": "Phone"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Contacts"
+    },
+    {
+      "fieldname": "phone_ext",
+      "label": "Phone Ext.",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"phone_ext\"]",
+        "name": "phone_ext",
+        "label": "Phone Ext."
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": "Contacts"
+    },
+    {
+      "fieldname": "address_contact_section",
+      "label": "address_contact_section",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"address_contact_section\"]",
+        "name": "address_contact_section",
+        "label": "address_contact_section"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Contacts"
+    },
+    {
+      "fieldname": "__details",
+      "label": "__details",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__details\"]",
+        "name": "__details",
+        "label": "__details"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Products"
+    },
+    {
+      "fieldname": "contact_info",
+      "label": "contact_info",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"contact_info\"]",
+        "name": "contact_info",
+        "label": "contact_info"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Products"
+    },
+    {
+      "fieldname": "items_section",
+      "label": "items_section",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"items_section\"]",
+        "name": "items_section",
+        "label": "items_section"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Products"
+    },
+    {
+      "fieldname": "__section_10",
+      "label": "Products",
+      "fieldtype": "Check",
+      "value": false,
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__section_10\"]",
+        "name": "__section_10",
+        "label": "Products"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": "Products"
+    },
+    {
+      "fieldname": "__column_10",
+      "label": "Products",
+      "fieldtype": "Check",
+      "value": false,
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_10\"]",
+        "name": "__column_10",
+        "label": "Products"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": "Products"
+    },
+    {
+      "fieldname": "items",
+      "label": "Products",
+      "fieldtype": "Check",
+      "value": false,
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"items\"]",
+        "name": "items",
+        "label": "Products"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": "Products"
+    },
+    {
+      "fieldname": "item_code",
+      "label": "item_code",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"item_code\"]",
+        "name": "item_code",
+        "label": "item_code"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Products"
+    },
+    {
+      "fieldname": "qty",
+      "label": "qty",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"qty\"]",
+        "name": "qty",
+        "label": "qty"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Products"
+    },
+    {
+      "fieldname": "rate",
+      "label": "rate",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"rate\"]",
+        "name": "rate",
+        "label": "rate"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Products"
+    },
+    {
+      "fieldname": "amount",
+      "label": "amount",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"amount\"]",
+        "name": "amount",
+        "label": "amount"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": "Products"
+    }
+  ],
+  "tabs": [
+    "Details",
+    "Contacts",
+    "Products"
+  ],
+  "tab_observations": [
+    {
+      "label": "Details",
+      "index": 0,
+      "read": true,
+      "field_count": 44
+    },
+    {
+      "label": "Contacts",
+      "index": 1,
+      "read": true,
+      "field_count": 14
+    },
+    {
+      "label": "Products",
+      "index": 2,
+      "read": true,
+      "field_count": 10
+    }
+  ],
+  "sections": [
+    "Organization",
+    "Opportunity Value",
+    "Analytics",
+    "More Information",
+    "Primary Contact",
+    "Address & Contact"
+  ],
+  "buttons": [
+    {
+      "text": "A",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Save",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Details",
+      "aria_label": "",
+      "title": "",
+      "role": "tab",
+      "action": "click"
+    },
+    {
+      "text": "Contacts",
+      "aria_label": "",
+      "title": "",
+      "role": "tab",
+      "action": "click"
+    },
+    {
+      "text": "Products",
+      "aria_label": "",
+      "title": "",
+      "role": "tab",
+      "action": "click"
+    },
+    {
+      "text": "Add Row",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Add Multiple",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Download",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "aria_label": "",
+      "title": ""
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "aria_label": "",
+      "title": "Home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "aria_label": "",
+      "title": "Accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "aria_label": "",
+      "title": "Local Procurement"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "aria_label": "",
+      "title": "Import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "aria_label": "",
+      "title": "Merchandising"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "aria_label": "",
+      "title": "Inventory"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "aria_label": "",
+      "title": "Assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "aria_label": "",
+      "title": "Production"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "aria_label": "",
+      "title": "Quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "aria_label": "",
+      "title": "Planning"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "aria_label": "",
+      "title": "Support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "aria_label": "",
+      "title": "CRM"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "aria_label": "",
+      "title": "Settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "aria_label": "",
+      "title": ""
+    },
+    {
+      "text": "Opportunity",
+      "href": "/app/opportunity",
+      "aria_label": "",
+      "title": ""
+    }
+  ],
+  "elements": [
+    {
+      "tag": "a",
+      "text": "ERP",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "app-switcher-dropdown",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn-reset drop-icon show-in-edit-mode",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "navbar-search",
+      "name": "",
+      "type": "text",
+      "placeholder": "Search or type a command (Ctrl + K)",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "",
+      "class": "form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "select",
+      "text": "CRM-OPP-.YYYY.-",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "naming_series",
+      "class": "input-with-feedback form-control ellipsis bold",
+      "system_ui": false
+    }
+  ],
+  "navigation": {
+    "source": "blank_new_document",
+    "record_access_allowed": false,
+    "business_data_mutation": false
+  },
+  "system_ui_rules": {
+    "notification_detected": true,
+    "notification_click_allowed": false,
+    "notification_keywords": [
+      "bell",
+      "no new notifications",
+      "notification",
+      "notification icon",
+      "notifications"
+    ],
+    "workspace_click_allowed": false,
+    "generic_system_actions_allowed": false
+  },
+  "qa_knowledge": {
+    "form_read": true,
+    "business_data_created": false,
+    "business_data_saved": false,
+    "existing_record_opened": false,
+    "field_actions": [
+      "check",
+      "clear",
+      "fill",
+      "select",
+      "uncheck"
+    ],
+    "business_buttons": [
+      "A",
+      "Save",
+      "Details",
+      "Contacts",
+      "Products",
+      "Add Row",
+      "Add Multiple",
+      "Download"
+    ],
+    "validation_candidates": [
+      {
+        "fieldname": "__details",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "contact_info",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "items_section",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "__section_1",
+        "required": true,
+        "fieldtype": "Select"
+      },
+      {
+        "fieldname": "__column_1",
+        "required": true,
+        "fieldtype": "Select"
+      },
+      {
+        "fieldname": "naming_series",
+        "required": true,
+        "fieldtype": "Select"
+      },
+      {
+        "fieldname": "opportunity_from",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "party_name",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "status",
+        "required": true,
+        "fieldtype": "Select"
+      },
+      {
+        "fieldname": "column_break0",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "opportunity_type",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "opportunity_owner",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_10",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "sales_stage",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "expected_closing",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "probability",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "organization_details_section",
+        "required": false,
+        "fieldtype": "Select"
+      },
+      {
+        "fieldname": "__column_2",
+        "required": false,
+        "fieldtype": "Select"
+      },
+      {
+        "fieldname": "no_of_employees",
+        "required": false,
+        "fieldtype": "Select"
+      },
+      {
+        "fieldname": "annual_revenue",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_23",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "industry",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "market_segment",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "website",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_31",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "city",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "state",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "country",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "territory",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "section_break_14",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__column_3",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "currency",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_36",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_17",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "opportunity_amount",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "section_break_analytics",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__column_4",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "utm_source",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "utm_content",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_emai",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "utm_campaign",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_whcu",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "utm_medium",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "more_info",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__details",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "contact_info",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "items_section",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "primary_contact_section",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__column_8",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "job_title",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_54",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "contact_email",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "contact_mobile",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break_22",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "whatsapp",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "phone",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "phone_ext",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "address_contact_section",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "__details",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "contact_info",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "items_section",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "__section_10",
+        "required": true,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "__column_10",
+        "required": true,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "items",
+        "required": true,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "item_code",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "qty",
+        "required": false,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "rate",
+        "required": true,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "amount",
+        "required": true,
+        "fieldtype": "unknown"
+      }
+    ]
+  },
+  "discovery_notes": {
+    "navigation": "Login -> ERPNext Home -> Global Search using 'New <DocType>' -> DocType List or blank New Document -> read all fields -> store main DocType without 'New'",
+    "doctype_validation": "DocType is accepted from a clean /app/<doctype> list route and the opened list page is UI-validated; no metadata API dependency.",
+    "record_rule": "Existing business documents are not opened for discovery; only the blank New Document form is inspected.",
+    "system_ui_rule": "Notification, Bell, Search, Filter, Settings, Workspace and other system UI are ignored and never treated as DocTypes.",
+    "field_rule": "Visible form fields are read for fieldname, label, fieldtype, required state, placeholder/options and available actions.",
+    "tab_section_rule": "Every visible form tab is opened and read one-by-one; fields are stored with tab context, and sections are collected from each tab.",
+    "scroll_rule": "Each form tab is scanned from top to bottom in multiple scroll positions so long forms and lazy-rendered fields are not missed.",
+    "blank_form_rule": "The agent reads the blank New Document without filling or saving business data.",
+    "ai_knowledge_rule": "The JSON is an observation record for future AI retrieval/planning, not a test execution result."
+  },
+  "discovery_summary": {
+    "doctype": "Opportunity",
+    "field_count": 68,
+    "tab_count": 3,
+    "section_count": 6,
+    "button_count": 8,
+    "link_count": 16,
+    "element_count": 4,
+    "discovery_status": "completed"
+  }
+}

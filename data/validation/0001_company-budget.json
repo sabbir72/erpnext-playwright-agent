@@ -1,0 +1,52 @@
+{
+  "file": "0001_company-budget.json",
+  "status": "PASSED",
+  "doctype": "Company Budget",
+  "checked_at": "2026-09-10T14:27:44",
+  "issues": [
+    {
+      "severity": "WARNING",
+      "message": "field '__column_3' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'budget_head' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'budget_requisition' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'account' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'asking_amount' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'budget_amount' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'carry_forwarded_amount' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'is_carry_forwarding' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'department' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'cost_center' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'branch' has unknown fieldtype"
+    }
+  ]
+}

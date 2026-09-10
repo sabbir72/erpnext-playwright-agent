@@ -1,0 +1,545 @@
+{
+  "knowledge_type": "erpnext_doctype",
+  "schema_version": "2.1",
+  "module": "CRM",
+  "doctype": "Customer/Buyer",
+  "document_name": "Customer/Buyer",
+  "search_name": "New Customer/Buyer",
+  "action": "New",
+  "read_mode": "blank_new_document",
+  "existing_documents_skipped": true,
+  "url": "https://stage2-salma.altersense.net/app/home",
+  "route": "/app/home",
+  "title": "Home",
+  "text": "ERP Home Accounting Local Procurement Import Merchandising Inventory Assets Production Quality Planning Support CRM Settings Collapse No new notifications Help A Home Your Shortcuts Product 19473 Customer/Buyer 18 Supplier 370 Sales Invoice 39 Reports & Masters Accounting Chart of Accounts Company Customer/Buyer Supplier Inventory Product Store Brand Unit of Measure (UOM) Stock Reconciliation CRM Lead Customer Group Territory Data Import and Settings Import Data Opening Invoice Creation Tool Chart of Accounts Importer Letter Head Email Account Custom Reports finance New Edit New Customer/Buyer Customer Name customer_name Country Begin typing for results. country Primary Contact Details Primary Address Details Edit Full Form Save",
+  "fields": [
+    {
+      "fieldname": "__section_1",
+      "label": "Customer Name",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__section_1\"]",
+        "name": "__section_1",
+        "label": "Customer Name"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_1",
+      "label": "Customer Name",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_1\"]",
+        "name": "__column_1",
+        "label": "Customer Name"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "customer_name",
+      "label": "Customer Name",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"customer_name\"]",
+        "name": "customer_name",
+        "label": "Customer Name"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "country",
+      "label": "Country",
+      "fieldtype": "Data",
+      "value": "Bangladesh",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"country\"]",
+        "name": "country",
+        "label": "Country"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__section_2",
+      "label": "First Name",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__section_2\"]",
+        "name": "__section_2",
+        "label": "First Name"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__section_3",
+      "label": "Address Line 1",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__section_3\"]",
+        "name": "__section_3",
+        "label": "Address Line 1"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    }
+  ],
+  "tabs": [],
+  "tab_observations": [],
+  "sections": [
+    "Primary Contact Details",
+    "Primary Address Details"
+  ],
+  "buttons": [
+    {
+      "text": "A",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "New",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Edit",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Edit Full Form",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Save",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "aria_label": "",
+      "title": ""
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "aria_label": "",
+      "title": "Home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "aria_label": "",
+      "title": "Accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "aria_label": "",
+      "title": "Local Procurement"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "aria_label": "",
+      "title": "Import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "aria_label": "",
+      "title": "Merchandising"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "aria_label": "",
+      "title": "Inventory"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "aria_label": "",
+      "title": "Assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "aria_label": "",
+      "title": "Production"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "aria_label": "",
+      "title": "Quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "aria_label": "",
+      "title": "Planning"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "aria_label": "",
+      "title": "Support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "aria_label": "",
+      "title": "CRM"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "aria_label": "",
+      "title": "Settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "aria_label": "",
+      "title": ""
+    },
+    {
+      "text": "Chart of Accounts",
+      "href": "/app/account",
+      "aria_label": "",
+      "title": "Chart of Accounts"
+    },
+    {
+      "text": "Company",
+      "href": "/app/company",
+      "aria_label": "",
+      "title": "Company"
+    },
+    {
+      "text": "Customer/Buyer",
+      "href": "/app/customer",
+      "aria_label": "",
+      "title": "Customer/Buyer"
+    },
+    {
+      "text": "Supplier",
+      "href": "/app/supplier",
+      "aria_label": "",
+      "title": "Supplier"
+    },
+    {
+      "text": "Product",
+      "href": "/app/item",
+      "aria_label": "",
+      "title": "Product"
+    },
+    {
+      "text": "Store",
+      "href": "/app/warehouse",
+      "aria_label": "",
+      "title": "Store"
+    },
+    {
+      "text": "Brand",
+      "href": "/app/brand",
+      "aria_label": "",
+      "title": "Brand"
+    },
+    {
+      "text": "Unit of Measure (UOM)",
+      "href": "/app/uom",
+      "aria_label": "",
+      "title": "Unit of Measure (UOM)"
+    },
+    {
+      "text": "Stock Reconciliation",
+      "href": "/app/stock-reconciliation",
+      "aria_label": "",
+      "title": "Stock Reconciliation"
+    },
+    {
+      "text": "Lead",
+      "href": "/app/lead",
+      "aria_label": "",
+      "title": "Lead"
+    },
+    {
+      "text": "Customer Group",
+      "href": "/app/customer-group",
+      "aria_label": "",
+      "title": "Customer Group"
+    },
+    {
+      "text": "Territory",
+      "href": "/app/territory",
+      "aria_label": "",
+      "title": "Territory"
+    },
+    {
+      "text": "Import Data",
+      "href": "/app/data-import",
+      "aria_label": "",
+      "title": "Import Data"
+    },
+    {
+      "text": "Opening Invoice Creation Tool",
+      "href": "/app/opening-invoice-creation-tool",
+      "aria_label": "",
+      "title": "Opening Invoice Creation Tool"
+    },
+    {
+      "text": "Chart of Accounts Importer",
+      "href": "/app/chart-of-accounts-importer",
+      "aria_label": "",
+      "title": "Chart of Accounts Importer"
+    },
+    {
+      "text": "Letter Head",
+      "href": "/app/letter-head",
+      "aria_label": "",
+      "title": "Letter Head"
+    },
+    {
+      "text": "Email Account",
+      "href": "/app/email-account",
+      "aria_label": "",
+      "title": "Email Account"
+    },
+    {
+      "text": "finance",
+      "href": "/app/employee/view/report/finance",
+      "aria_label": "",
+      "title": "finance"
+    }
+  ],
+  "elements": [
+    {
+      "tag": "a",
+      "text": "ERP",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "app-switcher-dropdown",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn-reset drop-icon show-in-edit-mode",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "navbar-search",
+      "name": "",
+      "type": "text",
+      "placeholder": "Search or type a command (Ctrl + K)",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "",
+      "class": "form-control",
+      "system_ui": false
+    }
+  ],
+  "navigation": {
+    "source": "blank_new_document",
+    "record_access_allowed": false,
+    "business_data_mutation": false
+  },
+  "system_ui_rules": {
+    "notification_detected": true,
+    "notification_click_allowed": false,
+    "notification_keywords": [
+      "bell",
+      "no new notifications",
+      "notification",
+      "notification icon",
+      "notifications"
+    ],
+    "workspace_click_allowed": false,
+    "generic_system_actions_allowed": false
+  },
+  "qa_knowledge": {
+    "form_read": true,
+    "business_data_created": false,
+    "business_data_saved": false,
+    "existing_record_opened": false,
+    "field_actions": [
+      "clear",
+      "fill"
+    ],
+    "business_buttons": [
+      "A",
+      "New",
+      "Edit",
+      "Edit Full Form",
+      "Save"
+    ],
+    "validation_candidates": [
+      {
+        "fieldname": "__section_1",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__column_1",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "customer_name",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "country",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__section_2",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__section_3",
+        "required": true,
+        "fieldtype": "Data"
+      }
+    ]
+  },
+  "discovery_notes": {
+    "navigation": "Login -> ERPNext Home -> Global Search using 'New <DocType>' -> DocType List or blank New Document -> read all fields -> store main DocType without 'New'",
+    "doctype_validation": "DocType is accepted from a clean /app/<doctype> list route and the opened list page is UI-validated; no metadata API dependency.",
+    "record_rule": "Existing business documents are not opened for discovery; only the blank New Document form is inspected.",
+    "system_ui_rule": "Notification, Bell, Search, Filter, Settings, Workspace and other system UI are ignored and never treated as DocTypes.",
+    "field_rule": "Visible form fields are read for fieldname, label, fieldtype, required state, placeholder/options and available actions.",
+    "tab_section_rule": "Every visible form tab is opened and read one-by-one; fields are stored with tab context, and sections are collected from each tab.",
+    "scroll_rule": "Each form tab is scanned from top to bottom in multiple scroll positions so long forms and lazy-rendered fields are not missed.",
+    "blank_form_rule": "The agent reads the blank New Document without filling or saving business data.",
+    "ai_knowledge_rule": "The JSON is an observation record for future AI retrieval/planning, not a test execution result."
+  },
+  "discovery_summary": {
+    "doctype": "Customer/Buyer",
+    "field_count": 6,
+    "tab_count": 0,
+    "section_count": 2,
+    "button_count": 5,
+    "link_count": 33,
+    "element_count": 3,
+    "discovery_status": "completed"
+  }
+}
