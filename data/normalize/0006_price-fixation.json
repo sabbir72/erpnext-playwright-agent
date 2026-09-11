@@ -1,0 +1,570 @@
+{
+  "doctype": "Price Fixation",
+  "search_name": "New Price Fixation",
+  "action": "New",
+  "module": "",
+  "url": "https://stage2-salma.altersense.net/app/price-fixation/new-price-fixation-xkbyjsshpp",
+  "route": "/app/price-fixation/new-price-fixation-xkbyjsshpp",
+  "read_mode": "blank_new_document",
+  "fields": [
+    {
+      "fieldname": "__section_1",
+      "label": "__section_1",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_1",
+      "label": "__column_1",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_pgji",
+      "label": "Posting Date",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "posting_date",
+      "label": "Posting Date",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_saen",
+      "label": "Material Type",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "material_type",
+      "label": "Material Type",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "contract_details_section",
+      "label": "Contract No",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_4",
+      "label": "Contract No",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "blanket_order",
+      "label": "Contract No",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "total_contract_quantity",
+      "label": "Total Contract Qty",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "fixation_quantity",
+      "label": "Fixation Qty",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_edov",
+      "label": "Prior fix Qty",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "prior_fix_quantity",
+      "label": "Prior fix Qty",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "contract_balance_quantity",
+      "label": "Contract Balance Qty",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "currency_and_exchange_rate",
+      "label": "Currency",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_5",
+      "label": "Currency",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_qaku",
+      "label": "Exchange Rate",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "insert_bid_details_section",
+      "label": "Date & Time",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_6",
+      "label": "Date & Time",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "datetime",
+      "label": "Date & Time",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "insert",
+      "label": "insert",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_ronr",
+      "label": "column_break_ronr",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "ice_indexclb",
+      "label": "ICE Index/CLB",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_jwrd",
+      "label": "Qty (MT)",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "qty_mt",
+      "label": "Qty (MT)",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "bid_quantity",
+      "label": "Bid Qty (LBS)",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_yflg",
+      "label": "column_break_yflg",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "price_entry",
+      "label": "Products",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_9",
+      "label": "Products",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "items",
+      "label": "Products",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "item_code",
+      "label": "item_code",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "qty",
+      "label": "qty",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "uom",
+      "label": "uom",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "base_priceclb",
+      "label": "base_priceclb",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "rateclb",
+      "label": "rateclb",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "bid_id",
+      "label": "bid_id",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "quality_inspection_section",
+      "label": "Quality Inspection Template",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "total_section_section",
+      "label": "total_section_section",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_11",
+      "label": "__column_11",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_tncu",
+      "label": "Total Amount (BDT)",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "total",
+      "label": "Total Amount (BDT)",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    }
+  ],
+  "tabs": [],
+  "sections": [
+    {
+      "name": "Contract Details"
+    },
+    {
+      "name": "Currency and Exchange Rate"
+    },
+    {
+      "name": "Insert Bid Details"
+    },
+    {
+      "name": "Price Entry"
+    },
+    {
+      "name": "Quality Inspection Section"
+    }
+  ],
+  "buttons": [
+    {
+      "text": "A",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "A"
+    },
+    {
+      "text": "Save",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Save"
+    },
+    {
+      "text": "Insert",
+      "aria_label": "",
+      "title": "Insert",
+      "role": "button",
+      "action": "click",
+      "name": "Insert"
+    },
+    {
+      "text": "Download",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Download"
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "aria_label": "",
+      "title": "",
+      "name": "ERP"
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "aria_label": "",
+      "title": "Home",
+      "name": "Home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "aria_label": "",
+      "title": "Accounting",
+      "name": "Accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "aria_label": "",
+      "title": "Local Procurement",
+      "name": "Local Procurement"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "aria_label": "",
+      "title": "Import",
+      "name": "Import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "aria_label": "",
+      "title": "Merchandising",
+      "name": "Merchandising"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "aria_label": "",
+      "title": "Inventory",
+      "name": "Inventory"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "aria_label": "",
+      "title": "Assets",
+      "name": "Assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "aria_label": "",
+      "title": "Production",
+      "name": "Production"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "aria_label": "",
+      "title": "Quality",
+      "name": "Quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "aria_label": "",
+      "title": "Planning",
+      "name": "Planning"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "aria_label": "",
+      "title": "Support",
+      "name": "Support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "aria_label": "",
+      "title": "CRM",
+      "name": "CRM"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "aria_label": "",
+      "title": "Settings",
+      "name": "Settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "aria_label": "",
+      "title": "",
+      "name": "Collapse"
+    },
+    {
+      "text": "Price Fixation",
+      "href": "/app/price-fixation",
+      "aria_label": "",
+      "title": "",
+      "name": "Price Fixation"
+    }
+  ],
+  "normalization": {
+    "status": "NORMALIZED",
+    "doctype_cleaned": true,
+    "search_name_preserved_as_new": true,
+    "duplicates_removed": true
+  }
+}

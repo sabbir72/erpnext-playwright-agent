@@ -1,0 +1,60 @@
+{
+  "file": "0006_price-fixation.json",
+  "status": "PASSED",
+  "doctype": "Price Fixation",
+  "checked_at": "2026-09-11T16:54:10",
+  "issues": [
+    {
+      "severity": "WARNING",
+      "message": "field '__column_1' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'insert' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'column_break_yflg' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'item_code' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'qty' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'uom' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'base_priceclb' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'rateclb' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'bid_id' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'total_section_section' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field '__column_11' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'column_break_tncu' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'total' has unknown fieldtype"
+    }
+  ]
+}

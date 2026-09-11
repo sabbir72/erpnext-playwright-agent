@@ -1,18 +1,18 @@
 {
   "validation_type": "erpnext_discovery_validation",
-  "checked_at": "2026-09-10T14:27:44",
-  "discovery_dir": "E:\\erpnext-playwright-agent\\data\\discovery",
-  "total": 4,
-  "passed": 3,
-  "failed": 1,
-  "warning_only": 1,
+  "checked_at": "2026-09-11T16:54:10",
+  "discovery_dir": "/home/eng-sabbir/Downloads/erpnext-playwright-agent/data/discovery",
+  "total": 8,
+  "passed": 6,
+  "failed": 2,
+  "warning_only": 4,
   "invalid_json": 0,
   "results": [
     {
       "file": "0001_company-budget.json",
       "status": "PASSED",
       "doctype": "Company Budget",
-      "checked_at": "2026-09-10T14:27:44",
+      "checked_at": "2026-09-11T16:54:10",
       "issues": [
         {
           "severity": "WARNING",
@@ -64,14 +64,14 @@
       "file": "0002_lead.json",
       "status": "PASSED",
       "doctype": "Lead",
-      "checked_at": "2026-09-10T14:27:44",
+      "checked_at": "2026-09-11T16:54:10",
       "issues": []
     },
     {
       "file": "0003_opportunity.json",
       "status": "FAILED",
       "doctype": "Opportunity",
-      "checked_at": "2026-09-10T14:27:44",
+      "checked_at": "2026-09-11T16:54:10",
       "issues": [
         {
           "severity": "WARNING",
@@ -159,8 +159,288 @@
       "file": "0004_customer-buyer.json",
       "status": "PASSED",
       "doctype": "Customer/Buyer",
-      "checked_at": "2026-09-10T14:27:44",
+      "checked_at": "2026-09-11T16:54:10",
       "issues": []
+    },
+    {
+      "file": "0005_contract.json",
+      "status": "PASSED",
+      "doctype": "Contract",
+      "checked_at": "2026-09-11T16:54:10",
+      "issues": [
+        {
+          "severity": "WARNING",
+          "message": "field 'posting_date' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'custom_column_break_hcd0c' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'column_break_hwcyp' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'column_break_8bdo6' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'column_break_wm4vm' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'column_break_jwaug' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'item_code' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'item_name' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'purchase_qty' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'purchase_uom' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'qty' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'rate_type' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'base_price_clb' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'ice_index_clb' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'rate_usc' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'tolerance' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'column_break_itsma' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'column_break_eoj4s' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'column_break_5pux7' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'cus_section_break_01' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field '__column_7' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'prior_fix_quantity' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'contract_balance_quantity' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'cus_column_break_01' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'total' has unknown fieldtype"
+        }
+      ]
+    },
+    {
+      "file": "0006_price-fixation.json",
+      "status": "PASSED",
+      "doctype": "Price Fixation",
+      "checked_at": "2026-09-11T16:54:10",
+      "issues": [
+        {
+          "severity": "WARNING",
+          "message": "field '__column_1' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'insert' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'column_break_yflg' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'item_code' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'qty' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'uom' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'base_priceclb' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'rateclb' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'bid_id' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'total_section_section' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field '__column_11' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'column_break_tncu' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'total' has unknown fieldtype"
+        }
+      ]
+    },
+    {
+      "file": "0007_requisition.json",
+      "status": "PASSED",
+      "doctype": "Requisition",
+      "checked_at": "2026-09-11T16:54:10",
+      "issues": [
+        {
+          "severity": "WARNING",
+          "message": "field 'procurement_type' has unknown fieldtype"
+        }
+      ]
+    },
+    {
+      "file": "0008_purchase-order.json",
+      "status": "FAILED",
+      "doctype": "Purchase Order",
+      "checked_at": "2026-09-11T16:54:10",
+      "issues": [
+        {
+          "severity": "WARNING",
+          "message": "field '__details' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'connections_tab' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'column_break_nxrvs' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'cus_column_break_04' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'column_break_hjuii' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'col_break_address' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'column_break_lzhdf' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'item_code' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'item_name' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'qty' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'uom' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'rate' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'amount' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'country_of_origin' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'sb_last_purchase' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field '__column_10' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'total_qty' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'column_break_26' has unknown fieldtype"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'total' has unknown fieldtype"
+        },
+        {
+          "severity": "ERROR",
+          "message": "duplicate fieldname: __details"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field '__details' has unknown fieldtype"
+        },
+        {
+          "severity": "ERROR",
+          "message": "duplicate fieldname: connections_tab"
+        },
+        {
+          "severity": "WARNING",
+          "message": "field 'connections_tab' has unknown fieldtype"
+        }
+      ]
     }
   ]
 }

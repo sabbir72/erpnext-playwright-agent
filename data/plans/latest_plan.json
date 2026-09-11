@@ -1,24 +1,1452 @@
 {
-  "status": "needs_clarification",
-  "command": "Generate test cases for company budget",
-  "task_type": "generate_test_cases",
-  "target_type": "unknown",
-  "message": "Could not identify a known ERPNext DocType or Module.",
-  "available_doctypes": [
-    "New Company Budget",
-    "New Contract",
-    "New Price Fixation",
-    "New Requisition",
-    "New Purchase Order",
-    "New Proforma Invoice",
-    "New LC Application",
-    "New Import LC",
-    "New Shipment Document",
-    "New Material Distribution",
-    "New MRR",
-    "New Stock Transaction",
-    "New Product"
+  "plan_version": "1.0",
+  "task": "Create Contract flow test",
+  "task_type": "create",
+  "doctype": "Contract",
+  "document_name": "Contract",
+  "search_name": "New Contract",
+  "action": "New",
+  "source_file": "0005_contract.json",
+  "safety": {
+    "existing_documents_skipped": true,
+    "blank_new_document_only": true,
+    "do_not_save_without_task": true,
+    "do_not_submit_without_task": true,
+    "do_not_delete": true,
+    "system_ui_excluded": true
+  },
+  "steps": [
+    {
+      "order": 1,
+      "action": "login",
+      "description": "Login using configured credentials."
+    },
+    {
+      "order": 2,
+      "action": "open_home",
+      "description": "Open ERPNext Home."
+    },
+    {
+      "order": 3,
+      "action": "global_search",
+      "search_text": "New Contract",
+      "description": "Search Global Search for \"New Contract\"."
+    },
+    {
+      "order": 4,
+      "action": "open_blank_new_document",
+      "doctype": "Contract",
+      "description": "Open the blank New form for Contract."
+    },
+    {
+      "order": 5,
+      "action": "inspect_form_top_to_bottom",
+      "description": "Inspect the full blank form by scrolling through every viewport."
+    },
+    {
+      "order": 6,
+      "action": "inspect_section",
+      "section": "Supplier Information"
+    },
+    {
+      "order": 7,
+      "action": "inspect_section",
+      "section": "Currency and Exchange Rate"
+    },
+    {
+      "order": 8,
+      "action": "inspect_section",
+      "section": "Product Details"
+    },
+    {
+      "order": 9,
+      "action": "inspect_section",
+      "section": "Freight Charges"
+    },
+    {
+      "order": 10,
+      "action": "inspect_section",
+      "section": "Total"
+    },
+    {
+      "order": 11,
+      "action": "inspect_section",
+      "section": "Quality Inspection Section"
+    },
+    {
+      "order": 12,
+      "action": "inspect_section",
+      "section": "Terms and Conditions"
+    },
+    {
+      "order": 13,
+      "action": "inspect_field",
+      "fieldname": "__section_1",
+      "label": "__section_1",
+      "fieldtype": "Data",
+      "required": true
+    },
+    {
+      "order": 14,
+      "action": "inspect_field",
+      "fieldname": "__column_1",
+      "label": "__column_1",
+      "fieldtype": "Data",
+      "required": true
+    },
+    {
+      "order": 15,
+      "action": "inspect_field",
+      "fieldname": "blanket_order_no",
+      "label": "Contract No",
+      "fieldtype": "Data",
+      "required": true
+    },
+    {
+      "order": 16,
+      "action": "inspect_field",
+      "fieldname": "material_type",
+      "label": "Material Type",
+      "fieldtype": "Data",
+      "required": false
+    },
+    {
+      "order": 17,
+      "action": "inspect_field",
+      "fieldname": "column_break_8",
+      "label": "Posting Date",
+      "fieldtype": "Data",
+      "required": false
+    },
+    {
+      "order": 18,
+      "action": "inspect_field",
+      "fieldname": "posting_date",
+      "label": "Posting Date",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 19,
+      "action": "inspect_field",
+      "fieldname": "contract_date",
+      "label": "Contract Date",
+      "fieldtype": "Data",
+      "required": false
+    },
+    {
+      "order": 20,
+      "action": "inspect_field",
+      "fieldname": "column_break_xseap",
+      "label": "Company",
+      "fieldtype": "Data",
+      "required": true
+    },
+    {
+      "order": 21,
+      "action": "inspect_field",
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Data",
+      "required": true
+    },
+    {
+      "order": 22,
+      "action": "inspect_field",
+      "fieldname": "contract_validity",
+      "label": "Contract Validity",
+      "fieldtype": "Data",
+      "required": false
+    },
+    {
+      "order": 23,
+      "action": "inspect_field",
+      "fieldname": "sourcing_from",
+      "label": "Sourcing From",
+      "fieldtype": "Select",
+      "required": true
+    },
+    {
+      "order": 24,
+      "action": "inspect_field",
+      "fieldname": "payment_term",
+      "label": "Payment Term",
+      "fieldtype": "Data",
+      "required": false
+    },
+    {
+      "order": 25,
+      "action": "inspect_field",
+      "fieldname": "custom_supplier_information",
+      "label": "Supplier",
+      "fieldtype": "Data",
+      "required": true
+    },
+    {
+      "order": 26,
+      "action": "inspect_field",
+      "fieldname": "__column_2",
+      "label": "Supplier",
+      "fieldtype": "Data",
+      "required": true
+    },
+    {
+      "order": 27,
+      "action": "inspect_field",
+      "fieldname": "supplier",
+      "label": "Supplier",
+      "fieldtype": "Data",
+      "required": true
+    },
+    {
+      "order": 28,
+      "action": "inspect_field",
+      "fieldname": "custom_column_break_hcd0c",
+      "label": "custom_column_break_hcd0c",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 29,
+      "action": "inspect_field",
+      "fieldname": "column_break_hwcyp",
+      "label": "column_break_hwcyp",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 30,
+      "action": "inspect_field",
+      "fieldname": "column_break_8bdo6",
+      "label": "column_break_8bdo6",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 31,
+      "action": "inspect_field",
+      "fieldname": "column_break_wm4vm",
+      "label": "column_break_wm4vm",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 32,
+      "action": "inspect_field",
+      "fieldname": "currency_and_exchange_rate",
+      "label": "Supplier Currency",
+      "fieldtype": "Data",
+      "required": false
+    },
+    {
+      "order": 33,
+      "action": "inspect_field",
+      "fieldname": "__column_4",
+      "label": "Supplier Currency",
+      "fieldtype": "Data",
+      "required": false
+    },
+    {
+      "order": 34,
+      "action": "inspect_field",
+      "fieldname": "currency",
+      "label": "Supplier Currency",
+      "fieldtype": "Data",
+      "required": false
+    },
+    {
+      "order": 35,
+      "action": "inspect_field",
+      "fieldname": "column_break_jwaug",
+      "label": "Exchange Rate",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 36,
+      "action": "inspect_field",
+      "fieldname": "section_break_12",
+      "label": "section_break_12",
+      "fieldtype": "Check",
+      "required": true
+    },
+    {
+      "order": 37,
+      "action": "inspect_field",
+      "fieldname": "__column_5",
+      "label": "__column_5",
+      "fieldtype": "Check",
+      "required": true
+    },
+    {
+      "order": 38,
+      "action": "inspect_field",
+      "fieldname": "items",
+      "label": "items",
+      "fieldtype": "Check",
+      "required": true
+    },
+    {
+      "order": 39,
+      "action": "inspect_field",
+      "fieldname": "item_code",
+      "label": "item_code",
+      "fieldtype": "unknown",
+      "required": true
+    },
+    {
+      "order": 40,
+      "action": "inspect_field",
+      "fieldname": "item_name",
+      "label": "item_name",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 41,
+      "action": "inspect_field",
+      "fieldname": "purchase_qty",
+      "label": "purchase_qty",
+      "fieldtype": "unknown",
+      "required": true
+    },
+    {
+      "order": 42,
+      "action": "inspect_field",
+      "fieldname": "purchase_uom",
+      "label": "purchase_uom",
+      "fieldtype": "unknown",
+      "required": true
+    },
+    {
+      "order": 43,
+      "action": "inspect_field",
+      "fieldname": "qty",
+      "label": "qty",
+      "fieldtype": "unknown",
+      "required": true
+    },
+    {
+      "order": 44,
+      "action": "inspect_field",
+      "fieldname": "rate_type",
+      "label": "rate_type",
+      "fieldtype": "unknown",
+      "required": true
+    },
+    {
+      "order": 45,
+      "action": "inspect_field",
+      "fieldname": "base_price_clb",
+      "label": "base_price_clb",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 46,
+      "action": "inspect_field",
+      "fieldname": "ice_index_clb",
+      "label": "ice_index_clb",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 47,
+      "action": "inspect_field",
+      "fieldname": "rate_usc",
+      "label": "rate_usc",
+      "fieldtype": "unknown",
+      "required": true
+    },
+    {
+      "order": 48,
+      "action": "inspect_field",
+      "fieldname": "tolerance",
+      "label": "tolerance",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 49,
+      "action": "inspect_field",
+      "fieldname": "freight_charges",
+      "label": "Is Freight Included",
+      "fieldtype": "Check",
+      "required": false
+    },
+    {
+      "order": 50,
+      "action": "inspect_field",
+      "fieldname": "__column_6",
+      "label": "Is Freight Included",
+      "fieldtype": "Check",
+      "required": false
+    },
+    {
+      "order": 51,
+      "action": "inspect_field",
+      "fieldname": "is_freight_included",
+      "label": "Is Freight Included",
+      "fieldtype": "Check",
+      "required": false
+    },
+    {
+      "order": 52,
+      "action": "inspect_field",
+      "fieldname": "column_break_itsma",
+      "label": "column_break_itsma",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 53,
+      "action": "inspect_field",
+      "fieldname": "column_break_eoj4s",
+      "label": "column_break_eoj4s",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 54,
+      "action": "inspect_field",
+      "fieldname": "column_break_3yfdv",
+      "label": "Freight (BDT)",
+      "fieldtype": "Data",
+      "required": false
+    },
+    {
+      "order": 55,
+      "action": "inspect_field",
+      "fieldname": "freight",
+      "label": "Freight (BDT)",
+      "fieldtype": "Data",
+      "required": false
+    },
+    {
+      "order": 56,
+      "action": "inspect_field",
+      "fieldname": "column_break_5pux7",
+      "label": "column_break_5pux7",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 57,
+      "action": "inspect_field",
+      "fieldname": "cus_section_break_01",
+      "label": "cus_section_break_01",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 58,
+      "action": "inspect_field",
+      "fieldname": "__column_7",
+      "label": "__column_7",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 59,
+      "action": "inspect_field",
+      "fieldname": "prior_fix_quantity",
+      "label": "Prior fix quantity",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 60,
+      "action": "inspect_field",
+      "fieldname": "contract_balance_quantity",
+      "label": "Contract Balance Quantity",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 61,
+      "action": "inspect_field",
+      "fieldname": "cus_column_break_01",
+      "label": "cus_column_break_01",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 62,
+      "action": "inspect_field",
+      "fieldname": "total",
+      "label": "Total Amount (BDT)",
+      "fieldtype": "unknown",
+      "required": false
+    },
+    {
+      "order": 63,
+      "action": "inspect_field",
+      "fieldname": "section_break_bi98z",
+      "label": "Quality Inspection Template",
+      "fieldtype": "Data",
+      "required": true
+    },
+    {
+      "order": 64,
+      "action": "inspect_field",
+      "fieldname": "terms_and_conditions_section",
+      "label": "Terms",
+      "fieldtype": "Data",
+      "required": false
+    },
+    {
+      "order": 65,
+      "action": "inspect_field",
+      "fieldname": "__column_11",
+      "label": "Terms",
+      "fieldtype": "Data",
+      "required": false
+    },
+    {
+      "order": 66,
+      "action": "inspect_field",
+      "fieldname": "tc_name",
+      "label": "Terms",
+      "fieldtype": "Data",
+      "required": false
+    },
+    {
+      "order": 67,
+      "action": "inspect_field",
+      "fieldname": "terms",
+      "label": "Terms and Conditions Details",
+      "fieldtype": "Select",
+      "required": false
+    },
+    {
+      "order": 68,
+      "action": "inspect_button",
+      "button": "A",
+      "safe_action_required": true
+    },
+    {
+      "order": 69,
+      "action": "inspect_button",
+      "button": "Save",
+      "safe_action_required": true
+    },
+    {
+      "order": 70,
+      "action": "inspect_button",
+      "button": "Add Row",
+      "safe_action_required": true
+    },
+    {
+      "order": 71,
+      "action": "inspect_button",
+      "button": "Add Multiple",
+      "safe_action_required": true
+    },
+    {
+      "order": 72,
+      "action": "inspect_button",
+      "button": "Download",
+      "safe_action_required": true
+    },
+    {
+      "order": 73,
+      "action": "inspect_button",
+      "button": "bold",
+      "safe_action_required": true
+    },
+    {
+      "order": 74,
+      "action": "inspect_button",
+      "button": "italic",
+      "safe_action_required": true
+    },
+    {
+      "order": 75,
+      "action": "inspect_button",
+      "button": "underline",
+      "safe_action_required": true
+    },
+    {
+      "order": 76,
+      "action": "inspect_button",
+      "button": "strike",
+      "safe_action_required": true
+    },
+    {
+      "order": 77,
+      "action": "inspect_button",
+      "button": "clean",
+      "safe_action_required": true
+    },
+    {
+      "order": 78,
+      "action": "inspect_button",
+      "button": "blockquote",
+      "safe_action_required": true
+    },
+    {
+      "order": 79,
+      "action": "inspect_button",
+      "button": "code-block",
+      "safe_action_required": true
+    },
+    {
+      "order": 80,
+      "action": "inspect_button",
+      "button": "direction: rtl",
+      "safe_action_required": true
+    },
+    {
+      "order": 81,
+      "action": "inspect_button",
+      "button": "link",
+      "safe_action_required": true
+    },
+    {
+      "order": 82,
+      "action": "inspect_button",
+      "button": "image",
+      "safe_action_required": true
+    },
+    {
+      "order": 83,
+      "action": "inspect_button",
+      "button": "list: ordered",
+      "safe_action_required": true
+    },
+    {
+      "order": 84,
+      "action": "inspect_button",
+      "button": "list: bullet",
+      "safe_action_required": true
+    },
+    {
+      "order": 85,
+      "action": "inspect_button",
+      "button": "list: check",
+      "safe_action_required": true
+    },
+    {
+      "order": 86,
+      "action": "inspect_button",
+      "button": "indent: -1",
+      "safe_action_required": true
+    },
+    {
+      "order": 87,
+      "action": "inspect_button",
+      "button": "indent: +1",
+      "safe_action_required": true
+    },
+    {
+      "order": 88,
+      "action": "inspect_link_relation",
+      "label": "ERP"
+    },
+    {
+      "order": 89,
+      "action": "inspect_link_relation",
+      "label": "Home"
+    },
+    {
+      "order": 90,
+      "action": "inspect_link_relation",
+      "label": "Accounting"
+    },
+    {
+      "order": 91,
+      "action": "inspect_link_relation",
+      "label": "Local Procurement"
+    },
+    {
+      "order": 92,
+      "action": "inspect_link_relation",
+      "label": "Import"
+    },
+    {
+      "order": 93,
+      "action": "inspect_link_relation",
+      "label": "Merchandising"
+    },
+    {
+      "order": 94,
+      "action": "inspect_link_relation",
+      "label": "Inventory"
+    },
+    {
+      "order": 95,
+      "action": "inspect_link_relation",
+      "label": "Assets"
+    },
+    {
+      "order": 96,
+      "action": "inspect_link_relation",
+      "label": "Production"
+    },
+    {
+      "order": 97,
+      "action": "inspect_link_relation",
+      "label": "Quality"
+    },
+    {
+      "order": 98,
+      "action": "inspect_link_relation",
+      "label": "Planning"
+    },
+    {
+      "order": 99,
+      "action": "inspect_link_relation",
+      "label": "Support"
+    },
+    {
+      "order": 100,
+      "action": "inspect_link_relation",
+      "label": "CRM"
+    },
+    {
+      "order": 101,
+      "action": "inspect_link_relation",
+      "label": "Collapse"
+    },
+    {
+      "order": 102,
+      "action": "inspect_link_relation",
+      "label": "Contract"
+    },
+    {
+      "order": 103,
+      "action": "inspect_link_relation",
+      "label": "Metric Ton"
+    }
   ],
-  "available_modules": [],
-  "next_step": "ask_user"
+  "fields": [
+    {
+      "fieldname": "__section_1",
+      "label": "__section_1",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "__column_1",
+      "label": "__column_1",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "blanket_order_no",
+      "label": "Contract No",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "material_type",
+      "label": "Material Type",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "column_break_8",
+      "label": "Posting Date",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "posting_date",
+      "label": "Posting Date",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "contract_date",
+      "label": "Contract Date",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "column_break_xseap",
+      "label": "Company",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "contract_validity",
+      "label": "Contract Validity",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "sourcing_from",
+      "label": "Sourcing From",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "Import",
+          "value": "Import"
+        },
+        {
+          "text": "Local",
+          "value": "Local"
+        }
+      ],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "payment_term",
+      "label": "Payment Term",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "custom_supplier_information",
+      "label": "Supplier",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "__column_2",
+      "label": "Supplier",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "supplier",
+      "label": "Supplier",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "custom_column_break_hcd0c",
+      "label": "custom_column_break_hcd0c",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "column_break_hwcyp",
+      "label": "column_break_hwcyp",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "column_break_8bdo6",
+      "label": "column_break_8bdo6",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "column_break_wm4vm",
+      "label": "column_break_wm4vm",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "currency_and_exchange_rate",
+      "label": "Supplier Currency",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "__column_4",
+      "label": "Supplier Currency",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "currency",
+      "label": "Supplier Currency",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "column_break_jwaug",
+      "label": "Exchange Rate",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "section_break_12",
+      "label": "section_break_12",
+      "fieldtype": "Check",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "__column_5",
+      "label": "__column_5",
+      "fieldtype": "Check",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "items",
+      "label": "items",
+      "fieldtype": "Check",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "item_code",
+      "label": "item_code",
+      "fieldtype": "unknown",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "item_name",
+      "label": "item_name",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "purchase_qty",
+      "label": "purchase_qty",
+      "fieldtype": "unknown",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "purchase_uom",
+      "label": "purchase_uom",
+      "fieldtype": "unknown",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "qty",
+      "label": "qty",
+      "fieldtype": "unknown",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "rate_type",
+      "label": "rate_type",
+      "fieldtype": "unknown",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "base_price_clb",
+      "label": "base_price_clb",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "ice_index_clb",
+      "label": "ice_index_clb",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "rate_usc",
+      "label": "rate_usc",
+      "fieldtype": "unknown",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "tolerance",
+      "label": "tolerance",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "freight_charges",
+      "label": "Is Freight Included",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "__column_6",
+      "label": "Is Freight Included",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "is_freight_included",
+      "label": "Is Freight Included",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "column_break_itsma",
+      "label": "column_break_itsma",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "column_break_eoj4s",
+      "label": "column_break_eoj4s",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "column_break_3yfdv",
+      "label": "Freight (BDT)",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "freight",
+      "label": "Freight (BDT)",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "column_break_5pux7",
+      "label": "column_break_5pux7",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "cus_section_break_01",
+      "label": "cus_section_break_01",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "__column_7",
+      "label": "__column_7",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "prior_fix_quantity",
+      "label": "Prior fix quantity",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "contract_balance_quantity",
+      "label": "Contract Balance Quantity",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "cus_column_break_01",
+      "label": "cus_column_break_01",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "total",
+      "label": "Total Amount (BDT)",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "section_break_bi98z",
+      "label": "Quality Inspection Template",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "terms_and_conditions_section",
+      "label": "Terms",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "__column_11",
+      "label": "Terms",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "tc_name",
+      "label": "Terms",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "terms",
+      "label": "Terms and Conditions Details",
+      "fieldtype": "Select",
+      "required": false,
+      "options": [
+        {
+          "text": "",
+          "value": "1"
+        },
+        {
+          "text": "",
+          "value": "2"
+        },
+        {
+          "text": "",
+          "value": "3"
+        },
+        {
+          "text": "",
+          "value": "4"
+        },
+        {
+          "text": "",
+          "value": "5"
+        },
+        {
+          "text": "",
+          "value": "6"
+        }
+      ],
+      "placeholder": "",
+      "action": "inspect_or_fill"
+    }
+  ],
+  "tabs": [],
+  "sections": [
+    {
+      "section": "Supplier Information",
+      "action": "inspect"
+    },
+    {
+      "section": "Currency and Exchange Rate",
+      "action": "inspect"
+    },
+    {
+      "section": "Product Details",
+      "action": "inspect"
+    },
+    {
+      "section": "Freight Charges",
+      "action": "inspect"
+    },
+    {
+      "section": "Total",
+      "action": "inspect"
+    },
+    {
+      "section": "Quality Inspection Section",
+      "action": "inspect"
+    },
+    {
+      "section": "Terms and Conditions",
+      "action": "inspect"
+    }
+  ],
+  "buttons": [
+    {
+      "button": "A",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "Save",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "Add Row",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "Add Multiple",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "Download",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "bold",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "italic",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "underline",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "strike",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "clean",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "blockquote",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "code-block",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "direction: rtl",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "link",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "image",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "list: ordered",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "list: bullet",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "list: check",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "indent: -1",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "indent: +1",
+      "action": "inspect",
+      "safe_action_required": true
+    }
+  ],
+  "links": [
+    {
+      "label": "ERP",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "Home",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "Accounting",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "Local Procurement",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "Import",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "Merchandising",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "Inventory",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "Assets",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "Production",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "Quality",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "Planning",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "Support",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "CRM",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "Collapse",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "Contract",
+      "action": "inspect_relation"
+    },
+    {
+      "label": "Metric Ton",
+      "action": "inspect_relation"
+    }
+  ]
 }

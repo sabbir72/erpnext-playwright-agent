@@ -1,0 +1,389 @@
+{
+  "doctype": "Requisition",
+  "search_name": "New Requisition",
+  "action": "New",
+  "module": "",
+  "url": "https://stage2-salma.altersense.net/app/material-request/new-material-request-zxxvzjzoqr",
+  "route": "/app/material-request/new-material-request-zxxvzjzoqr",
+  "read_mode": "blank_new_document",
+  "fields": [
+    {
+      "fieldname": "type_section",
+      "label": "Company",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_2",
+      "label": "Company",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "sourcing_from",
+      "label": "Sourcing From",
+      "fieldtype": "Select",
+      "required": false,
+      "options": [
+        {
+          "text": "Local",
+          "value": "Local"
+        },
+        {
+          "text": "Import",
+          "value": "Import"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "user_branch",
+      "label": "User Branch",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "procurement_location",
+      "label": "Procurement Location",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "cash_iou",
+      "label": "Cash IOU",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_2",
+      "label": "Cost Center",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "cost_center",
+      "label": "Cost Center",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "transaction_date",
+      "label": "Requisition Date",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "cus_column_break_01",
+      "label": "Department",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "department",
+      "label": "Department",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "schedule_date",
+      "label": "Required Date",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "procurement_type",
+      "label": "Procurement Type",
+      "fieldtype": "unknown",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "purpose",
+      "label": "Purpose",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break5",
+      "label": "column_break5",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "material_type",
+      "label": "Material Type",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "requisition_type",
+      "label": "Requisition Type",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "material_category",
+      "label": "Material Category",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "Raw Material",
+          "value": "Raw Material"
+        },
+        {
+          "text": "Fixed Asset",
+          "value": "Fixed Asset"
+        },
+        {
+          "text": "General",
+          "value": "General"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "material_sub_category",
+      "label": "Material Sub Category",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "Cotton",
+          "value": "Cotton"
+        },
+        {
+          "text": "Non Cotton",
+          "value": "Non Cotton"
+        },
+        {
+          "text": "Chemical",
+          "value": "Chemical"
+        },
+        {
+          "text": "Packaging Material",
+          "value": "Packaging Material"
+        },
+        {
+          "text": "Other",
+          "value": "Other"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    }
+  ],
+  "tabs": [],
+  "sections": [],
+  "buttons": [
+    {
+      "text": "A",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "A"
+    },
+    {
+      "text": "Get Items From",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Get Items From"
+    },
+    {
+      "text": "Save",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Save"
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "aria_label": "",
+      "title": "",
+      "name": "ERP"
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "aria_label": "",
+      "title": "Home",
+      "name": "Home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "aria_label": "",
+      "title": "Accounting",
+      "name": "Accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "aria_label": "",
+      "title": "Local Procurement",
+      "name": "Local Procurement"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "aria_label": "",
+      "title": "Import",
+      "name": "Import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "aria_label": "",
+      "title": "Merchandising",
+      "name": "Merchandising"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "aria_label": "",
+      "title": "Inventory",
+      "name": "Inventory"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "aria_label": "",
+      "title": "Assets",
+      "name": "Assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "aria_label": "",
+      "title": "Production",
+      "name": "Production"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "aria_label": "",
+      "title": "Quality",
+      "name": "Quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "aria_label": "",
+      "title": "Planning",
+      "name": "Planning"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "aria_label": "",
+      "title": "Support",
+      "name": "Support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "aria_label": "",
+      "title": "CRM",
+      "name": "CRM"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "aria_label": "",
+      "title": "Settings",
+      "name": "Settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "aria_label": "",
+      "title": "",
+      "name": "Collapse"
+    },
+    {
+      "text": "Requisition",
+      "href": "/app/material-request",
+      "aria_label": "",
+      "title": "",
+      "name": "Requisition"
+    },
+    {
+      "text": "",
+      "href": "/app/company/Dabiruddin%20Spinning%20Mills%20Ltd.",
+      "aria_label": "",
+      "title": "Open Link",
+      "name": "Open Link"
+    }
+  ],
+  "normalization": {
+    "status": "NORMALIZED",
+    "doctype_cleaned": true,
+    "search_name_preserved_as_new": true,
+    "duplicates_removed": true
+  }
+}

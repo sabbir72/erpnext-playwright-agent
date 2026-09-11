@@ -1,0 +1,575 @@
+{
+  "doctype": "Company Budget",
+  "search_name": "New Company Budget",
+  "action": "New",
+  "module": "",
+  "url": "https://stage2-salma.altersense.net/app/budget/new-budget-qwdbfeerti",
+  "route": "/app/budget/new-budget-qwdbfeerti",
+  "read_mode": "blank_new_document",
+  "fields": [
+    {
+      "fieldname": "__section_1",
+      "label": "__section_1",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "BUDGET-.########",
+          "value": "BUDGET-.########"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_1",
+      "label": "__column_1",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "BUDGET-.########",
+          "value": "BUDGET-.########"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "naming_series",
+      "label": "Series",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "BUDGET-.########",
+          "value": "BUDGET-.########"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "budget_against",
+      "label": "Budget Against",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "Cost Center",
+          "value": "Cost Center"
+        },
+        {
+          "text": "Project",
+          "value": "Project"
+        },
+        {
+          "text": "Branch",
+          "value": "Branch"
+        },
+        {
+          "text": "Department",
+          "value": "Department"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "group_budget_section_end",
+      "label": "group_budget_section_end",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_3",
+      "label": "__column_3",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_3",
+      "label": "column_break_3",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "fiscal_year",
+      "label": "Fiscal Year",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "month",
+      "label": "Month",
+      "fieldtype": "Select",
+      "required": false,
+      "options": [
+        {
+          "text": "January",
+          "value": "January"
+        },
+        {
+          "text": "February",
+          "value": "February"
+        },
+        {
+          "text": "March",
+          "value": "March"
+        },
+        {
+          "text": "April",
+          "value": "April"
+        },
+        {
+          "text": "May",
+          "value": "May"
+        },
+        {
+          "text": "June",
+          "value": "June"
+        },
+        {
+          "text": "July",
+          "value": "July"
+        },
+        {
+          "text": "August",
+          "value": "August"
+        },
+        {
+          "text": "September",
+          "value": "September"
+        },
+        {
+          "text": "October",
+          "value": "October"
+        },
+        {
+          "text": "November",
+          "value": "November"
+        },
+        {
+          "text": "December",
+          "value": "December"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "control_action_for_cumulative_expense_section",
+      "label": "Applicable on Cumulative Expense",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_6",
+      "label": "Applicable on Cumulative Expense",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "applicable_on_cumulative_expense",
+      "label": "Applicable on Cumulative Expense",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "section_break_zkfwj",
+      "label": "Budget Account Details",
+      "fieldtype": "Check",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_10",
+      "label": "Budget Account Details",
+      "fieldtype": "Check",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "budget_account_details",
+      "label": "Budget Account Details",
+      "fieldtype": "Check",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "budget_head",
+      "label": "budget_head",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "budget_requisition",
+      "label": "budget_requisition",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "account",
+      "label": "account",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "asking_amount",
+      "label": "asking_amount",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "budget_amount",
+      "label": "budget_amount",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "carry_forwarded_amount",
+      "label": "carry_forwarded_amount",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "is_carry_forwarding",
+      "label": "is_carry_forwarding",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "department",
+      "label": "department",
+      "fieldtype": "unknown",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "cost_center",
+      "label": "cost_center",
+      "fieldtype": "unknown",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "branch",
+      "label": "branch",
+      "fieldtype": "unknown",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "section_break_4lrcu",
+      "label": "Consolidate Account Wise",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "section_breakerwaz",
+      "label": "Consolidate Account Wise",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "consolidate_account_wise",
+      "label": "Consolidate Account Wise",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_9ppwz",
+      "label": "Consolidate Cost Center Wise",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "consolidate_cost_center_wise",
+      "label": "Consolidate Cost Center Wise",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_rrc7q",
+      "label": "Consolidate Budget Head Wise",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "consolidate_budget_head_wise",
+      "label": "Consolidate Budget Head Wise",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_dwiz1",
+      "label": "Consolidate Department Wise",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "consolidate_department_wise",
+      "label": "Consolidate Department Wise",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    }
+  ],
+  "tabs": [],
+  "sections": [
+    {
+      "name": "Control Action for Cumulative Expense"
+    }
+  ],
+  "buttons": [
+    {
+      "text": "A",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "A"
+    },
+    {
+      "text": "Get Items From",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Get Items From"
+    },
+    {
+      "text": "Save",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Save"
+    },
+    {
+      "text": "Add Row",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Add Row"
+    },
+    {
+      "text": "Download",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Download"
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "aria_label": "",
+      "title": "",
+      "name": "ERP"
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "aria_label": "",
+      "title": "Home",
+      "name": "Home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "aria_label": "",
+      "title": "Accounting",
+      "name": "Accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "aria_label": "",
+      "title": "Local Procurement",
+      "name": "Local Procurement"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "aria_label": "",
+      "title": "Import",
+      "name": "Import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "aria_label": "",
+      "title": "Merchandising",
+      "name": "Merchandising"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "aria_label": "",
+      "title": "Inventory",
+      "name": "Inventory"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "aria_label": "",
+      "title": "Assets",
+      "name": "Assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "aria_label": "",
+      "title": "Production",
+      "name": "Production"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "aria_label": "",
+      "title": "Quality",
+      "name": "Quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "aria_label": "",
+      "title": "Planning",
+      "name": "Planning"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "aria_label": "",
+      "title": "Support",
+      "name": "Support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "aria_label": "",
+      "title": "CRM",
+      "name": "CRM"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "aria_label": "",
+      "title": "Settings",
+      "name": "Settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "aria_label": "",
+      "title": "",
+      "name": "Collapse"
+    },
+    {
+      "text": "Company Budget",
+      "href": "/app/budget",
+      "aria_label": "",
+      "title": "",
+      "name": "Company Budget"
+    }
+  ],
+  "normalization": {
+    "status": "NORMALIZED",
+    "doctype_cleaned": true,
+    "search_name_preserved_as_new": true,
+    "duplicates_removed": true
+  }
+}

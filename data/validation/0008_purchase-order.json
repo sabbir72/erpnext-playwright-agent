@@ -1,0 +1,100 @@
+{
+  "file": "0008_purchase-order.json",
+  "status": "FAILED",
+  "doctype": "Purchase Order",
+  "checked_at": "2026-09-11T16:54:10",
+  "issues": [
+    {
+      "severity": "WARNING",
+      "message": "field '__details' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'connections_tab' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'column_break_nxrvs' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'cus_column_break_04' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'column_break_hjuii' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'col_break_address' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'column_break_lzhdf' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'item_code' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'item_name' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'qty' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'uom' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'rate' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'amount' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'country_of_origin' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'sb_last_purchase' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field '__column_10' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'total_qty' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'column_break_26' has unknown fieldtype"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'total' has unknown fieldtype"
+    },
+    {
+      "severity": "ERROR",
+      "message": "duplicate fieldname: __details"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field '__details' has unknown fieldtype"
+    },
+    {
+      "severity": "ERROR",
+      "message": "duplicate fieldname: connections_tab"
+    },
+    {
+      "severity": "WARNING",
+      "message": "field 'connections_tab' has unknown fieldtype"
+    }
+  ]
+}

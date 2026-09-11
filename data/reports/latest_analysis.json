@@ -1,0 +1,748 @@
+{
+  "analysis_version": "1.0",
+  "status": "FAIL",
+  "doctype": "Contract",
+  "document_name": "Contract",
+  "search_name": "New Contract",
+  "execution_status": "EXECUTED",
+  "current_url": "https://stage2-salma.altersense.net/app/home",
+  "safety": {
+    "existing_documents_skipped": true,
+    "business_data_mutated": false,
+    "blocked_business_mutations": true,
+    "system_ui_blocked": true
+  },
+  "summary": {
+    "total": 103,
+    "passed": 3,
+    "failed": 19,
+    "blocked": 0,
+    "deferred": 28,
+    "skipped": 53
+  },
+  "failures": [
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "A",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"A\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "Add Row",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"Add Row\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "Add Multiple",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"Add Multiple\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "Download",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"Download\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "bold",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"bold\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "italic",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"italic\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "underline",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"underline\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "strike",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"strike\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "clean",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"clean\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "blockquote",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"blockquote\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "code-block",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"code-block\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "direction: rtl",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"direction: rtl\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "link",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"link\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "image",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"image\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "list: ordered",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"list: ordered\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "list: bullet",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"list: bullet\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "list: check",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"list: check\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "indent: -1",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"indent: -1\", exact=True)"
+    },
+    {
+      "type": "execution_failure",
+      "fieldname": "",
+      "label": "indent: +1",
+      "fieldtype": "",
+      "action": "inspect",
+      "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"indent: +1\", exact=True)"
+    }
+  ],
+  "blocked_actions": [],
+  "deferred_actions": [
+    {
+      "action": "login",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "open_home",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "global_search",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "open_blank_new_document",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_form_top_to_bottom",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_section",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_section",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_section",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_section",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_section",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_section",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_section",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    },
+    {
+      "action": "inspect_link_relation",
+      "owner": "Navigator",
+      "reason": "Navigation action is handled by navigator.py"
+    }
+  ],
+  "skipped_actions": [
+    {
+      "fieldname": "__section_1",
+      "label": "__section_1",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "__column_1",
+      "label": "__column_1",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "blanket_order_no",
+      "label": "Contract No",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "material_type",
+      "label": "Material Type",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "column_break_8",
+      "label": "Posting Date",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "posting_date",
+      "label": "Posting Date",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "contract_date",
+      "label": "Contract Date",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "column_break_xseap",
+      "label": "Company",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "contract_validity",
+      "label": "Contract Validity",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "sourcing_from",
+      "label": "Sourcing From",
+      "fieldtype": "select",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "payment_term",
+      "label": "Payment Term",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "custom_column_break_hcd0c",
+      "label": "custom_column_break_hcd0c",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "column_break_hwcyp",
+      "label": "column_break_hwcyp",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "column_break_8bdo6",
+      "label": "column_break_8bdo6",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "column_break_wm4vm",
+      "label": "column_break_wm4vm",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "currency_and_exchange_rate",
+      "label": "Supplier Currency",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "__column_4",
+      "label": "Supplier Currency",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "currency",
+      "label": "Supplier Currency",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "column_break_jwaug",
+      "label": "Exchange Rate",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "section_break_12",
+      "label": "section_break_12",
+      "fieldtype": "check",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "__column_5",
+      "label": "__column_5",
+      "fieldtype": "check",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "items",
+      "label": "items",
+      "fieldtype": "check",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "item_code",
+      "label": "item_code",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "item_name",
+      "label": "item_name",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "purchase_qty",
+      "label": "purchase_qty",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "purchase_uom",
+      "label": "purchase_uom",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "qty",
+      "label": "qty",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "rate_type",
+      "label": "rate_type",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "base_price_clb",
+      "label": "base_price_clb",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "ice_index_clb",
+      "label": "ice_index_clb",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "rate_usc",
+      "label": "rate_usc",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "tolerance",
+      "label": "tolerance",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "freight_charges",
+      "label": "Is Freight Included",
+      "fieldtype": "check",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "__column_6",
+      "label": "Is Freight Included",
+      "fieldtype": "check",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "is_freight_included",
+      "label": "Is Freight Included",
+      "fieldtype": "check",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "column_break_itsma",
+      "label": "column_break_itsma",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "column_break_eoj4s",
+      "label": "column_break_eoj4s",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "column_break_3yfdv",
+      "label": "Freight (BDT)",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "freight",
+      "label": "Freight (BDT)",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "column_break_5pux7",
+      "label": "column_break_5pux7",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "cus_section_break_01",
+      "label": "cus_section_break_01",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "__column_7",
+      "label": "__column_7",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "prior_fix_quantity",
+      "label": "Prior fix quantity",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "contract_balance_quantity",
+      "label": "Contract Balance Quantity",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "cus_column_break_01",
+      "label": "cus_column_break_01",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "total",
+      "label": "Total Amount (BDT)",
+      "fieldtype": "unknown",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "section_break_bi98z",
+      "label": "Quality Inspection Template",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "terms_and_conditions_section",
+      "label": "Terms",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "__column_11",
+      "label": "Terms",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "tc_name",
+      "label": "Terms",
+      "fieldtype": "data",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "terms",
+      "label": "Terms and Conditions Details",
+      "fieldtype": "select",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "button": "Save",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "business mutation blocked"
+    }
+  ],
+  "evidence": {
+    "screenshots": []
+  },
+  "recommendation": "Execution failure detected. Check failed fields/buttons, locator strategy and screenshots before retrying."
+}

@@ -1,0 +1,713 @@
+{
+  "doctype": "Lead",
+  "search_name": "New Lead",
+  "action": "New",
+  "module": "CRM",
+  "url": "https://stage2-salma.altersense.net/app/lead/new-lead-uuvmxjvjyf",
+  "route": "/app/lead/new-lead-uuvmxjvjyf",
+  "read_mode": "blank_new_document",
+  "fields": [
+    {
+      "fieldname": "__section_1",
+      "label": "__section_1",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "CRM-LEAD-.YYYY.-",
+          "value": "CRM-LEAD-.YYYY.-"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_1",
+      "label": "__column_1",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "CRM-LEAD-.YYYY.-",
+          "value": "CRM-LEAD-.YYYY.-"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "naming_series",
+      "label": "Series",
+      "fieldtype": "Select",
+      "required": false,
+      "options": [
+        {
+          "text": "CRM-LEAD-.YYYY.-",
+          "value": "CRM-LEAD-.YYYY.-"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "salutation",
+      "label": "Salutation",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "first_name",
+      "label": "First Name",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "middle_name",
+      "label": "Middle Name",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "last_name",
+      "label": "Last Name",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_1",
+      "label": "column_break_1",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "job_title",
+      "label": "Job Title",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "gender",
+      "label": "Gender",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "col_break123",
+      "label": "Lead Owner",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "lead_owner",
+      "label": "Lead Owner",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "Lead",
+          "value": "Lead"
+        },
+        {
+          "text": "Open",
+          "value": "Open"
+        },
+        {
+          "text": "Replied",
+          "value": "Replied"
+        },
+        {
+          "text": "Opportunity",
+          "value": "Opportunity"
+        },
+        {
+          "text": "Sales PI",
+          "value": "Quotation"
+        },
+        {
+          "text": "Lost Quotation",
+          "value": "Lost Quotation"
+        },
+        {
+          "text": "Interested",
+          "value": "Interested"
+        },
+        {
+          "text": "Converted",
+          "value": "Converted"
+        },
+        {
+          "text": "Do Not Contact",
+          "value": "Do Not Contact"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "type",
+      "label": "Lead Type",
+      "fieldtype": "Select",
+      "required": false,
+      "options": [
+        {
+          "text": "Client",
+          "value": "Client"
+        },
+        {
+          "text": "Channel Partner",
+          "value": "Channel Partner"
+        },
+        {
+          "text": "Consultant",
+          "value": "Consultant"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "request_type",
+      "label": "Request Type",
+      "fieldtype": "Select",
+      "required": false,
+      "options": [
+        {
+          "text": "Product Enquiry",
+          "value": "Product Enquiry"
+        },
+        {
+          "text": "Request for Information",
+          "value": "Request for Information"
+        },
+        {
+          "text": "Suggestions",
+          "value": "Suggestions"
+        },
+        {
+          "text": "Other",
+          "value": "Other"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "contact_info_tab",
+      "label": "Email",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_2",
+      "label": "Email",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "email_id",
+      "label": "Email",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "website",
+      "label": "Website",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_20",
+      "label": "Mobile No",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "mobile_no",
+      "label": "Mobile No",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "whatsapp_no",
+      "label": "WhatsApp",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_16",
+      "label": "Phone",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "phone",
+      "label": "Phone",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "phone_ext",
+      "label": "Phone Ext.",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "organization_section",
+      "label": "Organization Name",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_3",
+      "label": "Organization Name",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "company_name",
+      "label": "Organization Name",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "no_of_employees",
+      "label": "No of Employees",
+      "fieldtype": "Select",
+      "required": false,
+      "options": [
+        {
+          "text": "1-10",
+          "value": "1-10"
+        },
+        {
+          "text": "11-50",
+          "value": "11-50"
+        },
+        {
+          "text": "51-200",
+          "value": "51-200"
+        },
+        {
+          "text": "201-500",
+          "value": "201-500"
+        },
+        {
+          "text": "501-1000",
+          "value": "501-1000"
+        },
+        {
+          "text": "1000+",
+          "value": "1000+"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_28",
+      "label": "Annual Revenue",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "annual_revenue",
+      "label": "Annual Revenue",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "industry",
+      "label": "Industry",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "market_segment",
+      "label": "Market Segment",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_31",
+      "label": "Territory",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "territory",
+      "label": "Territory",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "fax",
+      "label": "Fax",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "address_section",
+      "label": "City",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "section_break_analytics",
+      "label": "Source",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_5",
+      "label": "Source",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "utm_source",
+      "label": "Source",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "utm_content",
+      "label": "Content",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_gkxo",
+      "label": "Campaign",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "utm_campaign",
+      "label": "Campaign",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_gqka",
+      "label": "Medium",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "utm_medium",
+      "label": "Medium",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "qualification_tab",
+      "label": "Qualification Status",
+      "fieldtype": "Select",
+      "required": false,
+      "options": [
+        {
+          "text": "Unqualified",
+          "value": "Unqualified"
+        },
+        {
+          "text": "In Process",
+          "value": "In Process"
+        },
+        {
+          "text": "Qualified",
+          "value": "Qualified"
+        }
+      ],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "other_info_tab",
+      "label": "Company",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    }
+  ],
+  "tabs": [],
+  "sections": [
+    {
+      "name": "Contact Info"
+    },
+    {
+      "name": "Organization"
+    },
+    {
+      "name": "Address & Contacts"
+    },
+    {
+      "name": "Analytics"
+    },
+    {
+      "name": "Qualification"
+    },
+    {
+      "name": "Additional Information"
+    }
+  ],
+  "buttons": [
+    {
+      "text": "A",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "A"
+    },
+    {
+      "text": "Save",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Save"
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "aria_label": "",
+      "title": "",
+      "name": "ERP"
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "aria_label": "",
+      "title": "Home",
+      "name": "Home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "aria_label": "",
+      "title": "Accounting",
+      "name": "Accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "aria_label": "",
+      "title": "Local Procurement",
+      "name": "Local Procurement"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "aria_label": "",
+      "title": "Import",
+      "name": "Import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "aria_label": "",
+      "title": "Merchandising",
+      "name": "Merchandising"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "aria_label": "",
+      "title": "Inventory",
+      "name": "Inventory"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "aria_label": "",
+      "title": "Assets",
+      "name": "Assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "aria_label": "",
+      "title": "Production",
+      "name": "Production"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "aria_label": "",
+      "title": "Quality",
+      "name": "Quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "aria_label": "",
+      "title": "Planning",
+      "name": "Planning"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "aria_label": "",
+      "title": "Support",
+      "name": "Support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "aria_label": "",
+      "title": "CRM",
+      "name": "CRM"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "aria_label": "",
+      "title": "Settings",
+      "name": "Settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "aria_label": "",
+      "title": "",
+      "name": "Collapse"
+    },
+    {
+      "text": "Lead",
+      "href": "/app/lead",
+      "aria_label": "",
+      "title": "",
+      "name": "Lead"
+    }
+  ],
+  "normalization": {
+    "status": "NORMALIZED",
+    "doctype_cleaned": true,
+    "search_name_preserved_as_new": true,
+    "duplicates_removed": true
+  }
+}

@@ -2,7 +2,7 @@
   "file": "0001_company-budget.json",
   "status": "PASSED",
   "doctype": "Company Budget",
-  "checked_at": "2026-09-10T14:27:44",
+  "checked_at": "2026-09-11T16:54:10",
   "issues": [
     {
       "severity": "WARNING",

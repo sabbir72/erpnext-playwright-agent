@@ -1,0 +1,355 @@
+{
+  "doctype": "Customer/Buyer",
+  "search_name": "New Customer/Buyer",
+  "action": "New",
+  "module": "CRM",
+  "url": "https://stage2-salma.altersense.net/app/home",
+  "route": "/app/home",
+  "read_mode": "blank_new_document",
+  "fields": [
+    {
+      "fieldname": "__section_1",
+      "label": "Customer Name",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_1",
+      "label": "Customer Name",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "customer_name",
+      "label": "Customer Name",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "country",
+      "label": "Country",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__section_2",
+      "label": "First Name",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    },
+    {
+      "fieldname": "__section_3",
+      "label": "Address Line 1",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": ""
+    }
+  ],
+  "tabs": [],
+  "sections": [
+    {
+      "name": "Primary Contact Details"
+    },
+    {
+      "name": "Primary Address Details"
+    }
+  ],
+  "buttons": [
+    {
+      "text": "A",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "A"
+    },
+    {
+      "text": "New",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "New"
+    },
+    {
+      "text": "Edit",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Edit"
+    },
+    {
+      "text": "Edit Full Form",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Edit Full Form"
+    },
+    {
+      "text": "Save",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Save"
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "aria_label": "",
+      "title": "",
+      "name": "ERP"
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "aria_label": "",
+      "title": "Home",
+      "name": "Home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "aria_label": "",
+      "title": "Accounting",
+      "name": "Accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "aria_label": "",
+      "title": "Local Procurement",
+      "name": "Local Procurement"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "aria_label": "",
+      "title": "Import",
+      "name": "Import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "aria_label": "",
+      "title": "Merchandising",
+      "name": "Merchandising"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "aria_label": "",
+      "title": "Inventory",
+      "name": "Inventory"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "aria_label": "",
+      "title": "Assets",
+      "name": "Assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "aria_label": "",
+      "title": "Production",
+      "name": "Production"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "aria_label": "",
+      "title": "Quality",
+      "name": "Quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "aria_label": "",
+      "title": "Planning",
+      "name": "Planning"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "aria_label": "",
+      "title": "Support",
+      "name": "Support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "aria_label": "",
+      "title": "CRM",
+      "name": "CRM"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "aria_label": "",
+      "title": "Settings",
+      "name": "Settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "aria_label": "",
+      "title": "",
+      "name": "Collapse"
+    },
+    {
+      "text": "Chart of Accounts",
+      "href": "/app/account",
+      "aria_label": "",
+      "title": "Chart of Accounts",
+      "name": "Chart of Accounts"
+    },
+    {
+      "text": "Company",
+      "href": "/app/company",
+      "aria_label": "",
+      "title": "Company",
+      "name": "Company"
+    },
+    {
+      "text": "Customer/Buyer",
+      "href": "/app/customer",
+      "aria_label": "",
+      "title": "Customer/Buyer",
+      "name": "Customer/Buyer"
+    },
+    {
+      "text": "Supplier",
+      "href": "/app/supplier",
+      "aria_label": "",
+      "title": "Supplier",
+      "name": "Supplier"
+    },
+    {
+      "text": "Product",
+      "href": "/app/item",
+      "aria_label": "",
+      "title": "Product",
+      "name": "Product"
+    },
+    {
+      "text": "Store",
+      "href": "/app/warehouse",
+      "aria_label": "",
+      "title": "Store",
+      "name": "Store"
+    },
+    {
+      "text": "Brand",
+      "href": "/app/brand",
+      "aria_label": "",
+      "title": "Brand",
+      "name": "Brand"
+    },
+    {
+      "text": "Unit of Measure (UOM)",
+      "href": "/app/uom",
+      "aria_label": "",
+      "title": "Unit of Measure (UOM)",
+      "name": "Unit of Measure (UOM)"
+    },
+    {
+      "text": "Stock Reconciliation",
+      "href": "/app/stock-reconciliation",
+      "aria_label": "",
+      "title": "Stock Reconciliation",
+      "name": "Stock Reconciliation"
+    },
+    {
+      "text": "Lead",
+      "href": "/app/lead",
+      "aria_label": "",
+      "title": "Lead",
+      "name": "Lead"
+    },
+    {
+      "text": "Customer Group",
+      "href": "/app/customer-group",
+      "aria_label": "",
+      "title": "Customer Group",
+      "name": "Customer Group"
+    },
+    {
+      "text": "Territory",
+      "href": "/app/territory",
+      "aria_label": "",
+      "title": "Territory",
+      "name": "Territory"
+    },
+    {
+      "text": "Import Data",
+      "href": "/app/data-import",
+      "aria_label": "",
+      "title": "Import Data",
+      "name": "Import Data"
+    },
+    {
+      "text": "Opening Invoice Creation Tool",
+      "href": "/app/opening-invoice-creation-tool",
+      "aria_label": "",
+      "title": "Opening Invoice Creation Tool",
+      "name": "Opening Invoice Creation Tool"
+    },
+    {
+      "text": "Chart of Accounts Importer",
+      "href": "/app/chart-of-accounts-importer",
+      "aria_label": "",
+      "title": "Chart of Accounts Importer",
+      "name": "Chart of Accounts Importer"
+    },
+    {
+      "text": "Letter Head",
+      "href": "/app/letter-head",
+      "aria_label": "",
+      "title": "Letter Head",
+      "name": "Letter Head"
+    },
+    {
+      "text": "Email Account",
+      "href": "/app/email-account",
+      "aria_label": "",
+      "title": "Email Account",
+      "name": "Email Account"
+    },
+    {
+      "text": "finance",
+      "href": "/app/employee/view/report/finance",
+      "aria_label": "",
+      "title": "finance",
+      "name": "finance"
+    }
+  ],
+  "normalization": {
+    "status": "NORMALIZED",
+    "doctype_cleaned": true,
+    "search_name_preserved_as_new": true,
+    "duplicates_removed": true
+  }
+}

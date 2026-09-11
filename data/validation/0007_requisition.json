@@ -1,0 +1,12 @@
+{
+  "file": "0007_requisition.json",
+  "status": "PASSED",
+  "doctype": "Requisition",
+  "checked_at": "2026-09-11T16:54:10",
+  "issues": [
+    {
+      "severity": "WARNING",
+      "message": "field 'procurement_type' has unknown fieldtype"
+    }
+  ]
+}

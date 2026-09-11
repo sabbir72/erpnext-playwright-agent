@@ -2,7 +2,7 @@
   "file": "0003_opportunity.json",
   "status": "FAILED",
   "doctype": "Opportunity",
-  "checked_at": "2026-09-10T14:27:44",
+  "checked_at": "2026-09-11T16:54:10",
   "issues": [
     {
       "severity": "WARNING",

@@ -196,7 +196,7 @@ python discovery/discovery_agent.py \
 
 9. What to Check After Discovery
 
-Terminal outputে দেখবেন:
+Terminal output দেখবেন:
 
 LOGIN SUCCESS
 MODULE DOCTYPE FOUND: Lead

@@ -1,0 +1,920 @@
+{
+  "knowledge_type": "erpnext_doctype",
+  "schema_version": "2.1",
+  "module": "",
+  "doctype": "Requisition",
+  "document_name": "Requisition",
+  "search_name": "New Requisition",
+  "action": "New",
+  "read_mode": "blank_new_document",
+  "existing_documents_skipped": true,
+  "url": "https://stage2-salma.altersense.net/app/material-request/new-material-request-zxxvzjzoqr",
+  "route": "/app/material-request/new-material-request-zxxvzjzoqr",
+  "title": "New Requisition",
+  "text": "ERP Home Accounting Local Procurement Import Merchandising Inventory Assets Production Quality Planning Support CRM Settings Collapse Requisition No new notifications Help A New Requisition Not Saved Workflow: Draft Get Items From Save Company Begin typing for results. company Sourcing From Local Import sourcing_from User Branch Begin typing for results. user_branch Procurement Location Begin typing for results. procurement_location Cash IOU Skip RFQ / Supplier Quotation and raise the Purchase Order directly. Can be set after approval; locked once a Purchase Order exists. cash_iou Cost Center Begin typing for results. cost_center Requisition Date transaction_date Department Begin typing for results. department Required Date schedule_date Procurement Type PO (Goods) procurement_type Purpose Reason this requisition is being raised. Flows to the Purchase Order (editable there). purpose Material Type Begin typing for results. material_type Requisition Type Begin typing for results. requisition_type Material Category Raw Material Fixed Asset General material_category Material Sub Category Cotton Non Cotton Chemical Packaging Material Other material_sub_category September, 2026 SU MO TU WE TH FR SA 30 31 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 1 2 3 Today September, 2026 SU MO TU WE TH FR SA 30 31 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 1 2 3 Today",
+  "fields": [
+    {
+      "fieldname": "type_section",
+      "label": "Company",
+      "fieldtype": "Data",
+      "value": "Dabiruddin Spinning Mills Ltd.",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"type_section\"]",
+        "name": "type_section",
+        "label": "Company"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "__column_2",
+      "label": "Company",
+      "fieldtype": "Data",
+      "value": "Dabiruddin Spinning Mills Ltd.",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"__column_2\"]",
+        "name": "__column_2",
+        "label": "Company"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Data",
+      "value": "Dabiruddin Spinning Mills Ltd.",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"company\"]",
+        "name": "company",
+        "label": "Company"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "sourcing_from",
+      "label": "Sourcing From",
+      "fieldtype": "Select",
+      "value": "Local",
+      "required": false,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "Local",
+          "value": "Local"
+        },
+        {
+          "text": "Import",
+          "value": "Import"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"sourcing_from\"]",
+        "name": "sourcing_from",
+        "label": "Sourcing From"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "user_branch",
+      "label": "User Branch",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"user_branch\"]",
+        "name": "user_branch",
+        "label": "User Branch"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "procurement_location",
+      "label": "Procurement Location",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"procurement_location\"]",
+        "name": "procurement_location",
+        "label": "Procurement Location"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "cash_iou",
+      "label": "Cash IOU",
+      "fieldtype": "Check",
+      "value": false,
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "check",
+        "uncheck"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"cash_iou\"]",
+        "name": "cash_iou",
+        "label": "Cash IOU"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": true,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break_2",
+      "label": "Cost Center",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break_2\"]",
+        "name": "column_break_2",
+        "label": "Cost Center"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "cost_center",
+      "label": "Cost Center",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"cost_center\"]",
+        "name": "cost_center",
+        "label": "Cost Center"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "transaction_date",
+      "label": "Requisition Date",
+      "fieldtype": "Data",
+      "value": "11-09-2026",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"transaction_date\"]",
+        "name": "transaction_date",
+        "label": "Requisition Date"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "cus_column_break_01",
+      "label": "Department",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"cus_column_break_01\"]",
+        "name": "cus_column_break_01",
+        "label": "Department"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "department",
+      "label": "Department",
+      "fieldtype": "Data",
+      "value": "",
+      "required": false,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"department\"]",
+        "name": "department",
+        "label": "Department"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "schedule_date",
+      "label": "Required Date",
+      "fieldtype": "Data",
+      "value": "11-09-2026",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"schedule_date\"]",
+        "name": "schedule_date",
+        "label": "Required Date"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "procurement_type",
+      "label": "Procurement Type",
+      "fieldtype": "unknown",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"procurement_type\"]",
+        "name": "procurement_type",
+        "label": "Procurement Type"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "purpose",
+      "label": "Purpose",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"purpose\"]",
+        "name": "purpose",
+        "label": "Purpose"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "column_break5",
+      "label": "column_break5",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"column_break5\"]",
+        "name": "column_break5",
+        "label": "column_break5"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "material_type",
+      "label": "Material Type",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"material_type\"]",
+        "name": "material_type",
+        "label": "Material Type"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "requisition_type",
+      "label": "Requisition Type",
+      "fieldtype": "Data",
+      "value": "",
+      "required": true,
+      "placeholder": "",
+      "options": [],
+      "actions": [
+        "fill",
+        "clear"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"requisition_type\"]",
+        "name": "requisition_type",
+        "label": "Requisition Type"
+      },
+      "testability": {
+        "can_fill": true,
+        "can_select": false,
+        "can_check": false,
+        "can_clear": true
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "material_category",
+      "label": "Material Category",
+      "fieldtype": "Select",
+      "value": "Raw Material",
+      "required": true,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "Raw Material",
+          "value": "Raw Material"
+        },
+        {
+          "text": "Fixed Asset",
+          "value": "Fixed Asset"
+        },
+        {
+          "text": "General",
+          "value": "General"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"material_category\"]",
+        "name": "material_category",
+        "label": "Material Category"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    },
+    {
+      "fieldname": "material_sub_category",
+      "label": "Material Sub Category",
+      "fieldtype": "Select",
+      "value": "Cotton",
+      "required": true,
+      "placeholder": "",
+      "options": [
+        {
+          "text": "Cotton",
+          "value": "Cotton"
+        },
+        {
+          "text": "Non Cotton",
+          "value": "Non Cotton"
+        },
+        {
+          "text": "Chemical",
+          "value": "Chemical"
+        },
+        {
+          "text": "Packaging Material",
+          "value": "Packaging Material"
+        },
+        {
+          "text": "Other",
+          "value": "Other"
+        }
+      ],
+      "actions": [
+        "select"
+      ],
+      "locator_hints": {
+        "fieldname": "[data-fieldname=\"material_sub_category\"]",
+        "name": "material_sub_category",
+        "label": "Material Sub Category"
+      },
+      "testability": {
+        "can_fill": false,
+        "can_select": true,
+        "can_check": false,
+        "can_clear": false
+      },
+      "tab": ""
+    }
+  ],
+  "tabs": [],
+  "tab_observations": [],
+  "sections": [],
+  "buttons": [
+    {
+      "text": "A",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Get Items From",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    },
+    {
+      "text": "Save",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click"
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "aria_label": "",
+      "title": ""
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "aria_label": "",
+      "title": "Home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "aria_label": "",
+      "title": "Accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "aria_label": "",
+      "title": "Local Procurement"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "aria_label": "",
+      "title": "Import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "aria_label": "",
+      "title": "Merchandising"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "aria_label": "",
+      "title": "Inventory"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "aria_label": "",
+      "title": "Assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "aria_label": "",
+      "title": "Production"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "aria_label": "",
+      "title": "Quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "aria_label": "",
+      "title": "Planning"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "aria_label": "",
+      "title": "Support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "aria_label": "",
+      "title": "CRM"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "aria_label": "",
+      "title": "Settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "aria_label": "",
+      "title": ""
+    },
+    {
+      "text": "Requisition",
+      "href": "/app/material-request",
+      "aria_label": "",
+      "title": ""
+    },
+    {
+      "text": "",
+      "href": "/app/company/Dabiruddin%20Spinning%20Mills%20Ltd.",
+      "aria_label": "",
+      "title": "Open Link"
+    }
+  ],
+  "elements": [
+    {
+      "tag": "a",
+      "text": "ERP",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "app-switcher-dropdown",
+      "system_ui": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "",
+      "class": "btn-reset drop-icon show-in-edit-mode",
+      "system_ui": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "id": "navbar-search",
+      "name": "",
+      "type": "text",
+      "placeholder": "Search or type a command (Ctrl + K)",
+      "aria_label": "",
+      "title": "",
+      "role": "combobox",
+      "value": "",
+      "data_fieldname": "",
+      "class": "form-control",
+      "system_ui": false
+    },
+    {
+      "tag": "select",
+      "text": "Local Import",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "sourcing_from",
+      "class": "input-with-feedback form-control ellipsis",
+      "system_ui": false
+    },
+    {
+      "tag": "textarea",
+      "text": "",
+      "id": "",
+      "name": "",
+      "type": "text",
+      "placeholder": "",
+      "aria_label": "",
+      "title": "",
+      "role": "",
+      "value": "",
+      "data_fieldname": "purpose",
+      "class": "input-with-feedback form-control bold",
+      "system_ui": false
+    }
+  ],
+  "navigation": {
+    "source": "blank_new_document",
+    "record_access_allowed": false,
+    "business_data_mutation": false
+  },
+  "system_ui_rules": {
+    "notification_detected": true,
+    "notification_click_allowed": false,
+    "notification_keywords": [
+      "bell",
+      "no new notifications",
+      "notification",
+      "notification icon",
+      "notifications"
+    ],
+    "workspace_click_allowed": false,
+    "generic_system_actions_allowed": false
+  },
+  "qa_knowledge": {
+    "form_read": true,
+    "business_data_created": false,
+    "business_data_saved": false,
+    "existing_record_opened": false,
+    "field_actions": [
+      "check",
+      "clear",
+      "fill",
+      "select",
+      "uncheck"
+    ],
+    "business_buttons": [
+      "A",
+      "Get Items From",
+      "Save"
+    ],
+    "validation_candidates": [
+      {
+        "fieldname": "type_section",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "__column_2",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "company",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "sourcing_from",
+        "required": false,
+        "fieldtype": "Select"
+      },
+      {
+        "fieldname": "user_branch",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "procurement_location",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "cash_iou",
+        "required": false,
+        "fieldtype": "Check"
+      },
+      {
+        "fieldname": "column_break_2",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "cost_center",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "transaction_date",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "cus_column_break_01",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "department",
+        "required": false,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "schedule_date",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "procurement_type",
+        "required": true,
+        "fieldtype": "unknown"
+      },
+      {
+        "fieldname": "purpose",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "column_break5",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "material_type",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "requisition_type",
+        "required": true,
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "material_category",
+        "required": true,
+        "fieldtype": "Select"
+      },
+      {
+        "fieldname": "material_sub_category",
+        "required": true,
+        "fieldtype": "Select"
+      }
+    ]
+  },
+  "discovery_notes": {
+    "navigation": "Login -> ERPNext Home -> Global Search using 'New <DocType>' -> DocType List or blank New Document -> read all fields -> store main DocType without 'New'",
+    "doctype_validation": "DocType is accepted from a clean /app/<doctype> list route and the opened list page is UI-validated; no metadata API dependency.",
+    "record_rule": "Existing business documents are not opened for discovery; only the blank New Document form is inspected.",
+    "system_ui_rule": "Notification, Bell, Search, Filter, Settings, Workspace and other system UI are ignored and never treated as DocTypes.",
+    "field_rule": "Visible form fields are read for fieldname, label, fieldtype, required state, placeholder/options and available actions.",
+    "tab_section_rule": "Every visible form tab is opened and read one-by-one; fields are stored with tab context, and sections are collected from each tab.",
+    "scroll_rule": "Each form tab is scanned from top to bottom in multiple scroll positions so long forms and lazy-rendered fields are not missed.",
+    "blank_form_rule": "The agent reads the blank New Document without filling or saving business data.",
+    "ai_knowledge_rule": "The JSON is an observation record for future AI retrieval/planning, not a test execution result."
+  },
+  "discovery_summary": {
+    "doctype": "Requisition",
+    "field_count": 20,
+    "tab_count": 0,
+    "section_count": 0,
+    "button_count": 3,
+    "link_count": 17,
+    "element_count": 5,
+    "discovery_status": "completed"
+  }
+}
