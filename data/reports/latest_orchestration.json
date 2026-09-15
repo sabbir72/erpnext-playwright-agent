@@ -1,0 +1,224 @@
+{
+  "orchestration_version": "1.0",
+  "status": "COMPLETED",
+  "started_at": "2026-09-12T10:54:04",
+  "finished_at": "2026-09-12T10:59:04",
+  "task": "Create Contract flow test",
+  "doctype": "Contract",
+  "plan_file": "/home/eng-sabbir/Downloads/erpnext-playwright-agent/data/plans/latest_plan.json",
+  "execution_file": "/home/eng-sabbir/Downloads/erpnext-playwright-agent/data/executions/latest_execution.json",
+  "analysis_file": "/home/eng-sabbir/Downloads/erpnext-playwright-agent/data/reports/latest_analysis.json",
+  "steps": [
+    {
+      "step": "PLANNER",
+      "command": [
+        "/home/eng-sabbir/Downloads/erpnext-playwright-agent/.venv/bin/python",
+        "/home/eng-sabbir/Downloads/erpnext-playwright-agent/agent/planner.py",
+        "--task",
+        "Create Contract flow test",
+        "--doctype",
+        "Contract"
+      ],
+      "returncode": 0,
+      "status": "PASSED"
+    },
+    {
+      "step": "NAVIGATOR",
+      "command": [
+        "/home/eng-sabbir/Downloads/erpnext-playwright-agent/.venv/bin/python",
+        "/home/eng-sabbir/Downloads/erpnext-playwright-agent/agent/navigator.py",
+        "--plan",
+        "/home/eng-sabbir/Downloads/erpnext-playwright-agent/data/plans/latest_plan.json"
+      ],
+      "returncode": 0,
+      "status": "PASSED"
+    },
+    {
+      "step": "EXECUTOR",
+      "command": [
+        "/home/eng-sabbir/Downloads/erpnext-playwright-agent/.venv/bin/python",
+        "/home/eng-sabbir/Downloads/erpnext-playwright-agent/agent/executor.py",
+        "--plan",
+        "/home/eng-sabbir/Downloads/erpnext-playwright-agent/data/plans/latest_plan.json"
+      ],
+      "returncode": 0,
+      "status": "PASSED"
+    },
+    {
+      "step": "ANALYZER",
+      "command": [
+        "/home/eng-sabbir/Downloads/erpnext-playwright-agent/.venv/bin/python",
+        "/home/eng-sabbir/Downloads/erpnext-playwright-agent/agent/analyzer.py",
+        "--file",
+        "/home/eng-sabbir/Downloads/erpnext-playwright-agent/data/executions/latest_execution.json"
+      ],
+      "returncode": 0,
+      "status": "PASSED"
+    }
+  ],
+  "execution_summary": {
+    "total": 103,
+    "passed": 3,
+    "failed": 19,
+    "blocked": 0
+  },
+  "analysis_summary": {
+    "status": "FAIL",
+    "recommendation": "Execution failure detected. Check failed fields/buttons, locator strategy and screenshots before retrying.",
+    "failures": [
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "A",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"A\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "Add Row",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"Add Row\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "Add Multiple",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"Add Multiple\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "Download",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"Download\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "bold",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"bold\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "italic",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"italic\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "underline",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"underline\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "strike",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"strike\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "clean",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"clean\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "blockquote",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"blockquote\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "code-block",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"code-block\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "direction: rtl",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"direction: rtl\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "link",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"link\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "image",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"image\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "list: ordered",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"list: ordered\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "list: bullet",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"list: bullet\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "list: check",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"list: check\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "indent: -1",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"indent: -1\", exact=True)"
+      },
+      {
+        "type": "execution_failure",
+        "fieldname": "",
+        "label": "indent: +1",
+        "fieldtype": "",
+        "action": "inspect",
+        "error": "Locator.scroll_into_view_if_needed: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"indent: +1\", exact=True)"
+      }
+    ],
+    "blocked_actions": []
+  }
+}
