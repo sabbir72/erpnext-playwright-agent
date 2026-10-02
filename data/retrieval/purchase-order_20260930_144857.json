@@ -1,0 +1,1756 @@
+{
+  "retrieval_version": "1.0",
+  "retrieved_at": "2026-09-30T08:48:57.799209+00:00",
+  "query": "required fields",
+  "doctype_filter": "Purchase Order",
+  "result_count": 1,
+  "results": [
+    {
+      "score": 5.0,
+      "source_file": "data/discovery/0008_purchase-order.json",
+      "knowledge_type": "erpnext_doctype",
+      "doctype": "Purchase Order",
+      "reasons": [
+        "content:fields",
+        "field:required"
+      ],
+      "context": {
+        "doctype": "Purchase Order",
+        "fields": [
+          {
+            "fieldname": "schedule_date",
+            "label": "Required Date",
+            "fieldtype": "Date",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"schedule_date\"]",
+              "name": "schedule_date",
+              "label": "Required Date"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "supplier_section",
+            "label": "Company",
+            "fieldtype": "Link",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"supplier_section\"]",
+              "name": "supplier_section",
+              "label": "Company"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "company",
+            "label": "Company",
+            "fieldtype": "Link",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"company\"]",
+              "name": "company",
+              "label": "Company"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "material_type",
+            "label": "Material Type",
+            "fieldtype": "Link",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"material_type\"]",
+              "name": "material_type",
+              "label": "Material Type"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "cost_center",
+            "label": "Cost Center",
+            "fieldtype": "Link",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"cost_center\"]",
+              "name": "cost_center",
+              "label": "Cost Center"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "sourcing_from",
+            "label": "Sourcing From",
+            "fieldtype": "Select",
+            "required": true,
+            "options": [
+              {
+                "text": "Local",
+                "value": "Local"
+              },
+              {
+                "text": "Import",
+                "value": "Import"
+              }
+            ],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"sourcing_from\"]",
+              "name": "sourcing_from",
+              "label": "Sourcing From"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "user_branch",
+            "label": "User Branch",
+            "fieldtype": "Link",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"user_branch\"]",
+              "name": "user_branch",
+              "label": "User Branch"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "procurement_location",
+            "label": "Procurement Location",
+            "fieldtype": "Link",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"procurement_location\"]",
+              "name": "procurement_location",
+              "label": "Procurement Location"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "payment_terms",
+            "label": "Payment Terms",
+            "fieldtype": "Link",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"payment_terms\"]",
+              "name": "payment_terms",
+              "label": "Payment Terms"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "cash_iou",
+            "label": "Cash IOU",
+            "fieldtype": "Check",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "check",
+              "uncheck"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"cash_iou\"]",
+              "name": "cash_iou",
+              "label": "Cash IOU"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": false,
+              "can_check": true,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "cus_column_break_02",
+            "label": "Department",
+            "fieldtype": "Link",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"cus_column_break_02\"]",
+              "name": "cus_column_break_02",
+              "label": "Department"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "department",
+            "label": "Department",
+            "fieldtype": "Link",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"department\"]",
+              "name": "department",
+              "label": "Department"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "subject",
+            "label": "Subject",
+            "fieldtype": "Select",
+            "required": true,
+            "options": [
+              {
+                "text": "Purchase Order",
+                "value": "Purchase Order"
+              },
+              {
+                "text": "Service Work Order",
+                "value": "Service Work Order"
+              },
+              {
+                "text": "Purchase Order (Cotton)",
+                "value": "Purchase Order (Cotton)"
+              }
+            ],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"subject\"]",
+              "name": "subject",
+              "label": "Subject"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "purpose",
+            "label": "Purpose",
+            "fieldtype": "Small Text",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"purpose\"]",
+              "name": "purpose",
+              "label": "Purpose"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "cus_column_break_03",
+            "label": "PO Type",
+            "fieldtype": "Select",
+            "required": true,
+            "options": [
+              {
+                "text": "Independent",
+                "value": "Independent"
+              },
+              {
+                "text": "Requisition",
+                "value": "Requisition"
+              },
+              {
+                "text": "Supplier Quotation",
+                "value": "Supplier Quotation"
+              },
+              {
+                "text": "PCS",
+                "value": "PCS"
+              }
+            ],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"cus_column_break_03\"]",
+              "name": "cus_column_break_03",
+              "label": "PO Type"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "po_type",
+            "label": "PO Type",
+            "fieldtype": "Select",
+            "required": true,
+            "options": [
+              {
+                "text": "Independent",
+                "value": "Independent"
+              },
+              {
+                "text": "Requisition",
+                "value": "Requisition"
+              },
+              {
+                "text": "Supplier Quotation",
+                "value": "Supplier Quotation"
+              },
+              {
+                "text": "PCS",
+                "value": "PCS"
+              }
+            ],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"po_type\"]",
+              "name": "po_type",
+              "label": "PO Type"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "transaction_date",
+            "label": "PO Date",
+            "fieldtype": "Date",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"transaction_date\"]",
+              "name": "transaction_date",
+              "label": "PO Date"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "section_addresses",
+            "label": "Supplier",
+            "fieldtype": "Link",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"section_addresses\"]",
+              "name": "section_addresses",
+              "label": "Supplier"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "supplier",
+            "label": "Supplier",
+            "fieldtype": "Link",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"supplier\"]",
+              "name": "supplier",
+              "label": "Supplier"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "cus_column_break_04",
+            "label": "cus_column_break_04",
+            "fieldtype": "Small Text",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"cus_column_break_04\"]",
+              "name": "cus_column_break_04",
+              "label": "cus_column_break_04"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "col_break_address",
+            "label": "col_break_address",
+            "fieldtype": "Small Text",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"col_break_address\"]",
+              "name": "col_break_address",
+              "label": "col_break_address"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "shipping_address_section",
+            "label": "shipping_address_section",
+            "fieldtype": "Link",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"shipping_address_section\"]",
+              "name": "shipping_address_section",
+              "label": "shipping_address_section"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "currency_and_price_list",
+            "label": "Currency",
+            "fieldtype": "Link",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"currency_and_price_list\"]",
+              "name": "currency_and_price_list",
+              "label": "Currency"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "currency",
+            "label": "Currency",
+            "fieldtype": "Link",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"currency\"]",
+              "name": "currency",
+              "label": "Currency"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "cb_price_list",
+            "label": "cb_price_list",
+            "fieldtype": "Float",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"cb_price_list\"]",
+              "name": "cb_price_list",
+              "label": "cb_price_list"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "before_items_section",
+            "label": "Store",
+            "fieldtype": "Link",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"before_items_section\"]",
+              "name": "before_items_section",
+              "label": "Store"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "set_warehouse",
+            "label": "Store",
+            "fieldtype": "Link",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"set_warehouse\"]",
+              "name": "set_warehouse",
+              "label": "Store"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "items_section",
+            "label": "Product Details",
+            "fieldtype": "Table",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "add_row",
+              "remove_row"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"items_section\"]",
+              "name": "items_section",
+              "label": "Product Details"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": true
+            }
+          },
+          {
+            "fieldname": "items",
+            "label": "Product Details",
+            "fieldtype": "Table",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "add_row",
+              "remove_row"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"items\"]",
+              "name": "items",
+              "label": "Product Details"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": true
+            }
+          },
+          {
+            "fieldname": "item_code",
+            "label": "item_code",
+            "fieldtype": "Link",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"item_code\"]",
+              "name": "item_code",
+              "label": "item_code"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "item_name",
+            "label": "item_name",
+            "fieldtype": "Data",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"item_name\"]",
+              "name": "item_name",
+              "label": "item_name"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "qty",
+            "label": "qty",
+            "fieldtype": "Float",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"qty\"]",
+              "name": "qty",
+              "label": "qty"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "uom",
+            "label": "uom",
+            "fieldtype": "Link",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"uom\"]",
+              "name": "uom",
+              "label": "uom"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "rate",
+            "label": "rate",
+            "fieldtype": "Currency",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"rate\"]",
+              "name": "rate",
+              "label": "rate"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "amount",
+            "label": "amount",
+            "fieldtype": "Currency",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"amount\"]",
+              "name": "amount",
+              "label": "amount"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "country_of_origin",
+            "label": "country_of_origin",
+            "fieldtype": "Link",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"country_of_origin\"]",
+              "name": "country_of_origin",
+              "label": "country_of_origin"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "sb_last_purchase",
+            "label": "Total Quantity (Lbs)",
+            "fieldtype": "Float",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"sb_last_purchase\"]",
+              "name": "sb_last_purchase",
+              "label": "Total Quantity (Lbs)"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "total_qty",
+            "label": "Total Quantity (Lbs)",
+            "fieldtype": "Float",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"total_qty\"]",
+              "name": "total_qty",
+              "label": "Total Quantity (Lbs)"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "total",
+            "label": "Total (BDT)",
+            "fieldtype": "Currency",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"total\"]",
+              "name": "total",
+              "label": "Total (BDT)"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "discount_section",
+            "label": "discount_section",
+            "fieldtype": "Select",
+            "required": false,
+            "options": [
+              {
+                "text": "Grand Total",
+                "value": "Grand Total"
+              },
+              {
+                "text": "Net Total",
+                "value": "Net Total"
+              }
+            ],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"discount_section\"]",
+              "name": "discount_section",
+              "label": "discount_section"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "totals_section",
+            "label": "totals_section",
+            "fieldtype": "Currency",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"totals_section\"]",
+              "name": "totals_section",
+              "label": "totals_section"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "payment_schedule_section",
+            "label": "payment_schedule_section",
+            "fieldtype": "Link",
+            "required": true,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"payment_schedule_section\"]",
+              "name": "payment_schedule_section",
+              "label": "payment_schedule_section"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "custom_terms_and_conditions",
+            "label": "custom_terms_and_conditions",
+            "fieldtype": "Link",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Details",
+            "actions": [
+              "select_link"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"custom_terms_and_conditions\"]",
+              "name": "custom_terms_and_conditions",
+              "label": "custom_terms_and_conditions"
+            },
+            "testability": {
+              "can_fill": false,
+              "can_select": true,
+              "can_check": false,
+              "can_clear": false,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "language",
+            "label": "Print Language",
+            "fieldtype": "Data",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Connections",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"language\"]",
+              "name": "language",
+              "label": "Print Language"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          },
+          {
+            "fieldname": "additional_remarks",
+            "label": "Remarks",
+            "fieldtype": "Small Text",
+            "required": false,
+            "options": [],
+            "placeholder": "",
+            "tab": "Connections",
+            "actions": [
+              "fill",
+              "clear"
+            ],
+            "locator_hints": {
+              "fieldname": "[data-fieldname=\"additional_remarks\"]",
+              "name": "additional_remarks",
+              "label": "Remarks"
+            },
+            "testability": {
+              "can_fill": true,
+              "can_select": false,
+              "can_check": false,
+              "can_clear": true,
+              "can_upload": false,
+              "can_edit_table": false
+            }
+          }
+        ],
+        "tabs": [
+          "Details",
+          "Connections"
+        ],
+        "sections": [
+          "Supplier Details",
+          "Shipping Address",
+          "Currency and Exchange Rate",
+          "Totals",
+          "Additional Discount",
+          "Purchase Taxes and Charges",
+          "Payment Terms",
+          "Terms and Conditions"
+        ],
+        "buttons": [
+          {
+            "text": "A",
+            "aria_label": "User Menu",
+            "title": "",
+            "role": "button",
+            "action": "click"
+          },
+          {
+            "text": "Get Data From",
+            "aria_label": "",
+            "title": "",
+            "role": "button",
+            "action": "click"
+          },
+          {
+            "text": "Save",
+            "aria_label": "",
+            "title": "",
+            "role": "button",
+            "action": "click"
+          },
+          {
+            "text": "Details",
+            "aria_label": "",
+            "title": "",
+            "role": "tab",
+            "action": "click"
+          },
+          {
+            "text": "Connections",
+            "aria_label": "",
+            "title": "",
+            "role": "tab",
+            "action": "click"
+          },
+          {
+            "text": "Add Row",
+            "aria_label": "",
+            "title": "",
+            "role": "button",
+            "action": "click"
+          },
+          {
+            "text": "Add Multiple",
+            "aria_label": "",
+            "title": "",
+            "role": "button",
+            "action": "click"
+          },
+          {
+            "text": "Download",
+            "aria_label": "",
+            "title": "",
+            "role": "button",
+            "action": "click"
+          },
+          {
+            "text": "Upload",
+            "aria_label": "",
+            "title": "",
+            "role": "button",
+            "action": "click"
+          }
+        ],
+        "links": [
+          {
+            "text": "ERP",
+            "href": "",
+            "aria_label": "",
+            "title": ""
+          },
+          {
+            "text": "Home",
+            "href": "/app/home",
+            "aria_label": "",
+            "title": "Home"
+          },
+          {
+            "text": "Accounting",
+            "href": "/app/accounting",
+            "aria_label": "",
+            "title": "Accounting"
+          },
+          {
+            "text": "Local Procurement",
+            "href": "/app/buying",
+            "aria_label": "",
+            "title": "Local Procurement"
+          },
+          {
+            "text": "Import",
+            "href": "/app/import",
+            "aria_label": "",
+            "title": "Import"
+          },
+          {
+            "text": "Merchandising",
+            "href": "/app/selling",
+            "aria_label": "",
+            "title": "Merchandising"
+          },
+          {
+            "text": "Inventory",
+            "href": "/app/stock",
+            "aria_label": "",
+            "title": "Inventory"
+          },
+          {
+            "text": "Assets",
+            "href": "/app/assets",
+            "aria_label": "",
+            "title": "Assets"
+          },
+          {
+            "text": "Production",
+            "href": "/app/manufacturing",
+            "aria_label": "",
+            "title": "Production"
+          },
+          {
+            "text": "Quality",
+            "href": "/app/quality",
+            "aria_label": "",
+            "title": "Quality"
+          },
+          {
+            "text": "Planning",
+            "href": "/app/projects",
+            "aria_label": "",
+            "title": "Planning"
+          },
+          {
+            "text": "Support",
+            "href": "/app/support",
+            "aria_label": "",
+            "title": "Support"
+          },
+          {
+            "text": "CRM",
+            "href": "/app/crm",
+            "aria_label": "",
+            "title": "CRM"
+          },
+          {
+            "text": "Settings",
+            "href": "/app/settings",
+            "aria_label": "",
+            "title": "Settings"
+          },
+          {
+            "text": "Collapse",
+            "href": "",
+            "aria_label": "",
+            "title": ""
+          },
+          {
+            "text": "Purchase Order",
+            "href": "/app/purchase-order",
+            "aria_label": "",
+            "title": ""
+          }
+        ],
+        "elements": [
+          {
+            "tag": "a",
+            "text": "ERP",
+            "id": "",
+            "name": "",
+            "type": "",
+            "placeholder": "",
+            "aria_label": "",
+            "title": "",
+            "role": "",
+            "value": "",
+            "data_fieldname": "",
+            "class": "app-switcher-dropdown",
+            "system_ui": false
+          },
+          {
+            "tag": "button",
+            "text": "",
+            "id": "",
+            "name": "",
+            "type": "",
+            "placeholder": "",
+            "aria_label": "",
+            "title": "",
+            "role": "",
+            "value": "",
+            "data_fieldname": "",
+            "class": "btn-reset drop-icon show-in-edit-mode",
+            "system_ui": false
+          },
+          {
+            "tag": "input",
+            "text": "",
+            "id": "navbar-search",
+            "name": "",
+            "type": "text",
+            "placeholder": "Search or type a command (Ctrl + K)",
+            "aria_label": "",
+            "title": "",
+            "role": "combobox",
+            "value": "",
+            "data_fieldname": "",
+            "class": "form-control",
+            "system_ui": false
+          },
+          {
+            "tag": "select",
+            "text": "Local Import",
+            "id": "",
+            "name": "",
+            "type": "text",
+            "placeholder": "",
+            "aria_label": "",
+            "title": "",
+            "role": "",
+            "value": "",
+            "data_fieldname": "sourcing_from",
+            "class": "input-with-feedback form-control ellipsis bold",
+            "system_ui": false
+          },
+          {
+            "tag": "textarea",
+            "text": "",
+            "id": "",
+            "name": "",
+            "type": "text",
+            "placeholder": "",
+            "aria_label": "",
+            "title": "",
+            "role": "",
+            "value": "",
+            "data_fieldname": "purpose",
+            "class": "input-with-feedback form-control bold",
+            "system_ui": false
+          },
+          {
+            "tag": "textarea",
+            "text": "",
+            "id": "",
+            "name": "",
+            "type": "text",
+            "placeholder": "",
+            "aria_label": "",
+            "title": "",
+            "role": "",
+            "value": "",
+            "data_fieldname": "additional_remarks",
+            "class": "input-with-feedback form-control",
+            "system_ui": false
+          }
+        ],
+        "qa_knowledge": {
+          "form_read": true,
+          "business_data_created": false,
+          "business_data_saved": false,
+          "existing_record_opened": false,
+          "field_actions": [
+            "add_row",
+            "check",
+            "clear",
+            "fill",
+            "remove_row",
+            "select",
+            "select_link",
+            "uncheck"
+          ],
+          "business_buttons": [
+            "A",
+            "Get Data From",
+            "Save",
+            "Details",
+            "Connections",
+            "Add Row",
+            "Add Multiple",
+            "Download",
+            "Upload"
+          ],
+          "validation_candidates": [
+            {
+              "fieldname": "supplier_section",
+              "required": true,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "company",
+              "required": true,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "material_type",
+              "required": true,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "schedule_date",
+              "required": true,
+              "fieldtype": "Date"
+            },
+            {
+              "fieldname": "cost_center",
+              "required": false,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "sourcing_from",
+              "required": true,
+              "fieldtype": "Select"
+            },
+            {
+              "fieldname": "user_branch",
+              "required": false,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "procurement_location",
+              "required": false,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "payment_terms",
+              "required": false,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "cash_iou",
+              "required": false,
+              "fieldtype": "Check"
+            },
+            {
+              "fieldname": "cus_column_break_02",
+              "required": true,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "department",
+              "required": true,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "subject",
+              "required": true,
+              "fieldtype": "Select"
+            },
+            {
+              "fieldname": "purpose",
+              "required": true,
+              "fieldtype": "Small Text"
+            },
+            {
+              "fieldname": "cus_column_break_03",
+              "required": true,
+              "fieldtype": "Select"
+            },
+            {
+              "fieldname": "po_type",
+              "required": true,
+              "fieldtype": "Select"
+            },
+            {
+              "fieldname": "transaction_date",
+              "required": true,
+              "fieldtype": "Date"
+            },
+            {
+              "fieldname": "section_addresses",
+              "required": true,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "supplier",
+              "required": true,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "cus_column_break_04",
+              "required": false,
+              "fieldtype": "Small Text"
+            },
+            {
+              "fieldname": "col_break_address",
+              "required": false,
+              "fieldtype": "Small Text"
+            },
+            {
+              "fieldname": "shipping_address_section",
+              "required": false,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "currency_and_price_list",
+              "required": true,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "currency",
+              "required": true,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "cb_price_list",
+              "required": true,
+              "fieldtype": "Float"
+            },
+            {
+              "fieldname": "before_items_section",
+              "required": false,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "set_warehouse",
+              "required": false,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "items_section",
+              "required": true,
+              "fieldtype": "Table"
+            },
+            {
+              "fieldname": "items",
+              "required": true,
+              "fieldtype": "Table"
+            },
+            {
+              "fieldname": "item_code",
+              "required": true,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "item_name",
+              "required": true,
+              "fieldtype": "Data"
+            },
+            {
+              "fieldname": "qty",
+              "required": true,
+              "fieldtype": "Float"
+            },
+            {
+              "fieldname": "uom",
+              "required": true,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "rate",
+              "required": true,
+              "fieldtype": "Currency"
+            },
+            {
+              "fieldname": "amount",
+              "required": false,
+              "fieldtype": "Currency"
+            },
+            {
+              "fieldname": "country_of_origin",
+              "required": false,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "sb_last_purchase",
+              "required": false,
+              "fieldtype": "Float"
+            },
+            {
+              "fieldname": "total_qty",
+              "required": false,
+              "fieldtype": "Float"
+            },
+            {
+              "fieldname": "total",
+              "required": false,
+              "fieldtype": "Currency"
+            },
+            {
+              "fieldname": "discount_section",
+              "required": false,
+              "fieldtype": "Select"
+            },
+            {
+              "fieldname": "totals_section",
+              "required": false,
+              "fieldtype": "Currency"
+            },
+            {
+              "fieldname": "payment_schedule_section",
+              "required": true,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "custom_terms_and_conditions",
+              "required": false,
+              "fieldtype": "Link"
+            },
+            {
+              "fieldname": "language",
+              "required": false,
+              "fieldtype": "Data"
+            },
+            {
+              "fieldname": "additional_remarks",
+              "required": false,
+              "fieldtype": "Small Text"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

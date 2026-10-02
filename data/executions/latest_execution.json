@@ -1,448 +1,475 @@
 {
   "status": "EXECUTED",
-  "doctype": "Contract",
-  "search_name": "New Contract",
+  "doctype": "Purchase Order",
+  "document_name": "Purchase Order",
+  "search_name": "New Purchase Order",
+  "action": "New",
   "existing_documents_skipped": true,
   "business_data_mutated": false,
+  "blocked_business_mutations": true,
+  "system_ui_blocked": true,
+  "summary": {
+    "total": 84,
+    "passed": 25,
+    "failed": 0,
+    "blocked": 0
+  },
   "results": [
     {
       "action": "login",
-      "status": "DEFERRED_TO_NAVIGATOR"
+      "status": "PASSED",
+      "reason": "login handled before plan execution"
     },
     {
       "action": "open_home",
-      "status": "DEFERRED_TO_NAVIGATOR"
+      "status": "PASSED"
     },
     {
       "action": "global_search",
-      "status": "DEFERRED_TO_NAVIGATOR"
+      "status": "PASSED",
+      "search_name": "New Purchase Order"
     },
     {
       "action": "open_blank_new_document",
-      "status": "DEFERRED_TO_NAVIGATOR"
+      "status": "PASSED",
+      "doctype": "Purchase Order",
+      "search_name": "New Purchase Order"
     },
     {
       "action": "inspect_form_top_to_bottom",
-      "status": "DEFERRED_TO_NAVIGATOR"
+      "status": "PASSED",
+      "scroll_positions": [
+        0,
+        765
+      ]
+    },
+    {
+      "action": "inspect_tab",
+      "status": "PASSED",
+      "tab": "Details"
+    },
+    {
+      "action": "inspect_tab",
+      "status": "PASSED",
+      "tab": "Connections"
     },
     {
       "action": "inspect_section",
-      "status": "DEFERRED_TO_NAVIGATOR"
+      "status": "SKIPPED",
+      "reason": "section locator not found",
+      "section": "Supplier Details"
     },
     {
       "action": "inspect_section",
-      "status": "DEFERRED_TO_NAVIGATOR"
+      "status": "SKIPPED",
+      "reason": "section locator not found",
+      "section": "Shipping Address"
     },
     {
       "action": "inspect_section",
-      "status": "DEFERRED_TO_NAVIGATOR"
+      "status": "SKIPPED",
+      "reason": "section locator not found",
+      "section": "Currency and Exchange Rate"
     },
     {
       "action": "inspect_section",
-      "status": "DEFERRED_TO_NAVIGATOR"
+      "status": "SKIPPED",
+      "reason": "section locator not found",
+      "section": "Totals"
     },
     {
       "action": "inspect_section",
-      "status": "DEFERRED_TO_NAVIGATOR"
+      "status": "SKIPPED",
+      "reason": "section locator not found",
+      "section": "Additional Discount"
     },
     {
       "action": "inspect_section",
-      "status": "DEFERRED_TO_NAVIGATOR"
+      "status": "SKIPPED",
+      "reason": "section locator not found",
+      "section": "Purchase Taxes and Charges"
     },
     {
       "action": "inspect_section",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "fieldname": "__section_1",
-      "label": "__section_1",
-      "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "section locator not found",
+      "section": "Payment Terms"
     },
     {
-      "fieldname": "__column_1",
-      "label": "__column_1",
-      "action": "inspect",
+      "action": "inspect_section",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "section locator not found",
+      "section": "Terms and Conditions"
     },
     {
-      "fieldname": "blanket_order_no",
-      "label": "Contract No",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "material_type",
-      "label": "Material Type",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "column_break_8",
-      "label": "Posting Date",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "posting_date",
-      "label": "Posting Date",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "contract_date",
-      "label": "Contract Date",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "column_break_xseap",
+      "fieldname": "supplier_section",
       "label": "Company",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
       "fieldname": "company",
       "label": "Company",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "contract_validity",
-      "label": "Contract Validity",
+      "fieldname": "material_type",
+      "label": "Material Type",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "schedule_date",
+      "label": "Required Date",
+      "fieldtype": "date",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "cost_center",
+      "label": "Cost Center",
+      "fieldtype": "link",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
     },
     {
       "fieldname": "sourcing_from",
       "label": "Sourcing From",
+      "fieldtype": "select",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "payment_term",
-      "label": "Payment Term",
+      "fieldname": "user_branch",
+      "label": "User Branch",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "custom_supplier_information",
+      "fieldname": "procurement_location",
+      "label": "Procurement Location",
+      "fieldtype": "link",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "payment_terms",
+      "label": "Payment Terms",
+      "fieldtype": "link",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "cash_iou",
+      "label": "Cash IOU",
+      "fieldtype": "check",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "cus_column_break_02",
+      "label": "Department",
+      "fieldtype": "link",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "department",
+      "label": "Department",
+      "fieldtype": "link",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "subject",
+      "label": "Subject",
+      "fieldtype": "select",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "purpose",
+      "label": "Purpose",
+      "fieldtype": "small text",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "cus_column_break_03",
+      "label": "PO Type",
+      "fieldtype": "select",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "po_type",
+      "label": "PO Type",
+      "fieldtype": "select",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "transaction_date",
+      "label": "PO Date",
+      "fieldtype": "date",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "section_addresses",
       "label": "Supplier",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "__column_2",
-      "label": "Supplier",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
       "fieldname": "supplier",
       "label": "Supplier",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "custom_column_break_hcd0c",
-      "label": "custom_column_break_hcd0c",
+      "fieldname": "cus_column_break_04",
+      "label": "cus_column_break_04",
+      "fieldtype": "small text",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "column_break_hwcyp",
-      "label": "column_break_hwcyp",
+      "fieldname": "col_break_address",
+      "label": "col_break_address",
+      "fieldtype": "small text",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "column_break_8bdo6",
-      "label": "column_break_8bdo6",
+      "fieldname": "shipping_address_section",
+      "label": "shipping_address_section",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "column_break_wm4vm",
-      "label": "column_break_wm4vm",
+      "fieldname": "currency_and_price_list",
+      "label": "Currency",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "currency_and_exchange_rate",
-      "label": "Supplier Currency",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "__column_4",
-      "label": "Supplier Currency",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
       "fieldname": "currency",
-      "label": "Supplier Currency",
+      "label": "Currency",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "column_break_jwaug",
-      "label": "Exchange Rate",
+      "fieldname": "cb_price_list",
+      "label": "cb_price_list",
+      "fieldtype": "float",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "section_break_12",
-      "label": "section_break_12",
+      "fieldname": "before_items_section",
+      "label": "Store",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "__column_5",
-      "label": "__column_5",
+      "fieldname": "set_warehouse",
+      "label": "Store",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
+    },
+    {
+      "fieldname": "items_section",
+      "label": "Product Details",
+      "fieldtype": "table",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "field locator not found"
     },
     {
       "fieldname": "items",
-      "label": "items",
+      "label": "Product Details",
+      "fieldtype": "table",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
       "fieldname": "item_code",
       "label": "item_code",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
       "fieldname": "item_name",
       "label": "item_name",
+      "fieldtype": "data",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "purchase_qty",
-      "label": "purchase_qty",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "purchase_uom",
-      "label": "purchase_uom",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
       "fieldname": "qty",
       "label": "qty",
+      "fieldtype": "float",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "rate_type",
-      "label": "rate_type",
+      "fieldname": "uom",
+      "label": "uom",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "base_price_clb",
-      "label": "base_price_clb",
+      "fieldname": "rate",
+      "label": "rate",
+      "fieldtype": "currency",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "ice_index_clb",
-      "label": "ice_index_clb",
+      "fieldname": "amount",
+      "label": "amount",
+      "fieldtype": "currency",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "rate_usc",
-      "label": "rate_usc",
+      "fieldname": "country_of_origin",
+      "label": "country_of_origin",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "tolerance",
-      "label": "tolerance",
+      "fieldname": "sb_last_purchase",
+      "label": "Total Quantity (Lbs)",
+      "fieldtype": "float",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "freight_charges",
-      "label": "Is Freight Included",
+      "fieldname": "total_qty",
+      "label": "Total Quantity (Lbs)",
+      "fieldtype": "float",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "__column_6",
-      "label": "Is Freight Included",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "is_freight_included",
-      "label": "Is Freight Included",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "column_break_itsma",
-      "label": "column_break_itsma",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "column_break_eoj4s",
-      "label": "column_break_eoj4s",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "column_break_3yfdv",
-      "label": "Freight (BDT)",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "freight",
-      "label": "Freight (BDT)",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "column_break_5pux7",
-      "label": "column_break_5pux7",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "cus_section_break_01",
-      "label": "cus_section_break_01",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "__column_7",
-      "label": "__column_7",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "prior_fix_quantity",
-      "label": "Prior fix quantity",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "contract_balance_quantity",
-      "label": "Contract Balance Quantity",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
-    },
-    {
-      "fieldname": "cus_column_break_01",
-      "label": "cus_column_break_01",
-      "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
       "fieldname": "total",
-      "label": "Total Amount (BDT)",
+      "label": "Total (BDT)",
+      "fieldtype": "currency",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "section_break_bi98z",
-      "label": "Quality Inspection Template",
+      "fieldname": "discount_section",
+      "label": "discount_section",
+      "fieldtype": "select",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "terms_and_conditions_section",
-      "label": "Terms",
+      "fieldname": "totals_section",
+      "label": "totals_section",
+      "fieldtype": "currency",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "__column_11",
-      "label": "Terms",
+      "fieldname": "payment_schedule_section",
+      "label": "payment_schedule_section",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "tc_name",
-      "label": "Terms",
+      "fieldname": "custom_terms_and_conditions",
+      "label": "custom_terms_and_conditions",
+      "fieldtype": "link",
       "action": "inspect",
       "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "reason": "field locator not found"
     },
     {
-      "fieldname": "terms",
-      "label": "Terms and Conditions Details",
+      "fieldname": "language",
+      "label": "Print Language",
+      "fieldtype": "data",
       "action": "inspect",
-      "status": "SKIPPED",
-      "reason": "system UI or locator not found"
+      "status": "PASSED"
+    },
+    {
+      "fieldname": "additional_remarks",
+      "label": "Remarks",
+      "fieldtype": "small text",
+      "action": "inspect",
+      "status": "PASSED"
     },
     {
       "button": "A",
       "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "button locator not found"
+    },
+    {
+      "button": "Get Data From",
+      "action": "inspect",
       "status": "PASSED",
-      "visible": false
+      "visible": true
     },
     {
       "button": "Save",
@@ -451,177 +478,146 @@
       "reason": "business mutation blocked"
     },
     {
+      "button": "Details",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "button locator not found"
+    },
+    {
+      "button": "Connections",
+      "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "button locator not found"
+    },
+    {
       "button": "Add Row",
       "action": "inspect",
-      "status": "PASSED",
-      "visible": false
+      "status": "SKIPPED",
+      "reason": "button locator not found"
     },
     {
       "button": "Add Multiple",
       "action": "inspect",
-      "status": "PASSED",
-      "visible": false
+      "status": "SKIPPED",
+      "reason": "button locator not found"
     },
     {
       "button": "Download",
       "action": "inspect",
-      "status": "PASSED",
-      "visible": false
+      "status": "SKIPPED",
+      "reason": "button locator not found"
     },
     {
-      "button": "bold",
+      "button": "Upload",
       "action": "inspect",
+      "status": "SKIPPED",
+      "reason": "button locator not found"
+    },
+    {
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
+      "fieldname": "",
+      "label": "ERP",
+      "reason": "relationship metadata inspected without opening an existing business document"
     },
     {
-      "button": "italic",
-      "action": "inspect",
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
+      "fieldname": "",
+      "label": "Home",
+      "reason": "relationship metadata inspected without opening an existing business document"
     },
     {
-      "button": "underline",
-      "action": "inspect",
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
+      "fieldname": "",
+      "label": "Accounting",
+      "reason": "relationship metadata inspected without opening an existing business document"
     },
     {
-      "button": "strike",
-      "action": "inspect",
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
+      "fieldname": "",
+      "label": "Local Procurement",
+      "reason": "relationship metadata inspected without opening an existing business document"
     },
     {
-      "button": "clean",
-      "action": "inspect",
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
+      "fieldname": "",
+      "label": "Import",
+      "reason": "relationship metadata inspected without opening an existing business document"
     },
     {
-      "button": "blockquote",
-      "action": "inspect",
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
+      "fieldname": "",
+      "label": "Merchandising",
+      "reason": "relationship metadata inspected without opening an existing business document"
     },
     {
-      "button": "code-block",
-      "action": "inspect",
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
+      "fieldname": "",
+      "label": "Inventory",
+      "reason": "relationship metadata inspected without opening an existing business document"
     },
     {
-      "button": "direction: rtl",
-      "action": "inspect",
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
+      "fieldname": "",
+      "label": "Assets",
+      "reason": "relationship metadata inspected without opening an existing business document"
     },
     {
-      "button": "link",
-      "action": "inspect",
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
+      "fieldname": "",
+      "label": "Production",
+      "reason": "relationship metadata inspected without opening an existing business document"
     },
     {
-      "button": "image",
-      "action": "inspect",
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
+      "fieldname": "",
+      "label": "Quality",
+      "reason": "relationship metadata inspected without opening an existing business document"
     },
     {
-      "button": "list: ordered",
-      "action": "inspect",
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
+      "fieldname": "",
+      "label": "Planning",
+      "reason": "relationship metadata inspected without opening an existing business document"
     },
     {
-      "button": "list: bullet",
-      "action": "inspect",
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
+      "fieldname": "",
+      "label": "Support",
+      "reason": "relationship metadata inspected without opening an existing business document"
     },
     {
-      "button": "list: check",
-      "action": "inspect",
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
+      "fieldname": "",
+      "label": "CRM",
+      "reason": "relationship metadata inspected without opening an existing business document"
     },
     {
-      "button": "indent: -1",
-      "action": "inspect",
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
+      "fieldname": "",
+      "label": "Collapse",
+      "reason": "relationship metadata inspected without opening an existing business document"
     },
     {
-      "button": "indent: +1",
-      "action": "inspect",
+      "action": "inspect_link_relation",
       "status": "PASSED",
-      "visible": false
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
-    },
-    {
-      "action": "inspect_link_relation",
-      "status": "DEFERRED_TO_NAVIGATOR"
+      "fieldname": "",
+      "label": "Purchase Order",
+      "reason": "relationship metadata inspected without opening an existing business document"
     }
   ],
-  "current_url": "https://stage2-salma.altersense.net/app/home"
+  "current_url": "https://stage2-salma.altersense.net/app/purchase-order/new-purchase-order-pjaibiikpo#connections_tab"
 }

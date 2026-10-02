@@ -1,6 +1,6 @@
 {
   "validation_type": "erpnext_discovery_validation",
-  "checked_at": "2026-09-11T16:54:10",
+  "checked_at": "2026-09-30T13:20:03",
   "discovery_dir": "/home/eng-sabbir/Downloads/erpnext-playwright-agent/data/discovery",
   "total": 8,
   "passed": 6,
@@ -12,7 +12,7 @@
       "file": "0001_company-budget.json",
       "status": "PASSED",
       "doctype": "Company Budget",
-      "checked_at": "2026-09-11T16:54:10",
+      "checked_at": "2026-09-30T13:20:03",
       "issues": [
         {
           "severity": "WARNING",
@@ -64,14 +64,14 @@
       "file": "0002_lead.json",
       "status": "PASSED",
       "doctype": "Lead",
-      "checked_at": "2026-09-11T16:54:10",
+      "checked_at": "2026-09-30T13:20:03",
       "issues": []
     },
     {
       "file": "0003_opportunity.json",
       "status": "FAILED",
       "doctype": "Opportunity",
-      "checked_at": "2026-09-11T16:54:10",
+      "checked_at": "2026-09-30T13:20:03",
       "issues": [
         {
           "severity": "WARNING",
@@ -159,14 +159,14 @@
       "file": "0004_customer-buyer.json",
       "status": "PASSED",
       "doctype": "Customer/Buyer",
-      "checked_at": "2026-09-11T16:54:10",
+      "checked_at": "2026-09-30T13:20:03",
       "issues": []
     },
     {
       "file": "0005_contract.json",
       "status": "PASSED",
       "doctype": "Contract",
-      "checked_at": "2026-09-11T16:54:10",
+      "checked_at": "2026-09-30T13:20:03",
       "issues": [
         {
           "severity": "WARNING",
@@ -274,7 +274,7 @@
       "file": "0006_price-fixation.json",
       "status": "PASSED",
       "doctype": "Price Fixation",
-      "checked_at": "2026-09-11T16:54:10",
+      "checked_at": "2026-09-30T13:20:03",
       "issues": [
         {
           "severity": "WARNING",
@@ -334,7 +334,7 @@
       "file": "0007_requisition.json",
       "status": "PASSED",
       "doctype": "Requisition",
-      "checked_at": "2026-09-11T16:54:10",
+      "checked_at": "2026-09-30T13:20:03",
       "issues": [
         {
           "severity": "WARNING",
@@ -346,7 +346,7 @@
       "file": "0008_purchase-order.json",
       "status": "FAILED",
       "doctype": "Purchase Order",
-      "checked_at": "2026-09-11T16:54:10",
+      "checked_at": "2026-09-30T13:20:03",
       "issues": [
         {
           "severity": "WARNING",

@@ -1,0 +1,709 @@
+{
+  "doctype": "Purchase Order",
+  "search_name": "New Purchase Order",
+  "action": "New",
+  "module": "",
+  "url": "https://stage2-salma.altersense.net/app/purchase-order/new-purchase-order-gakwdprfud",
+  "route": "/app/purchase-order/new-purchase-order-gakwdprfud",
+  "read_mode": "blank_new_document",
+  "fields": [
+    {
+      "fieldname": "supplier_section",
+      "label": "Company",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "material_type",
+      "label": "Material Type",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "schedule_date",
+      "label": "Required Date",
+      "fieldtype": "Date",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "cost_center",
+      "label": "Cost Center",
+      "fieldtype": "Link",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "sourcing_from",
+      "label": "Sourcing From",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "Local",
+          "value": "Local"
+        },
+        {
+          "text": "Import",
+          "value": "Import"
+        }
+      ],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "user_branch",
+      "label": "User Branch",
+      "fieldtype": "Link",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "procurement_location",
+      "label": "Procurement Location",
+      "fieldtype": "Link",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "payment_terms",
+      "label": "Payment Terms",
+      "fieldtype": "Link",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "cash_iou",
+      "label": "Cash IOU",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "cus_column_break_02",
+      "label": "Department",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "department",
+      "label": "Department",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "subject",
+      "label": "Subject",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "Purchase Order",
+          "value": "Purchase Order"
+        },
+        {
+          "text": "Service Work Order",
+          "value": "Service Work Order"
+        },
+        {
+          "text": "Purchase Order (Cotton)",
+          "value": "Purchase Order (Cotton)"
+        }
+      ],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "purpose",
+      "label": "Purpose",
+      "fieldtype": "Small Text",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "cus_column_break_03",
+      "label": "PO Type",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "Independent",
+          "value": "Independent"
+        },
+        {
+          "text": "Requisition",
+          "value": "Requisition"
+        },
+        {
+          "text": "Supplier Quotation",
+          "value": "Supplier Quotation"
+        },
+        {
+          "text": "PCS",
+          "value": "PCS"
+        }
+      ],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "po_type",
+      "label": "PO Type",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "Independent",
+          "value": "Independent"
+        },
+        {
+          "text": "Requisition",
+          "value": "Requisition"
+        },
+        {
+          "text": "Supplier Quotation",
+          "value": "Supplier Quotation"
+        },
+        {
+          "text": "PCS",
+          "value": "PCS"
+        }
+      ],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "transaction_date",
+      "label": "PO Date",
+      "fieldtype": "Date",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "section_addresses",
+      "label": "Supplier",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "supplier",
+      "label": "Supplier",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "cus_column_break_04",
+      "label": "cus_column_break_04",
+      "fieldtype": "Small Text",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "col_break_address",
+      "label": "col_break_address",
+      "fieldtype": "Small Text",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "shipping_address_section",
+      "label": "shipping_address_section",
+      "fieldtype": "Link",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "currency_and_price_list",
+      "label": "Currency",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "cb_price_list",
+      "label": "cb_price_list",
+      "fieldtype": "Float",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "before_items_section",
+      "label": "Store",
+      "fieldtype": "Link",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "set_warehouse",
+      "label": "Store",
+      "fieldtype": "Link",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "items_section",
+      "label": "Product Details",
+      "fieldtype": "Table",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "items",
+      "label": "Product Details",
+      "fieldtype": "Table",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "item_code",
+      "label": "item_code",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "item_name",
+      "label": "item_name",
+      "fieldtype": "Data",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "qty",
+      "label": "qty",
+      "fieldtype": "Float",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "uom",
+      "label": "uom",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "rate",
+      "label": "rate",
+      "fieldtype": "Currency",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "amount",
+      "label": "amount",
+      "fieldtype": "Currency",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "country_of_origin",
+      "label": "country_of_origin",
+      "fieldtype": "Link",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "sb_last_purchase",
+      "label": "Total Quantity (Lbs)",
+      "fieldtype": "Float",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "total_qty",
+      "label": "Total Quantity (Lbs)",
+      "fieldtype": "Float",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "total",
+      "label": "Total (BDT)",
+      "fieldtype": "Currency",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "discount_section",
+      "label": "discount_section",
+      "fieldtype": "Select",
+      "required": false,
+      "options": [
+        {
+          "text": "Grand Total",
+          "value": "Grand Total"
+        },
+        {
+          "text": "Net Total",
+          "value": "Net Total"
+        }
+      ],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "totals_section",
+      "label": "totals_section",
+      "fieldtype": "Currency",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "payment_schedule_section",
+      "label": "payment_schedule_section",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "custom_terms_and_conditions",
+      "label": "custom_terms_and_conditions",
+      "fieldtype": "Link",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details"
+    },
+    {
+      "fieldname": "language",
+      "label": "Print Language",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Connections"
+    },
+    {
+      "fieldname": "additional_remarks",
+      "label": "Remarks",
+      "fieldtype": "Small Text",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Connections"
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Details"
+    },
+    {
+      "name": "Connections"
+    }
+  ],
+  "sections": [
+    {
+      "name": "Supplier Details"
+    },
+    {
+      "name": "Shipping Address"
+    },
+    {
+      "name": "Currency and Exchange Rate"
+    },
+    {
+      "name": "Totals"
+    },
+    {
+      "name": "Additional Discount"
+    },
+    {
+      "name": "Purchase Taxes and Charges"
+    },
+    {
+      "name": "Payment Terms"
+    },
+    {
+      "name": "Terms and Conditions"
+    }
+  ],
+  "buttons": [
+    {
+      "text": "A",
+      "aria_label": "User Menu",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "A"
+    },
+    {
+      "text": "Get Data From",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Get Data From"
+    },
+    {
+      "text": "Save",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Save"
+    },
+    {
+      "text": "Details",
+      "aria_label": "",
+      "title": "",
+      "role": "tab",
+      "action": "click",
+      "name": "Details"
+    },
+    {
+      "text": "Connections",
+      "aria_label": "",
+      "title": "",
+      "role": "tab",
+      "action": "click",
+      "name": "Connections"
+    },
+    {
+      "text": "Add Row",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Add Row"
+    },
+    {
+      "text": "Add Multiple",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Add Multiple"
+    },
+    {
+      "text": "Download",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Download"
+    },
+    {
+      "text": "Upload",
+      "aria_label": "",
+      "title": "",
+      "role": "button",
+      "action": "click",
+      "name": "Upload"
+    }
+  ],
+  "links": [
+    {
+      "text": "ERP",
+      "href": "",
+      "aria_label": "",
+      "title": "",
+      "name": "ERP"
+    },
+    {
+      "text": "Home",
+      "href": "/app/home",
+      "aria_label": "",
+      "title": "Home",
+      "name": "Home"
+    },
+    {
+      "text": "Accounting",
+      "href": "/app/accounting",
+      "aria_label": "",
+      "title": "Accounting",
+      "name": "Accounting"
+    },
+    {
+      "text": "Local Procurement",
+      "href": "/app/buying",
+      "aria_label": "",
+      "title": "Local Procurement",
+      "name": "Local Procurement"
+    },
+    {
+      "text": "Import",
+      "href": "/app/import",
+      "aria_label": "",
+      "title": "Import",
+      "name": "Import"
+    },
+    {
+      "text": "Merchandising",
+      "href": "/app/selling",
+      "aria_label": "",
+      "title": "Merchandising",
+      "name": "Merchandising"
+    },
+    {
+      "text": "Inventory",
+      "href": "/app/stock",
+      "aria_label": "",
+      "title": "Inventory",
+      "name": "Inventory"
+    },
+    {
+      "text": "Assets",
+      "href": "/app/assets",
+      "aria_label": "",
+      "title": "Assets",
+      "name": "Assets"
+    },
+    {
+      "text": "Production",
+      "href": "/app/manufacturing",
+      "aria_label": "",
+      "title": "Production",
+      "name": "Production"
+    },
+    {
+      "text": "Quality",
+      "href": "/app/quality",
+      "aria_label": "",
+      "title": "Quality",
+      "name": "Quality"
+    },
+    {
+      "text": "Planning",
+      "href": "/app/projects",
+      "aria_label": "",
+      "title": "Planning",
+      "name": "Planning"
+    },
+    {
+      "text": "Support",
+      "href": "/app/support",
+      "aria_label": "",
+      "title": "Support",
+      "name": "Support"
+    },
+    {
+      "text": "CRM",
+      "href": "/app/crm",
+      "aria_label": "",
+      "title": "CRM",
+      "name": "CRM"
+    },
+    {
+      "text": "Settings",
+      "href": "/app/settings",
+      "aria_label": "",
+      "title": "Settings",
+      "name": "Settings"
+    },
+    {
+      "text": "Collapse",
+      "href": "",
+      "aria_label": "",
+      "title": "",
+      "name": "Collapse"
+    },
+    {
+      "text": "Purchase Order",
+      "href": "/app/purchase-order",
+      "aria_label": "",
+      "title": "",
+      "name": "Purchase Order"
+    }
+  ],
+  "normalization": {
+    "status": "NORMALIZED",
+    "doctype_cleaned": true,
+    "search_name_preserved_as_new": true,
+    "duplicates_removed": true
+  }
+}

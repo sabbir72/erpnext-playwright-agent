@@ -1,12 +1,12 @@
 {
-  "plan_version": "1.0",
-  "task": "Create Contract flow test",
-  "task_type": "create",
-  "doctype": "Contract",
-  "document_name": "Contract",
-  "search_name": "New Contract",
+  "plan_version": "1.1",
+  "task": "Generate test cases for Purchase Order required fields",
+  "task_type": "test_case_generation",
+  "doctype": "Purchase Order",
+  "document_name": "Purchase Order",
+  "search_name": "New Purchase Order",
   "action": "New",
-  "source_file": "0005_contract.json",
+  "source_file": "0008_purchase-order.json",
   "safety": {
     "existing_documents_skipped": true,
     "blank_new_document_only": true,
@@ -29,14 +29,14 @@
     {
       "order": 3,
       "action": "global_search",
-      "search_text": "New Contract",
-      "description": "Search Global Search for \"New Contract\"."
+      "search_text": "New Purchase Order",
+      "description": "Search Global Search for \"New Purchase Order\"."
     },
     {
       "order": 4,
       "action": "open_blank_new_document",
-      "doctype": "Contract",
-      "description": "Open the blank New form for Contract."
+      "doctype": "Purchase Order",
+      "description": "Open the blank New form for Purchase Order."
     },
     {
       "order": 5,
@@ -45,769 +45,690 @@
     },
     {
       "order": 6,
-      "action": "inspect_section",
-      "section": "Supplier Information"
+      "action": "inspect_tab",
+      "tab": "Details",
+      "description": "Open and inspect tab \"Details\"."
     },
     {
       "order": 7,
-      "action": "inspect_section",
-      "section": "Currency and Exchange Rate"
+      "action": "inspect_tab",
+      "tab": "Connections",
+      "description": "Open and inspect tab \"Connections\"."
     },
     {
       "order": 8,
       "action": "inspect_section",
-      "section": "Product Details"
+      "section": "Supplier Details"
     },
     {
       "order": 9,
       "action": "inspect_section",
-      "section": "Freight Charges"
+      "section": "Shipping Address"
     },
     {
       "order": 10,
       "action": "inspect_section",
-      "section": "Total"
+      "section": "Currency and Exchange Rate"
     },
     {
       "order": 11,
       "action": "inspect_section",
-      "section": "Quality Inspection Section"
+      "section": "Totals"
     },
     {
       "order": 12,
       "action": "inspect_section",
-      "section": "Terms and Conditions"
+      "section": "Additional Discount"
     },
     {
       "order": 13,
-      "action": "inspect_field",
-      "fieldname": "__section_1",
-      "label": "__section_1",
-      "fieldtype": "Data",
-      "required": true
+      "action": "inspect_section",
+      "section": "Purchase Taxes and Charges"
     },
     {
       "order": 14,
-      "action": "inspect_field",
-      "fieldname": "__column_1",
-      "label": "__column_1",
-      "fieldtype": "Data",
-      "required": true
+      "action": "inspect_section",
+      "section": "Payment Terms"
     },
     {
       "order": 15,
-      "action": "inspect_field",
-      "fieldname": "blanket_order_no",
-      "label": "Contract No",
-      "fieldtype": "Data",
-      "required": true
+      "action": "inspect_section",
+      "section": "Terms and Conditions"
     },
     {
       "order": 16,
       "action": "inspect_field",
-      "fieldname": "material_type",
-      "label": "Material Type",
-      "fieldtype": "Data",
-      "required": false
+      "fieldname": "supplier_section",
+      "label": "Company",
+      "fieldtype": "Link",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 17,
       "action": "inspect_field",
-      "fieldname": "column_break_8",
-      "label": "Posting Date",
-      "fieldtype": "Data",
-      "required": false
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Link",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 18,
       "action": "inspect_field",
-      "fieldname": "posting_date",
-      "label": "Posting Date",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "material_type",
+      "label": "Material Type",
+      "fieldtype": "Link",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 19,
       "action": "inspect_field",
-      "fieldname": "contract_date",
-      "label": "Contract Date",
-      "fieldtype": "Data",
-      "required": false
+      "fieldname": "schedule_date",
+      "label": "Required Date",
+      "fieldtype": "Date",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 20,
       "action": "inspect_field",
-      "fieldname": "column_break_xseap",
-      "label": "Company",
-      "fieldtype": "Data",
-      "required": true
+      "fieldname": "cost_center",
+      "label": "Cost Center",
+      "fieldtype": "Link",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 21,
       "action": "inspect_field",
-      "fieldname": "company",
-      "label": "Company",
-      "fieldtype": "Data",
-      "required": true
+      "fieldname": "sourcing_from",
+      "label": "Sourcing From",
+      "fieldtype": "Select",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 22,
       "action": "inspect_field",
-      "fieldname": "contract_validity",
-      "label": "Contract Validity",
-      "fieldtype": "Data",
-      "required": false
+      "fieldname": "user_branch",
+      "label": "User Branch",
+      "fieldtype": "Link",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 23,
       "action": "inspect_field",
-      "fieldname": "sourcing_from",
-      "label": "Sourcing From",
-      "fieldtype": "Select",
-      "required": true
+      "fieldname": "procurement_location",
+      "label": "Procurement Location",
+      "fieldtype": "Link",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 24,
       "action": "inspect_field",
-      "fieldname": "payment_term",
-      "label": "Payment Term",
-      "fieldtype": "Data",
-      "required": false
+      "fieldname": "payment_terms",
+      "label": "Payment Terms",
+      "fieldtype": "Link",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 25,
       "action": "inspect_field",
-      "fieldname": "custom_supplier_information",
-      "label": "Supplier",
-      "fieldtype": "Data",
-      "required": true
+      "fieldname": "cash_iou",
+      "label": "Cash IOU",
+      "fieldtype": "Check",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 26,
       "action": "inspect_field",
-      "fieldname": "__column_2",
-      "label": "Supplier",
-      "fieldtype": "Data",
-      "required": true
+      "fieldname": "cus_column_break_02",
+      "label": "Department",
+      "fieldtype": "Link",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 27,
       "action": "inspect_field",
-      "fieldname": "supplier",
-      "label": "Supplier",
-      "fieldtype": "Data",
-      "required": true
+      "fieldname": "department",
+      "label": "Department",
+      "fieldtype": "Link",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 28,
       "action": "inspect_field",
-      "fieldname": "custom_column_break_hcd0c",
-      "label": "custom_column_break_hcd0c",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "subject",
+      "label": "Subject",
+      "fieldtype": "Select",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 29,
       "action": "inspect_field",
-      "fieldname": "column_break_hwcyp",
-      "label": "column_break_hwcyp",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "purpose",
+      "label": "Purpose",
+      "fieldtype": "Small Text",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 30,
       "action": "inspect_field",
-      "fieldname": "column_break_8bdo6",
-      "label": "column_break_8bdo6",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "cus_column_break_03",
+      "label": "PO Type",
+      "fieldtype": "Select",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 31,
       "action": "inspect_field",
-      "fieldname": "column_break_wm4vm",
-      "label": "column_break_wm4vm",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "po_type",
+      "label": "PO Type",
+      "fieldtype": "Select",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 32,
       "action": "inspect_field",
-      "fieldname": "currency_and_exchange_rate",
-      "label": "Supplier Currency",
-      "fieldtype": "Data",
-      "required": false
+      "fieldname": "transaction_date",
+      "label": "PO Date",
+      "fieldtype": "Date",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 33,
       "action": "inspect_field",
-      "fieldname": "__column_4",
-      "label": "Supplier Currency",
-      "fieldtype": "Data",
-      "required": false
+      "fieldname": "section_addresses",
+      "label": "Supplier",
+      "fieldtype": "Link",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 34,
       "action": "inspect_field",
-      "fieldname": "currency",
-      "label": "Supplier Currency",
-      "fieldtype": "Data",
-      "required": false
+      "fieldname": "supplier",
+      "label": "Supplier",
+      "fieldtype": "Link",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 35,
       "action": "inspect_field",
-      "fieldname": "column_break_jwaug",
-      "label": "Exchange Rate",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "cus_column_break_04",
+      "label": "cus_column_break_04",
+      "fieldtype": "Small Text",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 36,
       "action": "inspect_field",
-      "fieldname": "section_break_12",
-      "label": "section_break_12",
-      "fieldtype": "Check",
-      "required": true
+      "fieldname": "col_break_address",
+      "label": "col_break_address",
+      "fieldtype": "Small Text",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 37,
       "action": "inspect_field",
-      "fieldname": "__column_5",
-      "label": "__column_5",
-      "fieldtype": "Check",
-      "required": true
+      "fieldname": "shipping_address_section",
+      "label": "shipping_address_section",
+      "fieldtype": "Link",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 38,
       "action": "inspect_field",
-      "fieldname": "items",
-      "label": "items",
-      "fieldtype": "Check",
-      "required": true
+      "fieldname": "currency_and_price_list",
+      "label": "Currency",
+      "fieldtype": "Link",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 39,
       "action": "inspect_field",
-      "fieldname": "item_code",
-      "label": "item_code",
-      "fieldtype": "unknown",
-      "required": true
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Link",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 40,
       "action": "inspect_field",
-      "fieldname": "item_name",
-      "label": "item_name",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "cb_price_list",
+      "label": "cb_price_list",
+      "fieldtype": "Float",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 41,
       "action": "inspect_field",
-      "fieldname": "purchase_qty",
-      "label": "purchase_qty",
-      "fieldtype": "unknown",
-      "required": true
+      "fieldname": "before_items_section",
+      "label": "Store",
+      "fieldtype": "Link",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 42,
       "action": "inspect_field",
-      "fieldname": "purchase_uom",
-      "label": "purchase_uom",
-      "fieldtype": "unknown",
-      "required": true
+      "fieldname": "set_warehouse",
+      "label": "Store",
+      "fieldtype": "Link",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 43,
       "action": "inspect_field",
-      "fieldname": "qty",
-      "label": "qty",
-      "fieldtype": "unknown",
-      "required": true
+      "fieldname": "items_section",
+      "label": "Product Details",
+      "fieldtype": "Table",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 44,
       "action": "inspect_field",
-      "fieldname": "rate_type",
-      "label": "rate_type",
-      "fieldtype": "unknown",
-      "required": true
+      "fieldname": "items",
+      "label": "Product Details",
+      "fieldtype": "Table",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 45,
       "action": "inspect_field",
-      "fieldname": "base_price_clb",
-      "label": "base_price_clb",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "item_code",
+      "label": "item_code",
+      "fieldtype": "Link",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 46,
       "action": "inspect_field",
-      "fieldname": "ice_index_clb",
-      "label": "ice_index_clb",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "item_name",
+      "label": "item_name",
+      "fieldtype": "Data",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 47,
       "action": "inspect_field",
-      "fieldname": "rate_usc",
-      "label": "rate_usc",
-      "fieldtype": "unknown",
-      "required": true
+      "fieldname": "qty",
+      "label": "qty",
+      "fieldtype": "Float",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 48,
       "action": "inspect_field",
-      "fieldname": "tolerance",
-      "label": "tolerance",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "uom",
+      "label": "uom",
+      "fieldtype": "Link",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 49,
       "action": "inspect_field",
-      "fieldname": "freight_charges",
-      "label": "Is Freight Included",
-      "fieldtype": "Check",
-      "required": false
+      "fieldname": "rate",
+      "label": "rate",
+      "fieldtype": "Currency",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 50,
       "action": "inspect_field",
-      "fieldname": "__column_6",
-      "label": "Is Freight Included",
-      "fieldtype": "Check",
-      "required": false
+      "fieldname": "amount",
+      "label": "amount",
+      "fieldtype": "Currency",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 51,
       "action": "inspect_field",
-      "fieldname": "is_freight_included",
-      "label": "Is Freight Included",
-      "fieldtype": "Check",
-      "required": false
+      "fieldname": "country_of_origin",
+      "label": "country_of_origin",
+      "fieldtype": "Link",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 52,
       "action": "inspect_field",
-      "fieldname": "column_break_itsma",
-      "label": "column_break_itsma",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "sb_last_purchase",
+      "label": "Total Quantity (Lbs)",
+      "fieldtype": "Float",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 53,
       "action": "inspect_field",
-      "fieldname": "column_break_eoj4s",
-      "label": "column_break_eoj4s",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "total_qty",
+      "label": "Total Quantity (Lbs)",
+      "fieldtype": "Float",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 54,
       "action": "inspect_field",
-      "fieldname": "column_break_3yfdv",
-      "label": "Freight (BDT)",
-      "fieldtype": "Data",
-      "required": false
+      "fieldname": "total",
+      "label": "Total (BDT)",
+      "fieldtype": "Currency",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 55,
       "action": "inspect_field",
-      "fieldname": "freight",
-      "label": "Freight (BDT)",
-      "fieldtype": "Data",
-      "required": false
+      "fieldname": "discount_section",
+      "label": "discount_section",
+      "fieldtype": "Select",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 56,
       "action": "inspect_field",
-      "fieldname": "column_break_5pux7",
-      "label": "column_break_5pux7",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "totals_section",
+      "label": "totals_section",
+      "fieldtype": "Currency",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 57,
       "action": "inspect_field",
-      "fieldname": "cus_section_break_01",
-      "label": "cus_section_break_01",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "payment_schedule_section",
+      "label": "payment_schedule_section",
+      "fieldtype": "Link",
+      "required": true,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 58,
       "action": "inspect_field",
-      "fieldname": "__column_7",
-      "label": "__column_7",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "custom_terms_and_conditions",
+      "label": "custom_terms_and_conditions",
+      "fieldtype": "Link",
+      "required": false,
+      "tab": "Details",
+      "section": ""
     },
     {
       "order": 59,
       "action": "inspect_field",
-      "fieldname": "prior_fix_quantity",
-      "label": "Prior fix quantity",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "language",
+      "label": "Print Language",
+      "fieldtype": "Data",
+      "required": false,
+      "tab": "Connections",
+      "section": ""
     },
     {
       "order": 60,
       "action": "inspect_field",
-      "fieldname": "contract_balance_quantity",
-      "label": "Contract Balance Quantity",
-      "fieldtype": "unknown",
-      "required": false
+      "fieldname": "additional_remarks",
+      "label": "Remarks",
+      "fieldtype": "Small Text",
+      "required": false,
+      "tab": "Connections",
+      "section": ""
     },
     {
       "order": 61,
-      "action": "inspect_field",
-      "fieldname": "cus_column_break_01",
-      "label": "cus_column_break_01",
-      "fieldtype": "unknown",
-      "required": false
-    },
-    {
-      "order": 62,
-      "action": "inspect_field",
-      "fieldname": "total",
-      "label": "Total Amount (BDT)",
-      "fieldtype": "unknown",
-      "required": false
-    },
-    {
-      "order": 63,
-      "action": "inspect_field",
-      "fieldname": "section_break_bi98z",
-      "label": "Quality Inspection Template",
-      "fieldtype": "Data",
-      "required": true
-    },
-    {
-      "order": 64,
-      "action": "inspect_field",
-      "fieldname": "terms_and_conditions_section",
-      "label": "Terms",
-      "fieldtype": "Data",
-      "required": false
-    },
-    {
-      "order": 65,
-      "action": "inspect_field",
-      "fieldname": "__column_11",
-      "label": "Terms",
-      "fieldtype": "Data",
-      "required": false
-    },
-    {
-      "order": 66,
-      "action": "inspect_field",
-      "fieldname": "tc_name",
-      "label": "Terms",
-      "fieldtype": "Data",
-      "required": false
-    },
-    {
-      "order": 67,
-      "action": "inspect_field",
-      "fieldname": "terms",
-      "label": "Terms and Conditions Details",
-      "fieldtype": "Select",
-      "required": false
-    },
-    {
-      "order": 68,
       "action": "inspect_button",
       "button": "A",
       "safe_action_required": true
     },
     {
-      "order": 69,
+      "order": 62,
+      "action": "inspect_button",
+      "button": "Get Data From",
+      "safe_action_required": true
+    },
+    {
+      "order": 63,
       "action": "inspect_button",
       "button": "Save",
       "safe_action_required": true
     },
     {
-      "order": 70,
+      "order": 64,
+      "action": "inspect_button",
+      "button": "Details",
+      "safe_action_required": true
+    },
+    {
+      "order": 65,
+      "action": "inspect_button",
+      "button": "Connections",
+      "safe_action_required": true
+    },
+    {
+      "order": 66,
       "action": "inspect_button",
       "button": "Add Row",
       "safe_action_required": true
     },
     {
-      "order": 71,
+      "order": 67,
       "action": "inspect_button",
       "button": "Add Multiple",
       "safe_action_required": true
     },
     {
-      "order": 72,
+      "order": 68,
       "action": "inspect_button",
       "button": "Download",
       "safe_action_required": true
     },
     {
-      "order": 73,
+      "order": 69,
       "action": "inspect_button",
-      "button": "bold",
+      "button": "Upload",
       "safe_action_required": true
     },
     {
-      "order": 74,
-      "action": "inspect_button",
-      "button": "italic",
-      "safe_action_required": true
-    },
-    {
-      "order": 75,
-      "action": "inspect_button",
-      "button": "underline",
-      "safe_action_required": true
-    },
-    {
-      "order": 76,
-      "action": "inspect_button",
-      "button": "strike",
-      "safe_action_required": true
-    },
-    {
-      "order": 77,
-      "action": "inspect_button",
-      "button": "clean",
-      "safe_action_required": true
-    },
-    {
-      "order": 78,
-      "action": "inspect_button",
-      "button": "blockquote",
-      "safe_action_required": true
-    },
-    {
-      "order": 79,
-      "action": "inspect_button",
-      "button": "code-block",
-      "safe_action_required": true
-    },
-    {
-      "order": 80,
-      "action": "inspect_button",
-      "button": "direction: rtl",
-      "safe_action_required": true
-    },
-    {
-      "order": 81,
-      "action": "inspect_button",
-      "button": "link",
-      "safe_action_required": true
-    },
-    {
-      "order": 82,
-      "action": "inspect_button",
-      "button": "image",
-      "safe_action_required": true
-    },
-    {
-      "order": 83,
-      "action": "inspect_button",
-      "button": "list: ordered",
-      "safe_action_required": true
-    },
-    {
-      "order": 84,
-      "action": "inspect_button",
-      "button": "list: bullet",
-      "safe_action_required": true
-    },
-    {
-      "order": 85,
-      "action": "inspect_button",
-      "button": "list: check",
-      "safe_action_required": true
-    },
-    {
-      "order": 86,
-      "action": "inspect_button",
-      "button": "indent: -1",
-      "safe_action_required": true
-    },
-    {
-      "order": 87,
-      "action": "inspect_button",
-      "button": "indent: +1",
-      "safe_action_required": true
-    },
-    {
-      "order": 88,
+      "order": 70,
       "action": "inspect_link_relation",
       "label": "ERP"
     },
     {
-      "order": 89,
+      "order": 71,
       "action": "inspect_link_relation",
       "label": "Home"
     },
     {
-      "order": 90,
+      "order": 72,
       "action": "inspect_link_relation",
       "label": "Accounting"
     },
     {
-      "order": 91,
+      "order": 73,
       "action": "inspect_link_relation",
       "label": "Local Procurement"
     },
     {
-      "order": 92,
+      "order": 74,
       "action": "inspect_link_relation",
       "label": "Import"
     },
     {
-      "order": 93,
+      "order": 75,
       "action": "inspect_link_relation",
       "label": "Merchandising"
     },
     {
-      "order": 94,
+      "order": 76,
       "action": "inspect_link_relation",
       "label": "Inventory"
     },
     {
-      "order": 95,
+      "order": 77,
       "action": "inspect_link_relation",
       "label": "Assets"
     },
     {
-      "order": 96,
+      "order": 78,
       "action": "inspect_link_relation",
       "label": "Production"
     },
     {
-      "order": 97,
+      "order": 79,
       "action": "inspect_link_relation",
       "label": "Quality"
     },
     {
-      "order": 98,
+      "order": 80,
       "action": "inspect_link_relation",
       "label": "Planning"
     },
     {
-      "order": 99,
+      "order": 81,
       "action": "inspect_link_relation",
       "label": "Support"
     },
     {
-      "order": 100,
+      "order": 82,
       "action": "inspect_link_relation",
       "label": "CRM"
     },
     {
-      "order": 101,
+      "order": 83,
       "action": "inspect_link_relation",
       "label": "Collapse"
     },
     {
-      "order": 102,
+      "order": 84,
       "action": "inspect_link_relation",
-      "label": "Contract"
-    },
-    {
-      "order": 103,
-      "action": "inspect_link_relation",
-      "label": "Metric Ton"
+      "label": "Purchase Order"
     }
   ],
   "fields": [
     {
-      "fieldname": "__section_1",
-      "label": "__section_1",
-      "fieldtype": "Data",
-      "required": true,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "__column_1",
-      "label": "__column_1",
-      "fieldtype": "Data",
-      "required": true,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "blanket_order_no",
-      "label": "Contract No",
-      "fieldtype": "Data",
-      "required": true,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "material_type",
-      "label": "Material Type",
-      "fieldtype": "Data",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "column_break_8",
-      "label": "Posting Date",
-      "fieldtype": "Data",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "posting_date",
-      "label": "Posting Date",
-      "fieldtype": "unknown",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "contract_date",
-      "label": "Contract Date",
-      "fieldtype": "Data",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "column_break_xseap",
+      "fieldname": "supplier_section",
       "label": "Company",
-      "fieldtype": "Data",
+      "fieldtype": "Link",
       "required": true,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
       "fieldname": "company",
       "label": "Company",
-      "fieldtype": "Data",
+      "fieldtype": "Link",
       "required": true,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "contract_validity",
-      "label": "Contract Validity",
-      "fieldtype": "Data",
+      "fieldname": "material_type",
+      "label": "Material Type",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "schedule_date",
+      "label": "Required Date",
+      "fieldtype": "Date",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "cost_center",
+      "label": "Cost Center",
+      "fieldtype": "Link",
       "required": false,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
@@ -817,443 +738,522 @@
       "required": true,
       "options": [
         {
-          "text": "Import",
-          "value": "Import"
-        },
-        {
           "text": "Local",
           "value": "Local"
+        },
+        {
+          "text": "Import",
+          "value": "Import"
         }
       ],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "payment_term",
-      "label": "Payment Term",
-      "fieldtype": "Data",
+      "fieldname": "user_branch",
+      "label": "User Branch",
+      "fieldtype": "Link",
       "required": false,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "custom_supplier_information",
-      "label": "Supplier",
-      "fieldtype": "Data",
-      "required": true,
+      "fieldname": "procurement_location",
+      "label": "Procurement Location",
+      "fieldtype": "Link",
+      "required": false,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "__column_2",
-      "label": "Supplier",
-      "fieldtype": "Data",
+      "fieldname": "payment_terms",
+      "label": "Payment Terms",
+      "fieldtype": "Link",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "cash_iou",
+      "label": "Cash IOU",
+      "fieldtype": "Check",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "cus_column_break_02",
+      "label": "Department",
+      "fieldtype": "Link",
       "required": true,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "department",
+      "label": "Department",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "subject",
+      "label": "Subject",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "Purchase Order",
+          "value": "Purchase Order"
+        },
+        {
+          "text": "Service Work Order",
+          "value": "Service Work Order"
+        },
+        {
+          "text": "Purchase Order (Cotton)",
+          "value": "Purchase Order (Cotton)"
+        }
+      ],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "purpose",
+      "label": "Purpose",
+      "fieldtype": "Small Text",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "cus_column_break_03",
+      "label": "PO Type",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "Independent",
+          "value": "Independent"
+        },
+        {
+          "text": "Requisition",
+          "value": "Requisition"
+        },
+        {
+          "text": "Supplier Quotation",
+          "value": "Supplier Quotation"
+        },
+        {
+          "text": "PCS",
+          "value": "PCS"
+        }
+      ],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "po_type",
+      "label": "PO Type",
+      "fieldtype": "Select",
+      "required": true,
+      "options": [
+        {
+          "text": "Independent",
+          "value": "Independent"
+        },
+        {
+          "text": "Requisition",
+          "value": "Requisition"
+        },
+        {
+          "text": "Supplier Quotation",
+          "value": "Supplier Quotation"
+        },
+        {
+          "text": "PCS",
+          "value": "PCS"
+        }
+      ],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "transaction_date",
+      "label": "PO Date",
+      "fieldtype": "Date",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "section_addresses",
+      "label": "Supplier",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
       "fieldname": "supplier",
       "label": "Supplier",
-      "fieldtype": "Data",
+      "fieldtype": "Link",
       "required": true,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "custom_column_break_hcd0c",
-      "label": "custom_column_break_hcd0c",
-      "fieldtype": "unknown",
+      "fieldname": "cus_column_break_04",
+      "label": "cus_column_break_04",
+      "fieldtype": "Small Text",
       "required": false,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "column_break_hwcyp",
-      "label": "column_break_hwcyp",
-      "fieldtype": "unknown",
+      "fieldname": "col_break_address",
+      "label": "col_break_address",
+      "fieldtype": "Small Text",
       "required": false,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "column_break_8bdo6",
-      "label": "column_break_8bdo6",
-      "fieldtype": "unknown",
+      "fieldname": "shipping_address_section",
+      "label": "shipping_address_section",
+      "fieldtype": "Link",
       "required": false,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "column_break_wm4vm",
-      "label": "column_break_wm4vm",
-      "fieldtype": "unknown",
-      "required": false,
+      "fieldname": "currency_and_price_list",
+      "label": "Currency",
+      "fieldtype": "Link",
+      "required": true,
       "options": [],
       "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "currency_and_exchange_rate",
-      "label": "Supplier Currency",
-      "fieldtype": "Data",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "__column_4",
-      "label": "Supplier Currency",
-      "fieldtype": "Data",
-      "required": false,
-      "options": [],
-      "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
       "fieldname": "currency",
-      "label": "Supplier Currency",
-      "fieldtype": "Data",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "column_break_jwaug",
-      "label": "Exchange Rate",
-      "fieldtype": "unknown",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "section_break_12",
-      "label": "section_break_12",
-      "fieldtype": "Check",
+      "label": "Currency",
+      "fieldtype": "Link",
       "required": true,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "__column_5",
-      "label": "__column_5",
-      "fieldtype": "Check",
+      "fieldname": "cb_price_list",
+      "label": "cb_price_list",
+      "fieldtype": "Float",
       "required": true,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "before_items_section",
+      "label": "Store",
+      "fieldtype": "Link",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "set_warehouse",
+      "label": "Store",
+      "fieldtype": "Link",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "items_section",
+      "label": "Product Details",
+      "fieldtype": "Table",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
       "fieldname": "items",
-      "label": "items",
-      "fieldtype": "Check",
+      "label": "Product Details",
+      "fieldtype": "Table",
       "required": true,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
       "fieldname": "item_code",
       "label": "item_code",
-      "fieldtype": "unknown",
+      "fieldtype": "Link",
       "required": true,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
       "fieldname": "item_name",
       "label": "item_name",
-      "fieldtype": "unknown",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "purchase_qty",
-      "label": "purchase_qty",
-      "fieldtype": "unknown",
+      "fieldtype": "Data",
       "required": true,
       "options": [],
       "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "purchase_uom",
-      "label": "purchase_uom",
-      "fieldtype": "unknown",
-      "required": true,
-      "options": [],
-      "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
       "fieldname": "qty",
       "label": "qty",
-      "fieldtype": "unknown",
+      "fieldtype": "Float",
       "required": true,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "rate_type",
-      "label": "rate_type",
-      "fieldtype": "unknown",
+      "fieldname": "uom",
+      "label": "uom",
+      "fieldtype": "Link",
       "required": true,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "base_price_clb",
-      "label": "base_price_clb",
-      "fieldtype": "unknown",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "ice_index_clb",
-      "label": "ice_index_clb",
-      "fieldtype": "unknown",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "rate_usc",
-      "label": "rate_usc",
-      "fieldtype": "unknown",
+      "fieldname": "rate",
+      "label": "rate",
+      "fieldtype": "Currency",
       "required": true,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "tolerance",
-      "label": "tolerance",
-      "fieldtype": "unknown",
+      "fieldname": "amount",
+      "label": "amount",
+      "fieldtype": "Currency",
       "required": false,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "freight_charges",
-      "label": "Is Freight Included",
-      "fieldtype": "Check",
+      "fieldname": "country_of_origin",
+      "label": "country_of_origin",
+      "fieldtype": "Link",
       "required": false,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "__column_6",
-      "label": "Is Freight Included",
-      "fieldtype": "Check",
+      "fieldname": "sb_last_purchase",
+      "label": "Total Quantity (Lbs)",
+      "fieldtype": "Float",
       "required": false,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "is_freight_included",
-      "label": "Is Freight Included",
-      "fieldtype": "Check",
+      "fieldname": "total_qty",
+      "label": "Total Quantity (Lbs)",
+      "fieldtype": "Float",
       "required": false,
       "options": [],
       "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "column_break_itsma",
-      "label": "column_break_itsma",
-      "fieldtype": "unknown",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "column_break_eoj4s",
-      "label": "column_break_eoj4s",
-      "fieldtype": "unknown",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "column_break_3yfdv",
-      "label": "Freight (BDT)",
-      "fieldtype": "Data",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "freight",
-      "label": "Freight (BDT)",
-      "fieldtype": "Data",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "column_break_5pux7",
-      "label": "column_break_5pux7",
-      "fieldtype": "unknown",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "cus_section_break_01",
-      "label": "cus_section_break_01",
-      "fieldtype": "unknown",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "__column_7",
-      "label": "__column_7",
-      "fieldtype": "unknown",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "prior_fix_quantity",
-      "label": "Prior fix quantity",
-      "fieldtype": "unknown",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "contract_balance_quantity",
-      "label": "Contract Balance Quantity",
-      "fieldtype": "unknown",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "cus_column_break_01",
-      "label": "cus_column_break_01",
-      "fieldtype": "unknown",
-      "required": false,
-      "options": [],
-      "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
       "fieldname": "total",
-      "label": "Total Amount (BDT)",
-      "fieldtype": "unknown",
+      "label": "Total (BDT)",
+      "fieldtype": "Currency",
       "required": false,
       "options": [],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
       "action": "inspect_or_fill"
     },
     {
-      "fieldname": "section_break_bi98z",
-      "label": "Quality Inspection Template",
-      "fieldtype": "Data",
-      "required": true,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "terms_and_conditions_section",
-      "label": "Terms",
-      "fieldtype": "Data",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "__column_11",
-      "label": "Terms",
-      "fieldtype": "Data",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "tc_name",
-      "label": "Terms",
-      "fieldtype": "Data",
-      "required": false,
-      "options": [],
-      "placeholder": "",
-      "action": "inspect_or_fill"
-    },
-    {
-      "fieldname": "terms",
-      "label": "Terms and Conditions Details",
+      "fieldname": "discount_section",
+      "label": "discount_section",
       "fieldtype": "Select",
       "required": false,
       "options": [
         {
-          "text": "",
-          "value": "1"
+          "text": "Grand Total",
+          "value": "Grand Total"
         },
         {
-          "text": "",
-          "value": "2"
-        },
-        {
-          "text": "",
-          "value": "3"
-        },
-        {
-          "text": "",
-          "value": "4"
-        },
-        {
-          "text": "",
-          "value": "5"
-        },
-        {
-          "text": "",
-          "value": "6"
+          "text": "Net Total",
+          "value": "Net Total"
         }
       ],
       "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "totals_section",
+      "label": "totals_section",
+      "fieldtype": "Currency",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "payment_schedule_section",
+      "label": "payment_schedule_section",
+      "fieldtype": "Link",
+      "required": true,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "custom_terms_and_conditions",
+      "label": "custom_terms_and_conditions",
+      "fieldtype": "Link",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Details",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "language",
+      "label": "Print Language",
+      "fieldtype": "Data",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Connections",
+      "section": "",
+      "action": "inspect_or_fill"
+    },
+    {
+      "fieldname": "additional_remarks",
+      "label": "Remarks",
+      "fieldtype": "Small Text",
+      "required": false,
+      "options": [],
+      "placeholder": "",
+      "tab": "Connections",
+      "section": "",
       "action": "inspect_or_fill"
     }
   ],
-  "tabs": [],
+  "tabs": [
+    {
+      "tab": "Details",
+      "action": "open_and_inspect"
+    },
+    {
+      "tab": "Connections",
+      "action": "open_and_inspect"
+    }
+  ],
   "sections": [
     {
-      "section": "Supplier Information",
+      "section": "Supplier Details",
+      "action": "inspect"
+    },
+    {
+      "section": "Shipping Address",
       "action": "inspect"
     },
     {
@@ -1261,19 +1261,19 @@
       "action": "inspect"
     },
     {
-      "section": "Product Details",
+      "section": "Totals",
       "action": "inspect"
     },
     {
-      "section": "Freight Charges",
+      "section": "Additional Discount",
       "action": "inspect"
     },
     {
-      "section": "Total",
+      "section": "Purchase Taxes and Charges",
       "action": "inspect"
     },
     {
-      "section": "Quality Inspection Section",
+      "section": "Payment Terms",
       "action": "inspect"
     },
     {
@@ -1288,7 +1288,22 @@
       "safe_action_required": true
     },
     {
+      "button": "Get Data From",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
       "button": "Save",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "Details",
+      "action": "inspect",
+      "safe_action_required": true
+    },
+    {
+      "button": "Connections",
       "action": "inspect",
       "safe_action_required": true
     },
@@ -1308,77 +1323,7 @@
       "safe_action_required": true
     },
     {
-      "button": "bold",
-      "action": "inspect",
-      "safe_action_required": true
-    },
-    {
-      "button": "italic",
-      "action": "inspect",
-      "safe_action_required": true
-    },
-    {
-      "button": "underline",
-      "action": "inspect",
-      "safe_action_required": true
-    },
-    {
-      "button": "strike",
-      "action": "inspect",
-      "safe_action_required": true
-    },
-    {
-      "button": "clean",
-      "action": "inspect",
-      "safe_action_required": true
-    },
-    {
-      "button": "blockquote",
-      "action": "inspect",
-      "safe_action_required": true
-    },
-    {
-      "button": "code-block",
-      "action": "inspect",
-      "safe_action_required": true
-    },
-    {
-      "button": "direction: rtl",
-      "action": "inspect",
-      "safe_action_required": true
-    },
-    {
-      "button": "link",
-      "action": "inspect",
-      "safe_action_required": true
-    },
-    {
-      "button": "image",
-      "action": "inspect",
-      "safe_action_required": true
-    },
-    {
-      "button": "list: ordered",
-      "action": "inspect",
-      "safe_action_required": true
-    },
-    {
-      "button": "list: bullet",
-      "action": "inspect",
-      "safe_action_required": true
-    },
-    {
-      "button": "list: check",
-      "action": "inspect",
-      "safe_action_required": true
-    },
-    {
-      "button": "indent: -1",
-      "action": "inspect",
-      "safe_action_required": true
-    },
-    {
-      "button": "indent: +1",
+      "button": "Upload",
       "action": "inspect",
       "safe_action_required": true
     }
@@ -1441,11 +1386,7 @@
       "action": "inspect_relation"
     },
     {
-      "label": "Contract",
-      "action": "inspect_relation"
-    },
-    {
-      "label": "Metric Ton",
+      "label": "Purchase Order",
       "action": "inspect_relation"
     }
   ]
